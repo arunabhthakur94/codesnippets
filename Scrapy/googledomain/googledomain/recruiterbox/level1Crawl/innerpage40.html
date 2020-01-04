@@ -1,0 +1,5000 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns#" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Anderson Columbia Co. Inc. jobs |
+    Anderson Columbia Co. Inc. openings |
+    Anderson Columbia Co. Inc. careers
+  </title>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/images/logo/png/blue/32-ba85ed81cc83b2ac88999e391ad0b429453de810.png" rel="shortcut icon"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/css/reskin_publishing-93920b3b90ee6f33db43f587b0cdfa401aeb7b01.min.css" rel="stylesheet" type="text/css"/>
+  <script src="//use.typekit.net/trv5ndi.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   try{Typekit.load();}catch(e){}
+  </script>
+  <script type="text/javascript">
+   window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+        if (event.origin !== "")
+            return;
+
+        var data = event.data;
+
+        if (data === 'FINISHED_LOADING_LINKEDIN_JS') {
+            $('.js-apply-with-linkedin').removeClass('hide');
+        } else if (data === 'PROFILE_DATA_BEING_FETCHED') {
+            show_application_form();
+            show_loading_overlay();
+        } else if (data.message == 'ERROR_WHILE_FETCHING_PROFILE_DATA') {
+            hide_loading_overlay();
+            show_application_form();
+            _RB.logToRollbar(data.error);
+        } else if (data.message == 'LINKEDIN_PROFILE_DATA') {
+            populateFields(data.firstName, data.lastName, data.emailAddress, data.summary, data.publicProfileUrl)
+        }
+    }
+
+    function populateFields(first_name, last_name, email, summary, linkedin_public_profile_url) {
+        hide_loading_overlay();
+        show_application_form();
+        var first_name_field = $('#id_candidate_first_name');
+        var last_name_field = $('#id_candidate_last_name');
+        var email_field = $('#id_candidate_email');
+        var summary_field = $('#id_linkedin_profile_summary');
+        var linkedin_public_profile_url_field = $('#id_linkedin_public_profile_url');
+
+        first_name_field.val(first_name);
+        last_name_field.val(last_name);
+        email_field.val(email);
+        summary_field.val(summary);
+        linkedin_public_profile_url_field.val(linkedin_public_profile_url);
+    }
+
+    function clickOnLinkedinButton() {
+        var iframe = document.querySelector("#js-linkedin-btn-iframe");
+        var iframeWindow = iframe.contentWindow;
+        iframeWindow.postMessage("CLICK_ON_LINKEDIN_BUTTON", "*");
+    }
+  </script>
+ </head>
+ <body>
+  <div class="header-main">
+   <div class="container">
+    <div class="row">
+     <div class="row-flex row-flex-align-center">
+      <div class="col-md-7 col-xs-8 header-main-logo-container">
+       <a class="header-main-logo hide-href" href="/">
+        <img alt="Anderson Columbia Co. Inc. jobs, openings" src="https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/b2e1095a10674ae9aeb4847b9f7776aa/Small%20AC%20LOGO%20with%20trans.png"/>
+       </a>
+      </div>
+      <div class="col-md-5 col-xs-4 header-main-link-container">
+       <a class="btn-link hidden-xs hide-href header-main-link" href="http://www.andersoncolumbia.com" rel="noopener noreferrer" target="_blank">
+        www.andersoncolumbia.com
+       </a>
+       <a class="btn-link visible-xs-inline header-main-link" href="http://www.andersoncolumbia.com" rel="noopener noreferrer" target="_blank">
+        Website
+        <i class="glyphicon glyphicon-share btn-link-external-icon">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="company-header hidden-print js-company-header">
+   <div class="container">
+    <h1 class="company-header-title">
+     Anderson Columbia Co. Inc. Jobs
+    </h1>
+    <a class="js-show-openings btn btn-hollow btn-main" href="#content">
+     View Openings
+    </a>
+   </div>
+  </div>
+  <div class="company-info">
+   <div class="container">
+    <section>
+     <div class="company-info-content">
+      <h1>
+       <span style="font-weight: bold;">
+        Hi,
+       </span>
+      </h1>
+      <p>
+       Welcome to our Careers section. Please review the positions we are currently hiring for and apply to the ones that interest you.
+      </p>
+     </div>
+    </section>
+   </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+  <script>
+   var mobile_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/d60379c0b94744079ef35cdbfc5268a6/NightRoadAsphaltMilling.jpg';
+        var desktop_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/d60379c0b94744079ef35cdbfc5268a6/NightRoadAsphaltMilling.jpg';
+
+        $( function() {
+            var bgImage = window.innerWidth < 500 ? mobile_image : desktop_image;
+            $('.js-company-header').css({'background-image': 'url(' + bgImage + ')'});
+
+            $('.js-show-openings').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#content").offset().top
+                }, 400);
+            })
+        });
+  </script>
+  <div class="container main-content" id="content">
+   <div class="row">
+    <div class="col-md-12">
+     <div class="heading-section">
+      <div class="row row-flex row-flex-align-center">
+       <div class="col-xs-12 col-sm-7">
+        <h2 class="nomargin">
+         Current Openings
+        </h2>
+       </div>
+       <div class="col-xs-12 col-sm-5 text-right">
+        <div class="form-inline">
+        </div>
+       </div>
+      </div>
+     </div>
+     <ul class="list-unstyled">
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Carrabelle, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2l7/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2l7/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Construction Laborer">
+              Construction Laborer
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Carrabelle ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Carrabelle
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2lp/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2lp/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Carpenter">
+              Carpenter
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Carrabelle ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Carrabelle
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Cedar Key, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fhq6/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fhq6/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Crane Operator">
+              Crane Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Cedar Key ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Cedar Key
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fwdt/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fwdt/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Concrete Finisher">
+              Concrete Finisher
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Cedar Key ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Cedar Key
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mbyp/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mbyp/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Road Construction Labor Worker">
+              Road Construction Labor Worker
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Cedar Key ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Cedar Key
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mbys/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mbys/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Bridge Carpenter ">
+              Bridge Carpenter
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Cedar Key ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Cedar Key
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Crestview, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0f4b9/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0f4b9/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Mechanic">
+              Mechanic
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Crestview ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Crestview
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fjdy/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fjdy/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Fuel/Service Truck Driver">
+              Fuel/Service Truck Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Crestview ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Crestview
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mkon/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mkon/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="CDL  Construction Truck Driver">
+              CDL  Construction Truck Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Crestview ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Crestview
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mpei/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mpei/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Concrete Finisher ">
+              Concrete Finisher
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Crestview ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Crestview
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0m1nr/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0m1nr/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Loader/Roller/Screed/Dozer Operator ">
+              Loader/Roller/Screed/Dozer Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Crestview ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Crestview
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0m1qa/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0m1qa/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Off- Road Haul Truck Driver ">
+              Off- Road Haul Truck Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Crestview ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Crestview
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div>
+        <a class="btn-link-btn-style space-on-bottom-20px" href="?loc_country=United+States&amp;loc_city=Crestview&amp;loc_state=Florida#content">
+         2
+                                        more »
+        </a>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Dowling Park, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03jn9/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03jn9/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Crane Operator">
+              Crane Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Dowling Park ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Dowling Park
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j8ex/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j8ex/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Pile Driver">
+              Pile Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Dowling Park ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Dowling Park
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j8eu/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j8eu/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Carpenter">
+              Carpenter
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Dowling Park ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Dowling Park
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j8eq/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j8eq/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Construction Laborer">
+              Construction Laborer
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Dowling Park ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Dowling Park
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Gainesville, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fco6/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fco6/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Surveyor ">
+              Surveyor
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Gainesville ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Gainesville
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Jacksonville, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0f4r9/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0f4r9/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Certified Traffic Control">
+              Certified Traffic Control
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Jacksonville ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Jacksonville
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Lake City, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03l3q/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03l3q/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="FLEET MANAGER">
+              FLEET MANAGER
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Lake City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Lake City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0jxpw/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0jxpw/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Welder">
+              Welder
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Lake City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Lake City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk01ss4/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk01ss4/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Pipelayer">
+              Pipelayer
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Lake City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Lake City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fstg/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fstg/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Concrete Finisher">
+              Concrete Finisher
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Lake City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Lake City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0m987/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0m987/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Certified Traffic Control ">
+              Certified Traffic Control
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Lake City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Lake City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0m1pe/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0m1pe/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Pan Operator/Dozer Operator ">
+              Pan Operator/Dozer Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Lake City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Lake City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div>
+        <a class="btn-link-btn-style space-on-bottom-20px" href="?loc_country=United+States&amp;loc_city=Lake+City&amp;loc_state=Florida#content">
+         4
+                                        more »
+        </a>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Laredo, Texas, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mrck/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mrck/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Laborers --Road Construction">
+              Laborers --Road Construction
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Laredo ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Laredo
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mf4n/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mf4n/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="CDL Construction Drivers ">
+              CDL Construction Drivers
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Laredo ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Laredo
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk06bh1/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk06bh1/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Heavy Equipment Operator">
+              Heavy Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Laredo ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Laredo
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk06bhh/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk06bhh/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Construction Labor ">
+              Construction Labor
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Laredo ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Laredo
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Marianna, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0m1n3/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0m1n3/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Heavy Equipment Operator ">
+              Heavy Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Marianna ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Marianna
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0m1h9/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0m1h9/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="CDL  Construction Truck Driver">
+              CDL  Construction Truck Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Marianna ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Marianna
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mhhv/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mhhv/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Road Construction Labor Worker">
+              Road Construction Labor Worker
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Marianna ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Marianna
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Ocala, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034w5/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034w5/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Fuel/Service Truck Driver ">
+              Fuel/Service Truck Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Ocala ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Ocala
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0123k/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0123k/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Distributor Operator">
+              Distributor Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Ocala ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Ocala
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fu1j/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fu1j/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Plant Groundsman">
+              Plant Groundsman
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Ocala ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Ocala
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0f1qc/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0f1qc/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Construction Labor Worker">
+              Construction Labor Worker
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Ocala ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Ocala
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mvnh/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mvnh/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Asphalt Paving Roller Operator">
+              Asphalt Paving Roller Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Ocala ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Ocala
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mfgz/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mfgz/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="CDL Construction Truck Drivers ">
+              CDL Construction Truck Drivers
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Ocala ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Ocala
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div>
+        <a class="btn-link-btn-style space-on-bottom-20px" href="?loc_country=United+States&amp;loc_city=Ocala&amp;loc_state=Florida#content">
+         2
+                                        more »
+        </a>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Panama City, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk01nfl/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk01nfl/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Heavy Equipment Operator">
+              Heavy Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Panama City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Panama City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0ft11/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0ft11/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Pile Driver">
+              Pile Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Panama City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Panama City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0ft16/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0ft16/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Laborer ">
+              Laborer
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Panama City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Panama City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fue5/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fue5/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Construction Labor">
+              Construction Labor
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Panama City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Panama City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fue8/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fue8/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Concrete Finisher">
+              Concrete Finisher
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Panama City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Panama City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fue7/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fue7/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Bridge Carpenters">
+              Bridge Carpenters
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Panama City ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Panama City
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Pensacola, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0f6z4/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0f6z4/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Concrete Finisher">
+              Concrete Finisher
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Pensacola ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Pensacola
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mned/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mned/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Heavy Equipment Operator">
+              Heavy Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Pensacola ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Pensacola
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0msju/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0msju/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Construction Labor ">
+              Construction Labor
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Pensacola ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Pensacola
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0ms14/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0ms14/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Bridge Construction Carpenter ">
+              Bridge Construction Carpenter
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Pensacola ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Pensacola
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Perry, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0jgen/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0jgen/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Bridge Carpenter">
+              Bridge Carpenter
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Perry ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Perry
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0m2x2/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0m2x2/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Equipment Operator">
+              Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Perry ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Perry
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0msj1/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0msj1/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Laborer">
+              Laborer
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Perry ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Perry
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0ms1p/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0ms1p/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Bridge Construction Carpenter ">
+              Bridge Construction Carpenter
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Perry ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Perry
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Pleasanton, Texas, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0misz/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0misz/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Road Construction Laborers">
+              Road Construction Laborers
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Pleasanton ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Pleasanton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mrcg/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mrcg/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Water Truck Driver">
+              Water Truck Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Pleasanton ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Pleasanton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mrcl/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mrcl/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Heavy Equipment Operator">
+              Heavy Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Pleasanton ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Pleasanton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Quincy, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk01b2m/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk01b2m/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Equipment Operator">
+              Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Quincy ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Quincy
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mk5v/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mk5v/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Plant Maintenance - A Mining Group">
+              Plant Maintenance - A Mining Group
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Quincy ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Quincy
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Starke, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0miwy/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0miwy/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Plant Groundsman">
+              Plant Groundsman
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Starke ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Starke
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0miwg/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0miwg/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Loader Operator">
+              Loader Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Starke ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Starke
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mpn3/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mpn3/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Heavy Equipment Operator ">
+              Heavy Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Starke ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Starke
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mqv8/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mqv8/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Grader Operator ">
+              Grader Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Starke ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Starke
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0m6vf/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0m6vf/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Experienced Excavator/Track-hoe Operator">
+              Experienced Excavator/Track-hoe Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Starke ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Starke
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mhaw/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mhaw/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Off-Road Truck Driver ">
+              Off-Road Truck Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Starke ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Starke
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div>
+        <a class="btn-link-btn-style space-on-bottom-20px" href="?loc_country=United+States&amp;loc_city=Starke&amp;loc_state=Florida#content">
+         1
+                                        more »
+        </a>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Talbotton, Georgia, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03t3i/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03t3i/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="QUARRY SUPERVISOR">
+              QUARRY SUPERVISOR
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Talbotton ,
+Georgia , United States ">
+              <span class="meta-job-location-city cut-text">
+               Talbotton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Georgia
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk01r3q/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk01r3q/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Maintenance Planner ">
+              Maintenance Planner
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Talbotton ,
+Georgia , United States ">
+              <span class="meta-job-location-city cut-text">
+               Talbotton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Georgia
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk01r36/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk01r36/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Welder">
+              Welder
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Talbotton ,
+Georgia , United States ">
+              <span class="meta-job-location-city cut-text">
+               Talbotton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Georgia
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk01rjb/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk01rjb/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Plant Maintenance">
+              Plant Maintenance
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Talbotton ,
+Georgia , United States ">
+              <span class="meta-job-location-city cut-text">
+               Talbotton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Georgia
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk01rj9/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk01rj9/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Diesel Mechanic">
+              Diesel Mechanic
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Talbotton ,
+Georgia , United States ">
+              <span class="meta-job-location-city cut-text">
+               Talbotton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Georgia
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk01rji/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk01rji/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Electrician">
+              Electrician
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Talbotton ,
+Georgia , United States ">
+              <span class="meta-job-location-city cut-text">
+               Talbotton
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Georgia
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div>
+        <a class="btn-link-btn-style space-on-bottom-20px" href="?loc_country=United+States&amp;loc_city=Talbotton&amp;loc_state=Georgia#content">
+         5
+                                        more »
+        </a>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Tallahassee, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk014a7/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk014a7/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Concrete Finisher">
+              Concrete Finisher
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Tallahassee ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Tallahassee
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0f67p/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0f67p/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Heavy Equipment Operator">
+              Heavy Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Tallahassee ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Tallahassee
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0f6zl/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0f6zl/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Pile Driver">
+              Pile Driver
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Tallahassee ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Tallahassee
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0ms9h/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0ms9h/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Bridge Carpenter ">
+              Bridge Carpenter
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Tallahassee ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Tallahassee
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Weslaco, Texas, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mqmr/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mqmr/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Construction Labor ">
+              Construction Labor
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Weslaco ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Weslaco
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0mqm7/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0mqm7/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Heavy Equipment Operator ">
+              Heavy Equipment Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Weslaco ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Weslaco
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk06bhm/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk06bhm/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="CDL Construction Drivers ">
+              CDL Construction Drivers
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Weslaco ,
+Texas , United States ">
+              <span class="meta-job-location-city cut-text">
+               Weslaco
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Texas
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Wildwood, Florida, United States
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0fv3m/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0fv3m/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Loader Operator">
+              Loader Operator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Wildwood ,
+Florida , United States ">
+              <span class="meta-job-location-city cut-text">
+               Wildwood
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Florida
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="page-footer hidden-print">
+   <div class="container">
+    <h5 class="footer-title">
+     Couldn't find the opening you were looking for?
+    </h5>
+    <div class="row">
+     <div class="col-md-5 follow-company">
+      <div class="js-follow-company-wrapper">
+       <p>
+        Get updates about upcoming openings straight to your inbox
+       </p>
+       <form action="/follow_client/" class="js-follow-company-form" method="post" role="form">
+        <input name="csrfmiddlewaretoken" type="hidden" value="2i8EXbMXkZ0Kj7Qg6yjRWFDqpygX6US7KNxOgMiuszIQKzj4a2kIUgfjdSB1WT7F"/>
+        <div class="form-group">
+         <label class="sr-only" for="follow_email">
+          Email address
+         </label>
+         <div class="input-group">
+          <input class="form-control" id="follow_email" name="email" placeholder="Your email address" required="required" type="email"/>
+          <span class="input-group-btn">
+           <button class="btn btn-default js-follow-company-button" data-loading-text="Saving..." type="submit">
+            Keep me posted
+           </button>
+          </span>
+         </div>
+        </div>
+        <input name="client" required="required" type="hidden" value="u0huep"/>
+        <div class="form-follow-error js-follow-company-error" style="display:none;">
+        </div>
+       </form>
+      </div>
+      <div class="follow-company-rss">
+       <i class="fa fa-rss tail5px">
+       </i>
+       <a class="btn-link" href="/jobfeeds/andersoncolumbia" target="_blank">
+        Jobs RSS Feed
+       </a>
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     $( function() {
+
+        $('[data-toggle="tooltip"]').tooltip({
+            delay: { "show": 500, "hide": 100 }
+        });
+
+        var $followForm = $('.js-follow-company-form');
+        var successMessage = "<div class='alert alert-success alert-lg'>" +
+                "<i class='glyphicon glyphicon-ok icon-cirlce icon-success'></i>" +
+                "<p>Thanks! You will receive updates from us in your email</p>" +
+                "</div>";
+
+        $followForm.on('submit', function(e) {
+            var $form = $(this);
+            var $formFollowError = $('.js-follow-company-error');
+            var $followWrapper = $('.js-follow-company-wrapper');
+            var $submitButton = $(this).find('[data-loading-text]');
+            $submitButton
+                    .button()
+                    .button('loading');
+
+            $.ajax({
+                url: $form.attr('action'),
+                type: $form.attr('method'),
+                data: $form.serialize(),
+                dataType: 'json'
+            }).done(function(data){
+                var resp_str;
+                resp_str = successMessage;
+                $followWrapper.html(resp_str);
+
+                if(window._gaq) {
+                    _gaq.push(['_trackEvent', 'Follow', 'success', 'andersoncolumbia']);
+                    ga('send', 'event', {
+                        eventCategory: 'Follow',
+                        eventAction: 'success',
+                        eventLabel: 'andersoncolumbia'
+                    });
+                }
+            }).fail(function(data){
+                var error_dict = JSON.parse(data.responseText);
+                var resp_str;
+                if (error_dict.email !== undefined){
+                    resp_str = "<span class='text-danger'>" + error_dict.email[0] + "</span>";
+                }else if (error_dict.client_id !== undefined) {
+                    resp_str = "<span class='text-danger'>" + error_dict.client_id[0] + "</span>";
+                }
+                $submitButton.button('reset');
+                $formFollowError.html(resp_str);
+                $formFollowError.show();
+
+            });
+            e.preventDefault();
+        });
+    });
+    </script>
+   </div>
+  </div>
+  <div class="page_footer page-footer">
+   <div class="container">
+    <a class="powered-by clearfix" href="http://recruiterbox.com/">
+     <div class="powered-by-logo pull-left">
+      <div class="icon icon-rbox-logo">
+      </div>
+     </div>
+     <div class="powered-by-text pull-left">
+      <div class="powered-by-text-title">
+       powered by
+      </div>
+      <div class="powered-by-text-brand">
+       <b>
+        Recruiterbox
+       </b>
+      </div>
+     </div>
+    </a>
+   </div>
+  </div>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-MSXJKT" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSXJKT');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/static/lib/jquery/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(function () {
+        $('.js-card').on('click', function () {
+            window.location.href = $(this).data('href');
+        });
+    });
+
+    function getParamMapFromURL(url) {
+        url = (url+'').replace(/\+/g, '%20');
+        url = decodeURI(url);
+        let query_string = null;
+        let object = {};
+        let param;
+
+        let items = url.split('?');
+
+        if (items.length > 1) {
+            query_string = items[1]
+        }
+        else {
+            return {}
+        }
+
+        let param_tokens = query_string.split('&');
+
+        for (let i = 0; i < param_tokens.length; i++) {
+            param = param_tokens[i];
+            if (param.indexOf('=') < 0) continue;
+            let item = param.split('=');
+            let key = item[0];
+            object[key] = item[1];
+        }
+
+        return object;
+    }
+
+    function constructURLFromParamMap(paramMap) {
+        let tokens = [];
+        for(let key in paramMap) {
+            if (paramMap.hasOwnProperty(key)) {
+                tokens.push(key + "=" + paramMap[key])
+            }
+        }
+        return encodeURI(tokens.join("&"));
+    }
+
+    function get_filter_value(filter_key) {
+        let paramMap = getParamMapFromURL(window.location.search);
+        return paramMap[filter_key]
+    }
+
+    function setDefaultValue(filter_el_id, filter_value) {
+        let filter_select_el = document.getElementById(filter_el_id);
+        for (let i = 0; i < filter_select_el.options.length; i++) {
+            if (filter_select_el.options[i].value.toLowerCase() === filter_value.toLowerCase()) {
+                filter_select_el.options[i].selected = true;
+            }
+        }
+    }
+
+    function updateLocationSelectedValue() {
+        let city_value = get_filter_value('loc_city')|| '_all_locations';
+        setDefaultValue('city_filter', city_value);
+    }
+
+    function updateTeamSelectedValue() {
+        let team_value = get_filter_value('team')|| '_all_teams';
+        setDefaultValue('team_filter', team_value);
+    }
+
+    function navigateWithParams(params, focus_on_jobs) {
+        let filter_str = constructURLFromParamMap(params);
+        window.location.href = "?" + filter_str + (focus_on_jobs ? "#content" : window.location.hash)
+    }
+
+
+    $(function () {
+        $('#city_filter').on('change', function (e) {
+            let city = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all location
+            // is selected in dropdown
+            if (city === "_all_locations") {
+                delete params['loc_city'];
+            }
+            else {
+                params['loc_city'] = city;
+            }
+            navigateWithParams(params, true);
+        })
+    });
+
+    $(function () {
+        $('#team_filter').on('change', function (e) {
+            let team_name = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all team
+            // is selected in dropdown
+
+            if (team_name === "_all_teams") {
+                delete params['team']
+            }
+            else {
+                params['team'] = team_name;
+            }
+            navigateWithParams(params, true)
+        })
+    });
+
+    $(function () {
+
+        if ($('#city_filter').length) {
+            updateLocationSelectedValue();
+        }
+
+        if ($('#team_filter').length) {
+            updateTeamSelectedValue();
+        }
+
+    });
+  </script>
+ </body>
+</html>

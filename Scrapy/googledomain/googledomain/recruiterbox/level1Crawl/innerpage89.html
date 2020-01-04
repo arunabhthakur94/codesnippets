@@ -1,0 +1,1387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns#" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta content="noindex" name="robots"/>
+  <title>
+   AgroStar jobs |
+    AgroStar openings |
+    AgroStar careers
+  </title>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/images/logo/png/blue/32-ba85ed81cc83b2ac88999e391ad0b429453de810.png" rel="shortcut icon"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <!-- Google maps API -->
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyABGgpvUrb7ykw25SOhXkD1KZ8NMO0ReYo&amp;libraries=places">
+  </script>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/css/hosted_page_styles_v2-a38c650f736c2b84459369be8d65527ba1819bc2.min.css" rel="stylesheet" type="text/css"/>
+  <script src="//use.typekit.net/trv5ndi.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   try{Typekit.load();}catch(e){}
+  </script>
+  <script type="text/javascript">
+   window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+        if (event.origin !== "")
+            return;
+
+        var data = event.data;
+
+        if (data === 'FINISHED_LOADING_LINKEDIN_JS') {
+            $('.js-apply-with-linkedin').removeClass('hide');
+        } else if (data === 'PROFILE_DATA_BEING_FETCHED') {
+            show_application_form();
+            show_loading_overlay();
+        } else if (data.message == 'ERROR_WHILE_FETCHING_PROFILE_DATA') {
+            hide_loading_overlay();
+            show_application_form();
+            _RB.logToRollbar(data.error);
+        } else if (data.message == 'LINKEDIN_PROFILE_DATA') {
+            populateFields(data.firstName, data.lastName, data.emailAddress, data.summary, data.publicProfileUrl)
+        }
+    }
+
+    function populateFields(first_name, last_name, email, summary, linkedin_public_profile_url) {
+        hide_loading_overlay();
+        show_application_form();
+        var first_name_field = $('#id_candidate_first_name');
+        var last_name_field = $('#id_candidate_last_name');
+        var email_field = $('#id_candidate_email');
+        var summary_field = $('#id_linkedin_profile_summary');
+        var linkedin_public_profile_url_field = $('#id_linkedin_public_profile_url');
+
+        first_name_field.val(first_name);
+        last_name_field.val(last_name);
+        email_field.val(email);
+        summary_field.val(summary);
+        linkedin_public_profile_url_field.val(linkedin_public_profile_url);
+    }
+
+    function clickOnLinkedinButton() {
+        var iframe = document.querySelector("#js-linkedin-btn-iframe");
+        var iframeWindow = iframe.contentWindow;
+        iframeWindow.postMessage("CLICK_ON_LINKEDIN_BUTTON", "*");
+    }
+  </script>
+ </head>
+ <body>
+  <div class="header-main">
+   <div class="container">
+    <div class="row">
+     <div class="row-flex row-flex-align-center">
+      <div class="col-md-7 col-xs-8 header-main-logo-container">
+       <a class="header-main-logo hide-href" href="/">
+        <img alt="AgroStar jobs, openings" src="https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/32c71aa4e75e4955842365a50466a175/AgroStar.jpg"/>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="company-header hidden-print js-company-header">
+   <div class="container">
+    <h1 class="company-header-title">
+     Jobs at AgroStar
+    </h1>
+    <a class="js-show-openings btn btn-primary btn-main" href="#content">
+     View 39
+                
+                    Openings
+    </a>
+   </div>
+  </div>
+  <div class="company-info">
+   <div class="container">
+    <section>
+     <div class="company-info-content">
+      <h4>
+       <strong>
+        We are a team of highly motivated individuals, who are willing to push beyond the ceiling, initiate new ideas and take challenges head on. Apart from coffee, working in an extremely fast-paced, dynamic work culture is what we passionate souls thrive on. We ride against the tide as time is never enough and there’s always more to do.
+       </strong>
+       <strong>
+        Our mission of ‘Helping Farmers Win’ is a tall task as we try to bring change and development to the grassroots of India. We need heroes who are dedicated to the mission, live the dream and drive it with passion.
+       </strong>
+      </h4>
+     </div>
+    </section>
+   </div>
+  </div>
+  <div class="container main-content" id="content">
+   <div class="row">
+    <form action="" class="js-job-search-form" method="GET">
+     <div class="col-md-3">
+      <div class="rb-tail-desktop-4rbpx" id="js-sidebar">
+      </div>
+     </div>
+     <div class="col-md-9 js-openings-list opening-list">
+      <div id="js-cs-filter-info">
+      </div>
+      <div class="rb-space-on-bottom-5rbpx rb-space-on-top-5rbpx">
+       <div class="row">
+        <div class="col-xs-10 col-md-12">
+         <div class="rb-input-wrapper rb-input-wrapper--size-lg rb-input-with-button">
+          <input class="rb-input rb-input--borderless rb-input--xl rb-input--full-width rb-input--with-large-shadow" name="q" placeholder="Search from jobs below" type="text"/>
+          <button class="rb-input__button" type="submit">
+           <i class="glyphicon glyphicon-search">
+           </i>
+          </button>
+         </div>
+        </div>
+        <div class="col-xs-2 text-right pl-0 visible-xs">
+         <button class="btn btn-icon js-toggle-filter" type="button">
+          <svg fill="none" height="12" viewbox="0 0 16 12" width="16" xmlns="http://www.w3.org/2000/svg">
+           <path d="M15.8345 1.15331C15.8345 1.79021 15.3183 2.30662 14.6812 2.30662H1.15331C0.516414 2.30662 0 1.7904 0 1.15331C0 0.516413 0.516222 0 1.15331 0H14.6814C15.3183 0 15.8345 0.516413 15.8345 1.15331Z" fill="#6E7881">
+           </path>
+           <path d="M13.9196 6.00097C13.9196 6.63786 13.4033 7.15428 12.7663 7.15428H3.06933C2.43243 7.15428 1.91602 6.63806 1.91602 6.00097C1.91602 5.36407 2.43224 4.84766 3.06933 4.84766H12.7664C13.4033 4.84766 13.9196 5.36407 13.9196 6.00097Z" fill="#6E7881">
+           </path>
+           <path d="M11.0462 10.8467C11.0462 11.4836 10.5299 12 9.89286 12H5.94237C5.30548 12 4.78906 11.4838 4.78906 10.8467C4.78906 10.2098 5.30528 9.69336 5.94237 9.69336H9.89305C10.5299 9.69336 11.0462 10.2098 11.0462 10.8467Z" fill="#6E7881">
+           </path>
+          </svg>
+         </button>
+        </div>
+       </div>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03zil/">
+       <a href="/jobs/fk03zil/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Agri Advisors">
+           Agri Advisors
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Ahmedabad, Gujarat, India ">
+           <span class="meta-job-location-city cut-text">
+            Ahmedabad
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Gujarat
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-space-on-top-0rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03zic/">
+       <a href="/jobs/fk03zic/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Agri Advisors">
+           Agri Advisors
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-space-on-top-0rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j46r/">
+       <a href="/jobs/fk0j46r/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Area Sales Executive - Bihar">
+           Area Sales Executive - Bihar
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Bihar, India ">
+           <span class="meta-job-location-city cut-text">
+            Bihar
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Strategic Alliances
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+           |
+           <span>
+            Allows remote
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j46x/">
+       <a href="/jobs/fk0j46x/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Assistant Finance Manager">
+           Assistant Finance Manager
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Finance
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03uvg/">
+       <a href="/jobs/fk03uvg/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Assistant Manager Procurement - Category ">
+           Assistant Manager Procurement - Category
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Procurement
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j4fs/">
+       <a href="/jobs/fk0j4fs/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Associate Product Manager">
+           Associate Product Manager
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Product
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j4q8/">
+       <a href="/jobs/fk0j4q8/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Business Analyst">
+           Business Analyst
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-space-on-top-0rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk036rr/">
+       <a href="/jobs/fk036rr/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Call Centre Manager">
+           Call Centre Manager
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Ahmedabad, Gujarat, India ">
+           <span class="meta-job-location-city cut-text">
+            Ahmedabad
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Gujarat
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Agri Advisory
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03mol/">
+       <a href="/jobs/fk03mol/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Category Manager - Crop Nutrition">
+           Category Manager - Crop Nutrition
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-space-on-top-0rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j468/">
+       <a href="/jobs/fk0j468/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Category Manager - Farm Implements">
+           Category Manager - Farm Implements
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Category
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk036qb/">
+       <a href="/jobs/fk036qb/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Compliance officer">
+           Compliance officer
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-space-on-top-0rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j4hr/">
+       <a href="/jobs/fk0j4hr/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Data Analyst CC">
+           Data Analyst CC
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Data
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03oh4/">
+       <a href="/jobs/fk03oh4/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Digital Marketing - Campaign Manager">
+           Digital Marketing - Campaign Manager
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Marketing
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j4hv/">
+       <a href="/jobs/fk0j4hv/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Director Product">
+           Director Product
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Product
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03sww/">
+       <a href="/jobs/fk03sww/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Executive-Operations">
+           Executive-Operations
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Operations
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03prt/">
+       <a href="/jobs/fk03prt/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Executive/Sr. Executive – Accounts Payable">
+           Executive/Sr. Executive – Accounts Payable
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Finance
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03n27/">
+       <a href="/jobs/fk03n27/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Growth Marketing Manager">
+           Growth Marketing Manager
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Marketing
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03rod/">
+       <a href="/jobs/fk03rod/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="HR Executive">
+           HR Executive
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           HR
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0339g/">
+       <a href="/jobs/fk0339g/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Lead - Data Scientist">
+           Lead - Data Scientist
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Data
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03vtp/">
+       <a href="/jobs/fk03vtp/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Lead - Fulfillment Center ">
+           Lead - Fulfillment Center
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Operations
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j4m2/">
+       <a href="/jobs/fk0j4m2/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Lead UI Engineer">
+           Lead UI Engineer
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Product
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j46q/">
+       <a href="/jobs/fk0j46q/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Logistics Lead">
+           Logistics Lead
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Fulfillment Center
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03ub9/">
+       <a href="/jobs/fk03ub9/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Manager - Operations">
+           Manager - Operations
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Operations
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03pww/">
+       <a href="/jobs/fk03pww/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Manager-First Mile Operations">
+           Manager-First Mile Operations
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune.Maharashtra">
+           <span class="meta-job-location-city cut-text">
+            Pune.Maharashtra
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Operations
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j4hi/">
+       <a href="/jobs/fk0j4hi/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Marketing Executive">
+           Marketing Executive
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Marketing
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03o23/">
+       <a href="/jobs/fk03o23/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Product Analyst">
+           Product Analyst
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Product
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03pr8/">
+       <a href="/jobs/fk03pr8/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Program Manager">
+           Program Manager
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Operations
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0j4hp/">
+       <a href="/jobs/fk0j4hp/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Recruitment Specialist">
+           Recruitment Specialist
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune, Maharashtra, India ">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+           ,
+           <span class="meta-job-location-state">
+            Maharashtra
+           </span>
+           ,
+           <span class="meta-job-location-country">
+            India
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           HR
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk0378u/">
+       <a href="/jobs/fk0378u/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Regional Sales Manager">
+           Regional Sales Manager
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Karnataka">
+           <span class="meta-job-location-city cut-text">
+            Karnataka
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-space-on-top-0rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="js-card list-item list-item-clickable js-careers-page-job-list-item" data-href="/jobs/fk03iwb/">
+       <a href="/jobs/fk03iwb/">
+        <div class="row">
+         <div class="col-md-6 col-xs-6">
+          <h3 class="rb-h3 js-job-list-opening-name cut-text rb-text-color-primary rb-space-on-bottom-2rbpx" data-placement="top" data-toggle="tooltip" title="Senior Manager - Content">
+           Senior Manager - Content
+          </h3>
+          <div class="rb-text-6 js-job-list-opening-loc cut-text" data-placement="top" data-toggle="tooltip" title="Pune">
+           <span class="meta-job-location-city cut-text">
+            Pune
+           </span>
+          </div>
+         </div>
+         <div class="col-xs-6 visible-xs text-right">
+         </div>
+         <div class="col-md-4 col-xs-12">
+          <div class="rb-text-4">
+           Content
+          </div>
+          <div class="rb-space-on-top-2rbpx">
+          </div>
+          <div class="rb-text-4 js-job-list-opening-meta">
+           <span>
+            Full-time
+           </span>
+          </div>
+         </div>
+         <div class="col-md-2 hidden-xs text-right py-3">
+         </div>
+        </div>
+       </a>
+      </div>
+      <div class="rb-divider">
+      </div>
+      <div class="div_navigation rb-space-on-top-5rbpx rb-space-on-bottom-5rbpx">
+       <span class="highlight">
+        1
+       </span>
+       to
+       <span class="highlight">
+        30
+       </span>
+       of
+       <span class="highlight">
+        39
+       </span>
+       jobs
+       <a class="btn-link offset5px" href="?p=2#content">
+        next »
+       </a>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+  <div class="page-footer hidden-print">
+   <div class="container">
+    <h5 class="footer-title">
+     Couldn't find the opening you were looking for?
+    </h5>
+    <div class="row">
+     <div class="col-md-5 follow-company">
+      <div class="js-follow-company-wrapper">
+       <p>
+        Get updates about upcoming openings straight to your inbox
+       </p>
+       <form action="/follow_client/" class="js-follow-company-form" method="post" role="form">
+        <input name="csrfmiddlewaretoken" type="hidden" value="n6uxsjoF6FqhBjb1gZECaLAJMgLr1K1Z5BTHLUUcef8n2LEPktFt8mcCAA6vRJgx"/>
+        <div class="form-group">
+         <label class="sr-only" for="follow_email">
+          Email address
+         </label>
+         <div class="input-group">
+          <input class="form-control" id="follow_email" name="email" placeholder="Your email address" required="required" type="email"/>
+          <span class="input-group-btn">
+           <button class="btn btn-default js-follow-company-button" data-loading-text="Saving..." type="submit">
+            Keep me posted
+           </button>
+          </span>
+         </div>
+        </div>
+        <input name="client" required="required" type="hidden" value="u0heik"/>
+        <div class="form-follow-error js-follow-company-error" style="display:none;">
+        </div>
+       </form>
+      </div>
+      <div class="follow-company-rss">
+       <i class="fa fa-rss tail5px">
+       </i>
+       <a class="btn-link" href="/jobfeeds/UlinkAgritech" target="_blank">
+        Jobs RSS Feed
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="page_footer page-footer">
+   <div class="container">
+    <a class="powered-by clearfix" href="http://recruiterbox.com/">
+     <div class="powered-by-logo pull-left">
+      <div class="icon icon-rbox-logo">
+      </div>
+     </div>
+     <div class="powered-by-text pull-left">
+      <div class="powered-by-text-title">
+       powered by
+      </div>
+      <div class="powered-by-text-brand">
+       <b>
+        Recruiterbox
+       </b>
+      </div>
+     </div>
+    </a>
+   </div>
+  </div>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-MSXJKT" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSXJKT');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <!-- Global Variables -->
+  <script type="text/javascript">
+   var _RB = {
+	    BUILD_VERSION: '',
+	    ENVIRONMENT: "sandbox",
+	    ajax_loader_url: "//d2ci7y8jachp9m.cloudfront.net/static/images/animations/ajax-loader-fb-fcb26e4667d713405138f5aac132f97aa415c6f5.gif",
+        GOOGLE_MAPS_API_KEY: "AIzaSyABGgpvUrb7ykw25SOhXkD1KZ8NMO0ReYo"
+	};
+
+	var RB = {
+	    init_data: {
+            filters:  {"states": {"options": [{"count": 1, "selected": false, "option": {"id": "Bihar", "name": "Bihar"}}, {"count": 2, "selected": false, "option": {"id": "Gujarat", "name": "Gujarat"}}, {"count": 25, "selected": false, "option": {"id": "Maharashtra", "name": "Maharashtra"}}], "order": 1}, "cities": {"options": [{"count": 2, "selected": false, "option": {"id": "Ahmedabad", "name": "Ahmedabad"}}, {"count": 1, "selected": false, "option": {"id": "Bihar", "name": "Bihar"}}, {"count": 25, "selected": false, "option": {"id": "Pune", "name": "Pune"}}], "order": 2}, "other_locations": {"options": [{"count": 1, "selected": false, "option": {"id": "Karnataka", "name": "Karnataka"}}, {"count": 9, "selected": false, "option": {"id": "Pune", "name": "Pune"}}, {"count": 1, "selected": false, "option": {"id": "Pune.Maharashtra", "name": "Pune.Maharashtra"}}], "order": 3}, "teams": {"options": [{"count": 3, "selected": false, "option": {"id": 18715, "name": "Agri Advisory"}}, {"count": 1, "selected": false, "option": {"id": 22959, "name": "Category"}}, {"count": 1, "selected": false, "option": {"id": 18465, "name": "Content"}}, {"count": 2, "selected": false, "option": {"id": 18463, "name": "Data"}}, {"count": 2, "selected": false, "option": {"id": 18364, "name": "Finance "}}, {"count": 1, "selected": false, "option": {"id": 18468, "name": "Fulfillment Center"}}, {"count": 4, "selected": false, "option": {"id": 18365, "name": "HR"}}, {"count": 4, "selected": false, "option": {"id": 18464, "name": "Marketing"}}, {"count": 5, "selected": false, "option": {"id": 18428, "name": "Operations"}}, {"count": 1, "selected": false, "option": {"id": 21877, "name": "Procurement"}}, {"count": 4, "selected": false, "option": {"id": 18462, "name": "Product"}}, {"count": 1, "selected": false, "option": {"id": 18366, "name": "Quality engineering"}}, {"count": 1, "selected": false, "option": {"id": 18470, "name": "Strategic Alliances"}}, {"count": 2, "selected": false, "option": {"id": 20001, "name": "Tech"}}], "order": 4}, "countries": {"options": [{"count": 28, "selected": false, "option": {"id": "India", "name": "India"}}], "order": 0}} ,
+            radius_search_parameters:  {} ,
+            settings:  {"hosted_site_filters": ["COUNTRY", "STATE", "CITY", "OTHER_LOCATION", "TEAM"], "hosted_site_radius_search_enabled": false} ,
+        },
+        banner_images: {
+            mobile: 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/4940d13e796f427e9b8c4b8ae2778e03/New-Office-Images_Collage.jpg',
+            desktop: 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/4940d13e796f427e9b8c4b8ae2778e03/New-Office-Images_Collage.jpg'
+        }
+	}
+  </script>
+  <script src="//d2ci7y8jachp9m.cloudfront.net/static/js/runtime.2acab38f99e4c4cc75f2.js">
+  </script>
+  <script src="//d2ci7y8jachp9m.cloudfront.net/static/js/vendors.fa9acd62a2b261910711.js">
+  </script>
+  <script src="//d2ci7y8jachp9m.cloudfront.net/static/js/careers_page.8be8f0f4d645bcf07159.js">
+  </script>
+  <script>
+   $( document ).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip({
+                delay: { show: 350, hide: 100 },
+            });
+        });
+  </script>
+ </body>
+</html>

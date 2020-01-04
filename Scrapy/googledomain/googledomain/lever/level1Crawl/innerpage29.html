@@ -1,0 +1,2811 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"fb4e40776b",applicationID:"308893147"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <script src="https://cdn.optimizely.com/js/15777290433.js">
+  </script>
+  <title>
+   HR and Recruiting Integrations | Lever Ecosystem
+  </title>
+  <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+  <script data-cfasync="false" type="text/javascript">
+   //<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+  </script>
+  <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+  <!-- This site is optimized with the Yoast SEO plugin v12.6 - https://yoast.com/wordpress/plugins/seo/ -->
+  <meta content="Lever is one of many essential tools in your HR tech stack. Learn how Lever integrates with the other human resources tools your team uses on a daily basis." name="description">
+   <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots">
+    <link href="https://www.lever.co/ecosystem/" rel="canonical">
+     <meta content="en_US" property="og:locale"/>
+     <meta content="article" property="og:type"/>
+     <meta content="HR and Recruiting Integrations | Lever Ecosystem" property="og:title"/>
+     <meta content="Lever is one of many essential tools in your HR tech stack. Learn how Lever integrates with the other human resources tools your team uses on a daily basis." property="og:description"/>
+     <meta content="https://www.lever.co/ecosystem/" property="og:url"/>
+     <meta content="Lever" property="og:site_name"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1-1024x985.png" property="og:image"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1-1024x985.png" property="og:image:secure_url"/>
+     <meta content="summary_large_image" name="twitter:card"/>
+     <meta content="Lever is one of many essential tools in your HR tech stack. Learn how Lever integrates with the other human resources tools your team uses on a daily basis." name="twitter:description"/>
+     <meta content="HR and Recruiting Integrations | Lever Ecosystem" name="twitter:title"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1-1024x985.png" name="twitter:image"/>
+     <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lever.co/#website","url":"https://www.lever.co/","name":"Lever","description":"Lever Recruiting Software","potentialAction":{"@type":"SearchAction","target":"https://www.lever.co/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.lever.co/ecosystem/#primaryimage","url":"https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1.png","width":3353,"height":3226},{"@type":"WebPage","@id":"https://www.lever.co/ecosystem/#webpage","url":"https://www.lever.co/ecosystem/","inLanguage":"en-US","name":"HR and Recruiting Integrations | Lever Ecosystem","isPartOf":{"@id":"https://www.lever.co/#website"},"primaryImageOfPage":{"@id":"https://www.lever.co/ecosystem/#primaryimage"},"datePublished":"2019-04-16T19:00:30+00:00","dateModified":"2019-07-03T04:20:27+00:00","description":"Lever is one of many essential tools in your HR tech stack. Learn how Lever integrates with the other human resources tools your team uses on a daily basis."}]}
+     </script>
+     <!-- / Yoast SEO plugin. -->
+     <link href="//www.lever.co" rel="dns-prefetch"/>
+     <link href="//munchkin.marketo.net" rel="dns-prefetch"/>
+     <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
+     <link href="//s.w.org" rel="dns-prefetch"/>
+     <link href="https://www.lever.co/feed/" rel="alternate" title="Lever » Feed" type="application/rss+xml"/>
+     <link href="https://www.lever.co/comments/feed/" rel="alternate" title="Lever » Comments Feed" type="application/rss+xml"/>
+     <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.lever.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+     </script>
+     <style type="text/css">
+      img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+     </style>
+     <link href="https://www.lever.co/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/metronet-profile-picture/css/front-end-gutenberg.css?ver=2.1.3" id="mpp_gutenberg-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/css/style.css?ver=5.2.4" id="cookie-consent-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/css/ult_marketo_forms-public.css?ver=1.0.1" id="ult_marketo_forms-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/public/css/wpp.css?ver=4.2.2" id="wordpress-popular-posts-css-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/css/minifycss/magnific-popup.min.css?ver=1.0.2" id="lib-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/underscores.min.css?ver=5.2.4" id="lever-underscores-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/style.min.css?ver=1.0.0-904" id="lever-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/header.min.css?ver=1.0.0-904" id="lever-header-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/footer.min.css?ver=1.0.0-904" id="lever-footer-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=4.3.0" id="elementor-icons-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0" id="font-awesome-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.5.14" id="elementor-animations-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.5.14" id="elementor-frontend-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/uploads/elementor/css/global.css?ver=1567035774" id="elementor-global-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/uploads/elementor/css/post-13070.css?ver=1562127628" id="elementor-post-13070-css" media="all" rel="stylesheet" type="text/css"/>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/forms2.min.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/ult_marketo_forms-public.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script src="//munchkin.marketo.net/munchkin.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      Munchkin.init('293-AOQ-024');
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/www.lever.co\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/","ID":"13070","token":"a1087beb23","debug":""};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/public/js/wpp-4.2.0.min.js?ver=4.2.2" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.9.2" type="text/javascript">
+     </script>
+     <link href="https://www.lever.co/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+     <link href="https://www.lever.co/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+     <meta content="WordPress 5.2.4" name="generator"/>
+     <link href="https://www.lever.co/?p=13070" rel="shortlink"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fecosystem%2F" rel="alternate" type="application/json+oembed"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fecosystem%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+     <style id="ctcc-css" media="screen" type="text/css">
+      #catapult-cookie-bar {
+					box-sizing: border-box;
+					max-height: 0;
+					opacity: 0;
+					z-index: 99999;
+					overflow: hidden;
+					color: #ddd;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					background-color: #464646;
+				}
+				#catapult-cookie-bar a {
+					color: #fff;
+				}
+				#catapult-cookie-bar .x_close span {
+					background-color: ;
+				}
+				button#catapultCookie {
+					background:;
+					color: ;
+					border: 0; padding: 6px 9px; border-radius: 3px;
+				}
+				#catapult-cookie-bar h3 {
+					color: #ddd;
+				}
+				.has-cookie-bar #catapult-cookie-bar {
+					opacity: 1;
+					max-height: 999px;
+					min-height: 30px;
+				}
+     </style>
+     <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+     <script data-cfasync="false" type="text/javascript">
+      //<![CDATA[
+	dataLayer.push({"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"superuser"});//]]>
+     </script>
+     <script data-cfasync="false">
+      //<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSF9Z3W');//]]>
+     </script>
+     <!-- End Google Tag Manager -->
+     <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+     <style type="text/css">
+      .site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+     </style>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="32x32"/>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="192x192"/>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="apple-touch-icon-precomposed"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" name="msapplication-TileImage"/>
+    </link>
+   </meta>
+  </meta>
+ </head>
+ <body class="page-template page-template-elementor_header_footer page page-id-13070 wp-custom-logo no-sidebar page-integrations elementor-default elementor-template-full-width elementor-page elementor-page-13070">
+  <div class="site page-wrap body-page-wrap" id="page">
+   <a class="skip-link screen-reader-text" href="#content">
+    Skip to content
+   </a>
+   <header class="site-header header" id="masthead">
+    <div class="header__wrapper">
+     <div class="site-branding">
+      <a class="custom-logo-link" href="https://www.lever.co/" rel="home">
+       <img alt="lever recruiting software" class="custom-logo" height="48" src="https://www.lever.co/wp-content/uploads/2019/03/lever_rgb_logo_standard.svg" width="169.001"/>
+      </a>
+      <p class="site-title">
+       <a href="https://www.lever.co/" rel="home">
+        Lever
+       </a>
+      </p>
+      <p class="site-description">
+       Lever Recruiting Software
+      </p>
+     </div>
+     <!-- .site-branding -->
+     <div class="menu-overflow hidden-large">
+     </div>
+     <div class="menu-wrapper">
+      <nav class="main-navigation" id="site-navigation">
+       <div class="menu-main-menu-container">
+        <ul class="menu" id="primary-menu">
+         <li class="hidden-large menu-item menu-item-type-custom menu-item-object-custom menu-item-76" id="menu-item-76">
+          <a href="https://hire.lever.co/">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-32" id="menu-item-32">
+          <a href="/talent-suite">
+           Products
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13835" id="menu-item-13835">
+            <a href="https://www.lever.co/talent-suite/">
+             Lever Talent Suite
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39" id="menu-item-39">
+            <a href="/hire">
+             Lever Hire
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49" id="menu-item-49">
+            <a href="/nurture">
+             Lever Nurture
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50" id="menu-item-50">
+            <a href="/analytics">
+             Lever Analytics
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13834" id="menu-item-13834">
+            <a href="https://www.lever.co/talent-cloud-connect/">
+             Talent Cloud Connect
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51" id="menu-item-51">
+            <a href="/pricing">
+             Plans and Pricing
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-40" id="menu-item-40">
+            <a aria-current="page" href="/ecosystem">
+             Ecosystem
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15555" id="menu-item-15555">
+          <a href="/pricing">
+           Pricing
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" id="menu-item-33">
+          <a href="/customers">
+           Customers
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4561" id="menu-item-4561">
+          <a href="https://www.lever.co/recruiting-resources/">
+           Resources
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4562" id="menu-item-4562">
+            <a href="https://www.lever.co/recruiting-resources/">
+             All
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-342" id="menu-item-342">
+            <a href="https://www.lever.co/recruiting-resources/ebook/">
+             eBooks
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-343" id="menu-item-343">
+            <a href="https://www.lever.co/recruiting-resources/video/">
+             Videos
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-346" id="menu-item-346">
+            <a href="https://www.lever.co/recruiting-resources/webinar/">
+             Webinars
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-345" id="menu-item-345">
+            <a href="https://www.lever.co/recruiting-resources/tools/">
+             Tools and Templates
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-344" id="menu-item-344">
+            <a href="https://www.lever.co/recruiting-resources/datasheet/">
+             Product Datasheets
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13391" id="menu-item-13391">
+            <a href="https://www.lever.co/gdpr-recruiting/">
+             GDPR
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16854" id="menu-item-16854">
+            <a href="https://www.lever.co/lever-for-startups/">
+             Lever for Startups
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-35" id="menu-item-35">
+          <a href="/about">
+           Company
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44" id="menu-item-44">
+            <a href="/about">
+             About Us
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4566" id="menu-item-4566">
+            <a href="https://www.lever.co/diversity-and-inclusion/">
+             Diversity
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47" id="menu-item-47">
+            <a href="/press">
+             Press
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46" id="menu-item-46">
+            <a href="/careers">
+             Careers
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48" id="menu-item-48">
+            <a href="/partner-referral-application">
+             Referral Program
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15716" id="menu-item-15716">
+            <a href="https://www.lever.co/events/">
+             Events
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" id="menu-item-36">
+          <a href="/blog">
+           Blog
+          </a>
+         </li>
+        </ul>
+       </div>
+      </nav>
+      <!-- #site-navigation -->
+      <div class="user-navigation">
+       <div class="menu-user-menu-container">
+        <ul class="menu" id="menu-user-menu">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" id="menu-item-37">
+          <a href="https://hire.lever.co" rel="noopener noreferrer" target="_blank">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-button menu-item menu-item-type-custom menu-item-object-custom menu-item-38" id="menu-item-38">
+          <a href="/1801-demo-signup">
+           Get a demo
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="social-links hidden-large">
+       <div class="menu-socail-links-container">
+        <ul class="menu" id="menu-socail-links">
+         <li class="fa fa-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-73" id="menu-item-73">
+          <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+           Twitter
+          </a>
+         </li>
+         <li class="fa fa-linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-74" id="menu-item-74">
+          <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+           Linkedin
+          </a>
+         </li>
+         <li class="fa fa-facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-75" id="menu-item-75">
+          <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+           Facebook
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- .menu-wrapper -->
+     <button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle hidden-large">
+      <span class="fa fa-bars">
+      </span>
+     </button>
+    </div>
+    <!-- .header__wrapper -->
+   </header>
+   <!-- #masthead -->
+   <div class="site-content" id="content">
+    <div class="elementor elementor-13070" data-elementor-id="13070" data-elementor-settings="[]" data-elementor-type="post">
+     <div class="elementor-inner">
+      <div class="elementor-section-wrap">
+       <section class="elementor-element elementor-element-583b2b6d elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="583b2b6d" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-1fe51d74 elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="1fe51d74">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-ce2361f elementor-widget elementor-widget-heading" data-element_type="widget" data-id="ce2361f" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+               <h2 class="elementor-heading-title elementor-size-default">
+                Talent Ecosystem
+               </h2>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-79e47880 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="79e47880" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <p>
+                 <span style="font-weight: 400;">
+                  Working together for better talent outcomes.
+                 </span>
+                </p>
+               </div>
+              </div>
+             </div>
+             <section class="elementor-element elementor-element-54d3b32 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section" data-id="54d3b32">
+              <div class="elementor-container elementor-column-gap-default">
+               <div class="elementor-row">
+                <div class="elementor-element elementor-element-abd1e4b elementor-column elementor-col-50 elementor-inner-column" data-element_type="column" data-id="abd1e4b">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-8a29f60 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="8a29f60" data-widget_type="spacer.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-spacer">
+                      <div class="elementor-spacer-inner">
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-3288f90 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="3288f90" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                     <h4 class="elementor-heading-title elementor-size-default">
+                      Talent Data is the New Oil
+                     </h4>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-2d229de elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="2d229de" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-text-editor elementor-clearfix">
+                      <p>
+                       <span style="font-weight: 400;">
+                        The Talent Cloud is Lever’s framework that offers a talent data platform connecting channels, pre-hire and post-hire workflows to deliver a single view of talent lifecycle data.
+                       </span>
+                      </p>
+                      <ul>
+                       <li>
+                        <span style="font-weight: 400;">
+                         Less complexity
+                        </span>
+                       </li>
+                       <li>
+                        <span style="font-weight: 400;">
+                         Org-wide collaboration
+                        </span>
+                       </li>
+                       <li>
+                        <span style="font-weight: 400;">
+                         One view across all touchpoints
+                        </span>
+                       </li>
+                       <li>
+                        <span style="font-weight: 400;">
+                         More complete data
+                        </span>
+                       </li>
+                      </ul>
+                      <p>
+                       <span style="font-weight: 400;">
+                       </span>
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="elementor-element elementor-element-7fbf350 elementor-column elementor-col-50 elementor-inner-column" data-element_type="column" data-id="7fbf350">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-a5033ae elementor-widget elementor-widget-image" data-element_type="widget" data-id="a5033ae" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-image">
+                      <img alt="" class="attachment-large size-large" height="616" sizes="(max-width: 640px) 100vw, 640px" src="https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1-1024x985.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1-1024x985.png 1024w, https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1-300x289.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1-768x739.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Talent-Cloud-gray-1-24x24.png 24w" width="640"/>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-9e6a2a6 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="9e6a2a6" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-1073d22 elementor-column elementor-col-50 elementor-top-column" data-element_type="column" data-id="1073d22">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-3b0617d elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="3b0617d" data-widget_type="spacer.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-spacer">
+                <div class="elementor-spacer-inner">
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-7a56a15 elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="7a56a15" data-widget_type="spacer.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-spacer">
+                <div class="elementor-spacer-inner">
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-661ab6c elementor-widget elementor-widget-heading" data-element_type="widget" data-id="661ab6c" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+               <h3 class="elementor-heading-title elementor-size-default">
+                Introducing Talent Cloud Connect for Workday
+               </h3>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-23f22f0 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="23f22f0" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <p>
+                 <span style="font-weight: 400;">
+                  Seamlessly brings together Lever and Workday for automated workflows, unified talent data and blended insights. With the out-of-the-box integration Lever and Workday you get the best of both worlds – fast and easy.
+                 </span>
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-68849df elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="68849df" data-widget_type="spacer.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-spacer">
+                <div class="elementor-spacer-inner">
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-8c5bf6a elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="8c5bf6a" data-widget_type="spacer.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-spacer">
+                <div class="elementor-spacer-inner">
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="elementor-element elementor-element-bd3af82 elementor-column elementor-col-50 elementor-top-column" data-element_type="column" data-id="bd3af82">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-b315ead elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="b315ead" data-widget_type="spacer.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-spacer">
+                <div class="elementor-spacer-inner">
+                </div>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-ddbeb76 elementor-widget elementor-widget-image" data-element_type="widget" data-id="ddbeb76" data-widget_type="image.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-image">
+                <img alt="" class="attachment-large size-large" height="134" sizes="(max-width: 317px) 100vw, 317px" src="https://www.lever.co/wp-content/uploads/2019/04/8FQ1TNTS3WE6.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/8FQ1TNTS3WE6.png 317w, https://www.lever.co/wp-content/uploads/2019/04/8FQ1TNTS3WE6-300x127.png 300w" width="317"/>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-b1be39d elementor-button-warning elementor-align-center button elementor-widget elementor-widget-button" data-element_type="widget" data-id="b1be39d" data-widget_type="button.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-button-wrapper">
+                <a class="elementor-button-link elementor-button elementor-size-sm" href="/talent-cloud-connect" role="button">
+                 <span class="elementor-button-content-wrapper">
+                  <span class="elementor-button-text">
+                   learn more
+                  </span>
+                 </span>
+                </a>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-5f9c0cc elementor-widget elementor-widget-spacer" data-element_type="widget" data-id="5f9c0cc" data-widget_type="spacer.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-spacer">
+                <div class="elementor-spacer-inner">
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-96fb99b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="96fb99b">
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-f8b9843 elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="f8b9843">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-f8d8792 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="f8d8792" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <div>
+                 <div style="display: flex; flex-wrap: nowrap; justify-content: space-between; margin-left: -20px; margin-right: -20px; width: unset;">
+                  <div data-w="12" data-widget-type="custom_widget" data-x="0" style="max-width: 700px; padding-left: 20px; padding-right: 20px; text-align: center; margin-left: auto; min-height: 1px; width: calc(100% - 40px); margin-right: auto; float: none;">
+                   <div data-hs-cos-general-type="widget" data-hs-cos-type="module">
+                   </div>
+                   <div data-hs-cos-general-type="widget" data-hs-cos-type="module">
+                   </div>
+                   <div data-hs-cos-general-type="widget" data-hs-cos-type="module">
+                    <span data-hs-cos-general-type="widget" data-hs-cos-type="text" style="overflow-wrap: break-word;">
+                     Lever is one of many essential tools in your HR tech stack. It’s about time that those tools talked to each other. Eliminate the back and forth, the manual data entry, and the inefficient processes. From sourcing to offer generation, we’re committed to streamlining the way you work.
+                    </span>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-451f628b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="451f628b">
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-30b0b6b9 elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="30b0b6b9">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-365ca4d6 elementor-widget elementor-widget-shortcode" data-element_type="widget" data-id="365ca4d6" data-widget_type="shortcode.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-shortcode">
+                <div id="integrations-list">
+                 <div class="relative" id="integrations-two-column-container">
+                  <div id="integrations-filters">
+                   <input class="search ml15 pb20" id="integrations-search" placeholder="Search integrations"/>
+                   <h5 class="mb15 ml15">
+                    Filter by category
+                   </h5>
+                   <a id="clear-filters">
+                    All
+                   </a>
+                   <a>
+                    Access and communication
+                   </a>
+                   <a>
+                    Analytics
+                   </a>
+                   <a>
+                    Assessments
+                   </a>
+                   <a>
+                    Background checks
+                   </a>
+                   <a>
+                    Hiring and onboarding
+                   </a>
+                   <a>
+                    Interviewing and Scheduling
+                   </a>
+                   <a>
+                    Job boards
+                   </a>
+                   <a>
+                    Sourcing and referrals
+                   </a>
+                  </div>
+                  <div id="main-column">
+                   <div class="row-fluid">
+                    <div class="span12">
+                     <p class="text-color-50 mb30 fs16" id="no-results" style="display: none;">
+                      Ops! Didn't find anything
+                            here.
+                      <a class="underline ml10" id="clear-all" style="display: inline;">
+                       Clear filters
+                      </a>
+                     </p>
+                    </div>
+                   </div>
+                   <div class="wrap">
+                    <div class="row-fluid list">
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/213498943">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="A-List" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="344" sizes="(max-width: 1456px) 100vw, 1456px" src="https://www.lever.co/wp-content/uploads/2019/04/A-List_horiz_lockup-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/A-List_horiz_lockup-1.png 1456w, https://www.lever.co/wp-content/uploads/2019/04/A-List_horiz_lockup-1-300x71.png 300w, https://www.lever.co/wp-content/uploads/2019/04/A-List_horiz_lockup-1-768x181.png 768w, https://www.lever.co/wp-content/uploads/2019/04/A-List_horiz_lockup-1-1024x242.png 1024w" width="1456"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        A-List
+                       </h3>
+                       <p>
+                        <p>
+                         A-List candidates are algorithmically identified before they’re active, and use A-List to privately reveal what they want next in their careers. The A-List team reviews every candidate to confirm that they are qualified and ready to interview, and …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/213498943">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/210315343">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="473" sizes="(max-width: 1783px) 100vw, 1783px" src="https://www.lever.co/wp-content/uploads/2019/04/Abacus-Logo-Grey-Transparent-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Abacus-Logo-Grey-Transparent-1.png 1783w, https://www.lever.co/wp-content/uploads/2019/04/Abacus-Logo-Grey-Transparent-1-300x80.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Abacus-Logo-Grey-Transparent-1-768x204.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Abacus-Logo-Grey-Transparent-1-1024x272.png 1024w" width="1783"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Abacus
+                       </h3>
+                       <p>
+                        <p>
+                         Abacus modernizes the recruiting experience with fast and easy expense reimbursements. No more emailed receipts, mailed checks, or payment lags. Connect Abacus and Lever to automatically invite candidates to submit their expenses when they reach a …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/210315343">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115000976583">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="492" sizes="(max-width: 2404px) 100vw, 2404px" src="https://www.lever.co/wp-content/uploads/2019/04/Adobe_Sign_logotype_with_logo_RGB_one_line_black.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Adobe_Sign_logotype_with_logo_RGB_one_line_black.png 2404w, https://www.lever.co/wp-content/uploads/2019/04/Adobe_Sign_logotype_with_logo_RGB_one_line_black-300x61.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Adobe_Sign_logotype_with_logo_RGB_one_line_black-768x157.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Adobe_Sign_logotype_with_logo_RGB_one_line_black-1024x210.png 1024w" width="2404"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Adobe Sign
+                       </h3>
+                       <p>
+                        <p>
+                         Adobe Sign makes end-to-end digital workflows a reality with trusted, legal electronic signatures. Make the most of Lever Offers by enabling the Adobe Sign integration. Track the status of your offers and empower candidates to sign immediately.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115000976583">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360020347411-How-do-I-enable-and-use-the-ADP-Workforce-Now-integration-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="627" sizes="(max-width: 1525px) 100vw, 1525px" src="https://www.lever.co/wp-content/uploads/2019/04/ADPRedLogowTag_RGB_Left_updated_crop.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/ADPRedLogowTag_RGB_Left_updated_crop.png 1525w, https://www.lever.co/wp-content/uploads/2019/04/ADPRedLogowTag_RGB_Left_updated_crop-300x123.png 300w, https://www.lever.co/wp-content/uploads/2019/04/ADPRedLogowTag_RGB_Left_updated_crop-768x316.png 768w, https://www.lever.co/wp-content/uploads/2019/04/ADPRedLogowTag_RGB_Left_updated_crop-1024x421.png 1024w" width="1525"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        ADP
+                       </h3>
+                       <p>
+                        <p>
+                         ADP is a comprehensive global provider of cloud-based human capital management (HCM) solutions that unite HR, payroll, talent, time, tax and benefits administration, and a leader in business outsourcing services, analytics and compliance expertise. …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360020347411-How-do-I-enable-and-use-the-ADP-Workforce-Now-integration-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/206454623">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Aevy" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="50" src="https://www.lever.co/wp-content/uploads/2019/04/aevy.png" width="168"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Aevy
+                       </h3>
+                       <p>
+                        <p>
+                         Aevy enables companies to find and contact passive candidates. Search within Aevy’s extensive database to access rich candidate profiles and identify the right talent for your team. Import these leads directly into Lever with a single click, so your …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/206454623">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/213498963">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="132" sizes="(max-width: 720px) 100vw, 720px" src="https://www.lever.co/wp-content/uploads/2019/04/angellist_black_lockup_720-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/angellist_black_lockup_720-1.png 720w, https://www.lever.co/wp-content/uploads/2019/04/angellist_black_lockup_720-1-300x55.png 300w" width="720"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        AngelList
+                       </h3>
+                       <p>
+                        <p>
+                         AngelList is the world’s largest platform for startup fundraising and hiring. Directly connect with high-quality, active candidates for free by creating a company profile, post your open jobs, and set your talent filters to quickly find and match …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/213498963">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360032582611-How-do-I-enable-Lever-s-integration-with-BambooHR-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="BambooHR" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="69" sizes="(max-width: 333px) 100vw, 333px" src="https://www.lever.co/wp-content/uploads/2019/04/BambooHR-Logo-333x69.jpeg" srcset="https://www.lever.co/wp-content/uploads/2019/04/BambooHR-Logo-333x69.jpeg 333w, https://www.lever.co/wp-content/uploads/2019/04/BambooHR-Logo-333x69-300x62.jpeg 300w" width="333"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        BambooHR
+                       </h3>
+                       <p>
+                        <p>
+                         BambooHR provides tools that power the strategic evolution of HR in small-to-medium-sized businesses. Their intuitive, affordable solution helps companies track and manage essential employee information. Through the integration with Lever, hired …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360032582611-How-do-I-enable-Lever-s-integration-with-BambooHR-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Job boards">
+                      <a class="no-underline" href="http://www.builtin.com/">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Built In" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="131" sizes="(max-width: 356px) 100vw, 356px" src="https://www.lever.co/wp-content/uploads/2019/04/builtin_logo-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/builtin_logo-1.png 356w, https://www.lever.co/wp-content/uploads/2019/04/builtin_logo-1-300x110.png 300w" width="356"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Built In
+                       </h3>
+                       <p>
+                        <p>
+                         Built In is the #1 recruitment platform for startups and technology companies, attracting and engaging the best talent in tech. Built In helps its partners create impactful employer brands that resonate with job seekers, tell their unique stories …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="http://www.builtin.com/">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Background checks">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360000127126-How-do-I-push-candidates-to-Checkr-for-background-checks-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Checkr" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="328" sizes="(max-width: 1000px) 100vw, 1000px" src="https://www.lever.co/wp-content/uploads/2019/04/Checkr_Logo_Web_1_2X-2.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Checkr_Logo_Web_1_2X-2.png 1000w, https://www.lever.co/wp-content/uploads/2019/04/Checkr_Logo_Web_1_2X-2-300x98.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Checkr_Logo_Web_1_2X-2-768x252.png 768w" width="1000"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Checkr
+                       </h3>
+                       <p>
+                        <p>
+                         Checkr offers compliant and nationally accredited background screening with an API driven, modern experience that makes the process simpler and more efficient for both companies and applicants. Now integrated with Lever, the solution streamlines …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360000127126-How-do-I-push-candidates-to-Checkr-for-background-checks-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Access and communication">
+                      <a class="no-underline" href="https://support.claralabs.com/hc/en-us/articles/360001811067-Lever-integration-setup">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Clara" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="93" sizes="(max-width: 332px) 100vw, 332px" src="https://www.lever.co/wp-content/uploads/2019/04/clara-logo.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/clara-logo.png 332w, https://www.lever.co/wp-content/uploads/2019/04/clara-logo-300x84.png 300w" width="332"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Clara
+                       </h3>
+                       <p>
+                        <p>
+                         When you use a Lever email template, you can Cc Clara and have it handle all your schedule coordination. Clara will get your candidate’s availability, know when interviewers are free, and book the interview swiftly. Clara will sync all the …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://support.claralabs.com/hc/en-us/articles/360001811067-Lever-integration-setup">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://info.clickboarding.com/lever-integration">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="924" sizes="(max-width: 2157px) 100vw, 2157px" src="https://www.lever.co/wp-content/uploads/2019/04/Click-Boarding-Main-Logo-on-light@2x.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Click-Boarding-Main-Logo-on-light@2x.png 2157w, https://www.lever.co/wp-content/uploads/2019/04/Click-Boarding-Main-Logo-on-light@2x-300x129.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Click-Boarding-Main-Logo-on-light@2x-768x329.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Click-Boarding-Main-Logo-on-light@2x-1024x439.png 1024w" width="2157"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Click Boarding
+                       </h3>
+                       <p>
+                        <p>
+                         Click Boarding helps HR more efficiently onboard new hires with an easier onboarding software solution, from engaging new hires and managing tasks and forms, compliantly. HR has more control over the onboarding process from prioritizing steps, …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://info.clickboarding.com/lever-integration">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115001615946">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="190" sizes="(max-width: 875px) 100vw, 875px" src="https://www.lever.co/wp-content/uploads/2019/04/closeriq_rect_logo_light-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/closeriq_rect_logo_light-1.png 875w, https://www.lever.co/wp-content/uploads/2019/04/closeriq_rect_logo_light-1-300x65.png 300w, https://www.lever.co/wp-content/uploads/2019/04/closeriq_rect_logo_light-1-768x167.png 768w" width="875"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        CloserIQ
+                       </h3>
+                       <p>
+                        <p>
+                         CloserIQ empowers sustainable growth by helping companies build high performing sales organizations. Recommended by 450+ global employers and leading institutional investors, we are a talent strategy firm that helps companies attract, hire, advance, and retain top sales talent.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115001615946">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Assessments">
+                      <a class="no-underline" href="https://coderpad.io/integrations/lever/guide">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="39" src="https://www.lever.co/wp-content/uploads/2019/05/coderpad-logo-color-67265361721d482c1b824cc34dead34712d7ed46b5eec2c722b9b68f706569c2.svg" width="227"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        CoderPad
+                       </h3>
+                       <p>
+                        <p>
+                         CoderPad helps you hire better candidates faster, with an intuitive live programming environment.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://coderpad.io/integrations/lever/guide">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115001050266">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="CodeSignal" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="71" src="https://www.lever.co/wp-content/uploads/2019/04/logo_codesignal.svg" width="288"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        CodeSignal
+                       </h3>
+                       <p>
+                        <p>
+                         CodeSignal unlocks access to a large pool of highly qualified candidates that traditional sources simply don’t have access to. They use their skill-based recruiting platform to identify top developers from a massive community and connect the most …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115001050266">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Assessments">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360004304572">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Codility" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="152" sizes="(max-width: 516px) 100vw, 516px" src="https://www.lever.co/wp-content/uploads/2019/04/codility_logo_blue.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/codility_logo_blue.png 516w, https://www.lever.co/wp-content/uploads/2019/04/codility_logo_blue-300x88.png 300w" width="516"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Codility
+                       </h3>
+                       <p>
+                        <p>
+                         Codility enables tech recruiting teams to accurately screen their candidates’ devs skills and technical knowledge. When integrated with Lever, recruiters can seamlessly invite candidates to take online tests, with each candidate’s full insight …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360004304572">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/206444323">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Connectifier" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="84" sizes="(max-width: 650px) 100vw, 650px" src="https://www.lever.co/wp-content/uploads/2019/04/connectifier-logo-alpha-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/connectifier-logo-alpha-1.png 650w, https://www.lever.co/wp-content/uploads/2019/04/connectifier-logo-alpha-1-300x39.png 300w" width="650"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Connectifier
+                       </h3>
+                       <p>
+                        <p>
+                         Connectifier employs intelligent technology, advanced filters, and organizational features to help you discover and connect with candidates. With our integration, not only can you easily import candidates into Lever, but you can also take advantage …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/206444323">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Assessments">
+                      <a class="no-underline" href="http://go.criteriacorp.com/Lever-Demo-Request-Page.html">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="CriteriaLogo2018" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="1072" sizes="(max-width: 2380px) 100vw, 2380px" src="https://www.lever.co/wp-content/uploads/2019/12/CriteriaLogo2018_Monogram_Blue.png" srcset="https://www.lever.co/wp-content/uploads/2019/12/CriteriaLogo2018_Monogram_Blue.png 2380w, https://www.lever.co/wp-content/uploads/2019/12/CriteriaLogo2018_Monogram_Blue-300x135.png 300w, https://www.lever.co/wp-content/uploads/2019/12/CriteriaLogo2018_Monogram_Blue-768x346.png 768w, https://www.lever.co/wp-content/uploads/2019/12/CriteriaLogo2018_Monogram_Blue-1024x461.png 1024w" width="2380"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Criteria Corp
+                       </h3>
+                       <p>
+                        <p>
+                         Aptitude, Personality and Skills Tests mapped to over 1,100 positions! HireSelect by Criteria Corp is a web-based pre-employment testing system that includes a robust integration with Lever, and comprehensive testing with all your testing needs in one place with aptitude, personality, and skills tests.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="http://go.criteriacorp.com/Lever-Demo-Request-Page.html">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/206410715">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="391" sizes="(max-width: 1107px) 100vw, 1107px" src="https://www.lever.co/wp-content/uploads/2019/04/DS_Logo_Black_RGB.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/DS_Logo_Black_RGB.png 1107w, https://www.lever.co/wp-content/uploads/2019/04/DS_Logo_Black_RGB-300x106.png 300w, https://www.lever.co/wp-content/uploads/2019/04/DS_Logo_Black_RGB-768x271.png 768w, https://www.lever.co/wp-content/uploads/2019/04/DS_Logo_Black_RGB-1024x362.png 1024w" width="1107"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        DocuSign
+                       </h3>
+                       <p>
+                        <p>
+                         DocuSign empowers businesses of all sizes to easily and securely sign, send, and manage documents in the cloud. Through this partnership, you can configure offer templates, customize offer fields, and send offer letters all within Lever.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/206410715">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115001501366">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Drafted" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="33" src="https://www.lever.co/wp-content/uploads/2019/04/drafted-1.png" width="200"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Drafted
+                       </h3>
+                       <p>
+                        <p>
+                         Drafted knows referrals make the best hires, so they offer automated sourcing parties, boosted team engagement, and integrated workflows to help you get in front of more referrals. Through Drafted’s technology, you’re empowered to discover new …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115001501366">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://enboarder.com/lever-integration-with-enboarder/">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Enboarder" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="89" sizes="(max-width: 488px) 100vw, 488px" src="https://www.lever.co/wp-content/uploads/2019/04/enboarder.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/enboarder.png 488w, https://www.lever.co/wp-content/uploads/2019/04/enboarder-300x55.png 300w" width="488"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Enboarder
+                       </h3>
+                       <p>
+                        <p>
+                         Enboarder looks at onboarding through the lens of the employee experience rather than just HR efficiency. With a seamless Lever integration, empower HR teams and hiring managers to create experiences that increase business productivity and lay …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://enboarder.com/lever-integration-with-enboarder/">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/206450153">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Entelo" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="186" sizes="(max-width: 640px) 100vw, 640px" src="https://www.lever.co/wp-content/uploads/2019/04/logo-entelo.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/logo-entelo.png 640w, https://www.lever.co/wp-content/uploads/2019/04/logo-entelo-300x87.png 300w" width="640"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Entelo
+                       </h3>
+                       <p>
+                        <p>
+                         Entelo lets you source from &gt;50 social data sources across the web. Track candidate engagement and use Entelo’s metrics to refine your outreach strategy over time. Let their proprietary algorithms help you target a more diverse talent pool or …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/206450153">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115001526326">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="2023" sizes="(max-width: 5634px) 100vw, 5634px" src="https://www.lever.co/wp-content/uploads/2019/04/fetcher_primary_horizontal_color.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/fetcher_primary_horizontal_color.png 5634w, https://www.lever.co/wp-content/uploads/2019/04/fetcher_primary_horizontal_color-300x108.png 300w, https://www.lever.co/wp-content/uploads/2019/04/fetcher_primary_horizontal_color-768x276.png 768w, https://www.lever.co/wp-content/uploads/2019/04/fetcher_primary_horizontal_color-1024x368.png 1024w" width="5634"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Fetcher
+                       </h3>
+                       <p>
+                        <p>
+                         Think of Fetcher as your personal recruiting expert. Fetcher combines artificial intelligence and human intuition to fill open positions at a fraction of the time and cost of traditional recruiting tools. Save countless hours by letting Fetcher find …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115001526326">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Background checks">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360021109971-How-do-I-configure-and-use-Lever-s-First-Advantage-Integration-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="First Advantage" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="50" src="https://www.lever.co/wp-content/uploads/2019/04/FA_Logo_220x50.png" width="220"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        First Advantage
+                       </h3>
+                       <p>
+                        <p>
+                         First Advantage is the world’s most trusted background check provider. With easy-to-understand background check results, you feel more confident about prospective employee, vendor and contractor decisions. Offering an advanced global technology …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360021109971-How-do-I-configure-and-use-Lever-s-First-Advantage-Integration-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Access and communication">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/205570975">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="G Suite" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="113" sizes="(max-width: 446px) 100vw, 446px" src="https://www.lever.co/wp-content/uploads/2019/04/gsuite.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/gsuite.png 446w, https://www.lever.co/wp-content/uploads/2019/04/gsuite-300x76.png 300w" width="446"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        G Suite
+                       </h3>
+                       <p>
+                        <p>
+                         G Suite is a set of intelligent apps for business, including Gmail, Google Calendar, and Google Contacts. G Suite is designed to help you communicate, store, collaborate and manage seamlessly across your organization. Connect G Suite to Lever to …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/205570975">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Job boards">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/213209646">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Glassdoor" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="86.7" src="https://www.lever.co/wp-content/uploads/2019/04/glassdoor-logo-vector.svg" width="435.8"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Glassdoor
+                       </h3>
+                       <p>
+                        <p>
+                         Glassdoor offers employers the opportunity to highlight job openings to a highly qualified candidate pool. Since Glassdoor is a destination site for applicants to research companies and prepare for interviews, many employers find it to be a key …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/213209646">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Background checks">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/213498983">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="GoodHire" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="77" src="https://www.lever.co/wp-content/uploads/2019/04/goodhire-logo-vector.svg" width="440"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        GoodHire
+                       </h3>
+                       <p>
+                        <p>
+                         GoodHire humanizes the background screening process by helping employers and job candidates build relationships based on mutual trust, safety, and fairness. Automatically push candidates or new hires to your employment screening queue when you …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/213498983">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Interviewing and Scheduling">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360001988992-How-do-I-enable-Lever-s-integration-with-GoodTime-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="GoodTim" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="50" sizes="(max-width: 304px) 100vw, 304px" src="https://www.lever.co/wp-content/uploads/2019/04/goodtime-logo-dark@2x.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/goodtime-logo-dark@2x.png 304w, https://www.lever.co/wp-content/uploads/2019/04/goodtime-logo-dark@2x-300x49.png 300w" width="304"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        GoodTime
+                       </h3>
+                       <p>
+                        <p>
+                         GoodTime is the first Talent Operations Platform that intelligently automates interview scheduling, facilitates interviewer training, and provides comprehensive metrics around interviewing processes.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360001988992-How-do-I-enable-Lever-s-integration-with-GoodTime-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Job boards">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115004978126">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Google" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="184" sizes="(max-width: 544px) 100vw, 544px" src="https://www.lever.co/wp-content/uploads/2019/04/Google-logo.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Google-logo.png 544w, https://www.lever.co/wp-content/uploads/2019/04/Google-logo-300x101.png 300w" width="544"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Google
+                       </h3>
+                       <p>
+                        <p>
+                         Google for Jobs is a powerful, organized search engine for jobs. Lever-hosted career pages are designed to be indexable by Google, so our customers’ job postings appear in Google for Jobs search results.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115004978126">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Assessments">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/217332106-How-do-I-enable-and-use-the-HackerRank-Integration-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="HackerRank" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="138" sizes="(max-width: 600px) 100vw, 600px" src="https://www.lever.co/wp-content/uploads/2019/04/hackerrank-large-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/hackerrank-large-1.png 600w, https://www.lever.co/wp-content/uploads/2019/04/hackerrank-large-1-300x69.png 300w" width="600"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        HackerRank
+                       </h3>
+                       <p>
+                        <p>
+                         HackerRank lets companies assess the skills of developers automatically. Tests can be created in Lever, and the test results are saved to the candidate’s profile when the test is completed.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/217332106-How-do-I-enable-and-use-the-HackerRank-Integration-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Assessments">
+                      <a class="no-underline" href="https://harver.com/schedule-a-demo/">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Harver logo" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="658" sizes="(max-width: 2270px) 100vw, 2270px" src="https://www.lever.co/wp-content/uploads/2019/12/Harver-logo.png" srcset="https://www.lever.co/wp-content/uploads/2019/12/Harver-logo.png 2270w, https://www.lever.co/wp-content/uploads/2019/12/Harver-logo-300x87.png 300w, https://www.lever.co/wp-content/uploads/2019/12/Harver-logo-768x223.png 768w, https://www.lever.co/wp-content/uploads/2019/12/Harver-logo-1024x297.png 1024w" width="2270"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Harver
+                       </h3>
+                       <p>
+                        <p>
+                         Harver is a full suite candidate assessment platform designed to enable innovative companies around the world to hire better, faster. Since our launch in 2015, Harver has had a singular mission — digitally transform the …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://harver.com/schedule-a-demo/">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/207298953-How-do-I-import-candidates-from-Hired-into-Lever-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Hired" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="143.7" src="https://www.lever.co/wp-content/uploads/2019/04/hired-logo-vector.svg" width="847"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Hired
+                       </h3>
+                       <p>
+                        <p>
+                         Hired has built a marketplace that brings together highly qualified knowledge workers with the companies who what to hire them. Through Hired, employers get access to a hand-picked pool of candidates who are interested in new opportunities, as well …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/207298953-How-do-I-import-candidates-from-Hired-into-Lever-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Assessments">
+                      <a class="no-underline" href="https://blog.getpy.com/lever-integration">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Hired Assessments" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="120" sizes="(max-width: 2401px) 100vw, 2401px" src="https://www.lever.co/wp-content/uploads/2019/04/Hired-Assessments.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Hired-Assessments.png 2401w, https://www.lever.co/wp-content/uploads/2019/04/Hired-Assessments-300x15.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Hired-Assessments-768x38.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Hired-Assessments-1024x51.png 1024w" width="2401"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Hired Assessments
+                       </h3>
+                       <p>
+                        <p>
+                         Hired Assessments is democratizing access to career opportunities in tech. We level the playing field for candidates and empower companies to take a skills-based approach to hiring. Our platform enables companies to assess candidates using …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://blog.getpy.com/lever-integration">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Background checks">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360003481092">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="HireRight" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="441" sizes="(max-width: 2376px) 100vw, 2376px" src="https://www.lever.co/wp-content/uploads/2019/04/HIR_Logo_RGB_R_300.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/HIR_Logo_RGB_R_300.png 2376w, https://www.lever.co/wp-content/uploads/2019/04/HIR_Logo_RGB_R_300-300x56.png 300w, https://www.lever.co/wp-content/uploads/2019/04/HIR_Logo_RGB_R_300-768x143.png 768w, https://www.lever.co/wp-content/uploads/2019/04/HIR_Logo_RGB_R_300-1024x190.png 1024w" width="2376"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        HireRight
+                       </h3>
+                       <p>
+                        <p>
+                         HireRight is the premier global background screening and workforce solutions provider. We bring clarity and confidence to vetting and hiring decisions through integrated, tailored solutions, driving a higher standard of accuracy in everything we do. …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360003481092">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://www.hiretual.com/">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Hiretual" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="133" sizes="(max-width: 600px) 100vw, 600px" src="https://www.lever.co/wp-content/uploads/2019/04/hiretual-logo.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/hiretual-logo.png 600w, https://www.lever.co/wp-content/uploads/2019/04/hiretual-logo-300x67.png 300w" width="600"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Hiretual
+                       </h3>
+                       <p>
+                        <p>
+                         Hiretual is a Recruiter’s Best Friend. Find and engage the right people 10x faster. Spend more time building relationships with AI prioritization and instant contact info and less time reading resumes and profiles. Source across 30+ platforms and …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://www.hiretual.com/">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115001070983">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="HumanPredictions" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="108" sizes="(max-width: 720px) 100vw, 720px" src="https://www.lever.co/wp-content/uploads/2019/04/HumanPredictions.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/HumanPredictions.png 720w, https://www.lever.co/wp-content/uploads/2019/04/HumanPredictions-300x45.png 300w" width="720"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        HumanPredictions
+                       </h3>
+                       <p>
+                        <p>
+                         You want to explore your team’s networks and discover new tech people before they start searching. HumanPredictions focuses exclusively on gathering information from diverse technical communities and imports profiles into Lever. Now you can spend …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115001070983">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Interviewing and Scheduling">
+                      <a class="no-underline" href="https://interviewschedule.com/partners/lever">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Interview Schedule" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="498" sizes="(max-width: 2880px) 100vw, 2880px" src="https://www.lever.co/wp-content/uploads/2019/12/Interview-Schedule.png" srcset="https://www.lever.co/wp-content/uploads/2019/12/Interview-Schedule.png 2880w, https://www.lever.co/wp-content/uploads/2019/12/Interview-Schedule-300x52.png 300w, https://www.lever.co/wp-content/uploads/2019/12/Interview-Schedule-768x133.png 768w, https://www.lever.co/wp-content/uploads/2019/12/Interview-Schedule-1024x177.png 1024w" width="2880"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Interview Schedule
+                       </h3>
+                       <p>
+                        <p>
+                         Interview Schedule is the most effective way to streamline recruiting coordination. Fast-growing talent teams use Interview Schedule to put an end to “Calendar Tetris” and the time sink of complex scheduling. The platform integrates with calendars and Lever to make coordination more efficient, measurable, and scalable.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://interviewschedule.com/partners/lever">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://interviewing.io/">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="464" sizes="(max-width: 3164px) 100vw, 3164px" src="https://www.lever.co/wp-content/uploads/2019/06/wordmark@1x-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/06/wordmark@1x-1.png 3164w, https://www.lever.co/wp-content/uploads/2019/06/wordmark@1x-1-300x44.png 300w, https://www.lever.co/wp-content/uploads/2019/06/wordmark@1x-1-768x113.png 768w, https://www.lever.co/wp-content/uploads/2019/06/wordmark@1x-1-1024x150.png 1024w" width="3164"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Interviewing.io
+                       </h3>
+                       <p>
+                        <p>
+                         Interviewing.io is your best-converting channel for hiring engineers. We track how candidates do in live, rigorous technical interviews and get you the best performers.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://interviewing.io/">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Job boards">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/213310726">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Job boards" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="315" sizes="(max-width: 2395px) 100vw, 2395px" src="https://www.lever.co/wp-content/uploads/2019/04/Job_boards_-_Partnership_page_web.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Job_boards_-_Partnership_page_web.png 2395w, https://www.lever.co/wp-content/uploads/2019/04/Job_boards_-_Partnership_page_web-300x39.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Job_boards_-_Partnership_page_web-768x101.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Job_boards_-_Partnership_page_web-1024x135.png 1024w" width="2395"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Job boards
+                       </h3>
+                       <p>
+                        <p>
+                         Lever enables you to post openings to any job board. Post specific roles to specialized boards to target particular applicant pools. Then, take advantage of our reporting to track where your best candidates come from.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/213310726">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Job boards">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/214710843">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="JobTarget" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="162" sizes="(max-width: 600px) 100vw, 600px" src="https://www.lever.co/wp-content/uploads/2019/04/jobtarget-logo_blue_transparent.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/jobtarget-logo_blue_transparent.png 600w, https://www.lever.co/wp-content/uploads/2019/04/jobtarget-logo_blue_transparent-300x81.png 300w" width="600"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        JobTarget
+                       </h3>
+                       <p>
+                        <p>
+                         JobTarget enables companies to hire the best talent faster by allowing you to post your job any major job board and target by geography, industry, or profession. The JobTarget network spans over 20,000 job sites. Take advantage of job distribution, …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/214710843">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115005291783-How-do-I-enable-Lever-s-integration-with-LinkedIn-Recruiter-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="LinkedIn" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="248" sizes="(max-width: 1224px) 100vw, 1224px" src="https://www.lever.co/wp-content/uploads/2019/04/TSPP-2C-306x62dp-4x.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/TSPP-2C-306x62dp-4x.png 1224w, https://www.lever.co/wp-content/uploads/2019/04/TSPP-2C-306x62dp-4x-300x61.png 300w, https://www.lever.co/wp-content/uploads/2019/04/TSPP-2C-306x62dp-4x-768x156.png 768w, https://www.lever.co/wp-content/uploads/2019/04/TSPP-2C-306x62dp-4x-1024x207.png 1024w" width="1224"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        LinkedIn
+                       </h3>
+                       <p>
+                        <p>
+                         As the world’s largest professional network and talent platform, LinkedIn boasts the authoritative database for sourcing and referrals. Through the Talent Solutions Preferred Partnership program, Lever now integrates seamlessly into your LinkedIn …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115005291783-How-do-I-enable-Lever-s-integration-with-LinkedIn-Recruiter-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Job boards">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/213209826">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="LinkedIn" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="347" sizes="(max-width: 1280px) 100vw, 1280px" src="https://www.lever.co/wp-content/uploads/2019/04/linkedin.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/linkedin.png 1280w, https://www.lever.co/wp-content/uploads/2019/04/linkedin-300x81.png 300w, https://www.lever.co/wp-content/uploads/2019/04/linkedin-768x208.png 768w, https://www.lever.co/wp-content/uploads/2019/04/linkedin-1024x278.png 1024w" width="1280"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        LinkedIn
+                       </h3>
+                       <p>
+                        <p>
+                         LinkedIn offers unbeatable reach to quality candidates. LinkedIn automatically advertises your job posting to their members with profiles that would be a great match for your role with smart targeting. Put your job listing in front of candidates …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/213209826">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360033329611">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Namely" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="185.9" src="https://www.lever.co/wp-content/uploads/2019/04/logo-namely.svg" width="572"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Namely
+                       </h3>
+                       <p>
+                        <p>
+                         Namely is the leading HR, payroll, and benefits platform for growing companies. With Namely, you can manage all your HR in one modern system. Facilitate new hire onboarding with ease by automatically pushing employee data from Lever into Namely as …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360033329611">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Access and communication">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115003008343">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Office365" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="350" sizes="(max-width: 1591px) 100vw, 1591px" src="https://www.lever.co/wp-content/uploads/2019/04/office365-logo-transparent-print.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/office365-logo-transparent-print.png 1591w, https://www.lever.co/wp-content/uploads/2019/04/office365-logo-transparent-print-300x66.png 300w, https://www.lever.co/wp-content/uploads/2019/04/office365-logo-transparent-print-768x169.png 768w, https://www.lever.co/wp-content/uploads/2019/04/office365-logo-transparent-print-1024x225.png 1024w" width="1591"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Office365
+                       </h3>
+                       <p>
+                        <p>
+                         Office 365 empowers teams to work anywhere, anytime, on any device. Office 365 provides flexible and familiar tools for collaboration across teams, devices, and platforms, all while granting you control over data security and compliance. Enable our …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115003008343">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Access and communication">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/209312746">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Okta" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="1688" sizes="(max-width: 5000px) 100vw, 5000px" src="https://www.lever.co/wp-content/uploads/2019/04/Okta_Logo_BrightBlue_Large.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Okta_Logo_BrightBlue_Large.png 5000w, https://www.lever.co/wp-content/uploads/2019/04/Okta_Logo_BrightBlue_Large-300x101.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Okta_Logo_BrightBlue_Large-768x259.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Okta_Logo_BrightBlue_Large-1024x346.png 1024w" width="5000"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Okta
+                       </h3>
+                       <p>
+                        <p>
+                         Okta is the foundation for secure connections between people and technology. Through our integration, use Okta to grant access to Lever on any device at anytime, while enforcing strong security protections.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/209312746">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Access and communication">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/207605726">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Onelogin" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="46" src="https://www.lever.co/wp-content/uploads/2019/04/onelogin-1.png" width="186"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Onelogin
+                       </h3>
+                       <p>
+                        <p>
+                         OneLogin is a cloud-based identity and access management solution that provides single sign-on for cloud-based applications. With our integration, every member of your team can seamlessly log in to Lever.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/207605726">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360028344651-How-do-I-enable-and-use-the-Paylocity-Onboarding-integration-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="372.58667" src="https://www.lever.co/wp-content/uploads/2019/09/paylocity-logo.svg" width="760.61334"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Paylocity
+                       </h3>
+                       <p>
+                        <div>
+                         Paylocity has revolutionized the marketplace for payroll and human resources professionals for more than 20 years.
+                        </div>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360028344651-How-do-I-enable-and-use-the-Paylocity-Onboarding-integration-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://www.phenompeople.com/request-demo">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Phenom People Logo" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="93" src="https://www.lever.co/wp-content/uploads/2019/12/Phenom-People-Logo-e1576118932284.png" width="177"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        PhenomPeople
+                       </h3>
+                       <p>
+                        <p>
+                         Phenom People is a global HR technology company with a mission to help a billion people find the right job. We do this through an AI-based SaaS platform called Talent Experience Management (TXM).The Phenom Talent Experience …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://www.phenompeople.com/request-demo">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://www.rippling.com/">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="70" src="https://www.lever.co/wp-content/uploads/2019/05/Black-Logo-205x70-1.png" width="205"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Rippling
+                       </h3>
+                       <p>
+                        <p>
+                         Rippling is the world’s first way to manage your company’s HR &amp; IT — from your team’s payroll and benefits, to their computers and cloud apps — all in one, integrated system.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://www.rippling.com/">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/217010366">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Roikoi" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="242" sizes="(max-width: 1023px) 100vw, 1023px" src="https://www.lever.co/wp-content/uploads/2019/04/ROIKOI-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/ROIKOI-1.png 1023w, https://www.lever.co/wp-content/uploads/2019/04/ROIKOI-1-300x71.png 300w, https://www.lever.co/wp-content/uploads/2019/04/ROIKOI-1-768x182.png 768w" width="1023"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Roikoi
+                       </h3>
+                       <p>
+                        <p>
+                         Improve diversity, hire faster, and build stronger teams through your employee’s personal connections. ROIKOI’s sourcing platform identifies 35 great connections per employee, matches them to your open jobs, and makes it easy to engage them through …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/217010366">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115000475306">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Sapling" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="476" sizes="(max-width: 1580px) 100vw, 1580px" src="https://www.lever.co/wp-content/uploads/2019/04/logo.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/logo.png 1580w, https://www.lever.co/wp-content/uploads/2019/04/logo-300x90.png 300w, https://www.lever.co/wp-content/uploads/2019/04/logo-768x231.png 768w, https://www.lever.co/wp-content/uploads/2019/04/logo-1024x308.png 1024w" width="1580"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Sapling
+                       </h3>
+                       <p>
+                        <p>
+                         Sapling is a next generation onboarding platform and HRIS, automating HR workflows and empowering People Operations teams with connectivity, data, and insights on their global workforce. As the platform of choice for KPMG, Coupa, Addepar and many …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115000475306">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/206454633">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Simppler" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="116" sizes="(max-width: 508px) 100vw, 508px" src="https://www.lever.co/wp-content/uploads/2019/04/simppler_logo-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/simppler_logo-1.png 508w, https://www.lever.co/wp-content/uploads/2019/04/simppler_logo-1-300x69.png 300w" width="508"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Simppler
+                       </h3>
+                       <p>
+                        <p>
+                         Simppler transforms employee referral programs by automating the referral discovery process. Through a powerful recommendation engine, accurate matching, and continuous employee engagement, you can easily tap into your colleagues’ professional and …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/206454633">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Assessments">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360016588192-How-do-I-enable-and-use-the-SkillSurvey-integration-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="SkillSurvey" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="73" src="https://www.lever.co/wp-content/uploads/2019/04/SKS-200x73.png" width="200"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        SkillSurvey
+                       </h3>
+                       <p>
+                        <p>
+                         SkillSurvey makes the referencing and sourcing process more efficient and effective — helping employers save time and money, grow revenues, and bring employees onboard faster. It’s an adage that always holds true: past performance is the best …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360016588192-How-do-I-enable-and-use-the-SkillSurvey-integration-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Access and communication">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/206344605">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="531" sizes="(max-width: 1297px) 100vw, 1297px" src="https://www.lever.co/wp-content/uploads/2019/04/Slack_RGB.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Slack_RGB.png 1297w, https://www.lever.co/wp-content/uploads/2019/04/Slack_RGB-300x123.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Slack_RGB-768x314.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Slack_RGB-1024x419.png 1024w" width="1297"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Slack
+                       </h3>
+                       <p>
+                        <p>
+                         Slack brings all your communication together in one place. It is real-time messaging, archiving, and search for modern teams. With Lever’s Slack integration, we’ve made it even easier to engage your entire team in the hiring process. Post …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/206344605">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="">
+                      <a class="no-underline" href="https://www.sparkhire.com/?utm_source=lever">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Spark Hire Logo" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="100" src="https://www.lever.co/wp-content/uploads/2019/12/Spark-Hire-Logo-200x100.png" width="200"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Spark Hire
+                       </h3>
+                       <p>
+                        <p>
+                         Spark Hire’s easy to use video interviewing platform is trusted by 5,000+ customers in over 100 countries. Organizations of all sizes use Spark Hire to learn more about their candidates earlier in the process, improve collaboration between …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://www.sparkhire.com/?utm_source=lever">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Background checks">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/360005182051">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Sterling Talent Solutions" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="154" sizes="(max-width: 473px) 100vw, 473px" src="https://www.lever.co/wp-content/uploads/2019/04/sterling.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/sterling.png 473w, https://www.lever.co/wp-content/uploads/2019/04/sterling-300x98.png 300w" width="473"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Sterling Talent Solutions
+                       </h3>
+                       <p>
+                        <p>
+                         Sterling Talent Solutions, the world’s largest background screening provider, provides hiring peace of mind by delivering a simpler, smarter background screening and onboarding experience for organizations worldwide. Our comprehensive suite of …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/360005182051">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Analytics">
+                      <a class="no-underline" href="https://www.lever.co/blog/introducing-lever-talent-intelligence-powered-by-tableau-making-talent-analytics-approachable?hsLang=en-us">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Tableau" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="200" sizes="(max-width: 1023px) 100vw, 1023px" src="https://www.lever.co/wp-content/uploads/2019/04/tableau-logo.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/tableau-logo.png 1023w, https://www.lever.co/wp-content/uploads/2019/04/tableau-logo-300x59.png 300w, https://www.lever.co/wp-content/uploads/2019/04/tableau-logo-768x150.png 768w" width="1023"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Tableau
+                       </h3>
+                       <p>
+                        <p>
+                         Lever Talent Intelligence, powered by Tableau, is an advanced talent analytics module that delivers robust reporting in an approachable, highly visual format to fuel strategic discussions with every member of your team.
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://www.lever.co/blog/introducing-lever-talent-intelligence-powered-by-tableau-making-talent-analytics-approachable?hsLang=en-us">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/206087206">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Teamable" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="120" sizes="(max-width: 544px) 100vw, 544px" src="https://www.lever.co/wp-content/uploads/2019/04/Teamable-Logo-dark2x.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Teamable-Logo-dark2x.png 544w, https://www.lever.co/wp-content/uploads/2019/04/Teamable-Logo-dark2x-300x66.png 300w" width="544"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Teamable
+                       </h3>
+                       <p>
+                        <p>
+                         Teamable equips companies to unlock top talent in their employees’ networks. Leverage your employees’ contacts and Teamables intelligence to stand out from the noise and recruit top talent smarter and faster. Automatically push all candidates you …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/206087206">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://www.topfunnel.co/?utm_source=google_adwords&amp;utm_medium=g&amp;utm_campaign=1601938996&amp;utm_term=59349216463&amp;utm_content=304416953496&amp;hsa_acc=8357249574&amp;hsa_mt=p&amp;hsa_grp=59349216463&amp;hsa_ad=304416953496&amp;hsa_cam=1601938996&amp;hsa_ver=3&amp;hsa_src=g&amp;hsa_tgt=kwd-546230657694&amp;hsa_kw=topfunnel&amp;hsa_net=adwords&amp;gclid=EAIaIQobChMIg6u1lsS95gIVEavsCh12MgmXEAAYASAAEgI9UPD_BwE">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="TopFunnel logo" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="100" src="https://www.lever.co/wp-content/uploads/2019/12/TopFunnel-logo.png" width="201"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        TopFunnel
+                       </h3>
+                       <p>
+                        <p>
+                         TopFunnel enables you to find and engage talent effortlessly. Effective recruiting teams spend a lot of time finding and engaging qualified candidates. TopFunnel does this at scale, quickly, and with world-class technology and operations. Our team delivers …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://www.topfunnel.co/?utm_source=google_adwords&amp;utm_medium=g&amp;utm_campaign=1601938996&amp;utm_term=59349216463&amp;utm_content=304416953496&amp;hsa_acc=8357249574&amp;hsa_mt=p&amp;hsa_grp=59349216463&amp;hsa_ad=304416953496&amp;hsa_cam=1601938996&amp;hsa_ver=3&amp;hsa_src=g&amp;hsa_tgt=kwd-546230657694&amp;hsa_kw=topfunnel&amp;hsa_net=adwords&amp;gclid=EAIaIQobChMIg6u1lsS95gIVEavsCh12MgmXEAAYASAAEgI9UPD_BwE">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/209766623">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Triplebyte" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="120" sizes="(max-width: 619px) 100vw, 619px" src="https://www.lever.co/wp-content/uploads/2019/04/triplebyte_logo_120_black_text_1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/triplebyte_logo_120_black_text_1.png 619w, https://www.lever.co/wp-content/uploads/2019/04/triplebyte_logo_120_black_text_1-300x58.png 300w" width="619"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Triplebyte
+                       </h3>
+                       <p>
+                        <p>
+                         Triplebyte matches software engineers with companies based on technical fit. They run a full technical evaluation with every engineer they match. With one click, you can automatically push candidates directly into Lever with full details of their …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/209766623">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/217010426">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Underdog.io" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="100" src="https://www.lever.co/wp-content/uploads/2019/04/underdogio-logo.svg" width="318"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Underdog.io
+                       </h3>
+                       <p>
+                        <p>
+                         Underdog.io is a leading marketplace for talent. Every week, they introduce growing technology companies to handpicked software engineers, designers, product managers, and businesspeople in the Underdog.io community. With our integration, mutual …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/217010426">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/212012706">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Vettery" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="313" sizes="(max-width: 1763px) 100vw, 1763px" src="https://www.lever.co/wp-content/uploads/2019/04/Vettery_Horizontal_Color-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Vettery_Horizontal_Color-1.png 1763w, https://www.lever.co/wp-content/uploads/2019/04/Vettery_Horizontal_Color-1-300x53.png 300w, https://www.lever.co/wp-content/uploads/2019/04/Vettery_Horizontal_Color-1-768x136.png 768w, https://www.lever.co/wp-content/uploads/2019/04/Vettery_Horizontal_Color-1-1024x182.png 1024w" width="1763"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Vettery
+                       </h3>
+                       <p>
+                        <p>
+                         Vettery is a tech marketplace built to connect top employers with the best talent in the market. Each week, clients gain access to fresh, experienced, and fully vetted tech and business candidates who are ready to make the next move in their …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/212012706">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115001049966">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="WayUp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="386" sizes="(max-width: 1600px) 100vw, 1600px" src="https://www.lever.co/wp-content/uploads/2019/04/WayUp-logo-cropped.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/WayUp-logo-cropped.png 1600w, https://www.lever.co/wp-content/uploads/2019/04/WayUp-logo-cropped-300x72.png 300w, https://www.lever.co/wp-content/uploads/2019/04/WayUp-logo-cropped-768x185.png 768w, https://www.lever.co/wp-content/uploads/2019/04/WayUp-logo-cropped-1024x247.png 1024w" width="1600"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        WayUp
+                       </h3>
+                       <p>
+                        <p>
+                         WayUp is the leading digital solution for employers to reach, engage, and recruit millennials for internships, part-time, and full-time jobs. They provide job advertising, employer branding, analytics, and a sourcing tool to help you connect with …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115001049966">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/206083346">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Whitetruffle" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="168" sizes="(max-width: 1202px) 100vw, 1202px" src="https://www.lever.co/wp-content/uploads/2019/04/whitetruffle-letters-1200-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/whitetruffle-letters-1200-1.png 1202w, https://www.lever.co/wp-content/uploads/2019/04/whitetruffle-letters-1200-1-300x42.png 300w, https://www.lever.co/wp-content/uploads/2019/04/whitetruffle-letters-1200-1-768x107.png 768w, https://www.lever.co/wp-content/uploads/2019/04/whitetruffle-letters-1200-1-1024x143.png 1024w" width="1202"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Whitetruffle
+                       </h3>
+                       <p>
+                        <p>
+                         Whitetruffle offers a different approach to sourcing by providing companies with access to a database of active candidates. Search the Whitetruffle database or rely on their matching algorithm to suggest candidates who fit your needs and have a high …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/206083346">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Sourcing and referrals">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/217923243">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Woo" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="120" sizes="(max-width: 382px) 100vw, 382px" src="https://www.lever.co/wp-content/uploads/2019/04/Woo-Logo-400x400-1-1-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/Woo-Logo-400x400-1-1-1.png 382w, https://www.lever.co/wp-content/uploads/2019/04/Woo-Logo-400x400-1-1-1-300x94.png 300w" width="382"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Woo
+                       </h3>
+                       <p>
+                        <p>
+                         Woo connects you with off-the-radar top tech talent that is open to new opportunities. Woo’s technology uses both candidate skill set and role expectations to create accurate matches, focusing your efforts only on relevant candidates. Lever’s …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/217923243">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Assessments">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/115005394723-How-do-I-set-up-reference-checks-for-candidates-using-Xref-">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Xref" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="100" sizes="(max-width: 478px) 100vw, 478px" src="https://www.lever.co/wp-content/uploads/2019/04/xref-logo-1.png" srcset="https://www.lever.co/wp-content/uploads/2019/04/xref-logo-1.png 478w, https://www.lever.co/wp-content/uploads/2019/04/xref-logo-1-300x63.png 300w" width="478"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Xref
+                       </h3>
+                       <p>
+                        <p>
+                         Traditional reference checks are time-consuming, offer minimal insight and are fraught with risk. Xref brings ease, security and value to the process. The online, automated solution delivers candidate insights, enabling organizations to make smart, …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/115005394723-How-do-I-set-up-reference-checks-for-candidates-using-Xref-">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Hiring and onboarding">
+                      <a class="no-underline" href="https://help.lever.co/hc/en-us/articles/207068913">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Zenefits" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="60" src="https://www.lever.co/wp-content/uploads/2019/04/logo-zenefits-2.png" width="240"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Zenefits
+                       </h3>
+                       <p>
+                        <p>
+                         Zenefits helps companies and their employees manage all of their HR — payroll, benefits, compliance and more — from a single, free online dashboard. Zenefits’ leading platform automates the administrative HR tasks and empowers you to guide your …
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://help.lever.co/hc/en-us/articles/207068913">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                     <div class="integration-card" data-category="Access and communication">
+                      <a class="no-underline" href="https://www.lever.co/zoom/">
+                      </a>
+                      <div class="p40 integration-logo-container">
+                       <div class="integration-logo">
+                        <!-- style="background-image:url('https://www.lever.co/hubfs/A-List_horiz_lockup-1.png');" -->
+                        <img alt="Zoom logo" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" height="50" src="https://www.lever.co/wp-content/uploads/2019/12/ZoomLogo.png" width="220"/>
+                       </div>
+                      </div>
+                      <div class="integration-card__body">
+                       <h3 class="integration-name none">
+                        Zoom
+                       </h3>
+                       <p>
+                        <p>
+                         Zoom is the leader in modern enterprise video communications, with an easy, reliable cloud platform for video and audio conferencing, collaboration, chat, and webinars across mobile devices, desktops, telephones, and room systems…
+                        </p>
+                       </p>
+                      </div>
+                      <div class="integration-card__footer">
+                       <a class="font-caps" href="https://www.lever.co/zoom/">
+                        Get started &gt;
+                       </a>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-49747bfd elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="49747bfd" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-default">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-569898ed elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="569898ed">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <section class="elementor-element elementor-element-55a30165 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section" data-id="55a30165">
+              <div class="elementor-container elementor-column-gap-default">
+               <div class="elementor-row">
+                <div class="elementor-element elementor-element-33386665 elementor-column elementor-col-100 elementor-inner-column" data-element_type="column" data-id="33386665">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-cd340b min-200 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="cd340b" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                     <h2 class="elementor-heading-title elementor-size-default">
+                      Get started now
+                     </h2>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-d48bc5d elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="d48bc5d" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-text-editor elementor-clearfix">
+                      <p>
+                       See our products and pick the perfect plan.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-bf90544 button min-200 elementor-align-center elementor-widget elementor-widget-button" data-element_type="widget" data-id="bf90544" data-widget_type="button.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-button-wrapper">
+                      <a class="elementor-button-link elementor-button elementor-size-sm" href="demo-signup" role="button">
+                       <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-text">
+                         GET A DEMO
+                        </span>
+                       </span>
+                      </a>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- #content -->
+   <footer class="site-footer footer" id="colophon">
+    <div class="footer__wrapper">
+     <div class="footer__top">
+      <div class="widget_link_list widget-column" id="list-2">
+       <h3 class="widget-title">
+        products
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/talent-suite">
+          Lever Talent Suite
+         </a>
+        </li>
+        <li class="">
+         <a href="/hire">
+          Lever Hire
+         </a>
+        </li>
+        <li class="">
+         <a href="/nurture">
+          Lever Nurture
+         </a>
+        </li>
+        <li class="">
+         <a href="/analytics">
+          Lever Analytics
+         </a>
+        </li>
+        <li class="">
+         <a href="/talent-cloud-connect">
+          Talent Cloud Connect
+         </a>
+        </li>
+        <li class="">
+         <a href="/pricing">
+          Plans and Pricing
+         </a>
+        </li>
+        <li class="">
+         <a href="/ecosystem">
+          Ecosystem
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-3">
+       <h3 class="widget-title">
+        company
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/about">
+          About us
+         </a>
+        </li>
+        <li class="">
+         <a href="/customers">
+          Customers
+         </a>
+        </li>
+        <li class="">
+         <a href="/press">
+          Press
+         </a>
+        </li>
+        <li class="">
+         <a href="/careers">
+          Careers
+         </a>
+        </li>
+        <li class="">
+         <a href="/events/">
+          Events
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-4">
+       <h3 class="widget-title">
+        resources
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/recruiting-resources">
+          Resource center
+         </a>
+        </li>
+        <li class="">
+         <a href="/blog">
+          Blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://inside.lever.co/" target="_blank">
+          Inside Lever blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://fulcrum.lever.co/" target="_blank">
+          Lever Engineering blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-5">
+       <h3 class="widget-title">
+        support
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us" target="_blank">
+          Help center
+         </a>
+        </li>
+        <li class="">
+         <a href="https://status.lever.co/" target="_blank">
+          Product status
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Support
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Contact
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-6">
+       <h3 class="widget-title">
+        contact sales
+       </h3>
+       <ul class="list">
+        <li class="phone-footer-bg phone-icon-left">
+         (415) 458-2731
+        </li>
+        <li class="">
+         155 5th St 6th floor
+        </li>
+        <li class="">
+         San Francisco, CA 94103
+        </li>
+        <li class="contact-form__wrap">
+         <a href="mailto:info@lever.co">
+          info@lever.co
+         </a>
+        </li>
+        <li class="">
+         Toronto Office
+        </li>
+        <li class="">
+         176 Yonge Street, 6F
+        </li>
+        <li class="">
+         Toronto, ON M5C 2L7
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__bottom-wrapper">
+      <div class="footer__bottom">
+       <div class="widget_text" id="text-2">
+        <div class="textwidget">
+         <div class="block-about-footer">
+          <div class="block-about-footer__left">
+           <div class="footer-circle-image">
+            <img alt="Image of Lever team members" class="border-radius-50" src="https://www.lever.co/wp-content/uploads/2019/03/footer-image-leveroo-group.jpg"/>
+           </div>
+          </div>
+          <div class="block-about-footer__right">
+           <p class="social-footer-bg">
+            Follow us on
+            <a href="https://www.linkedin.com/company/3254533">
+             LinkedIn
+            </a>
+            ,
+            <a href="https://www.facebook.com/leverapp/">
+             Facebook
+            </a>
+            , and
+            <a href="https://twitter.com/lever">
+             Twitter
+            </a>
+            .
+           </p>
+           <div class="social-links">
+            <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+             <img alt="twitter" src="/wp-content/uploads/2019/04/twitter.png"/>
+            </a>
+            <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+             <img alt="linkedin" src="/wp-content/uploads/2019/04/LinkedIn-3.png"/>
+            </a>
+            <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+             <img alt="facebook" src="/wp-content/uploads/2019/04/facebook.png"/>
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="footer__subscribe">
+       <strong>
+        Sign up for our blog
+       </strong>
+       <p>
+        Keep up with the latest in recruiting.
+       </p>
+       <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+        <div class="umfwrap">
+         <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-1" datalink="">
+         </form>
+         <div class="mkto_ty_message" style="display:none">
+          Thanks for subscribing.
+         </div>
+        </div>
+       </div>
+       <script>
+        if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+       </script>
+       <div id="iframe_area">
+       </div>
+      </div>
+     </div>
+     <div class="footer__copyright">
+      <div class="widget_text" id="text-4">
+       <h4 class="widget-title hidden">
+        copyright
+       </h4>
+       <div class="textwidget">
+        <p>
+         <span class="copyright-content">
+          © 2019 Lever
+          <a href="/privacy">
+           Privacy
+          </a>
+          |
+          <a href="https://www.lever.co/legal/">
+           Legal
+          </a>
+          |
+          <a href="/levers-data-selling-policy">
+           Do Not Sell My Personal Information
+          </a>
+         </span>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <!-- #colophon -->
+  </div>
+  <!-- #page -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NSF9Z3W" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script src="https://www.lever.co/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.min.js?ver=2.1.3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var ctcc_vars = {"expiry":"","method":"","version":"1"};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js?ver=2.3.0" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/navigation-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/skip-link-focus-fix-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/libs/jquery.magnific-popup.min.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js?ver=2.1.3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+var customAjax = {"ajaxurl":"https:\/\/www.lever.co\/wp-admin\/admin-ajax.php"};
+var timeConfigPopupFull = {"time_full_value":"1"};
+var timeConfigPopupSidebar = {"time_sidebar_value":"0.5"};
+var popupIdConfigPopupFull = {"popup_id":""};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-min.js?ver=1.0.0-904" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-header-min.js?ver=1.0.0-904" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/wp-embed.min.js?ver=5.2.4" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js?ver=5.2.4" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/lever-integration-min.js?ver=5.2.4" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.5.14" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.1" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=4.4.6" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.5.14","urls":{"assets":"https:\/\/www.lever.co\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":13070,"title":"Ecosystem","excerpt":""}};
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.5.14" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   jQuery(document).ready(function($){
+												if(!catapultReadCookie("catAccCookies")){ // If the cookie has not been set then show the bar
+							$("html").addClass("has-cookie-bar");
+							$("html").addClass("cookie-bar-bottom-bar");
+							$("html").addClass("cookie-bar-bar");
+													}
+																	});
+  </script>
+  <div class="" id="catapult-cookie-bar">
+   <div class="ctcc-inner">
+    <span class="ctcc-left-side">
+     This site uses cookies to offer you a better browsing experience.
+     <a class="ctcc-more-info-link" href="https://www.lever.co/cookie-policy" tabindex="0" target="_blank">
+      Learn more.
+     </a>
+    </span>
+    <span class="ctcc-right-side">
+     <button id="catapultCookie" onclick="catapultAcceptCookies();" tabindex="0">
+      Thank you
+     </button>
+    </span>
+   </div>
+   <!-- custom wrapper class -->
+  </div>
+  <!-- #catapult-cookie-bar -->
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb4e40776b","applicationID":"308893147","transactionName":"ZF0EbBcHWxZWVEUIWV0XJ1sRD1oLGF9UAFJWSkteCglBAEU=","queueTime":0,"applicationTime":937,"atts":"SBoHGl8dSBg=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

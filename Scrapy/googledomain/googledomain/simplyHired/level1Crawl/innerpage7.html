@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html data-css="hris_landingpage" lang="en">
+ <head ga-id="UA-1039096-6">
+  <meta content="width=device-width, minimum-scale=1, initial-scale=1" name="viewport"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+   <title>
+    SimplyHired HRIS | SimplyHired
+   </title>
+   <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+   <link href="/apple-touch-icon.png" rel="apple-touch-icon"/>
+   <meta name="prioritize_js"/>
+   <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet"/>
+   <link href="/packed/0aae187f11e9c127e091/main.css" rel="stylesheet">
+    <script async="" src="/packed/dc1ef23e4c1b29b8f828/main.js">
+    </script>
+    <meta data-json='{"init":{"dsn":"https://f9dca67454f647c9ac710a500a0bbebb@sentry.indeed.com/2391","release":"0091b6ff8a092d2dbe8dcae70ed7609216e0e385","environment":"PRODUCTION"},"user":null,"ctk":null,"tags":null,"extra":null,"isEnabled":true,"isEnabledLocally":true}' id="sentry-json"/>
+   </link>
+  </meta>
+ </head>
+ <body data-csrf="BRMwBA3lCrF8BWjcD_fhy64RR1RP1EugSVqOM6DvKZsCMEmeAQzMOPn22y_ZpHsQGryX9UXllOvIy5jFcYpM1Q">
+  <meta content="939356510115-023sd5f62vape692qqdllhnoi4qmnv0c.apps.googleusercontent.com" name="g-client-id"/>
+  <meta content="225697117996081" name="f-client-id"/>
+  <meta content="https://www.simplyhired.com/auth/facebook/login" name="f-redirect-url"/>
+  <meta content="ymBZD4pJIvenxU7e" name="i3pis-a"/>
+  <meta content="pC1NIMaCl+gbCFgfaH+E4vOUXPBEGt6NHPfjziAh0BV8fYoyjDFsz4Jd7z4BSoFn28uQrj9abarTI0geWDASHOSFnfXOqPwzz7Jpue3hVYL7rE532lQNw4vlelJsoOWdJ43XQbx0bdnJYbFZIg==" name="i3pis-p"/>
+  <meta content="idsync.indeed.com" name="i3pis-h"/>
+  <div aria-hidden="true" class="modal fade modal-login" id="main-login-modal" role="dialog" tabindex="-1">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+      <span>
+       ×
+      </span>
+     </button>
+    </div>
+    <div class="modal-body">
+     <p class="heading">
+      Sign In or Create Account
+     </p>
+     <div>
+      Use Facebook or Google to sign in or register with SimplyHired.
+     </div>
+     <div class="login-buttons">
+      <div class="btn btn-facebook js-login-facebook">
+       <span>
+        Continue with Facebook
+       </span>
+      </div>
+      <div class="btn btn-google js-login-google">
+       <span>
+        Continue with Google
+       </span>
+      </div>
+     </div>
+     <div class="login-disclaimer">
+      By signing in to your account, you agree to SimplyHired's
+      <a href="/about/terms-of-service">
+       Terms of Service
+      </a>
+      and consent to our
+      <a href="https://hrtechprivacy.com/brands/simplyhired#privacypolicy">
+       Cookie and Privacy Policy
+      </a>
+      .
+     </div>
+    </div>
+   </div>
+  </div>
+  <div aria-hidden="true" class="modal fade modal-login modal-login-error" id="login-error-modal" role="dialog" tabindex="-1">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+      <span>
+       ×
+      </span>
+     </button>
+     <h4 class="modal-title">
+      ERROR
+     </h4>
+    </div>
+    <div class="modal-body">
+    </div>
+   </div>
+  </div>
+  <div aria-hidden="true" class="modal fade modal-login modal-login-error" id="login-session-expired-modal" role="dialog" tabindex="-1">
+   <div class="modal-content">
+    <div class="modal-header">
+     <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+      <span>
+       ×
+      </span>
+     </button>
+     <h4 class="modal-title">
+      ERROR
+     </h4>
+    </div>
+    <div class="modal-body">
+    </div>
+    <div class="modal-footer">
+     <div class="btn btn-secondary js-refresh">
+      <span>
+       Refresh the Page
+      </span>
+     </div>
+    </div>
+   </div>
+  </div>
+  <nav class="NavBar navbar navbar-light d-md-block d-none serp-navbar navbar-desktop top-menu NavBar-global-nav">
+   <a class="sh-logo-link" data-event="header_logo" href="/">
+    <span class="sh-logo sh-logo-responsive" title="Find Jobs and Careers - SimplyHired.com Job Search">
+    </span>
+   </a>
+   <div class="navbar-filler">
+   </div>
+   <form action="/search" class="form-inline hidden-sm-down" method="get">
+    <input aria-label="Job Title, Skills or Company" autocomplete="off" class="id_f_keywords form-control" name="q" placeholder="Job Title, Skills or Company" type="text" value=""/>
+    <input aria-label="City, State or ZIP" autocomplete="off" class="id_f_location form-control" name="l" placeholder="City, State or ZIP" type="text" value=""/>
+    <button class="btn btn-large btn-sh-2 search-btn js-search-btn default-btn btn-block form-control" type="submit">
+     Search Jobs
+    </button>
+   </form>
+   <ul class="nav navbar-nav">
+    <li class="nav-item login-desktop-nav-item">
+     <button class="nav-login-menu-button">
+      Sign In
+      <i class="button-toggle-angle fas fa-angle-down">
+      </i>
+     </button>
+     <ul class="nav-login-menu">
+      <li class="nav-login-menu-item">
+       <button aria-expanded="false" class="nav-login-menu-link" data-target="#main-login-modal" data-toggle="modal">
+        Job Seeker
+       </button>
+      </li>
+      <li class="nav-login-menu-item">
+       <a class="nav-login-menu-link" href="https://employer.simplyhired.com" target="_self">
+        Employer ATS
+       </a>
+      </li>
+      <li class="nav-login-menu-item">
+       <a class="nav-login-menu-link" href="https://hr.simplyhired.com" target="_self">
+        Human Resources
+       </a>
+      </li>
+     </ul>
+    </li>
+    <li class="nav-item">
+     <button aria-controls="slideout-menu" aria-expanded="false" aria-label="Main menu" class="btn js-hamburger hamburger" data-toggle="collapse">
+      <i class="fas fa-bars">
+      </i>
+     </button>
+     <div class="slideout-menu-container">
+      <div aria-hidden="true" class="slideout-menu js-menu" id="slideout-menu">
+       <div class="slideout-menu-content">
+        <div class="section-header search-section js-section-header">
+         <button aria-label="Close menu" class="btn close-icon js-close">
+         </button>
+        </div>
+        <div class="section-header js-section-header">
+         <button aria-expanded="false" class="btn section-toggle js-section-toggle" data-target=".js-signin" data-toggle="collapse">
+          Sign In
+          <i class="section-toggle-angle fas fa-angle-down">
+          </i>
+         </button>
+        </div>
+        <div aria-controls="js-signin" aria-expanded="false" class="section-body js-section-body collapse js-signin">
+         <ul>
+          <li>
+           <button class="btn section-option" data-target="#main-login-modal" data-toggle="modal" id="mobile-login-modal-trigger">
+            Job Seeker
+           </button>
+          </li>
+          <li>
+           <a href="https://employer.simplyhired.com/">
+            Employer ATS
+           </a>
+          </li>
+          <li>
+           <a href="https://hr.simplyhired.com/">
+            Human Resources
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="slideout-menu-divider js-search-divider">
+        </div>
+        <div class="section-header">
+         <span class="section-toggle">
+          <a href="/post-jobs-free">
+           Post Jobs Free
+          </a>
+         </span>
+        </div>
+        <div class="section-header">
+         <span class="section-toggle">
+          <a href="https://simplyhired.com/hris">
+           Human Resources
+          </a>
+         </span>
+        </div>
+        <div class="section-header NavBar-sectionResumeBuilder">
+         <span class="section-toggle">
+          <a href="/resumebuilder" target="_blank">
+           Resume Builder
+          </a>
+         </span>
+        </div>
+        <div class="section-header js-section-header">
+         <button aria-expanded="false" class="btn section-toggle js-section-toggle" data-target=".js-jobseekers" data-toggle="collapse">
+          Job Tools
+          <i class="section-toggle-angle fas fa-angle-down">
+          </i>
+         </button>
+        </div>
+        <div aria-controls="js-jobseekers" aria-expanded="false" class="section-body js-section-body collapse js-jobseekers">
+         <ul>
+          <li>
+           <a class="local" href="/local-jobs">
+            Local Jobs
+           </a>
+          </li>
+          <li>
+           <a class="salary" href="/salaries">
+            Salary Estimator
+           </a>
+          </li>
+          <li>
+           <a class="career" href="/guide/career">
+            Careers
+           </a>
+          </li>
+          <li>
+           <a class="resumes" href="/guide/resume">
+            Resumes
+           </a>
+          </li>
+          <li>
+           <a class="coverletter" href="/guide/cover-letter">
+            Cover Letters
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="section-header">
+         <span class="section-toggle">
+          <a href="/about/contact-us" rel="nofollow" target="_self">
+           Contact Us
+          </a>
+         </span>
+        </div>
+        <div class="menu-footer">
+         <div class="copyright">
+          <span class="sh-logo">
+          </span>
+          <br/>
+          <div class="dropup international-dropdown international-dropdown-v2 hidden-sm-down">
+           <button aria-expanded="false" aria-haspopup="true" class="international-dropdown-button-v2" data-toggle="dropdown" type="button">
+            <span>
+             United States
+            </span>
+            <div class="dropdown-arrow-container">
+             <i class="fas fa-angle-down">
+             </i>
+            </div>
+           </button>
+           <div class="dropdown-menu international-dropdown-wrapper">
+            <div class="international-dropdown-list">
+             <a class="current-country dropdown-item" href="https://www.simplyhired.com">
+              United States
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.ca">
+              Canada
+             </a>
+             <div class="dropdown-divider">
+             </div>
+             <a class="dropdown-item" href="https://www.simplyhired.com.ar">
+              Argentina
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.com.au">
+              Australia
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.be">
+              België
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.com.br">
+              Brasil
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.de">
+              Deutschland
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.es">
+              España
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.fr">
+              France
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.co.in">
+              India
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.ie">
+              Ireland
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.it">
+              Italia
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.mx">
+              México
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.nl">
+              Nederland
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.at">
+              Österreich
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.pt">
+              Portugal
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.ch">
+              Schweiz
+             </a>
+             <a class="dropdown-item" href="https://za.simplyhired.com">
+              South Africa
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.se">
+              Sverige
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.co.uk">
+              United Kingdom
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.ru">
+              Россия
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.kr">
+              한국
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.cn">
+              中国
+             </a>
+             <a class="dropdown-item" href="https://www.simplyhired.jp">
+              日本
+             </a>
+            </div>
+           </div>
+          </div>
+          <div class="misc-links text-xs-left">
+           © 2019 SH Inc. |
+           <a href="https://hrtechprivacy.com/brands/simplyhired#privacypolicy">
+            Privacy
+           </a>
+           |
+           <a href="/about/terms-of-service">
+            Terms
+           </a>
+           <br/>
+           |
+           <a href="https://hrtechprivacy.com/">
+            Privacy Center
+           </a>
+           <br/>
+           |
+           <a href="/about/ccpa">
+            Do Not Sell My Personal Information
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </li>
+   </ul>
+  </nav>
+  <div>
+   <div data-react-class="HrisLandingPage" data-reactroot="">
+    <div>
+     <div class="Hris-banner">
+      <div class="container">
+       <div class="Hris-bannerBlob">
+        <div class="Hris-title">
+         HR made easy
+         <sup class="Hris-comingSoon">
+          Coming Soon
+         </sup>
+        </div>
+        <div class="Hris-subtitle">
+         We'll take care of the process,
+         <br>
+          you take care of the people
+         </br>
+        </div>
+        <a class="Hris-button" href="https://forms.gle/PwiGFPo8pKMsQgPa9" rel="noopener" target="_blank">
+         Express Interest
+        </a>
+        <div class="Hris-headerAccount">
+         Already have an account?
+         <a class="Hris-headerSignIn" href="https://hr.simplyhired.com" rel="nofollow">
+          Sign In
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="Hris-timeSaving">
+      Powerful, time saving HR tools
+     </div>
+     <div class="Hris-iconsWrapperMobile">
+      <div>
+       <span class="Hris-iconContainer">
+        <span class="Hris-circle">
+         <div class="Hris-iconSpacer">
+         </div>
+         <span>
+          <img class="Hris-icon" src="/static/hris/icon-employees.svg"/>
+         </span>
+        </span>
+        <div class="Hris-iconText">
+         <span>
+          Employee
+          <br>
+           Information
+          </br>
+         </span>
+        </div>
+       </span>
+       <span class="Hris-iconContainer">
+        <span class="Hris-circle">
+         <div class="Hris-iconSpacer">
+         </div>
+         <span>
+          <img class="Hris-icon" src="/static/hris/icon-time-off.svg"/>
+         </span>
+        </span>
+        <div class="Hris-iconText">
+         <span>
+          Time Off
+          <br/>
+          Tracking
+         </span>
+        </div>
+       </span>
+      </div>
+      <div>
+       <span class="Hris-iconContainer">
+        <span class="Hris-circle">
+         <div class="Hris-iconSpacer">
+         </div>
+         <span>
+          <img class="Hris-icon" src="/static/hris/icon-documents.svg"/>
+         </span>
+        </span>
+        <div class="Hris-iconText">
+         <span>
+          Document Signing
+          <br/>
+          and Sharing
+         </span>
+        </div>
+       </span>
+       <span class="Hris-iconContainer">
+        <span class="Hris-circle">
+         <div class="Hris-iconSpacer">
+         </div>
+         <span>
+          <img class="Hris-icon" src="/static/hris/icon-org-chart.svg"/>
+         </span>
+        </span>
+        <div class="Hris-iconText">
+         <span>
+          Organizational
+          <br/>
+          Chart
+         </span>
+        </div>
+       </span>
+      </div>
+     </div>
+     <div class="Hris-iconsWrapperDesktop">
+      <span class="Hris-iconContainer">
+       <span class="Hris-circle">
+        <div class="Hris-iconSpacer">
+        </div>
+        <span>
+         <img class="Hris-icon" src="/static/hris/icon-employees.svg"/>
+        </span>
+       </span>
+       <div class="Hris-iconText">
+        <span>
+         Employee
+         <br/>
+         Information
+        </span>
+       </div>
+      </span>
+      <span class="Hris-iconContainer">
+       <span class="Hris-circle">
+        <div class="Hris-iconSpacer">
+        </div>
+        <span>
+         <img class="Hris-icon" src="/static/hris/icon-time-off.svg"/>
+        </span>
+       </span>
+       <div class="Hris-iconText">
+        <span>
+         Time Off
+         <br/>
+         Tracking
+        </span>
+       </div>
+      </span>
+      <span class="Hris-iconContainer">
+       <span class="Hris-circle">
+        <div class="Hris-iconSpacer">
+        </div>
+        <span>
+         <img class="Hris-icon" src="/static/hris/icon-documents.svg"/>
+        </span>
+       </span>
+       <div class="Hris-iconText">
+        <span>
+         Document Signing
+         <br/>
+         and Sharing
+        </span>
+       </div>
+      </span>
+      <span class="Hris-iconContainer">
+       <span class="Hris-circle">
+        <div class="Hris-iconSpacer">
+        </div>
+        <span>
+         <img class="Hris-icon" src="/static/hris/icon-org-chart.svg"/>
+        </span>
+       </span>
+       <div class="Hris-iconText">
+        <span>
+         Organizational
+         <br/>
+         Chart
+        </span>
+       </div>
+      </span>
+     </div>
+     <div class="Hris-bodyWrapper">
+      <div class="Hris-body">
+       <div class="Hris-connectDots">
+        Connect all the dots on one powerful platform
+       </div>
+       <div class="Hris-screenshotWrapperMobile">
+        <span class="Hris-textBlobOdd">
+         <div class="Hris-textContent">
+          <div class="Hris-subHeading">
+           Employee Information
+          </div>
+          <ul>
+           <li>
+            <b>
+             Securely store sensitive information
+            </b>
+            for all your employees in one place.
+           </li>
+           <li>
+            <b>
+             Quickly find information
+            </b>
+            like Start Date, Salary, Address, Social Security Number, Emergency Contacts and more.
+           </li>
+          </ul>
+         </div>
+        </span>
+        <span class="Hris-screenshot">
+         <div class="Hris-screenshotContainer">
+          <img class="Hris-screenshotDotsEmployees" src="/static/hris/dots.svg"/>
+          <img class="Hris-screenshotImage" src="/static/hris/screenshot-employees@2x.png"/>
+         </div>
+        </span>
+        <div class="Hris-textBlobEven">
+         <div class="Hris-textContent">
+          <div class="Hris-subHeading">
+           Time Off Tracking
+          </div>
+          <ul>
+           <li>
+            <b>
+             Effortlessly keep track of all time off requests
+            </b>
+            and records for all of your employees.
+           </li>
+           <li>
+            <b>
+             Create custom time off policies
+            </b>
+            and keep track of time off history/records for their employees.
+           </li>
+           <li>
+            <b>
+             Employees can request time off
+            </b>
+            by sending a request directly to their manager for review. Both employee and manager can check for time off conflicts with other team members. The feature automatically updates time off balances, making the process simple for both employee and manager.
+           </li>
+          </ul>
+         </div>
+        </div>
+        <span class="Hris-screenshot">
+         <div class="Hris-screenshotContainer">
+          <img class="Hris-screenshotDotsTimeOff" src="/static/hris/dots.svg"/>
+          <img class="Hris-screenshotImage" src="/static/hris/screenshot-time-off@2x.png"/>
+         </div>
+        </span>
+        <span class="Hris-textBlobOdd">
+         <div class="Hris-textContent">
+          <div class="Hris-subHeading">
+           Document Management
+          </div>
+          <ul>
+           <li>
+            <b>
+             Send documents to employees
+            </b>
+            to be electronically signed and store them on our HRIS.
+           </li>
+           <li>
+            <b>
+             Upload documents, create signature templates and send those to employees.
+            </b>
+            Employees can electronically sign the documents.
+           </li>
+           <li>
+            <b>
+             Securely store and organize documents
+            </b>
+            , saving you time and a headache from trying to locate files in a cabinet.
+           </li>
+          </ul>
+         </div>
+        </span>
+        <span class="Hris-screenshot">
+         <div class="Hris-screenshotContainer">
+          <img class="Hris-screenshotDotsDocuments" src="/static/hris/dots.svg"/>
+          <img class="Hris-screenshotImage" src="/static/hris/screenshot-documents@2x.png"/>
+         </div>
+        </span>
+        <div class="Hris-textBlobEven">
+         <div class="Hris-textContent">
+          <div class="Hris-subHeading">
+           Organizational Chart
+          </div>
+          <ul>
+           <li>
+            <b>
+             Display your workforce on a professional organizational chart
+            </b>
+            while giving the ability for employees to easily find and contact fellow team members.
+           </li>
+           <li>
+            <b>
+             Your organizational chart is automatically created
+            </b>
+            when employees are added to the SimplyHired HRIS, making it easy for all users to view the different teams and roles within your company.
+           </li>
+          </ul>
+         </div>
+        </div>
+        <span class="Hris-screenshot">
+         <div class="Hris-screenshotContainer">
+          <img class="Hris-screenshotDotsOrganization" src="/static/hris/dots.svg"/>
+          <img class="Hris-screenshotImage" src="/static/hris/screenshot-org-chart@2x.png"/>
+         </div>
+        </span>
+       </div>
+       <div class="Hris-screenshotWrapperDesktop">
+        <div class="Hris-tableRowOdd">
+         <span class="Hris-textBlobOdd">
+          <div class="Hris-textContent">
+           <div class="Hris-subHeading">
+            Employee Information
+           </div>
+           <ul>
+            <li>
+             <b>
+              Securely store sensitive information
+             </b>
+             for all your employees in one place.
+            </li>
+            <li>
+             <b>
+              Quickly find information
+             </b>
+             like Start Date, Salary, Address, Social Security Number, Emergency Contacts and more.
+            </li>
+           </ul>
+          </div>
+         </span>
+         <span class="Hris-screenshot">
+          <div class="Hris-screenshotContainer">
+           <img class="Hris-screenshotDotsEmployees" src="/static/hris/dots.svg"/>
+           <img class="Hris-screenshotImage" src="/static/hris/screenshot-employees@2x.png"/>
+          </div>
+         </span>
+        </div>
+        <div class="Hris-tableRowEven">
+         <span class="Hris-screenshot">
+          <div class="Hris-screenshotContainer">
+           <img class="Hris-screenshotDotsTimeOff" src="/static/hris/dots.svg"/>
+           <img class="Hris-screenshotImage" src="/static/hris/screenshot-time-off@2x.png"/>
+          </div>
+         </span>
+         <div class="Hris-textBlobEven">
+          <div class="Hris-textContent">
+           <div class="Hris-subHeading">
+            Time Off Tracking
+           </div>
+           <ul>
+            <li>
+             <b>
+              Effortlessly keep track of all time off requests
+             </b>
+             and records for all of your employees.
+            </li>
+            <li>
+             <b>
+              Create custom time off policies
+             </b>
+             and keep track of time off history/records for their employees.
+            </li>
+            <li>
+             <b>
+              Employees can request time off
+             </b>
+             by sending a request directly to their manager for review. Both employee and manager can check for time off conflicts with other team members. The feature automatically updates time off balances, making the process simple for both employee and manager.
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+        <div class="Hris-tableRowOdd">
+         <span class="Hris-textBlobOdd">
+          <div class="Hris-textContent">
+           <div class="Hris-subHeading">
+            Document Management
+           </div>
+           <ul>
+            <li>
+             <b>
+              Send documents to employees
+             </b>
+             to be electronically signed and store them on our HRIS.
+            </li>
+            <li>
+             <b>
+              Upload documents, create signature templates and send those to employees.
+             </b>
+             Employees can electronically sign the documents.
+            </li>
+            <li>
+             <b>
+              Securely store and organize documents
+             </b>
+             , saving you time and a headache from trying to locate files in a cabinet.
+            </li>
+           </ul>
+          </div>
+         </span>
+         <span class="Hris-screenshot">
+          <div class="Hris-screenshotContainer">
+           <img class="Hris-screenshotDotsDocuments" src="/static/hris/dots.svg"/>
+           <img class="Hris-screenshotImage" src="/static/hris/screenshot-documents@2x.png"/>
+          </div>
+         </span>
+        </div>
+        <div class="Hris-tableRowEven">
+         <span class="Hris-screenshot">
+          <div class="Hris-screenshotContainer">
+           <img class="Hris-screenshotDotsOrganization" src="/static/hris/dots.svg"/>
+           <img class="Hris-screenshotImage" src="/static/hris/screenshot-org-chart@2x.png"/>
+          </div>
+         </span>
+         <div class="Hris-textBlobEven">
+          <div class="Hris-textContent">
+           <div class="Hris-subHeading">
+            Organizational Chart
+           </div>
+           <ul>
+            <li>
+             <b>
+              Display your workforce on a professional organizational chart
+             </b>
+             while giving the ability for employees to easily find and contact fellow team members.
+            </li>
+            <li>
+             <b>
+              Your organizational chart is automatically created
+             </b>
+             when employees are added to the SimplyHired HRIS, making it easy for all users to view the different teams and roles within your company.
+            </li>
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="Hris-bottomWrapper">
+       <div class="Hris-bottom">
+        <div class="Hris-theFirst">
+         <div class="Hris-bottomText">
+          Be the first to know when it’s ready
+         </div>
+         <a class="Hris-button" href="https://forms.gle/PwiGFPo8pKMsQgPa9" rel="noopener" target="_blank">
+          Express Interest
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer-expanded redesign">
+   <div class="hybrid-container">
+    <div class="row upper-row lower-row hidden-sm-down" itemscope="" itemtype="http://schema.org/Organization">
+     <div class="footer-column col-md-3 col-xs-6">
+      <a class="footer-link" href="/" itemprop="url">
+       <img alt="Find Jobs and Careers - SimplyHired.com Job Search" class="footer-logo" itemprop="logo" src="/static/base/img/sh-logo2.png"/>
+      </a>
+      <div class="dropup international-dropdown hidden-sm-down">
+       <button aria-expanded="false" aria-haspopup="true" class="international-dropdown-button-v2" data-toggle="dropdown" type="button">
+        <span>
+         United States
+        </span>
+        <div class="dropdown-arrow-container">
+         <div class="dropdown-arrow">
+         </div>
+        </div>
+       </button>
+       <div class="dropdown-menu international-dropdown-wrapper">
+        <div class="international-dropdown-list">
+         <a class="current-country dropdown-item" href="https://www.simplyhired.com">
+          United States
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.ca">
+          Canada
+         </a>
+         <div class="dropdown-divider">
+         </div>
+         <a class="dropdown-item" href="https://www.simplyhired.com.ar">
+          Argentina
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.com.au">
+          Australia
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.be">
+          België
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.com.br">
+          Brasil
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.de">
+          Deutschland
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.es">
+          España
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.fr">
+          France
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.co.in">
+          India
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.ie">
+          Ireland
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.it">
+          Italia
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.mx">
+          México
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.nl">
+          Nederland
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.at">
+          Österreich
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.pt">
+          Portugal
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.ch">
+          Schweiz
+         </a>
+         <a class="dropdown-item" href="https://za.simplyhired.com">
+          South Africa
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.se">
+          Sverige
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.co.uk">
+          United Kingdom
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.ru">
+          Россия
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.kr">
+          한국
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.cn">
+          中国
+         </a>
+         <a class="dropdown-item" href="https://www.simplyhired.jp">
+          日本
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="footer-column col-md-2 col-xs-6">
+      <p class="list-title">
+       Stay Connected
+      </p>
+      <ul class="footer-list-links">
+       <li>
+        <a href="/about/contact-us" rel="nofollow">
+         <span>
+          Contact Us
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="/blog/">
+         <span>
+          SimplyHired Blog
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://www.facebook.com/simplyhired" rel="nofollow">
+         <span>
+          Facebook
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://twitter.com/simplyhired" rel="nofollow">
+         <span>
+          Twitter
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://www.linkedin.com/company/simply-hired" rel="nofollow">
+         <span>
+          LinkedIn
+         </span>
+        </a>
+       </li>
+       <li>
+        <a href="https://www.youtube.com/user/simplyhired" rel="nofollow">
+         <span>
+          YouTube
+         </span>
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-column col-md-2 col-xs-6">
+      <p class="list-title">
+       Job Tools
+      </p>
+      <ul class="footer-list-links">
+       <li>
+        <a href="/local-jobs">
+         Local Jobs
+        </a>
+       </li>
+       <li>
+        <a href="/salaries">
+         Salary Estimator
+        </a>
+       </li>
+       <li>
+        <a href="/post-jobs-free">
+         Post Jobs Free
+        </a>
+       </li>
+       <li>
+        <a href="/resumebuilder" target="_blank">
+         Resume Builder
+        </a>
+       </li>
+       <li>
+        <a href="https://employer.simplyhired.com/job-description/" target="_blank">
+         Job Description
+        </a>
+       </li>
+      </ul>
+     </div>
+     <div class="footer-column col-md-2 col-xs-12">
+      <p class="list-title">
+       Browse
+      </p>
+      <ul class="footer-list-links">
+       <li>
+        <a href="/browse-jobs/titles">
+         All Jobs
+        </a>
+       </li>
+       <li>
+        <a href="/browse-jobs/salaries">
+         All Salaries
+        </a>
+       </li>
+       <li>
+        <a href="/browse-jobs/cities">
+         All Cities
+        </a>
+       </li>
+       <li>
+        <a href="/browse-jobs/companies">
+         All Companies
+        </a>
+       </li>
+      </ul>
+      <p class="list-title">
+       Guides
+      </p>
+      <ul class="footer-list-links">
+       <li>
+        <a href="/guide/resume">
+         Resumes
+        </a>
+       </li>
+       <li>
+        <a href="/guide/interviews">
+         Cover Letters
+        </a>
+       </li>
+       <li>
+        <a href="/guide/career">
+         Careers
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+   <div class="base-footer">
+    <div class="hybrid-container">
+     <div class="row lower-row">
+      <div class="col-md-8 col-xs-12">
+       <div class="misc-links text-xs-center text-md-left">
+        <span>
+         © 2019 SH Inc.
+        </span>
+        |
+        <a href="https://hrtechprivacy.com/brands/simplyhired#privacypolicy" rel="nofollow">
+         Privacy -
+         <b>
+          NEW
+         </b>
+        </a>
+        |
+        <a href="/about/terms-of-service" rel="nofollow">
+         Terms
+        </a>
+        |
+        <a href="https://hrtechprivacy.com/" rel="nofollow">
+         Privacy Center
+        </a>
+        <br/>
+        |
+        <a href="/about/ccpa" rel="nofollow">
+         Do Not Sell My Personal Information
+        </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </body>
+</html>

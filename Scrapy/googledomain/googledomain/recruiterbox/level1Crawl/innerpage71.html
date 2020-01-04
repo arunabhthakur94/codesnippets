@@ -1,0 +1,1795 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns#" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Quick Release_ jobs |
+    Quick Release_ openings |
+    Quick Release_ careers
+  </title>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/images/logo/png/blue/32-ba85ed81cc83b2ac88999e391ad0b429453de810.png" rel="shortcut icon"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/css/reskin_publishing-93920b3b90ee6f33db43f587b0cdfa401aeb7b01.min.css" rel="stylesheet" type="text/css"/>
+  <script src="//use.typekit.net/trv5ndi.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   try{Typekit.load();}catch(e){}
+  </script>
+  <script type="text/javascript">
+   window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+        if (event.origin !== "")
+            return;
+
+        var data = event.data;
+
+        if (data === 'FINISHED_LOADING_LINKEDIN_JS') {
+            $('.js-apply-with-linkedin').removeClass('hide');
+        } else if (data === 'PROFILE_DATA_BEING_FETCHED') {
+            show_application_form();
+            show_loading_overlay();
+        } else if (data.message == 'ERROR_WHILE_FETCHING_PROFILE_DATA') {
+            hide_loading_overlay();
+            show_application_form();
+            _RB.logToRollbar(data.error);
+        } else if (data.message == 'LINKEDIN_PROFILE_DATA') {
+            populateFields(data.firstName, data.lastName, data.emailAddress, data.summary, data.publicProfileUrl)
+        }
+    }
+
+    function populateFields(first_name, last_name, email, summary, linkedin_public_profile_url) {
+        hide_loading_overlay();
+        show_application_form();
+        var first_name_field = $('#id_candidate_first_name');
+        var last_name_field = $('#id_candidate_last_name');
+        var email_field = $('#id_candidate_email');
+        var summary_field = $('#id_linkedin_profile_summary');
+        var linkedin_public_profile_url_field = $('#id_linkedin_public_profile_url');
+
+        first_name_field.val(first_name);
+        last_name_field.val(last_name);
+        email_field.val(email);
+        summary_field.val(summary);
+        linkedin_public_profile_url_field.val(linkedin_public_profile_url);
+    }
+
+    function clickOnLinkedinButton() {
+        var iframe = document.querySelector("#js-linkedin-btn-iframe");
+        var iframeWindow = iframe.contentWindow;
+        iframeWindow.postMessage("CLICK_ON_LINKEDIN_BUTTON", "*");
+    }
+  </script>
+ </head>
+ <body>
+  <div class="header-main">
+   <div class="container">
+    <div class="row">
+     <div class="row-flex row-flex-align-center">
+      <div class="col-md-7 col-xs-8 header-main-logo-container">
+       <a class="header-main-logo hide-href" href="/">
+        <img alt="Quick Release_ jobs, openings" src="https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/1c9df9513bcd47dbb8d97e05844b9e5d/3.0_Logo_-_Quick_Release_Black.jpg"/>
+       </a>
+      </div>
+      <div class="col-md-5 col-xs-4 header-main-link-container">
+       <a class="btn-link hidden-xs hide-href header-main-link" href="http://www.quickrelease.co.uk" rel="noopener noreferrer" target="_blank">
+        www.quickrelease.co.uk
+       </a>
+       <a class="btn-link visible-xs-inline header-main-link" href="http://www.quickrelease.co.uk" rel="noopener noreferrer" target="_blank">
+        Website
+        <i class="glyphicon glyphicon-share btn-link-external-icon">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="company-header hidden-print js-company-header">
+   <div class="container">
+    <h1 class="company-header-title">
+     Quick Release_ Jobs
+    </h1>
+    <a class="js-show-openings btn btn-hollow btn-main" href="#content">
+     View Openings
+    </a>
+   </div>
+  </div>
+  <div class="company-info">
+   <div class="container">
+    <section>
+     <div class="company-info-content">
+      <p>
+       Quick Release_ are the leaders in automotive Product Data Management (PDM), working with many of the biggest global brands, F1 teams and exciting start-ups to improve the quality of their data and their approach to processing and reporting.
+      </p>
+      <p>
+       The Automotive industry is going through a huge transformation; OEMs are being redesigned and start-ups are rising up to challenge the status quo. Everyone needs to move faster to bring exciting products, technology and mobility solutions to the market. Tools, processes and professions designed to give teams an advantage are evolving as the race unfolds.
+      </p>
+      <p>
+       Quick Release is in a unique position to work as a trusted advisor to these competitors, helping them to harness the power of product data across the life-cycle from vehicle configuration through to in-service vehicle generated data.
+      </p>
+      <p>
+       We love life and we're passionate about what we do, so if you're excited about working with a diverse team of talented, driven people and influencing the physical world by mastering the digital world, then we want to hear from you.
+       <br/>
+       <br/>
+      </p>
+      <p>
+       Job roles and responsibilities vary as much as the projects we work on, but running through them all are the values that have guided us to success. If you share our belief in Technical Excellence, Outstanding Customer Service, Staying Curious, Continuously Improving and Daring To Be Different, and you're ready for a new challenge then take a look at our current opportunities to join the team....
+      </p>
+     </div>
+    </section>
+   </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+  <script>
+   var mobile_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/a8c2dc7886144c8b9b6557310e321ef8/seatbelt_-_letterbox.jpg';
+        var desktop_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/a8c2dc7886144c8b9b6557310e321ef8/seatbelt_-_letterbox.jpg';
+
+        $( function() {
+            var bgImage = window.innerWidth < 500 ? mobile_image : desktop_image;
+            $('.js-company-header').css({'background-image': 'url(' + bgImage + ')'});
+
+            $('.js-show-openings').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#content").offset().top
+                }, 400);
+            })
+        });
+  </script>
+  <div class="container main-content" id="content">
+   <div class="row">
+    <div class="col-md-12">
+     <div class="heading-section">
+      <div class="row row-flex row-flex-align-center">
+       <div class="col-xs-12 col-sm-7">
+        <h2 class="nomargin">
+         Current Openings
+        </h2>
+       </div>
+       <div class="col-xs-12 col-sm-5 text-right">
+        <div class="form-inline">
+         <label class="hide" for="city_filter">
+         </label>
+         <select class="form-control filter-select" id="city_filter" name="city_filter">
+          <option value="_all_locations">
+           All locations
+          </option>
+          <option value="United Kingdom">
+           United Kingdom
+          </option>
+          <option value="Valencia">
+           Valencia
+          </option>
+          <option value="Detroit">
+           Detroit
+          </option>
+          <option value="MI, USA">
+           MI, USA
+          </option>
+          <option value="Köln">
+           Köln
+          </option>
+          <option value="Melbourne">
+           Melbourne
+          </option>
+          <option value="Essex, Surrey &amp; South England, Warwickshire &amp; West Midlands">
+           Essex, Surrey &amp; South England, Warwickshire &amp; West Midlands
+          </option>
+          <option value="Essex, UK">
+           Essex, UK
+          </option>
+          <option value="Surrey, UK">
+           Surrey, UK
+          </option>
+          <option value="Warwickshire, UK">
+           Warwickshire, UK
+          </option>
+          <option value="München, Bayern, Deutschland">
+           München, Bayern, Deutschland
+          </option>
+          <option value="Köln, Nordrhein-Westfalen, Deutschland">
+           Köln, Nordrhein-Westfalen, Deutschland
+          </option>
+          <option value=" Broadmeadows, Victoria, Australia">
+           Broadmeadows, Victoria, Australia
+          </option>
+         </select>
+         <label class="hide" for="team_filter">
+         </label>
+         <select class="form-control filter-select" id="team_filter" name="team_filter">
+          <option value="_all_teams">
+           All teams
+          </option>
+          <option value="United Kingdom">
+           United Kingdom
+          </option>
+          <option value="Spain">
+           Spain
+          </option>
+          <option value="USA">
+           USA
+          </option>
+          <option value="Germany">
+           Germany
+          </option>
+          <option value="Australia">
+           Australia
+          </option>
+          <option value="Others">
+           Others
+          </option>
+          <option value="AUS">
+           AUS
+          </option>
+         </select>
+        </div>
+       </div>
+      </div>
+     </div>
+     <ul class="list-unstyled">
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         AUS
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0341t/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0341t/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Mechanical Automotive Engineer">
+              Mechanical Automotive Engineer
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Melbourne ,
+Victoria , Australia ">
+              <span class="meta-job-location-city cut-text">
+               Melbourne
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Victoria
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Australia
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034b4/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034b4/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title=" Junior Project Analyst - Melbourne">
+              Junior Project Analyst - Melbourne
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title=" Broadmeadows, Victoria, Australia ">
+              <span class="meta-job-location-city cut-text">
+               Broadmeadows, Victoria, Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03n2t/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03n2t/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Principal Software Engineer - Melbourne">
+              Principal Software Engineer - Melbourne
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Melbourne ,
+Victoria , Australia ">
+              <span class="meta-job-location-city cut-text">
+               Melbourne
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Victoria
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03n2d/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03n2d/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Senior Software Engineer - Melbourne">
+              Senior Software Engineer - Melbourne
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Melbourne ,
+Victoria , Australia ">
+              <span class="meta-job-location-city cut-text">
+               Melbourne
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Victoria
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03nj2/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03nj2/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Maintenance Release and PCR Manager - Melbourne">
+              Maintenance Release and PCR Manager - Melbourne
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Melbourne ,
+Victoria , Australia ">
+              <span class="meta-job-location-city cut-text">
+               Melbourne
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Victoria
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03njh/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03njh/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Integration Engineer - Melbourne">
+              Integration Engineer - Melbourne
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Melbourne ,
+Victoria , Australia ">
+              <span class="meta-job-location-city cut-text">
+               Melbourne
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Victoria
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03nfd/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03nfd/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Systems Engineer - Melbourne">
+              Systems Engineer - Melbourne
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Melbourne ,
+Victoria , Australia ">
+              <span class="meta-job-location-city cut-text">
+               Melbourne
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Victoria
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Germany
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034bl/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034bl/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Projektmanager / Datenanalyst im Datenmanagement – Automotive (m/w/d) Köln">
+              Projektmanager / Datenanalyst im Datenmanagement – Automotive (m/w/d) Köln
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Köln, Nordrhein-Westfalen, Deutschland ">
+              <span class="meta-job-location-city cut-text">
+               Köln, Nordrhein-Westfalen, Deutschland
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034bo/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034bo/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Projektmanager / Datenanalyst im Datenmanagement - Automotive (m/w/d) München">
+              Projektmanager / Datenanalyst im Datenmanagement - Automotive (m/w/d) München
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="München, Bayern, Deutschland ">
+              <span class="meta-job-location-city cut-text">
+               München, Bayern, Deutschland
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03lbl/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03lbl/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Auszubildende/r zur Kauffrau/ zum Kaufmann für Büromanagement (w/m/d) in Köln">
+              Auszubildende/r zur Kauffrau/ zum Kaufmann für Büromanagement (w/m/d) in Köln
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Köln ,
+Nordrhein-Westfalen , Deutschland ">
+              <span class="meta-job-location-city cut-text">
+               Köln
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Nordrhein-Westfalen
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Deutschland
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Others
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03aji/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03aji/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Java Developer">
+              Java Developer
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Melbourne ,
+Victoria , Australia ">
+              <span class="meta-job-location-city cut-text">
+               Melbourne
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Victoria
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03nko/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03nko/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Software Engineering Manager">
+              Software Engineering Manager
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Melbourne ,
+Victoria , Australia ">
+              <span class="meta-job-location-city cut-text">
+               Melbourne
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Victoria
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Australia
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Spain
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034bj/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034bj/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Graduate Project Analyst - Valencia, Spain">
+              Graduate Project Analyst - Valencia, Spain
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Valencia ,
+Valencian Community , Spain ">
+              <span class="meta-job-location-city cut-text">
+               Valencia
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Valencian Community
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Spain
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk032yl/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk032yl/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Graduate Project Analyst - Valencia, ESP">
+              Graduate Project Analyst - Valencia, ESP
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Valencia ,
+Valencian Community , Spain ">
+              <span class="meta-job-location-city cut-text">
+               Valencia
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Valencian Community
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Spain
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         United Kingdom
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034kk/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034kk/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Graduate Project Analyst (Warwickshire &amp; West Midlands)">
+              Graduate Project Analyst (Warwickshire &amp; West Midlands)
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Warwickshire, UK ">
+              <span class="meta-job-location-city cut-text">
+               Warwickshire, UK
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034ky/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034ky/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Graduate Project Analyst (Surrey &amp; South England)">
+              Graduate Project Analyst (Surrey &amp; South England)
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Surrey, UK ">
+              <span class="meta-job-location-city cut-text">
+               Surrey, UK
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034kg/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034kg/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Graduate Project Analyst (Essex)">
+              Graduate Project Analyst (Essex)
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Essex, UK ">
+              <span class="meta-job-location-city cut-text">
+               Essex, UK
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034ab/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034ab/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Chartwell Consulting Referrals">
+              Chartwell Consulting Referrals
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Essex, Surrey &amp; South England, Warwickshire &amp; West Midlands ">
+              <span class="meta-job-location-city cut-text">
+               Essex, Surrey &amp; South England, Warwickshire &amp; West Midlands
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03azx/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03azx/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="University of Bath Graduate Opportunities and Placements 2019/20">
+              University of Bath Graduate Opportunities and Placements 2019/20
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Essex, Surrey &amp; South England, Warwickshire &amp; West Midlands ">
+              <span class="meta-job-location-city cut-text">
+               Essex, Surrey &amp; South England, Warwickshire &amp; West Midlands
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03cf7/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03cf7/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Data Analyst / Consultant (SC Security Cleared)">
+              Data Analyst / Consultant (SC Security Cleared)
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="United Kingdom ">
+              <span class="meta-job-location-city cut-text">
+               United Kingdom
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div>
+        <a class="btn-link-btn-style space-on-bottom-20px" href="?team=United+Kingdom#content">
+         2
+                                        more »
+        </a>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         USA
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034by/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034by/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Project Coordinator - Michigan">
+              Project Coordinator - Michigan
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="MI, USA ">
+              <span class="meta-job-location-city cut-text">
+               MI, USA
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03894/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03894/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Project Coordinator">
+              Project Coordinator
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="MI, USA ">
+              <span class="meta-job-location-city cut-text">
+               MI, USA
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03omm/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03omm/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Project Analyst">
+              Project Analyst
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Detroit ,
+Michigan , United States ">
+              <span class="meta-job-location-city cut-text">
+               Detroit
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Michigan
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               United States
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="page-footer hidden-print">
+   <div class="container">
+    <h5 class="footer-title">
+     Couldn't find the opening you were looking for?
+    </h5>
+    <div class="row">
+     <div class="col-md-5 follow-company">
+      <div class="js-follow-company-wrapper">
+       <p>
+        Get updates about upcoming openings straight to your inbox
+       </p>
+       <form action="/follow_client/" class="js-follow-company-form" method="post" role="form">
+        <input name="csrfmiddlewaretoken" type="hidden" value="aOyVdKERe5akq8kejMHcfplEeg3L38OESjX5wlaomFSqRAN2ngI3d0Xx2AoPT73c"/>
+        <div class="form-group">
+         <label class="sr-only" for="follow_email">
+          Email address
+         </label>
+         <div class="input-group">
+          <input class="form-control" id="follow_email" name="email" placeholder="Your email address" required="required" type="email"/>
+          <span class="input-group-btn">
+           <button class="btn btn-default js-follow-company-button" data-loading-text="Saving..." type="submit">
+            Keep me posted
+           </button>
+          </span>
+         </div>
+        </div>
+        <input name="client" required="required" type="hidden" value="u0588"/>
+        <div class="form-follow-error js-follow-company-error" style="display:none;">
+        </div>
+       </form>
+      </div>
+      <div class="follow-company-rss">
+       <i class="fa fa-rss tail5px">
+       </i>
+       <a class="btn-link" href="/jobfeeds/quickrelease" target="_blank">
+        Jobs RSS Feed
+       </a>
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     $( function() {
+
+        $('[data-toggle="tooltip"]').tooltip({
+            delay: { "show": 500, "hide": 100 }
+        });
+
+        var $followForm = $('.js-follow-company-form');
+        var successMessage = "<div class='alert alert-success alert-lg'>" +
+                "<i class='glyphicon glyphicon-ok icon-cirlce icon-success'></i>" +
+                "<p>Thanks! You will receive updates from us in your email</p>" +
+                "</div>";
+
+        $followForm.on('submit', function(e) {
+            var $form = $(this);
+            var $formFollowError = $('.js-follow-company-error');
+            var $followWrapper = $('.js-follow-company-wrapper');
+            var $submitButton = $(this).find('[data-loading-text]');
+            $submitButton
+                    .button()
+                    .button('loading');
+
+            $.ajax({
+                url: $form.attr('action'),
+                type: $form.attr('method'),
+                data: $form.serialize(),
+                dataType: 'json'
+            }).done(function(data){
+                var resp_str;
+                resp_str = successMessage;
+                $followWrapper.html(resp_str);
+
+                if(window._gaq) {
+                    _gaq.push(['_trackEvent', 'Follow', 'success', 'quickrelease']);
+                    ga('send', 'event', {
+                        eventCategory: 'Follow',
+                        eventAction: 'success',
+                        eventLabel: 'quickrelease'
+                    });
+                }
+            }).fail(function(data){
+                var error_dict = JSON.parse(data.responseText);
+                var resp_str;
+                if (error_dict.email !== undefined){
+                    resp_str = "<span class='text-danger'>" + error_dict.email[0] + "</span>";
+                }else if (error_dict.client_id !== undefined) {
+                    resp_str = "<span class='text-danger'>" + error_dict.client_id[0] + "</span>";
+                }
+                $submitButton.button('reset');
+                $formFollowError.html(resp_str);
+                $formFollowError.show();
+
+            });
+            e.preventDefault();
+        });
+    });
+    </script>
+   </div>
+  </div>
+  <div class="page_footer page-footer">
+   <div class="container">
+    <a class="powered-by clearfix" href="http://recruiterbox.com/">
+     <div class="powered-by-logo pull-left">
+      <div class="icon icon-rbox-logo">
+      </div>
+     </div>
+     <div class="powered-by-text pull-left">
+      <div class="powered-by-text-title">
+       powered by
+      </div>
+      <div class="powered-by-text-brand">
+       <b>
+        Recruiterbox
+       </b>
+      </div>
+     </div>
+    </a>
+   </div>
+  </div>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-MSXJKT" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSXJKT');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/static/lib/jquery/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(function () {
+        $('.js-card').on('click', function () {
+            window.location.href = $(this).data('href');
+        });
+    });
+
+    function getParamMapFromURL(url) {
+        url = (url+'').replace(/\+/g, '%20');
+        url = decodeURI(url);
+        let query_string = null;
+        let object = {};
+        let param;
+
+        let items = url.split('?');
+
+        if (items.length > 1) {
+            query_string = items[1]
+        }
+        else {
+            return {}
+        }
+
+        let param_tokens = query_string.split('&');
+
+        for (let i = 0; i < param_tokens.length; i++) {
+            param = param_tokens[i];
+            if (param.indexOf('=') < 0) continue;
+            let item = param.split('=');
+            let key = item[0];
+            object[key] = item[1];
+        }
+
+        return object;
+    }
+
+    function constructURLFromParamMap(paramMap) {
+        let tokens = [];
+        for(let key in paramMap) {
+            if (paramMap.hasOwnProperty(key)) {
+                tokens.push(key + "=" + paramMap[key])
+            }
+        }
+        return encodeURI(tokens.join("&"));
+    }
+
+    function get_filter_value(filter_key) {
+        let paramMap = getParamMapFromURL(window.location.search);
+        return paramMap[filter_key]
+    }
+
+    function setDefaultValue(filter_el_id, filter_value) {
+        let filter_select_el = document.getElementById(filter_el_id);
+        for (let i = 0; i < filter_select_el.options.length; i++) {
+            if (filter_select_el.options[i].value.toLowerCase() === filter_value.toLowerCase()) {
+                filter_select_el.options[i].selected = true;
+            }
+        }
+    }
+
+    function updateLocationSelectedValue() {
+        let city_value = get_filter_value('loc_city')|| '_all_locations';
+        setDefaultValue('city_filter', city_value);
+    }
+
+    function updateTeamSelectedValue() {
+        let team_value = get_filter_value('team')|| '_all_teams';
+        setDefaultValue('team_filter', team_value);
+    }
+
+    function navigateWithParams(params, focus_on_jobs) {
+        let filter_str = constructURLFromParamMap(params);
+        window.location.href = "?" + filter_str + (focus_on_jobs ? "#content" : window.location.hash)
+    }
+
+
+    $(function () {
+        $('#city_filter').on('change', function (e) {
+            let city = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all location
+            // is selected in dropdown
+            if (city === "_all_locations") {
+                delete params['loc_city'];
+            }
+            else {
+                params['loc_city'] = city;
+            }
+            navigateWithParams(params, true);
+        })
+    });
+
+    $(function () {
+        $('#team_filter').on('change', function (e) {
+            let team_name = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all team
+            // is selected in dropdown
+
+            if (team_name === "_all_teams") {
+                delete params['team']
+            }
+            else {
+                params['team'] = team_name;
+            }
+            navigateWithParams(params, true)
+        })
+    });
+
+    $(function () {
+
+        if ($('#city_filter').length) {
+            updateLocationSelectedValue();
+        }
+
+        if ($('#team_filter').length) {
+            updateTeamSelectedValue();
+        }
+
+    });
+  </script>
+ </body>
+</html>

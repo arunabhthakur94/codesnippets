@@ -1,0 +1,2279 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns#" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   DB1 Group jobs |
+    DB1 Group openings |
+    DB1 Group careers
+  </title>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/images/logo/png/blue/32-ba85ed81cc83b2ac88999e391ad0b429453de810.png" rel="shortcut icon"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/css/reskin_publishing-93920b3b90ee6f33db43f587b0cdfa401aeb7b01.min.css" rel="stylesheet" type="text/css"/>
+  <script src="//use.typekit.net/trv5ndi.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   try{Typekit.load();}catch(e){}
+  </script>
+  <script type="text/javascript">
+   window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+        if (event.origin !== "")
+            return;
+
+        var data = event.data;
+
+        if (data === 'FINISHED_LOADING_LINKEDIN_JS') {
+            $('.js-apply-with-linkedin').removeClass('hide');
+        } else if (data === 'PROFILE_DATA_BEING_FETCHED') {
+            show_application_form();
+            show_loading_overlay();
+        } else if (data.message == 'ERROR_WHILE_FETCHING_PROFILE_DATA') {
+            hide_loading_overlay();
+            show_application_form();
+            _RB.logToRollbar(data.error);
+        } else if (data.message == 'LINKEDIN_PROFILE_DATA') {
+            populateFields(data.firstName, data.lastName, data.emailAddress, data.summary, data.publicProfileUrl)
+        }
+    }
+
+    function populateFields(first_name, last_name, email, summary, linkedin_public_profile_url) {
+        hide_loading_overlay();
+        show_application_form();
+        var first_name_field = $('#id_candidate_first_name');
+        var last_name_field = $('#id_candidate_last_name');
+        var email_field = $('#id_candidate_email');
+        var summary_field = $('#id_linkedin_profile_summary');
+        var linkedin_public_profile_url_field = $('#id_linkedin_public_profile_url');
+
+        first_name_field.val(first_name);
+        last_name_field.val(last_name);
+        email_field.val(email);
+        summary_field.val(summary);
+        linkedin_public_profile_url_field.val(linkedin_public_profile_url);
+    }
+
+    function clickOnLinkedinButton() {
+        var iframe = document.querySelector("#js-linkedin-btn-iframe");
+        var iframeWindow = iframe.contentWindow;
+        iframeWindow.postMessage("CLICK_ON_LINKEDIN_BUTTON", "*");
+    }
+  </script>
+ </head>
+ <body>
+  <div class="header-main">
+   <div class="container">
+    <div class="row">
+     <div class="row-flex row-flex-align-center">
+      <div class="col-md-7 col-xs-8 header-main-logo-container">
+       <a class="header-main-logo hide-href" href="/">
+        <img alt="DB1 Group jobs, openings" src="https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/cf3e436ebcd84448bc367c490ec3a8c0/logo-db1-group-color.png"/>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="company-header hidden-print js-company-header">
+   <div class="container">
+    <h1 class="company-header-title">
+     DB1 Group Jobs
+    </h1>
+    <a class="js-show-openings btn btn-hollow btn-main" href="#content">
+     View Openings
+    </a>
+   </div>
+  </div>
+  <div class="company-info">
+   <div class="container">
+    <section>
+     <div class="company-info-content">
+      <h2>
+       <strong>
+        UMA CARREIRA DE APRENDIZADO CONSTANTE
+       </strong>
+      </h2>
+      <p>
+      </p>
+      <p>
+       Se você é uma pessoa que preza por adquirir cada vez mais conhecimento e autonomia, a DB1 é o lugar certo para sua carreira.
+       <br/>
+       São muitas oportunidades, tanto para quem é da área de tecnologia quanto para comunicação, ciências contábeis, vendas, gestão de pessoas e entre outras.
+       <br/>
+       <br/>
+       Venha fazer parte desse time de feras!
+      </p>
+     </div>
+    </section>
+   </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+  <script>
+   var mobile_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/1e6e08ad7b704c42b6651259b49e5c42/banner-trabalhe-na-db1-novo.jpg';
+        var desktop_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/1e6e08ad7b704c42b6651259b49e5c42/banner-trabalhe-na-db1-novo.jpg';
+
+        $( function() {
+            var bgImage = window.innerWidth < 500 ? mobile_image : desktop_image;
+            $('.js-company-header').css({'background-image': 'url(' + bgImage + ')'});
+
+            $('.js-show-openings').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#content").offset().top
+                }, 400);
+            })
+        });
+  </script>
+  <div class="container main-content" id="content">
+   <div class="row">
+    <div class="col-md-12">
+     <div class="heading-section">
+      <div class="row row-flex row-flex-align-center">
+       <div class="col-xs-12 col-sm-7">
+        <h2 class="nomargin">
+         Current Openings
+        </h2>
+       </div>
+       <div class="col-xs-12 col-sm-5 text-right">
+        <div class="form-inline">
+         <label class="hide" for="city_filter">
+         </label>
+         <select class="form-control filter-select" id="city_filter" name="city_filter">
+          <option value="_all_locations">
+           All locations
+          </option>
+          <option value="Porto Alegre">
+           Porto Alegre
+          </option>
+          <option value="Maringá - Paraná">
+           Maringá - Paraná
+          </option>
+          <option value="Maringá">
+           Maringá
+          </option>
+          <option value="Presidente Prudente">
+           Presidente Prudente
+          </option>
+          <option value="Maringá - Floriano, Maringá - PR, Brasil">
+           Maringá - Floriano, Maringá - PR, Brasil
+          </option>
+          <option value="Buenos Aires">
+           Buenos Aires
+          </option>
+         </select>
+         <label class="hide" for="team_filter">
+         </label>
+         <select class="form-control filter-select" id="team_filter" name="team_filter">
+          <option value="_all_teams">
+           All teams
+          </option>
+          <option value="Comercial">
+           Comercial
+          </option>
+          <option value="Desenvolvedor(a) Delphi">
+           Desenvolvedor(a) Delphi
+          </option>
+          <option value="Desenvolvedor(a) PHP">
+           Desenvolvedor(a) PHP
+          </option>
+          <option value="Desenvolvedor(a) .NET">
+           Desenvolvedor(a) .NET
+          </option>
+          <option value="Desenvolvedor(a) Mobile">
+           Desenvolvedor(a) Mobile
+          </option>
+          <option value="Desenvolvedor(a) Front end">
+           Desenvolvedor(a) Front end
+          </option>
+          <option value="Gestão e Análise">
+           Gestão e Análise
+          </option>
+          <option value="Administrativo">
+           Administrativo
+          </option>
+          <option value="Arquitetura de Software">
+           Arquitetura de Software
+          </option>
+          <option value="Desenvolvedor(a) Java">
+           Desenvolvedor(a) Java
+          </option>
+          <option value="Outros">
+           Outros
+          </option>
+          <option value="Suporte e Implantação">
+           Suporte e Implantação
+          </option>
+         </select>
+        </div>
+       </div>
+      </div>
+     </div>
+     <ul class="list-unstyled">
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Administrativo
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03c8d/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03c8d/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Analista de Departamento Pessoal">
+              Analista de Departamento Pessoal
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03c87/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03c87/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Analista Contábil/Fiscal">
+              Analista Contábil/Fiscal
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03c8x/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03c8x/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Agente de Viagens">
+              Agente de Viagens
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03c82/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03c82/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Auxiliar de Serviços Gerais">
+              Auxiliar de Serviços Gerais
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j531/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j531/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Coordenador(a) de Eventos">
+              Coordenador(a) de Eventos
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0jdq6/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0jdq6/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Recepcionista">
+              Recepcionista
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Arquitetura de Software
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk031gz/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk031gz/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Arquiteto (a) de Sistemas">
+              Arquiteto (a) de Sistemas
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Comercial
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03n4o/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03n4o/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Analista de Parcerias">
+              Analista de Parcerias
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá - Floriano, Maringá - PR, Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá - Floriano, Maringá - PR, Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2f7/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2f7/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Consultor Comercial (Júnior) - RS">
+              Consultor Comercial (Júnior) - RS
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Porto Alegre ,
+Rio Grande do Sul , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Porto Alegre
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Rio Grande do Sul
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Desenvolvedor(a) .NET
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2cm/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2cm/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) .NET Backend">
+              Desenvolvedor (a) .NET Backend
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2ch/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2ch/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) .NET">
+              Desenvolvedor (a) .NET
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Desenvolvedor(a) Delphi
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0je9e/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0je9e/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) Delphi - Presidente Prudente/SP">
+              Desenvolvedor (a) Delphi - Presidente Prudente/SP
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Presidente Prudente ,
+São Paulo , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Presidente Prudente
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               São Paulo
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2nt/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2nt/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) Delphi - Maringá/PR">
+              Desenvolvedor (a) Delphi - Maringá/PR
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá - Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá - Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Desenvolvedor(a) Front end
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2cl/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2cl/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) Frontend">
+              Desenvolvedor (a) Frontend
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Desenvolvedor(a) Java
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03z23/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03z23/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor(a) Java Sênior">
+              Desenvolvedor(a) Java Sênior
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03z21/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03z21/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor(a) Java Pleno">
+              Desenvolvedor(a) Java Pleno
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03zs5/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03zs5/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor(a) Java Junior">
+              Desenvolvedor(a) Java Junior
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Desenvolvedor(a) Mobile
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03a7i/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03a7i/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) Mobile">
+              Desenvolvedor (a) Mobile
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03fje/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03fje/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) React Native">
+              Desenvolvedor (a) React Native
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2cs/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2cs/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) iOS">
+              Desenvolvedor (a) iOS
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2cq/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2cq/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) Android">
+              Desenvolvedor (a) Android
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Desenvolvedor(a) PHP
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2ng/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2ng/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) PHP ">
+              Desenvolvedor (a) PHP
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2nc/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2nc/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Desenvolvedor (a) PHP Backend - Sênior">
+              Desenvolvedor (a) PHP Backend - Sênior
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Gestão e Análise
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0321m/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0321m/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Gerente de Configuração/ DevOps">
+              Gerente de Configuração/ DevOps
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j29m/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j29m/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Gerente de Projetos">
+              Gerente de Projetos
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2k5/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2k5/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Analista de Requisitos/Negócios">
+              Analista de Requisitos/Negócios
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Allows remote
+             </small>
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk0j2ks/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0j2ks/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Analista de Testes (automatizado)">
+              Analista de Testes (automatizado)
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá ,
+Paraná , Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Paraná
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Outros
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk03lnw/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk03lnw/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Assistente de Customer Success (Tinbot)">
+              Assistente de Customer Success (Tinbot)
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Maringá - Floriano, Maringá - PR, Brasil ">
+              <span class="meta-job-location-city cut-text">
+               Maringá - Floriano, Maringá - PR, Brasil
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="job-group">
+       <div class="heading-with-line-on-mid">
+        <h2 class="heading-with-line-on-mid-text">
+         Suporte e Implantação
+        </h2>
+       </div>
+       <div class="row">
+        <div class="col-md-6">
+         <a class="card-title" href="/jobs/fk034m8/">
+          <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk034m8/">
+           <div class="row">
+            <div class="col-xs-8 col-md-9">
+             <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Analista de Soporte">
+              Analista de Soporte
+             </h3>
+             <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Buenos Aires ,
+Cidade Autônoma de Buenos Aires , Argentina ">
+              <span class="meta-job-location-city cut-text">
+               Buenos Aires
+              </span>
+              ,
+              <span class="meta-job-location-state">
+               Cidade Autônoma de Buenos Aires
+              </span>
+              ,
+              <span class="meta-job-location-country">
+               Argentina
+              </span>
+             </div>
+            </div>
+            <div class="card-badge col-xs-4 col-md-3">
+             <small class="badge-opening-meta">
+              Full-time
+             </small>
+            </div>
+           </div>
+           <script>
+            function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+           </script>
+          </div>
+         </a>
+        </div>
+       </div>
+      </div>
+     </ul>
+    </div>
+   </div>
+  </div>
+  <div class="page-footer hidden-print">
+   <div class="container">
+    <h5 class="footer-title">
+     Couldn't find the opening you were looking for?
+    </h5>
+    <div class="row">
+     <div class="col-md-5 follow-company">
+      <div class="js-follow-company-wrapper">
+       <p>
+        Get updates about upcoming openings straight to your inbox
+       </p>
+       <form action="/follow_client/" class="js-follow-company-form" method="post" role="form">
+        <input name="csrfmiddlewaretoken" type="hidden" value="zR1MXO6m37M40Y2jBznmFetqRZmLGDsfm9eUEWwn3NnoqzBRAgEuuAvhmem8HUsx"/>
+        <div class="form-group">
+         <label class="sr-only" for="follow_email">
+          Email address
+         </label>
+         <div class="input-group">
+          <input class="form-control" id="follow_email" name="email" placeholder="Your email address" required="required" type="email"/>
+          <span class="input-group-btn">
+           <button class="btn btn-default js-follow-company-button" data-loading-text="Saving..." type="submit">
+            Keep me posted
+           </button>
+          </span>
+         </div>
+        </div>
+        <input name="client" required="required" type="hidden" value="u0hew1"/>
+        <div class="form-follow-error js-follow-company-error" style="display:none;">
+        </div>
+       </form>
+      </div>
+      <div class="follow-company-rss">
+       <i class="fa fa-rss tail5px">
+       </i>
+       <a class="btn-link" href="/jobfeeds/vagasdb1" target="_blank">
+        Jobs RSS Feed
+       </a>
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     $( function() {
+
+        $('[data-toggle="tooltip"]').tooltip({
+            delay: { "show": 500, "hide": 100 }
+        });
+
+        var $followForm = $('.js-follow-company-form');
+        var successMessage = "<div class='alert alert-success alert-lg'>" +
+                "<i class='glyphicon glyphicon-ok icon-cirlce icon-success'></i>" +
+                "<p>Thanks! You will receive updates from us in your email</p>" +
+                "</div>";
+
+        $followForm.on('submit', function(e) {
+            var $form = $(this);
+            var $formFollowError = $('.js-follow-company-error');
+            var $followWrapper = $('.js-follow-company-wrapper');
+            var $submitButton = $(this).find('[data-loading-text]');
+            $submitButton
+                    .button()
+                    .button('loading');
+
+            $.ajax({
+                url: $form.attr('action'),
+                type: $form.attr('method'),
+                data: $form.serialize(),
+                dataType: 'json'
+            }).done(function(data){
+                var resp_str;
+                resp_str = successMessage;
+                $followWrapper.html(resp_str);
+
+                if(window._gaq) {
+                    _gaq.push(['_trackEvent', 'Follow', 'success', 'vagasdb1']);
+                    ga('send', 'event', {
+                        eventCategory: 'Follow',
+                        eventAction: 'success',
+                        eventLabel: 'vagasdb1'
+                    });
+                }
+            }).fail(function(data){
+                var error_dict = JSON.parse(data.responseText);
+                var resp_str;
+                if (error_dict.email !== undefined){
+                    resp_str = "<span class='text-danger'>" + error_dict.email[0] + "</span>";
+                }else if (error_dict.client_id !== undefined) {
+                    resp_str = "<span class='text-danger'>" + error_dict.client_id[0] + "</span>";
+                }
+                $submitButton.button('reset');
+                $formFollowError.html(resp_str);
+                $formFollowError.show();
+
+            });
+            e.preventDefault();
+        });
+    });
+    </script>
+   </div>
+  </div>
+  <div class="page_footer page-footer">
+   <div class="container">
+    <a class="powered-by clearfix" href="http://recruiterbox.com/">
+     <div class="powered-by-logo pull-left">
+      <div class="icon icon-rbox-logo">
+      </div>
+     </div>
+     <div class="powered-by-text pull-left">
+      <div class="powered-by-text-title">
+       powered by
+      </div>
+      <div class="powered-by-text-brand">
+       <b>
+        Recruiterbox
+       </b>
+      </div>
+     </div>
+    </a>
+   </div>
+  </div>
+  <!-- Google Analytics -->
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-148670641-1', 'auto');
+ga('send', 'pageview');
+  </script>
+  <!-- End Google Analytics -->
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-MSXJKT" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSXJKT');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/static/lib/jquery/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(function () {
+        $('.js-card').on('click', function () {
+            window.location.href = $(this).data('href');
+        });
+    });
+
+    function getParamMapFromURL(url) {
+        url = (url+'').replace(/\+/g, '%20');
+        url = decodeURI(url);
+        let query_string = null;
+        let object = {};
+        let param;
+
+        let items = url.split('?');
+
+        if (items.length > 1) {
+            query_string = items[1]
+        }
+        else {
+            return {}
+        }
+
+        let param_tokens = query_string.split('&');
+
+        for (let i = 0; i < param_tokens.length; i++) {
+            param = param_tokens[i];
+            if (param.indexOf('=') < 0) continue;
+            let item = param.split('=');
+            let key = item[0];
+            object[key] = item[1];
+        }
+
+        return object;
+    }
+
+    function constructURLFromParamMap(paramMap) {
+        let tokens = [];
+        for(let key in paramMap) {
+            if (paramMap.hasOwnProperty(key)) {
+                tokens.push(key + "=" + paramMap[key])
+            }
+        }
+        return encodeURI(tokens.join("&"));
+    }
+
+    function get_filter_value(filter_key) {
+        let paramMap = getParamMapFromURL(window.location.search);
+        return paramMap[filter_key]
+    }
+
+    function setDefaultValue(filter_el_id, filter_value) {
+        let filter_select_el = document.getElementById(filter_el_id);
+        for (let i = 0; i < filter_select_el.options.length; i++) {
+            if (filter_select_el.options[i].value.toLowerCase() === filter_value.toLowerCase()) {
+                filter_select_el.options[i].selected = true;
+            }
+        }
+    }
+
+    function updateLocationSelectedValue() {
+        let city_value = get_filter_value('loc_city')|| '_all_locations';
+        setDefaultValue('city_filter', city_value);
+    }
+
+    function updateTeamSelectedValue() {
+        let team_value = get_filter_value('team')|| '_all_teams';
+        setDefaultValue('team_filter', team_value);
+    }
+
+    function navigateWithParams(params, focus_on_jobs) {
+        let filter_str = constructURLFromParamMap(params);
+        window.location.href = "?" + filter_str + (focus_on_jobs ? "#content" : window.location.hash)
+    }
+
+
+    $(function () {
+        $('#city_filter').on('change', function (e) {
+            let city = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all location
+            // is selected in dropdown
+            if (city === "_all_locations") {
+                delete params['loc_city'];
+            }
+            else {
+                params['loc_city'] = city;
+            }
+            navigateWithParams(params, true);
+        })
+    });
+
+    $(function () {
+        $('#team_filter').on('change', function (e) {
+            let team_name = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all team
+            // is selected in dropdown
+
+            if (team_name === "_all_teams") {
+                delete params['team']
+            }
+            else {
+                params['team'] = team_name;
+            }
+            navigateWithParams(params, true)
+        })
+    });
+
+    $(function () {
+
+        if ($('#city_filter').length) {
+            updateLocationSelectedValue();
+        }
+
+        if ($('#team_filter').length) {
+            updateTeamSelectedValue();
+        }
+
+    });
+  </script>
+ </body>
+</html>

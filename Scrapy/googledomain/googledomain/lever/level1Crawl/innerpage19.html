@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"fb4e40776b",applicationID:"308893147"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <script src="https://cdn.optimizely.com/js/15777290433.js">
+  </script>
+  <title>
+   Diversity and Inclusion at Lever
+  </title>
+  <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+  <script data-cfasync="false" type="text/javascript">
+   //<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+  </script>
+  <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+  <!-- This site is optimized with the Yoast SEO plugin v12.6 - https://yoast.com/wordpress/plugins/seo/ -->
+  <meta content="Why we care so much about diversity and inclusion at Lever, and how you can achieve the same, or better, results." name="description">
+   <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots">
+    <link href="https://www.lever.co/diversity-and-inclusion/" rel="canonical">
+     <meta content="en_US" property="og:locale"/>
+     <meta content="article" property="og:type"/>
+     <meta content="Diversity and Inclusion at Lever" property="og:title"/>
+     <meta content="Why we care so much about diversity and inclusion at Lever, and how you can achieve the same, or better, results." property="og:description"/>
+     <meta content="https://www.lever.co/diversity-and-inclusion/" property="og:url"/>
+     <meta content="Lever" property="og:site_name"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/03/diversity-hero.png" property="og:image"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/03/diversity-hero.png" property="og:image:secure_url"/>
+     <meta content="summary_large_image" name="twitter:card"/>
+     <meta content="Why we care so much about diversity and inclusion at Lever, and how you can achieve the same, or better, results." name="twitter:description"/>
+     <meta content="Diversity and Inclusion at Lever" name="twitter:title"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/03/diversity-hero.png" name="twitter:image"/>
+     <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lever.co/#website","url":"https://www.lever.co/","name":"Lever","description":"Lever Recruiting Software","potentialAction":{"@type":"SearchAction","target":"https://www.lever.co/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.lever.co/diversity-and-inclusion/#primaryimage","url":"https://www.lever.co/wp-content/uploads/2019/03/diversity-hero.png","width":1920,"height":623,"caption":"team and company diversity"},{"@type":"WebPage","@id":"https://www.lever.co/diversity-and-inclusion/#webpage","url":"https://www.lever.co/diversity-and-inclusion/","inLanguage":"en-US","name":"Diversity and Inclusion at Lever","isPartOf":{"@id":"https://www.lever.co/#website"},"primaryImageOfPage":{"@id":"https://www.lever.co/diversity-and-inclusion/#primaryimage"},"datePublished":"2019-03-15T02:26:18+00:00","dateModified":"2019-08-06T20:33:44+00:00","description":"Why we care so much about diversity and inclusion at Lever, and how you can achieve the same, or better, results."}]}
+     </script>
+     <!-- / Yoast SEO plugin. -->
+     <link href="//www.lever.co" rel="dns-prefetch"/>
+     <link href="//munchkin.marketo.net" rel="dns-prefetch"/>
+     <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
+     <link href="//s.w.org" rel="dns-prefetch"/>
+     <link href="https://www.lever.co/feed/" rel="alternate" title="Lever » Feed" type="application/rss+xml"/>
+     <link href="https://www.lever.co/comments/feed/" rel="alternate" title="Lever » Comments Feed" type="application/rss+xml"/>
+     <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.lever.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+     </script>
+     <style type="text/css">
+      img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+     </style>
+     <link href="https://www.lever.co/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/metronet-profile-picture/css/front-end-gutenberg.css?ver=2.1.3" id="mpp_gutenberg-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/css/style.css?ver=5.2.4" id="cookie-consent-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/css/ult_marketo_forms-public.css?ver=1.0.1" id="ult_marketo_forms-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/public/css/wpp.css?ver=4.2.2" id="wordpress-popular-posts-css-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/css/minifycss/magnific-popup.min.css?ver=1.0.2" id="lib-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/underscores.min.css?ver=5.2.4" id="lever-underscores-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/style.min.css?ver=1.0.0-604" id="lever-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/header.min.css?ver=1.0.0-604" id="lever-header-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/footer.min.css?ver=1.0.0-604" id="lever-footer-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=4.3.0" id="elementor-icons-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0" id="font-awesome-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=2.5.14" id="elementor-animations-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=2.5.14" id="elementor-frontend-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/uploads/elementor/css/global.css?ver=1567035774" id="elementor-global-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/uploads/elementor/css/post-118.css?ver=1565123627" id="elementor-post-118-css" media="all" rel="stylesheet" type="text/css"/>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/forms2.min.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/ult_marketo_forms-public.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script src="//munchkin.marketo.net/munchkin.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      Munchkin.init('293-AOQ-024');
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/www.lever.co\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/","ID":"118","token":"a1087beb23","debug":""};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/public/js/wpp-4.2.0.min.js?ver=4.2.2" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.9.2" type="text/javascript">
+     </script>
+     <link href="https://www.lever.co/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+     <link href="https://www.lever.co/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+     <meta content="WordPress 5.2.4" name="generator"/>
+     <link href="https://www.lever.co/?p=118" rel="shortlink"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fdiversity-and-inclusion%2F" rel="alternate" type="application/json+oembed"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fdiversity-and-inclusion%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+     <style id="ctcc-css" media="screen" type="text/css">
+      #catapult-cookie-bar {
+					box-sizing: border-box;
+					max-height: 0;
+					opacity: 0;
+					z-index: 99999;
+					overflow: hidden;
+					color: #ddd;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					background-color: #464646;
+				}
+				#catapult-cookie-bar a {
+					color: #fff;
+				}
+				#catapult-cookie-bar .x_close span {
+					background-color: ;
+				}
+				button#catapultCookie {
+					background:;
+					color: ;
+					border: 0; padding: 6px 9px; border-radius: 3px;
+				}
+				#catapult-cookie-bar h3 {
+					color: #ddd;
+				}
+				.has-cookie-bar #catapult-cookie-bar {
+					opacity: 1;
+					max-height: 999px;
+					min-height: 30px;
+				}
+     </style>
+     <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+     <script data-cfasync="false" type="text/javascript">
+      //<![CDATA[
+	dataLayer.push({"pagePostType":"page","pagePostType2":"single-page","pagePostAuthor":"superuser"});//]]>
+     </script>
+     <script data-cfasync="false">
+      //<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSF9Z3W');//]]>
+     </script>
+     <!-- End Google Tag Manager -->
+     <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+     <style type="text/css">
+      .site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+     </style>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="32x32"/>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="192x192"/>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="apple-touch-icon-precomposed"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" name="msapplication-TileImage"/>
+    </link>
+   </meta>
+  </meta>
+ </head>
+ <body class="page-template page-template-elementor_header_footer page page-id-118 wp-custom-logo no-sidebar page-diversity-and-inclusion elementor-default elementor-template-full-width elementor-page elementor-page-118">
+  <div class="site page-wrap body-page-wrap" id="page">
+   <a class="skip-link screen-reader-text" href="#content">
+    Skip to content
+   </a>
+   <header class="site-header header" id="masthead">
+    <div class="header__wrapper">
+     <div class="site-branding">
+      <a class="custom-logo-link" href="https://www.lever.co/" rel="home">
+       <img alt="lever recruiting software" class="custom-logo" height="48" src="https://www.lever.co/wp-content/uploads/2019/03/lever_rgb_logo_standard.svg" width="169.001"/>
+      </a>
+      <p class="site-title">
+       <a href="https://www.lever.co/" rel="home">
+        Lever
+       </a>
+      </p>
+      <p class="site-description">
+       Lever Recruiting Software
+      </p>
+     </div>
+     <!-- .site-branding -->
+     <div class="menu-overflow hidden-large">
+     </div>
+     <div class="menu-wrapper">
+      <nav class="main-navigation" id="site-navigation">
+       <div class="menu-main-menu-container">
+        <ul class="menu" id="primary-menu">
+         <li class="hidden-large menu-item menu-item-type-custom menu-item-object-custom menu-item-76" id="menu-item-76">
+          <a href="https://hire.lever.co/">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32" id="menu-item-32">
+          <a href="/talent-suite">
+           Products
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13835" id="menu-item-13835">
+            <a href="https://www.lever.co/talent-suite/">
+             Lever Talent Suite
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39" id="menu-item-39">
+            <a href="/hire">
+             Lever Hire
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49" id="menu-item-49">
+            <a href="/nurture">
+             Lever Nurture
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50" id="menu-item-50">
+            <a href="/analytics">
+             Lever Analytics
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13834" id="menu-item-13834">
+            <a href="https://www.lever.co/talent-cloud-connect/">
+             Talent Cloud Connect
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51" id="menu-item-51">
+            <a href="/pricing">
+             Plans and Pricing
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40" id="menu-item-40">
+            <a href="/ecosystem">
+             Ecosystem
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15555" id="menu-item-15555">
+          <a href="/pricing">
+           Pricing
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" id="menu-item-33">
+          <a href="/customers">
+           Customers
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4561" id="menu-item-4561">
+          <a href="https://www.lever.co/recruiting-resources/">
+           Resources
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4562" id="menu-item-4562">
+            <a href="https://www.lever.co/recruiting-resources/">
+             All
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-342" id="menu-item-342">
+            <a href="https://www.lever.co/recruiting-resources/ebook/">
+             eBooks
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-343" id="menu-item-343">
+            <a href="https://www.lever.co/recruiting-resources/video/">
+             Videos
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-346" id="menu-item-346">
+            <a href="https://www.lever.co/recruiting-resources/webinar/">
+             Webinars
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-345" id="menu-item-345">
+            <a href="https://www.lever.co/recruiting-resources/tools/">
+             Tools and Templates
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-344" id="menu-item-344">
+            <a href="https://www.lever.co/recruiting-resources/datasheet/">
+             Product Datasheets
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13391" id="menu-item-13391">
+            <a href="https://www.lever.co/gdpr-recruiting/">
+             GDPR
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16854" id="menu-item-16854">
+            <a href="https://www.lever.co/lever-for-startups/">
+             Lever for Startups
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-35" id="menu-item-35">
+          <a href="/about">
+           Company
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44" id="menu-item-44">
+            <a href="/about">
+             About Us
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-118 current_page_item menu-item-4566" id="menu-item-4566">
+            <a aria-current="page" href="https://www.lever.co/diversity-and-inclusion/">
+             Diversity
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47" id="menu-item-47">
+            <a href="/press">
+             Press
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46" id="menu-item-46">
+            <a href="/careers">
+             Careers
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48" id="menu-item-48">
+            <a href="/partner-referral-application">
+             Referral Program
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15716" id="menu-item-15716">
+            <a href="https://www.lever.co/events/">
+             Events
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" id="menu-item-36">
+          <a href="/blog">
+           Blog
+          </a>
+         </li>
+        </ul>
+       </div>
+      </nav>
+      <!-- #site-navigation -->
+      <div class="user-navigation">
+       <div class="menu-user-menu-container">
+        <ul class="menu" id="menu-user-menu">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" id="menu-item-37">
+          <a href="https://hire.lever.co" rel="noopener noreferrer" target="_blank">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-button menu-item menu-item-type-custom menu-item-object-custom menu-item-38" id="menu-item-38">
+          <a href="/1801-demo-signup">
+           Get a demo
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="social-links hidden-large">
+       <div class="menu-socail-links-container">
+        <ul class="menu" id="menu-socail-links">
+         <li class="fa fa-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-73" id="menu-item-73">
+          <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+           Twitter
+          </a>
+         </li>
+         <li class="fa fa-linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-74" id="menu-item-74">
+          <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+           Linkedin
+          </a>
+         </li>
+         <li class="fa fa-facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-75" id="menu-item-75">
+          <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+           Facebook
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- .menu-wrapper -->
+     <button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle hidden-large">
+      <span class="fa fa-bars">
+      </span>
+     </button>
+    </div>
+    <!-- .header__wrapper -->
+   </header>
+   <!-- #masthead -->
+   <div class="site-content" id="content">
+    <div class="elementor elementor-118" data-elementor-id="118" data-elementor-settings="[]" data-elementor-type="post">
+     <div class="elementor-inner">
+      <div class="elementor-section-wrap">
+       <section class="elementor-element elementor-element-6b6094a7 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="6b6094a7">
+        <div class="elementor-container elementor-column-gap-no">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-4e811fc9 elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="4e811fc9">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-22aac463 elementor-widget elementor-widget-image" data-element_type="widget" data-id="22aac463" data-widget_type="image.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-image">
+                <img alt="team and company diversity" class="attachment-full size-full" height="623" sizes="(max-width: 1920px) 100vw, 1920px" src="https://www.lever.co/wp-content/uploads/2019/03/diversity-hero.png" srcset="https://www.lever.co/wp-content/uploads/2019/03/diversity-hero.png 1920w, https://www.lever.co/wp-content/uploads/2019/03/diversity-hero-300x97.png 300w, https://www.lever.co/wp-content/uploads/2019/03/diversity-hero-768x249.png 768w, https://www.lever.co/wp-content/uploads/2019/03/diversity-hero-1024x332.png 1024w" width="1920"/>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-78af02ca section-divider-quote elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="78af02ca">
+        <div class="elementor-container elementor-column-gap-no">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-dd3e2b elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="dd3e2b">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <section class="elementor-element elementor-element-3a614ecb elementor-section-full_width section-divider-quote__columns elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section" data-id="3a614ecb">
+              <div class="elementor-container elementor-column-gap-no">
+               <div class="elementor-row">
+                <div class="elementor-element elementor-element-47866f0e elementor-column elementor-col-66 elementor-inner-column" data-element_type="column" data-id="47866f0e">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-1923dbea font-meta-serif elementor-widget elementor-widget-heading" data-element_type="widget" data-id="1923dbea" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                     <h2 class="elementor-heading-title elementor-size-default">
+                      Diversity and Inclusion at Lever
+                     </h2>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-4f548a46 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="4f548a46" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-text-editor elementor-clearfix">
+                      <p>
+                       Our commitment to diversity and inclusion started with a taskforce at just 10 employees. We didn’t know it then, but this taskforce would take deep root in our culture—fundamentally shaping our trajectory. Since then, we’ve worked to create an environment where Leveroos can thrive and bring their authentic selves to work without judgement. We’ve learned that giving Leveroos the freedom to express themselves, to be open with their ideas, and to use opportunities for growth as their north star frees them to put their best work forward.
+                      </p>
+                      <p>
+                       Whether it’s through diversity and inclusion education during new employee ramp class, regular team workshops, weekly peer appreciation, or everyday actions, we strive to create a workplace where everyone feels like a welcome and essential part of the team. We’re not perfect, we’re still learning and we’re always open to new and different ways to think about inclusion.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="elementor-element elementor-element-214232d2 elementor-column elementor-col-33 elementor-inner-column" data-element_type="column" data-id="214232d2">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-37f3dcf1 elementor-widget elementor-widget-image" data-element_type="widget" data-id="37f3dcf1" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-image">
+                      <img alt="quate-image" src="https://www.lever.co/wp-content/uploads/2019/03/quate-image.png" title="quate-image"/>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-4c3e269c elementor-widget elementor-widget-html" data-element_type="widget" data-id="4c3e269c" data-widget_type="html.default">
+                    <div class="elementor-widget-container">
+                     <div class="sidebar-quote-content">
+                      <div class="sidebar-quote-inner-content">
+                       When employees from all walks of life can look around and see people like themselves already succeeding at all levels in your company, it makes a powerful impact on their own success.”
+                       <br/>
+                       <br/>
+                       <em>
+                        —Sarah Nahm, Co-Founder and CEO
+                       </em>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-1342e08f diversity-stats elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="1342e08f" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-no">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-9a4af40 elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="9a4af40">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-601a4b9f elementor-widget elementor-widget-heading" data-element_type="widget" data-id="601a4b9f" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+               <h2 class="elementor-heading-title elementor-size-default">
+                Our diversity stats
+               </h2>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-3a5f723b elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="3a5f723b" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <p>
+                 We’re proud of the team we’ve built, but know there’s more work to be done.
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-3ecb9c07 elementor-widget elementor-widget-image" data-element_type="widget" data-id="3ecb9c07" data-widget_type="image.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-image">
+                <img alt="Culture Quest team photo" class="attachment-full size-full" height="532" sizes="(max-width: 1280px) 100vw, 1280px" src="https://www.lever.co/wp-content/uploads/2019/03/Culture-Quest-Team-Picture-2018.jpg" srcset="https://www.lever.co/wp-content/uploads/2019/03/Culture-Quest-Team-Picture-2018.jpg 1280w, https://www.lever.co/wp-content/uploads/2019/03/Culture-Quest-Team-Picture-2018-300x125.jpg 300w, https://www.lever.co/wp-content/uploads/2019/03/Culture-Quest-Team-Picture-2018-768x319.jpg 768w, https://www.lever.co/wp-content/uploads/2019/03/Culture-Quest-Team-Picture-2018-1024x426.jpg 1024w" width="1280"/>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-578583d diversity-stats__six-column elementor-widget elementor-widget-wp-widget-text" data-element_type="widget" data-id="578583d" data-widget_type="wp-widget-text.default">
+              <div class="elementor-widget-container">
+               <h5>
+                51%
+               </h5>
+               <div class="textwidget">
+                <p>
+                 identify as women (all time – leaders and ics)
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-20b86784 diversity-stats__six-column elementor-widget elementor-widget-wp-widget-text" data-element_type="widget" data-id="20b86784" data-widget_type="wp-widget-text.default">
+              <div class="elementor-widget-container">
+               <h5>
+                56%
+               </h5>
+               <div class="textwidget">
+                <p>
+                 leaders (non-execs) identify as women
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-2f575f0a diversity-stats__six-column elementor-widget elementor-widget-wp-widget-text" data-element_type="widget" data-id="2f575f0a" data-widget_type="wp-widget-text.default">
+              <div class="elementor-widget-container">
+               <h5>
+                40%
+               </h5>
+               <div class="textwidget">
+                <p>
+                 female board
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-1e6c5795 diversity-stats__six-column diversity-stats__six-column-mobile elementor-widget elementor-widget-wp-widget-text" data-element_type="widget" data-id="1e6c5795" data-widget_type="wp-widget-text.default">
+              <div class="elementor-widget-container">
+               <h5>
+                12%
+               </h5>
+               <div class="textwidget">
+                <p>
+                 underrepresented minorities
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-5a1357b0 diversity-stats__six-column elementor-widget elementor-widget-wp-widget-text" data-element_type="widget" data-id="5a1357b0" data-widget_type="wp-widget-text.default">
+              <div class="elementor-widget-container">
+               <h5>
+                43%
+               </h5>
+               <div class="textwidget">
+                <p>
+                 executives identify as women
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-32f5e299 diversity-stats__six-column elementor-widget elementor-widget-wp-widget-text" data-element_type="widget" data-id="32f5e299" data-widget_type="wp-widget-text.default">
+              <div class="elementor-widget-container">
+               <h5>
+                41%
+               </h5>
+               <div class="textwidget">
+                <p>
+                 engineers identify as women
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-6b14a4f6 text-editer--small elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="6b14a4f6" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <p>
+                 Diversity statistics come from a voluntary survey taken when Lever was 220 employees in 2019. ‘Underrepresented minorities’ accounts for all non-Asian and non-White employees.
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-73d7e1b0 btn-link-no-bg text--center elementor-widget elementor-widget-button" data-element_type="widget" data-id="73d7e1b0" data-widget_type="button.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-button-wrapper">
+                <a class="elementor-button-link elementor-button elementor-size-sm" href="https://medium.com/initialized-capital/how-lever-got-to-50-50-between-women-men-b8db05b7d3ee" role="button" target="_blank">
+                 <span class="elementor-button-content-wrapper">
+                  <span class="elementor-button-text">
+                   Read about how Lever got to a 50:50 ratio between women and men &gt;
+                  </span>
+                 </span>
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-63a7e537 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="63a7e537" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-no">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-6072d465 elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="6072d465">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <section class="elementor-element elementor-element-77a1abf9 elementor-section-boxed__image-left elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section" data-id="77a1abf9">
+              <div class="elementor-container elementor-column-gap-no">
+               <div class="elementor-row">
+                <div class="elementor-element elementor-element-3e3e1ae9 elementor-column elementor-col-33 elementor-inner-column" data-element_type="column" data-id="3e3e1ae9">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-7b9c2b57 image-bg--white elementor-widget elementor-widget-image" data-element_type="widget" data-id="7b9c2b57" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-image">
+                      <img alt="diversity inclusion applicant tracking system recruiting" class="attachment-full size-full" height="1086" sizes="(max-width: 886px) 100vw, 886px" src="https://www.lever.co/wp-content/uploads/2019/07/dversity-inclusion-handbook.png" srcset="https://www.lever.co/wp-content/uploads/2019/07/dversity-inclusion-handbook.png 886w, https://www.lever.co/wp-content/uploads/2019/07/dversity-inclusion-handbook-245x300.png 245w, https://www.lever.co/wp-content/uploads/2019/07/dversity-inclusion-handbook-768x941.png 768w, https://www.lever.co/wp-content/uploads/2019/07/dversity-inclusion-handbook-835x1024.png 835w" width="886"/>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="elementor-element elementor-element-4b3a404d elementor-column elementor-col-66 elementor-inner-column" data-element_type="column" data-id="4b3a404d">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-2f74f26f elementor-widget elementor-widget-heading" data-element_type="widget" data-id="2f74f26f" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                     <h2 class="elementor-heading-title elementor-size-default">
+                      Ready to get started at your company? Read our guide!
+                     </h2>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-29a2d72 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="29a2d72" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-text-editor elementor-clearfix">
+                      <p>
+                       Customers frequently ask us what they can do to create a diverse and inclusive workplace, so we wrote this Diversity and Inclusion Handbook to compile those insights, along with those from inclusion leaders at Yelp, Affirm, and Shopify. In it, you’ll find tactical advice, beneficial resources, and examples of what you can do today to make real progress in diversity and inclusion.
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-202063e1 button elementor-button-info elementor-widget elementor-widget-button" data-element_type="widget" data-id="202063e1" data-widget_type="button.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-button-wrapper">
+                      <a class="elementor-button-link elementor-button elementor-size-sm" href="/resources/the-diversity-and-inclusion-handbook/" role="button">
+                       <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-text">
+                         Download the guide &gt;
+                        </span>
+                       </span>
+                      </a>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-1f8de23f elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="1f8de23f" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-no">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-6b0afd9c elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="6b0afd9c">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <section class="elementor-element elementor-element-706d3fb elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section" data-id="706d3fb">
+              <div class="elementor-container elementor-column-gap-no">
+               <div class="elementor-row">
+                <div class="elementor-element elementor-element-bb2c41c elementor-column elementor-col-100 elementor-inner-column" data-element_type="column" data-id="bb2c41c">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-3d7e4959 elementor-widget elementor-widget-heading" data-element_type="widget" data-id="3d7e4959" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                     <h2 class="elementor-heading-title elementor-size-default">
+                      More Resources
+                     </h2>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-6e43d4ea editer-samll-width elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="6e43d4ea" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-text-editor elementor-clearfix">
+                      <p>
+                       If you’re interested in learning more about this topic, there are a lot of good resources out there. Here are a few:
+                      </p>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+             <section class="elementor-element elementor-element-3d1a277 elementor-section-full_width elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section" data-id="3d1a277">
+              <div class="elementor-container elementor-column-gap-no">
+               <div class="elementor-row">
+                <div class="elementor-element elementor-element-1f6d4ca elementor-column elementor-col-100 elementor-inner-column" data-element_type="column" data-id="1f6d4ca">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-7eda5ec shadow-box-content-image elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="widget" data-id="7eda5ec" data-widget_type="image-box.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                       <a href="https://managingbias.fb.com/" target="_blank">
+                        <img alt="facebook lever recruiting" class="attachment-full size-full" height="82" src="https://www.lever.co/wp-content/uploads/2019/03/fb.svg" width="82"/>
+                       </a>
+                      </figure>
+                      <div class="elementor-image-box-content">
+                       <div class="elementor-image-box-title">
+                        <a href="https://managingbias.fb.com/" target="_blank">
+                         How Facebook manages unconscious bias
+                        </a>
+                       </div>
+                       <p class="elementor-image-box-description">
+                        Learn how Facebook believes that understanding and managing unconscious bias can help us build stronger, more diverse and inclusive organizations.
+                       </p>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-03db35b shadow-box-content-image elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="widget" data-id="03db35b" data-widget_type="image-box.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                       <a href="https://inside.lever.co/tagged/diversity-and-inclusion" target="_blank">
+                        <img alt="lever recruiting software" class="attachment-full size-full" height="48" src="https://www.lever.co/wp-content/uploads/2019/03/lever_rgb_logo_standard.svg" width="169.001"/>
+                       </a>
+                      </figure>
+                      <div class="elementor-image-box-content">
+                       <div class="elementor-image-box-title">
+                        <a href="https://inside.lever.co/tagged/diversity-and-inclusion" target="_blank">
+                         Inside Lever: Diversity and Inclusion
+                        </a>
+                       </div>
+                       <p class="elementor-image-box-description">
+                        Read stories on Lever's work to develop culture and foster diversity and inclusion. Hear directly from the Lever team about their own experiences with diversity and inclusion.
+                       </p>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-358d5772 shadow-box-content-image elementor-position-top elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-element_type="widget" data-id="358d5772" data-widget_type="image-box.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-image-box-wrapper">
+                      <figure class="elementor-image-box-img">
+                       <a href="https://projectinclude.org/implementing_culture" target="_blank">
+                        <img alt="include hiring logo" class="attachment-full size-full" height="55" src="https://www.lever.co/wp-content/uploads/2019/03/include-project.svg" width="173"/>
+                       </a>
+                      </figure>
+                      <div class="elementor-image-box-content">
+                       <div class="elementor-image-box-title">
+                        <a href="https://projectinclude.org/implementing_culture" target="_blank">
+                         How Project Include Thinks Culture Should Be Implemented
+                        </a>
+                       </div>
+                       <p class="elementor-image-box-description">
+                        <span>
+                         <span>
+                          There is no silver bullet, no one-size-fits-all solution. Learn more about
+                         </span>
+                         Project Include's holistic approach to inclusivity  —  one that covers every aspect of the culture.
+                        </span>
+                       </p>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-554cdfbb elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-element_type="section" data-id="554cdfbb" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-no">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-7c30ef6 elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="7c30ef6">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <section class="elementor-element elementor-element-36910689 elementor-section-boxed__image-left elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-element_type="section" data-id="36910689">
+              <div class="elementor-container elementor-column-gap-no">
+               <div class="elementor-row">
+                <div class="elementor-element elementor-element-5773510e elementor-column elementor-col-33 elementor-inner-column" data-element_type="column" data-id="5773510e">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-78881bdb elementor-widget elementor-widget-image" data-element_type="widget" data-id="78881bdb" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-image">
+                      <img alt="diversity inclusion sourcing applicant recruiting" class="attachment-full size-full" height="1066" sizes="(max-width: 820px) 100vw, 820px" src="https://www.lever.co/wp-content/uploads/2019/08/Diversity_Cover.png" srcset="https://www.lever.co/wp-content/uploads/2019/08/Diversity_Cover.png 820w, https://www.lever.co/wp-content/uploads/2019/08/Diversity_Cover-231x300.png 231w, https://www.lever.co/wp-content/uploads/2019/08/Diversity_Cover-768x998.png 768w, https://www.lever.co/wp-content/uploads/2019/08/Diversity_Cover-788x1024.png 788w" width="820"/>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="elementor-element elementor-element-7128b14d elementor-column elementor-col-66 elementor-inner-column" data-element_type="column" data-id="7128b14d">
+                 <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                   <div class="elementor-element elementor-element-b5edf7e elementor-widget elementor-widget-heading" data-element_type="widget" data-id="b5edf7e" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                     <h2 class="elementor-heading-title elementor-size-default">
+                      Learn how Lever's applicant tracking system supports diversity and inclusion
+                     </h2>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-4416c156 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="4416c156" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-text-editor elementor-clearfix">
+                      <ul>
+                       <li>
+                        Diversify your pipeline
+                       </li>
+                       <li>
+                        Nurture the right candidates
+                       </li>
+                       <li>
+                        Reduce your interviewer bias
+                       </li>
+                       <li>
+                        Measure your results
+                       </li>
+                      </ul>
+                     </div>
+                    </div>
+                   </div>
+                   <div class="elementor-element elementor-element-48101243 btn-link-no-bg elementor-widget elementor-widget-button" data-element_type="widget" data-id="48101243" data-widget_type="button.default">
+                    <div class="elementor-widget-container">
+                     <div class="elementor-button-wrapper">
+                      <a class="elementor-button-link elementor-button elementor-size-sm" href="/resources/datasheet-how-lever-supports-diversity-and-inclusion?hsLang=en-us" role="button">
+                       <span class="elementor-button-content-wrapper">
+                        <span class="elementor-button-text">
+                         Get the datasheet &gt;
+                        </span>
+                       </span>
+                      </a>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </section>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+       <section class="elementor-element elementor-element-77de5b6e elementor-section-height-min-height elementor-section-content-middle cta-button-link elementor-section-boxed elementor-section-height-default elementor-section-items-middle elementor-section elementor-top-section" data-element_type="section" data-id="77de5b6e" data-settings='{"background_background":"classic"}'>
+        <div class="elementor-container elementor-column-gap-no">
+         <div class="elementor-row">
+          <div class="elementor-element elementor-element-6de65594 elementor-column elementor-col-100 elementor-top-column" data-element_type="column" data-id="6de65594">
+           <div class="elementor-column-wrap elementor-element-populated">
+            <div class="elementor-widget-wrap">
+             <div class="elementor-element elementor-element-45a8f7ac text--center elementor-widget elementor-widget-heading" data-element_type="widget" data-id="45a8f7ac" data-widget_type="heading.default">
+              <div class="elementor-widget-container">
+               <h2 class="elementor-heading-title elementor-size-default">
+                Want to work with us?
+               </h2>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-52cc5516 elementor-widget elementor-widget-text-editor" data-element_type="widget" data-id="52cc5516" data-widget_type="text-editor.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-text-editor elementor-clearfix">
+                <p>
+                 We’re always looking for talented people.
+                </p>
+               </div>
+              </div>
+             </div>
+             <div class="elementor-element elementor-element-30e75cfe elementor-align-center text--center btn-min-width elementor-widget elementor-widget-button" data-element_type="widget" data-id="30e75cfe" data-widget_type="button.default">
+              <div class="elementor-widget-container">
+               <div class="elementor-button-wrapper">
+                <a class="elementor-button-link elementor-button elementor-size-sm" href="/careers" role="button">
+                 <span class="elementor-button-content-wrapper">
+                  <span class="elementor-button-text">
+                   Explore Jobs at Lever
+                  </span>
+                 </span>
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </section>
+      </div>
+     </div>
+    </div>
+   </div>
+   <!-- #content -->
+   <footer class="site-footer footer" id="colophon">
+    <div class="footer__wrapper">
+     <div class="footer__top">
+      <div class="widget_link_list widget-column" id="list-2">
+       <h3 class="widget-title">
+        products
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/talent-suite">
+          Lever Talent Suite
+         </a>
+        </li>
+        <li class="">
+         <a href="/hire">
+          Lever Hire
+         </a>
+        </li>
+        <li class="">
+         <a href="/nurture">
+          Lever Nurture
+         </a>
+        </li>
+        <li class="">
+         <a href="/analytics">
+          Lever Analytics
+         </a>
+        </li>
+        <li class="">
+         <a href="/talent-cloud-connect">
+          Talent Cloud Connect
+         </a>
+        </li>
+        <li class="">
+         <a href="/pricing">
+          Plans and Pricing
+         </a>
+        </li>
+        <li class="">
+         <a href="/ecosystem">
+          Ecosystem
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-3">
+       <h3 class="widget-title">
+        company
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/about">
+          About us
+         </a>
+        </li>
+        <li class="">
+         <a href="/customers">
+          Customers
+         </a>
+        </li>
+        <li class="">
+         <a href="/press">
+          Press
+         </a>
+        </li>
+        <li class="">
+         <a href="/careers">
+          Careers
+         </a>
+        </li>
+        <li class="">
+         <a href="/events/">
+          Events
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-4">
+       <h3 class="widget-title">
+        resources
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/recruiting-resources">
+          Resource center
+         </a>
+        </li>
+        <li class="">
+         <a href="/blog">
+          Blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://inside.lever.co/" target="_blank">
+          Inside Lever blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://fulcrum.lever.co/" target="_blank">
+          Lever Engineering blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-5">
+       <h3 class="widget-title">
+        support
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us" target="_blank">
+          Help center
+         </a>
+        </li>
+        <li class="">
+         <a href="https://status.lever.co/" target="_blank">
+          Product status
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Support
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Contact
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-6">
+       <h3 class="widget-title">
+        contact sales
+       </h3>
+       <ul class="list">
+        <li class="phone-footer-bg phone-icon-left">
+         (415) 458-2731
+        </li>
+        <li class="">
+         155 5th St 6th floor
+        </li>
+        <li class="">
+         San Francisco, CA 94103
+        </li>
+        <li class="contact-form__wrap">
+         <a href="mailto:info@lever.co">
+          info@lever.co
+         </a>
+        </li>
+        <li class="">
+         Toronto Office
+        </li>
+        <li class="">
+         176 Yonge Street, 6F
+        </li>
+        <li class="">
+         Toronto, ON M5C 2L7
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__bottom-wrapper">
+      <div class="footer__bottom">
+       <div class="widget_text" id="text-2">
+        <div class="textwidget">
+         <div class="block-about-footer">
+          <div class="block-about-footer__left">
+           <div class="footer-circle-image">
+            <img alt="Image of Lever team members" class="border-radius-50" src="https://www.lever.co/wp-content/uploads/2019/03/footer-image-leveroo-group.jpg"/>
+           </div>
+          </div>
+          <div class="block-about-footer__right">
+           <p class="social-footer-bg">
+            Follow us on
+            <a href="https://www.linkedin.com/company/3254533">
+             LinkedIn
+            </a>
+            ,
+            <a href="https://www.facebook.com/leverapp/">
+             Facebook
+            </a>
+            , and
+            <a href="https://twitter.com/lever">
+             Twitter
+            </a>
+            .
+           </p>
+           <div class="social-links">
+            <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+             <img alt="twitter" src="/wp-content/uploads/2019/04/twitter.png"/>
+            </a>
+            <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+             <img alt="linkedin" src="/wp-content/uploads/2019/04/LinkedIn-3.png"/>
+            </a>
+            <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+             <img alt="facebook" src="/wp-content/uploads/2019/04/facebook.png"/>
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="footer__subscribe">
+       <strong>
+        Sign up for our blog
+       </strong>
+       <p>
+        Keep up with the latest in recruiting.
+       </p>
+       <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+        <div class="umfwrap">
+         <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-1" datalink="">
+         </form>
+         <div class="mkto_ty_message" style="display:none">
+          Thanks for subscribing.
+         </div>
+        </div>
+       </div>
+       <script>
+        if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+       </script>
+       <div id="iframe_area">
+       </div>
+      </div>
+     </div>
+     <div class="footer__copyright">
+      <div class="widget_text" id="text-4">
+       <h4 class="widget-title hidden">
+        copyright
+       </h4>
+       <div class="textwidget">
+        <p>
+         <span class="copyright-content">
+          © 2019 Lever
+          <a href="/privacy">
+           Privacy
+          </a>
+          |
+          <a href="https://www.lever.co/legal/">
+           Legal
+          </a>
+          |
+          <a href="/levers-data-selling-policy">
+           Do Not Sell My Personal Information
+          </a>
+         </span>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <!-- #colophon -->
+  </div>
+  <!-- #page -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NSF9Z3W" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script src="https://www.lever.co/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.min.js?ver=2.1.3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var ctcc_vars = {"expiry":"","method":"","version":"1"};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js?ver=2.3.0" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/navigation-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/skip-link-focus-fix-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/libs/jquery.magnific-popup.min.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js?ver=2.1.3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+var customAjax = {"ajaxurl":"https:\/\/www.lever.co\/wp-admin\/admin-ajax.php"};
+var timeConfigPopupFull = {"time_full_value":"1"};
+var timeConfigPopupSidebar = {"time_sidebar_value":"0.5"};
+var popupIdConfigPopupFull = {"popup_id":""};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-min.js?ver=1.0.0-604" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-header-min.js?ver=1.0.0-604" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/wp-embed.min.js?ver=5.2.4" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=2.5.14" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/jquery/ui/position.min.js?ver=1.11.4" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.7.1" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=4.4.6" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.5.14","urls":{"assets":"https:\/\/www.lever.co\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":118,"title":"Resources for cultivating diversity and inclusion in the workplace","excerpt":""}};
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=2.5.14" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   jQuery(document).ready(function($){
+												if(!catapultReadCookie("catAccCookies")){ // If the cookie has not been set then show the bar
+							$("html").addClass("has-cookie-bar");
+							$("html").addClass("cookie-bar-bottom-bar");
+							$("html").addClass("cookie-bar-bar");
+													}
+																	});
+  </script>
+  <div class="" id="catapult-cookie-bar">
+   <div class="ctcc-inner">
+    <span class="ctcc-left-side">
+     This site uses cookies to offer you a better browsing experience.
+     <a class="ctcc-more-info-link" href="https://www.lever.co/cookie-policy" tabindex="0" target="_blank">
+      Learn more.
+     </a>
+    </span>
+    <span class="ctcc-right-side">
+     <button id="catapultCookie" onclick="catapultAcceptCookies();" tabindex="0">
+      Thank you
+     </button>
+    </span>
+   </div>
+   <!-- custom wrapper class -->
+  </div>
+  <!-- #catapult-cookie-bar -->
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb4e40776b","applicationID":"308893147","transactionName":"ZF0EbBcHWxZWVEUIWV0XJ1sRD1oLGF9UAFJWSkteCglBAEU=","queueTime":0,"applicationTime":633,"atts":"SBoHGl8dSBg=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>
