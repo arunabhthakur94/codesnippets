@@ -25,7 +25,7 @@ class CrawlRecruiterBox(scrapy.Spider):
     def parse(self, response):
         html_source = response.body
         html = BeautifulSoup(html_source, 'html.parser')
-        with open('../HTML/page' + str(CrawlRecruiterBox.page_number) + '.html', 'w', encoding='utf-8') as f:
+        with open('/tmp/HTML/page' + str(CrawlRecruiterBox.page_number) + '.html', 'w', encoding='utf-8') as f:
             f.write(str(html.prettify()))
         
         next_page = response.xpath('/html/body/div/footer/div[1]/div/div/a/@href').extract_first()
@@ -50,5 +50,5 @@ class CrawlRecruiterBox(scrapy.Spider):
         CrawlRecruiterBox.inner_pages += 1
         html_source = response.body
         html = BeautifulSoup(html_source, 'html.parser')
-        with open ('../HTML/Level-2/innerpage'+str(CrawlRecruiterBox.inner_pages)+'.html', 'w', encoding='utf-8') as f:
+        with open ('/tmp/HTML/Level-2/innerpage'+str(CrawlRecruiterBox.inner_pages)+'.html', 'w', encoding='utf-8') as f:
             f.write(str(html.prettify()))
