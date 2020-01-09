@@ -8,7 +8,20 @@
 #     https://docs.scrapy.org/en/latest/topics/settings.html
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
+import logging
+from scrapy.utils.log import configure_logging
 
+configure_logging(install_root_handler=False)
+logging.basicConfig(
+filename='/tmp/scrapy.log',
+filemode='a',
+format='%(levelname)s: %(message)s',
+level=logging.DEBUG
+)
+
+#logfile = open('/tmp/scrapy.log', 'w')
+#log_observer = ScrapyFileLogObserver(logfile, level=logging.DEBUG)
+#log_observer.start()
 BOT_NAME = 'recruiterboxjobs'
 
 SPIDER_MODULES = ['recruiterboxjobs.spiders']
