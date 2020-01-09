@@ -55,7 +55,7 @@ class CrawlworkDay(scrapy.Spider):
         parent_source = "https://cutshort.io/jobs/growth-hacking-jobs-in-bangalore-bengaluru"
         job_type = "Full time"
         company_type = response.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "t", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "t", " " ))]//*[contains(concat( " ", @class, " " ), concat( " ", "inline_middle", " " )) and (((count(preceding-sibling::*) + 1) = 3) and parent::*)]//span/text()').extract_first()
-
+        apply_now = response.xpath('//*[contains(concat( " ", @class, " " ), concat( " ", "everyOtherBlueButton", " " ))]/@href').extract_first()
         arr_company_name = []
         arr_company_name.append(company_name)
 
@@ -77,12 +77,15 @@ class CrawlworkDay(scrapy.Spider):
         arr_company_name = []
         arr_company_name.append(company_name)
 
+        arr_apply_now = []
+        arr_apply_now.append(apply_now)
+
         with open ('../cutshortfetched/level2data/datas.csv','a', encoding='utf-8') as csvfile:
-            fieldnames = ['Job_Title','Company_Name','Pay_Scale','Location','Parent_Source','Job_Type','Company_Type']
+            fieldnames = ['Job_Title','Company_Name','Pay_Scale','Location','Parent_Source','Job_Type','Company_Type','Apply_Now']
             writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
-            # writer.writeheader()
+            writer.writeheader()
             for i in range(len(arr_company_name)):
-                writer.writerow({'Job_Title': [job_title],'Company_Name': company_name, 'Pay_Scale': pay_scale, 'Location':location,'Parent_Source':parent_source,'Job_Type':job_type, 'Company_Type':company_type})
+                writer.writerow({'Job_Title': [job_title],'Company_Name': company_name, 'Pay_Scale': pay_scale, 'Location':location,'Parent_Source':parent_source,'Job_Type':job_type, 'Company_Type':company_type, 'Apply_Now':apply_now})
             return json.dumps({"response": "done"})
         yield None
 
