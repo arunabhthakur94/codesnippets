@@ -703,9 +703,6 @@ class crawlPost(scrapy.Spider):
 
 
 
-
-
-
     # LEVEL-1 CRAWLNG
 
     # def parse(self, response):
