@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns#" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   The On Being Project jobs |
+   The On Being Project openings |
+   The On Being Project careers
+  </title>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/images/logo/png/blue/32-ba85ed81cc83b2ac88999e391ad0b429453de810.png" rel="shortcut icon"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/css/reskin_publishing-93920b3b90ee6f33db43f587b0cdfa401aeb7b01.min.css" rel="stylesheet" type="text/css"/>
+  <script src="//use.typekit.net/trv5ndi.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   try{Typekit.load();}catch(e){}
+  </script>
+  <script type="text/javascript">
+   window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+        if (event.origin !== "")
+            return;
+
+        var data = event.data;
+
+        if (data === 'FINISHED_LOADING_LINKEDIN_JS') {
+            $('.js-apply-with-linkedin').removeClass('hide');
+        } else if (data === 'PROFILE_DATA_BEING_FETCHED') {
+            show_application_form();
+            show_loading_overlay();
+        } else if (data.message == 'ERROR_WHILE_FETCHING_PROFILE_DATA') {
+            hide_loading_overlay();
+            show_application_form();
+            _RB.logToRollbar(data.error);
+        } else if (data.message == 'LINKEDIN_PROFILE_DATA') {
+            populateFields(data.firstName, data.lastName, data.emailAddress, data.summary, data.publicProfileUrl)
+        }
+    }
+
+    function populateFields(first_name, last_name, email, summary, linkedin_public_profile_url) {
+        hide_loading_overlay();
+        show_application_form();
+        var first_name_field = $('#id_candidate_first_name');
+        var last_name_field = $('#id_candidate_last_name');
+        var email_field = $('#id_candidate_email');
+        var summary_field = $('#id_linkedin_profile_summary');
+        var linkedin_public_profile_url_field = $('#id_linkedin_public_profile_url');
+
+        first_name_field.val(first_name);
+        last_name_field.val(last_name);
+        email_field.val(email);
+        summary_field.val(summary);
+        linkedin_public_profile_url_field.val(linkedin_public_profile_url);
+    }
+
+    function clickOnLinkedinButton() {
+        var iframe = document.querySelector("#js-linkedin-btn-iframe");
+        var iframeWindow = iframe.contentWindow;
+        iframeWindow.postMessage("CLICK_ON_LINKEDIN_BUTTON", "*");
+    }
+  </script>
+ </head>
+ <body>
+  <div class="header-main">
+   <div class="container">
+    <div class="row">
+     <div class="row-flex row-flex-align-center">
+      <div class="col-md-7 col-xs-8 header-main-logo-container">
+       <a class="header-main-logo hide-href" href="/">
+        <img alt="The On Being Project jobs, openings" src="https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/7a664b9da94c4bff977fbaa7ddc58ec9/ONBE_SocialMedia_Icon_OnWhite.jpg"/>
+       </a>
+      </div>
+      <div class="col-md-5 col-xs-4 header-main-link-container">
+       <a class="btn-link hidden-xs hide-href header-main-link" href="http://onbeing.org" rel="noopener noreferrer" target="_blank">
+        onbeing.org
+       </a>
+       <a class="btn-link visible-xs-inline header-main-link" href="http://onbeing.org" rel="noopener noreferrer" target="_blank">
+        Website
+        <i class="glyphicon glyphicon-share btn-link-external-icon">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="company-header hidden-print js-company-header">
+   <div class="container">
+    <h1 class="company-header-title">
+     The On Being Project Jobs
+    </h1>
+    <a class="js-show-openings btn btn-hollow btn-main" href="#content">
+     View Openings
+    </a>
+   </div>
+  </div>
+  <div class="company-info">
+   <div class="container">
+    <section>
+     <div class="company-info-content">
+      <p>
+       <strong>
+        Thank you for your interest in working with the us!
+       </strong>
+      </p>
+      <p>
+       <a href="https://onbeing.org/">
+        The On Being Project
+       </a>
+       is an independent, non-profit media and public life initiative. We make a
+       <a href="https://onbeing.org/series/podcast/">
+        public radio show
+       </a>
+       ,
+       <a href="https://onbeing.org/series/podcast/">
+        podcasts
+       </a>
+       , and
+       <a href="https://onbeing.org/civil-conversations-project/better-conversations-guide/">
+        tools for the art of living
+       </a>
+       that explore the intersection of spiritual inquiry, science, social healing, community, poetry, and the arts. Through content, experiences and practical tools, we tend the human change that makes social transformation possible.
+      </p>
+      <p>
+       We strive to be an ambitious, high-performing and yet human-centered organization. Our service to our audience, community, and the world is the focus of our work together.
+      </p>
+     </div>
+    </section>
+   </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+  <script>
+   var mobile_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/c1837b083d5c45c896e460862bd3a849/OnbeingCandids4-5837.jpg';
+        var desktop_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/c1837b083d5c45c896e460862bd3a849/OnbeingCandids4-5837.jpg';
+
+        $( function() {
+            var bgImage = window.innerWidth < 500 ? mobile_image : desktop_image;
+            $('.js-company-header').css({'background-image': 'url(' + bgImage + ')'});
+
+            $('.js-show-openings').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#content").offset().top
+                }, 400);
+            })
+        });
+  </script>
+  <div class="container main-content" id="content">
+   <div class="row">
+    <div class="col-md-12">
+     <div class="heading-section">
+      <div class="row row-flex row-flex-align-center">
+       <div class="col-xs-12 col-sm-7">
+        <h2 class="nomargin">
+         Current Openings
+        </h2>
+       </div>
+       <div class="col-xs-12 col-sm-5 text-right">
+        <div class="form-inline">
+        </div>
+       </div>
+      </div>
+     </div>
+     <h2 class="heading-no-opening align-center nomargin">
+      Sorry! But we do not have any openings right now.
+     </h2>
+    </div>
+   </div>
+  </div>
+  <div class="page_footer page-footer">
+   <div class="container">
+    <a class="powered-by clearfix" href="http://recruiterbox.com/">
+     <div class="powered-by-logo pull-left">
+      <div class="icon icon-rbox-logo">
+      </div>
+     </div>
+     <div class="powered-by-text pull-left">
+      <div class="powered-by-text-title">
+       powered by
+      </div>
+      <div class="powered-by-text-brand">
+       <b>
+        Recruiterbox
+       </b>
+      </div>
+     </div>
+    </a>
+   </div>
+  </div>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-MSXJKT" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSXJKT');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/static/lib/jquery/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(function () {
+        $('.js-card').on('click', function () {
+            window.location.href = $(this).data('href');
+        });
+    });
+
+    function getParamMapFromURL(url) {
+        url = (url+'').replace(/\+/g, '%20');
+        url = decodeURI(url);
+        let query_string = null;
+        let object = {};
+        let param;
+
+        let items = url.split('?');
+
+        if (items.length > 1) {
+            query_string = items[1]
+        }
+        else {
+            return {}
+        }
+
+        let param_tokens = query_string.split('&');
+
+        for (let i = 0; i < param_tokens.length; i++) {
+            param = param_tokens[i];
+            if (param.indexOf('=') < 0) continue;
+            let item = param.split('=');
+            let key = item[0];
+            object[key] = item[1];
+        }
+
+        return object;
+    }
+
+    function constructURLFromParamMap(paramMap) {
+        let tokens = [];
+        for(let key in paramMap) {
+            if (paramMap.hasOwnProperty(key)) {
+                tokens.push(key + "=" + paramMap[key])
+            }
+        }
+        return encodeURI(tokens.join("&"));
+    }
+
+    function get_filter_value(filter_key) {
+        let paramMap = getParamMapFromURL(window.location.search);
+        return paramMap[filter_key]
+    }
+
+    function setDefaultValue(filter_el_id, filter_value) {
+        let filter_select_el = document.getElementById(filter_el_id);
+        for (let i = 0; i < filter_select_el.options.length; i++) {
+            if (filter_select_el.options[i].value.toLowerCase() === filter_value.toLowerCase()) {
+                filter_select_el.options[i].selected = true;
+            }
+        }
+    }
+
+    function updateLocationSelectedValue() {
+        let city_value = get_filter_value('loc_city')|| '_all_locations';
+        setDefaultValue('city_filter', city_value);
+    }
+
+    function updateTeamSelectedValue() {
+        let team_value = get_filter_value('team')|| '_all_teams';
+        setDefaultValue('team_filter', team_value);
+    }
+
+    function navigateWithParams(params, focus_on_jobs) {
+        let filter_str = constructURLFromParamMap(params);
+        window.location.href = "?" + filter_str + (focus_on_jobs ? "#content" : window.location.hash)
+    }
+
+
+    $(function () {
+        $('#city_filter').on('change', function (e) {
+            let city = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all location
+            // is selected in dropdown
+            if (city === "_all_locations") {
+                delete params['loc_city'];
+            }
+            else {
+                params['loc_city'] = city;
+            }
+            navigateWithParams(params, true);
+        })
+    });
+
+    $(function () {
+        $('#team_filter').on('change', function (e) {
+            let team_name = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all team
+            // is selected in dropdown
+
+            if (team_name === "_all_teams") {
+                delete params['team']
+            }
+            else {
+                params['team'] = team_name;
+            }
+            navigateWithParams(params, true)
+        })
+    });
+
+    $(function () {
+
+        if ($('#city_filter').length) {
+            updateLocationSelectedValue();
+        }
+
+        if ($('#team_filter').length) {
+            updateTeamSelectedValue();
+        }
+
+    });
+  </script>
+ </body>
+</html>

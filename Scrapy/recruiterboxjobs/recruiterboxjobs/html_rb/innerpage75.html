@@ -1,0 +1,1211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html prefix="og: http://ogp.me/ns#" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title>
+   Talentpad jobs |
+   Talentpad openings |
+   Talentpad careers
+  </title>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/images/logo/png/blue/32-ba85ed81cc83b2ac88999e391ad0b429453de810.png" rel="shortcut icon"/>
+  <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="//d2ci7y8jachp9m.cloudfront.net/static/css/reskin_publishing-93920b3b90ee6f33db43f587b0cdfa401aeb7b01.min.css" rel="stylesheet" type="text/css"/>
+  <script src="//use.typekit.net/trv5ndi.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   try{Typekit.load();}catch(e){}
+  </script>
+  <script type="text/javascript">
+   window.addEventListener("message", receiveMessage, false);
+
+    function receiveMessage(event)
+    {
+        if (event.origin !== "")
+            return;
+
+        var data = event.data;
+
+        if (data === 'FINISHED_LOADING_LINKEDIN_JS') {
+            $('.js-apply-with-linkedin').removeClass('hide');
+        } else if (data === 'PROFILE_DATA_BEING_FETCHED') {
+            show_application_form();
+            show_loading_overlay();
+        } else if (data.message == 'ERROR_WHILE_FETCHING_PROFILE_DATA') {
+            hide_loading_overlay();
+            show_application_form();
+            _RB.logToRollbar(data.error);
+        } else if (data.message == 'LINKEDIN_PROFILE_DATA') {
+            populateFields(data.firstName, data.lastName, data.emailAddress, data.summary, data.publicProfileUrl)
+        }
+    }
+
+    function populateFields(first_name, last_name, email, summary, linkedin_public_profile_url) {
+        hide_loading_overlay();
+        show_application_form();
+        var first_name_field = $('#id_candidate_first_name');
+        var last_name_field = $('#id_candidate_last_name');
+        var email_field = $('#id_candidate_email');
+        var summary_field = $('#id_linkedin_profile_summary');
+        var linkedin_public_profile_url_field = $('#id_linkedin_public_profile_url');
+
+        first_name_field.val(first_name);
+        last_name_field.val(last_name);
+        email_field.val(email);
+        summary_field.val(summary);
+        linkedin_public_profile_url_field.val(linkedin_public_profile_url);
+    }
+
+    function clickOnLinkedinButton() {
+        var iframe = document.querySelector("#js-linkedin-btn-iframe");
+        var iframeWindow = iframe.contentWindow;
+        iframeWindow.postMessage("CLICK_ON_LINKEDIN_BUTTON", "*");
+    }
+  </script>
+ </head>
+ <body>
+  <div class="header-main">
+   <div class="container">
+    <div class="row">
+     <div class="row-flex row-flex-align-center">
+      <div class="col-md-7 col-xs-8 header-main-logo-container">
+       <a class="header-main-logo hide-href" href="/">
+        <img alt="Talentpad jobs, openings" src="https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/ae048c958dcf4fc2b09d904d291f876d/0.png"/>
+       </a>
+      </div>
+      <div class="col-md-5 col-xs-4 header-main-link-container">
+       <a class="btn-link hidden-xs hide-href header-main-link" href="http://www.talentpad.com/" rel="noopener noreferrer" target="_blank">
+        www.talentpad.com
+       </a>
+       <a class="btn-link visible-xs-inline header-main-link" href="http://www.talentpad.com/" rel="noopener noreferrer" target="_blank">
+        Website
+        <i class="glyphicon glyphicon-share btn-link-external-icon">
+        </i>
+       </a>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="company-header hidden-print js-company-header">
+   <div class="container">
+    <h1 class="company-header-title">
+     Talentpad Jobs
+    </h1>
+    <a class="js-show-openings btn btn-hollow btn-main" href="#content">
+     View Openings
+    </a>
+   </div>
+  </div>
+  <div class="company-info">
+   <div class="container">
+    <section>
+     <div class="company-info-content">
+      <p class="p1">
+       <span class="s1">
+        <strong>
+         About TalentPad
+        </strong>
+       </span>
+      </p>
+      <p class="p1">
+       <span class="s1">
+        <strong>
+         Brief
+        </strong>
+       </span>
+      </p>
+      <p class="p1">
+       <span class="s1">
+        Started in Feb 2014, Delhi-based TalentPad is an online marketplace for high quality talent, operating in the large online recruitment market in India. Started by three IIT alumni, it’s a second generation platform which plans to flip the current recruitment process on it’s head. It gives more power to the job-seekers and lets employers make the first move in search for high quality talent.
+       </span>
+      </p>
+      <p class="p1">
+       <span class="s1">
+        <strong>
+         Basic Info
+        </strong>
+       </span>
+      </p>
+      <ul class="ul1">
+       <li class="li1">
+        <span class="s1">
+         Team Size: 15+
+        </span>
+        <span class="s2">
+         <br/>
+        </span>
+        <span class="s1">
+         Office: Delhi
+        </span>
+       </li>
+       <li class="li1">
+        <span class="s1">
+         Founded in: Feb 2014
+        </span>
+       </li>
+       <li class="li1">
+        <span class="s1">
+         Industry: Online recruitment
+        </span>
+       </li>
+       <li class="li2">
+        <span class="s4">
+         Web URL:
+         <a href="http://talentpad.com/">
+          <span class="s5">
+           http://talentpad.com/
+          </span>
+         </a>
+        </span>
+       </li>
+       <li class="li2">
+        <span class="s4">
+         Social URLs:
+         <a href="https://www.facebook.com/talentpad">
+          <span class="s5">
+           Facebook
+          </span>
+         </a>
+         |
+         <a href="https://www.linkedin.com/company/talent-pad">
+          <span class="s5">
+           LinkedIn
+          </span>
+         </a>
+         |
+         <a href="https://twitter.com/talent_pad">
+          <span class="s5">
+           Twitter
+          </span>
+         </a>
+         |
+         <a href="https://angel.co/talentpad">
+          <span class="s5">
+           AngelList
+          </span>
+         </a>
+        </span>
+       </li>
+       <li class="li2">
+        <span class="s4">
+         Investor:
+         <a href="http://www.helionvc.com/">
+          <span class="s5">
+           Helion Ventures
+          </span>
+         </a>
+        </span>
+       </li>
+       <li class="li1">
+        <span class="s1">
+         Address: B-6/66 Safdarjung Enclave, Behind B-6 market, New Delhi - 110029
+        </span>
+       </li>
+      </ul>
+      <p class="p1">
+       <span class="s1">
+        <strong>
+         Founding Team
+        </strong>
+       </span>
+      </p>
+      <p class="p1">
+       <span class="s1">
+        We believe people learn from people, and hence it’s very important for you to judge the people you’ll be working with. We’re a passionate bunch who don’t hesitate in challenging the stereotypes, have a crazy drive to solve the pain-points for the customers. Below is a short bio:
+       </span>
+      </p>
+      <ul class="ul1">
+       <li class="li1">
+        <span class="s6">
+         <a href="http://in.linkedin.com/pub/mayank-jain/11/b72/ab6">
+          <span class="s5">
+           Mayank Jain
+          </span>
+         </a>
+        </span>
+        <span class="s1">
+         (CEO):  IIT D, IIM A, Ex-Management Consultant, Ex-Entrepreneur-in-Residence
+        </span>
+       </li>
+       <li class="li1">
+        <span class="s6">
+         <a href="http://in.linkedin.com/in/nikhilvij">
+          <span class="s5">
+           Nikhil Vij
+          </span>
+         </a>
+        </span>
+        <span class="s1">
+         (CTO): IIT B (CS), Ex-Morgan Stanley, Ex-Google, Ex-World Quant
+        </span>
+       </li>
+       <li class="li1">
+        <span class="s6">
+         <a href="https://www.linkedin.com/in/raghavjain1">
+          <span class="s5">
+           Raghav Jain
+          </span>
+         </a>
+        </span>
+        <span class="s1">
+         (COO): IIT BHU, Ex-JP Morgan, Ex-Deloitte
+        </span>
+       </li>
+      </ul>
+      <p class="p2">
+       <span class="s4">
+        <strong>
+         Explainer Video:
+        </strong>
+        <a href="https://www.youtube.com/watch?v=9CmFjW6iffw&amp;feature=youtu.be">
+         <span class="s5">
+          How it Works: Talent
+         </span>
+        </a>
+       </span>
+      </p>
+      <p class="p1">
+       <span class="s1">
+        <strong>
+         Customers Reviews
+        </strong>
+        :
+        <a href="http://www.quora.com/How-was-your-experience-with-Talent-Auction">
+         <span class="s7">
+          Quora Reviews
+         </span>
+        </a>
+       </span>
+      </p>
+      <p class="p1">
+       <span class="s1">
+        <strong>
+         Media Coverage
+        </strong>
+       </span>
+      </p>
+      <p class="p2">
+       <span class="s8">
+        <a href="http://epaperbeta.timesofindia.com/Gallery.aspx?id=14_10_2014_016_020_002&amp;type=P&amp;artUrl=Job-Seekers-Choose-Their-Employers-14102014016020&amp;eid=31806">
+         TOI
+        </a>
+       </span>
+       <span class="s4">
+        |
+        <a href="http://www.business-standard.com/article/specials/recruitment-platform-talentpad-raises-first-round-of-funding-from-helion-advisors-114100900372_1.html">
+         <span class="s5">
+          Business Standard
+         </span>
+        </a>
+        |
+        <a href="http://www.thehindubusinessline.com/features/smartbuy/tech-news/helion-ventures-invests-in-talentpad/article6484728.ece">
+         <span class="s5">
+          Hindu
+         </span>
+        </a>
+        |
+        <a href="http://yourstory.com/2014/10/talentpad-funding-helion-ventures/">
+         <span class="s5">
+          YourStory
+         </span>
+        </a>
+       </span>
+      </p>
+      <p class="p1">
+       <span class="s1">
+        <strong>
+         Refer Friends &amp; Earn Goodwill
+        </strong>
+       </span>
+      </p>
+      <p class="p1">
+       <span class="s1">
+        Kindly send any referrals at
+        <a href="mailto:referrals@talentpad.com">
+         <span class="s7">
+          referrals@talentpad.com
+         </span>
+        </a>
+        with subject line “&lt;Name of the opening&gt;”. Thanks!
+       </span>
+      </p>
+     </div>
+    </section>
+   </div>
+  </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+  </script>
+  <script>
+   var mobile_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/08ab61d2284e4abf8346745a4a0ecee4/coffee_small.jpg';
+        var desktop_image = 'https://d1zx4fn8ox8446.cloudfront.net/filemanager.rboxfile/e4b4b1afe2724a41ac88ed01e893e793/coffee.jpg';
+
+        $( function() {
+            var bgImage = window.innerWidth < 500 ? mobile_image : desktop_image;
+            $('.js-company-header').css({'background-image': 'url(' + bgImage + ')'});
+
+            $('.js-show-openings').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $("#content").offset().top
+                }, 400);
+            })
+        });
+  </script>
+  <div class="container main-content" id="content">
+   <div class="row">
+    <div class="col-md-12">
+     <div class="heading-section">
+      <div class="row row-flex row-flex-align-center">
+       <div class="col-xs-12 col-sm-7">
+        <h2 class="nomargin">
+         Current Openings
+        </h2>
+       </div>
+       <div class="col-xs-12 col-sm-5 text-right">
+        <div class="form-inline">
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0hf75/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0hf75/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="AVP Sourcing (Core Team Member)">
+            AVP Sourcing (Core Team Member)
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="New Delhi ,
+Delhi , India ">
+            <span class="meta-job-location-city cut-text">
+             New Delhi
+            </span>
+            ,
+            <span class="meta-job-location-state">
+             Delhi
+            </span>
+            ,
+            <span class="meta-job-location-country">
+             India
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0hmzm/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0hmzm/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="AVP Review/Curation (Core Team Member)">
+            AVP Review/Curation (Core Team Member)
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="New Delhi ,
+Delhi , India ">
+            <span class="meta-job-location-city cut-text">
+             New Delhi
+            </span>
+            ,
+            <span class="meta-job-location-state">
+             Delhi
+            </span>
+            ,
+            <span class="meta-job-location-country">
+             India
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0h6cl/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0h6cl/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="AVP Marketing (Core Team Member)">
+            AVP Marketing (Core Team Member)
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Delhi ">
+            <span class="meta-job-location-city cut-text">
+             Delhi
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0h6ci/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0h6ci/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="AVP Customer Success (Core Team Member)">
+            AVP Customer Success (Core Team Member)
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="Delhi ">
+            <span class="meta-job-location-city cut-text">
+             Delhi
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0b7g/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0b7g/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="HR Executive/Talent Advocate">
+            HR Executive/Talent Advocate
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="New Delhi ,
+Delhi , India ">
+            <span class="meta-job-location-city cut-text">
+             New Delhi
+            </span>
+            ,
+            <span class="meta-job-location-state">
+             Delhi
+            </span>
+            ,
+            <span class="meta-job-location-country">
+             India
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0b7u/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0b7u/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Manager, Content Marketing/Social Media">
+            Manager, Content Marketing/Social Media
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="New Delhi ,
+Delhi , India ">
+            <span class="meta-job-location-city cut-text">
+             New Delhi
+            </span>
+            ,
+            <span class="meta-job-location-state">
+             Delhi
+            </span>
+            ,
+            <span class="meta-job-location-country">
+             India
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0bx1/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0bx1/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="HR Head (Core Team Member)">
+            HR Head (Core Team Member)
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="New Delhi ,
+Delhi , India ">
+            <span class="meta-job-location-city cut-text">
+             New Delhi
+            </span>
+            ,
+            <span class="meta-job-location-state">
+             Delhi
+            </span>
+            ,
+            <span class="meta-job-location-country">
+             India
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0k9x/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0k9x/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Manager Operations">
+            Manager Operations
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="New Delhi ,
+Delhi , India ">
+            <span class="meta-job-location-city cut-text">
+             New Delhi
+            </span>
+            ,
+            <span class="meta-job-location-state">
+             Delhi
+            </span>
+            ,
+            <span class="meta-job-location-country">
+             India
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0k92/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0k92/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="AVP Operations">
+            AVP Operations
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="New Delhi ,
+Delhi , India ">
+            <span class="meta-job-location-city cut-text">
+             New Delhi
+            </span>
+            ,
+            <span class="meta-job-location-state">
+             Delhi
+            </span>
+            ,
+            <span class="meta-job-location-country">
+             India
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+      <div class="col-md-6">
+       <a class="card-title" href="/jobs/fk0k9s/">
+        <div class="card card-clickable js-card job-opening-card" data-href="/jobs/fk0k9s/">
+         <div class="row">
+          <div class="col-xs-8 col-md-9">
+           <h3 class="card-title-text cut-text" data-placement="top" data-toggle="tooltip" title="Customer Success Manager">
+            Customer Success Manager
+           </h3>
+           <div class="card-info cut-text" data-placement="top" data-toggle="tooltip" title="New Delhi ,
+Delhi , India ">
+            <span class="meta-job-location-city cut-text">
+             New Delhi
+            </span>
+            ,
+            <span class="meta-job-location-state">
+             Delhi
+            </span>
+            ,
+            <span class="meta-job-location-country">
+             India
+            </span>
+           </div>
+          </div>
+          <div class="card-badge col-xs-4 col-md-3">
+           <small class="badge-opening-meta">
+            Full-time
+           </small>
+          </div>
+         </div>
+         <script>
+          function getHumanizedDate(timestamp) {
+        var monthNames = [
+            "Jan", "Feb", "Mar",
+            "Apr", "May", "Jun", "Jul",
+            "Aug", "Sep", "Oct",
+            "Nov", "Dec"
+          ];
+        var date = new Date(Number(timestamp)*1000);
+        var day = date.getDate();
+        var monthIndex = date.getMonth();
+        var year = date.getFullYear();
+
+        return  monthNames[monthIndex] + ' ' + day + ', ' + year;
+    }
+
+    function initUpdateDatetoLocalTime() {
+        var allDates = document.querySelectorAll('[data-time]');
+        for (var i = 0; i < allDates.length; i++) {
+            allDates[i].innerHTML = getHumanizedDate(allDates[i].dataset.time)
+        }
+    }
+
+    initUpdateDatetoLocalTime();
+         </script>
+        </div>
+       </a>
+      </div>
+     </div>
+     <div class="div_navigation">
+      <span class="highlight">
+       1
+      </span>
+      to
+      <span class="highlight">
+       10
+      </span>
+      of
+      <span class="highlight">
+       10
+      </span>
+      jobs
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="page-footer hidden-print">
+   <div class="container">
+    <h5 class="footer-title">
+     Couldn't find the opening you were looking for?
+    </h5>
+    <div class="row">
+     <div class="col-md-5 follow-company">
+      <div class="js-follow-company-wrapper">
+       <p>
+        Get updates about upcoming openings straight to your inbox
+       </p>
+       <form action="/follow_client/" class="js-follow-company-form" method="post" role="form">
+        <input name="csrfmiddlewaretoken" type="hidden" value="5wEnUE7s8hytTE6SZX7RBsvQW8QsjY4bL6CrlpbChm5JPkzJAqYsFUPddwP5bjch"/>
+        <div class="form-group">
+         <label class="sr-only" for="follow_email">
+          Email address
+         </label>
+         <div class="input-group">
+          <input class="form-control" id="follow_email" name="email" placeholder="Your email address" required="required" type="email"/>
+          <span class="input-group-btn">
+           <button class="btn btn-default js-follow-company-button" data-loading-text="Saving..." type="submit">
+            Keep me posted
+           </button>
+          </span>
+         </div>
+        </div>
+        <input name="client" required="required" type="hidden" value="u0ikl"/>
+        <div class="form-follow-error js-follow-company-error" style="display:none;">
+        </div>
+       </form>
+      </div>
+      <div class="follow-company-rss">
+       <i class="fa fa-rss tail5px">
+       </i>
+       <a class="btn-link" href="/jobfeeds/talentpad" target="_blank">
+        Jobs RSS Feed
+       </a>
+      </div>
+     </div>
+    </div>
+    <script type="text/javascript">
+     $( function() {
+
+        $('[data-toggle="tooltip"]').tooltip({
+            delay: { "show": 500, "hide": 100 }
+        });
+
+        var $followForm = $('.js-follow-company-form');
+        var successMessage = "<div class='alert alert-success alert-lg'>" +
+                "<i class='glyphicon glyphicon-ok icon-cirlce icon-success'></i>" +
+                "<p>Thanks! You will receive updates from us in your email</p>" +
+                "</div>";
+
+        $followForm.on('submit', function(e) {
+            var $form = $(this);
+            var $formFollowError = $('.js-follow-company-error');
+            var $followWrapper = $('.js-follow-company-wrapper');
+            var $submitButton = $(this).find('[data-loading-text]');
+            $submitButton
+                    .button()
+                    .button('loading');
+
+            $.ajax({
+                url: $form.attr('action'),
+                type: $form.attr('method'),
+                data: $form.serialize(),
+                dataType: 'json'
+            }).done(function(data){
+                var resp_str;
+                resp_str = successMessage;
+                $followWrapper.html(resp_str);
+
+                if(window._gaq) {
+                    _gaq.push(['_trackEvent', 'Follow', 'success', 'talentpad']);
+                    ga('send', 'event', {
+                        eventCategory: 'Follow',
+                        eventAction: 'success',
+                        eventLabel: 'talentpad'
+                    });
+                }
+            }).fail(function(data){
+                var error_dict = JSON.parse(data.responseText);
+                var resp_str;
+                if (error_dict.email !== undefined){
+                    resp_str = "<span class='text-danger'>" + error_dict.email[0] + "</span>";
+                }else if (error_dict.client_id !== undefined) {
+                    resp_str = "<span class='text-danger'>" + error_dict.client_id[0] + "</span>";
+                }
+                $submitButton.button('reset');
+                $formFollowError.html(resp_str);
+                $formFollowError.show();
+
+            });
+            e.preventDefault();
+        });
+    });
+    </script>
+   </div>
+  </div>
+  <div class="page_footer page-footer">
+   <div class="container">
+    <a class="powered-by clearfix" href="http://recruiterbox.com/">
+     <div class="powered-by-logo pull-left">
+      <div class="icon icon-rbox-logo">
+      </div>
+     </div>
+     <div class="powered-by-text pull-left">
+      <div class="powered-by-text-title">
+       powered by
+      </div>
+      <div class="powered-by-text-brand">
+       <b>
+        Recruiterbox
+       </b>
+      </div>
+     </div>
+    </a>
+   </div>
+  </div>
+  <!-- Google Tag Manager -->
+  <noscript>
+   <iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-MSXJKT" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <script>
+   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MSXJKT');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script src="/static/lib/jquery/jquery.min.js" type="text/javascript">
+  </script>
+  <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   $(function () {
+        $('.js-card').on('click', function () {
+            window.location.href = $(this).data('href');
+        });
+    });
+
+    function getParamMapFromURL(url) {
+        url = (url+'').replace(/\+/g, '%20');
+        url = decodeURI(url);
+        let query_string = null;
+        let object = {};
+        let param;
+
+        let items = url.split('?');
+
+        if (items.length > 1) {
+            query_string = items[1]
+        }
+        else {
+            return {}
+        }
+
+        let param_tokens = query_string.split('&');
+
+        for (let i = 0; i < param_tokens.length; i++) {
+            param = param_tokens[i];
+            if (param.indexOf('=') < 0) continue;
+            let item = param.split('=');
+            let key = item[0];
+            object[key] = item[1];
+        }
+
+        return object;
+    }
+
+    function constructURLFromParamMap(paramMap) {
+        let tokens = [];
+        for(let key in paramMap) {
+            if (paramMap.hasOwnProperty(key)) {
+                tokens.push(key + "=" + paramMap[key])
+            }
+        }
+        return encodeURI(tokens.join("&"));
+    }
+
+    function get_filter_value(filter_key) {
+        let paramMap = getParamMapFromURL(window.location.search);
+        return paramMap[filter_key]
+    }
+
+    function setDefaultValue(filter_el_id, filter_value) {
+        let filter_select_el = document.getElementById(filter_el_id);
+        for (let i = 0; i < filter_select_el.options.length; i++) {
+            if (filter_select_el.options[i].value.toLowerCase() === filter_value.toLowerCase()) {
+                filter_select_el.options[i].selected = true;
+            }
+        }
+    }
+
+    function updateLocationSelectedValue() {
+        let city_value = get_filter_value('loc_city')|| '_all_locations';
+        setDefaultValue('city_filter', city_value);
+    }
+
+    function updateTeamSelectedValue() {
+        let team_value = get_filter_value('team')|| '_all_teams';
+        setDefaultValue('team_filter', team_value);
+    }
+
+    function navigateWithParams(params, focus_on_jobs) {
+        let filter_str = constructURLFromParamMap(params);
+        window.location.href = "?" + filter_str + (focus_on_jobs ? "#content" : window.location.hash)
+    }
+
+
+    $(function () {
+        $('#city_filter').on('change', function (e) {
+            let city = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all location
+            // is selected in dropdown
+            if (city === "_all_locations") {
+                delete params['loc_city'];
+            }
+            else {
+                params['loc_city'] = city;
+            }
+            navigateWithParams(params, true);
+        })
+    });
+
+    $(function () {
+        $('#team_filter').on('change', function (e) {
+            let team_name = e.target.value;
+            let params = getParamMapFromURL(window.location.search);
+
+            // Remove the filter param if all team
+            // is selected in dropdown
+
+            if (team_name === "_all_teams") {
+                delete params['team']
+            }
+            else {
+                params['team'] = team_name;
+            }
+            navigateWithParams(params, true)
+        })
+    });
+
+    $(function () {
+
+        if ($('#city_filter').length) {
+            updateLocationSelectedValue();
+        }
+
+        if ($('#team_filter').length) {
+            updateTeamSelectedValue();
+        }
+
+    });
+  </script>
+ </body>
+</html>

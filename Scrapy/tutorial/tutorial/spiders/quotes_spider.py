@@ -5,6 +5,16 @@ from scrapy.utils.response import open_in_browser
 
 # Scraping only one element from the web
 
+class IntegrateGCS(scrapy.Spider):
+    name = "gcs"
+    start_urls = [
+        'http://quotes.toscrape.com/'
+    ]
+
+    def parse(self, response):
+        open_in_browser(response)
+        yield response.body
+
 class QuoteSpider(scrapy.Spider):
     name = "quotes1"
     start_urls = [
@@ -80,23 +90,23 @@ class QuoteAuthorSpider(scrapy.Spider):
 # use of items.py file
 # Used as temp locations to store data
 
-class QuoteAuthorSpider(scrapy.Spider):
-    name = "storingItems"
-    start_urls = [
-        'http://quotes.toscrape.com/'
-    ]
+# class QuoteAuthorSpider(scrapy.Spider):
+#     name = "storingItems"
+#     start_urls = [
+#         'http://quotes.toscrape.com/'
+#     ]
 
-    def parse(self, response):
-        items = TutorialItem()
+#     def parse(self, response):
+#         items = TutorialItem()
 
-        all_div_quotes = response.css('div.quote')
+#         all_div_quotes = response.css('div.quote')
 
-        for quote in all_div_quotes:
-            items['title'] = quote.css('span.text::text').extract()
-            items['author'] = quote.css('.author::text').extract()
-            items['tag'] = quote.css('.tag::text').extract()
+#         for quote in all_div_quotes:
+#             items['title'] = quote.css('span.text::text').extract()
+#             items['author'] = quote.css('.author::text').extract()
+#             items['tag'] = quote.css('.tag::text').extract()
 
-            yield items
+#             yield items
 
 
 # V13. Storing data XML,CSV,JSON or HTML

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>
+   Recruiterbox Knowledge Base
+  </title>
+  <meta content="width=device-width, maximum-scale=1" name="viewport"/>
+  <meta content="yes" name="apple-mobile-web-app-capable"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="Recruiterbox videos, help articles and getting started guides" name="description">
+   <meta content="Recruiterbox" name="author"/>
+   <link href="https://recruiterbox.helpscoutdocs.com" rel="canonical"/>
+   <link href="//d3eto7onm69fcz.cloudfront.net/assets/stylesheets/launch-1575311532502.css" rel="stylesheet"/>
+   <style>
+    body { background: #ffffff; }
+        .navbar .navbar-inner { background: #ffffff; }
+        .navbar .nav li a, 
+        .navbar .icon-private-w  { color: #383f44; }
+        .navbar .brand, 
+        .navbar .nav li a:hover, 
+        .navbar .nav li a:focus, 
+        .navbar .nav .active a, 
+        .navbar .nav .active a:hover, 
+        .navbar .nav .active a:focus  { color: #030405; }
+        .navbar a:hover .icon-private-w, 
+        .navbar a:focus .icon-private-w, 
+        .navbar .active a .icon-private-w, 
+        .navbar .active a:hover .icon-private-w, 
+        .navbar .active a:focus .icon-private-w { color: #030405; }
+        #serp-dd .result a:hover,
+        #serp-dd .result > li.active,
+        #fullArticle strong a,
+        #fullArticle a strong,
+        .collection a,
+        .contentWrapper a,
+        .most-pop-articles .popArticles a,
+        .most-pop-articles .popArticles a:hover span,
+        .category-list .category .article-count,
+        .category-list .category:hover .article-count { color: #1288ef; }
+        #fullArticle, 
+        #fullArticle p, 
+        #fullArticle ul, 
+        #fullArticle ol, 
+        #fullArticle li, 
+        #fullArticle div, 
+        #fullArticle blockquote, 
+        #fullArticle dd, 
+        #fullArticle table { color:#3e3939; }
+   </style>
+   <link href="//d3eto7onm69fcz.cloudfront.net/assets/ico/touch-152.png" rel="apple-touch-icon-precomposed"/>
+   <link href="//d33v4339jhl8k0.cloudfront.net/docs/assets/59b173692c7d3a73488cae07/images/5a6a30f50428632faf622e2e/Blue-logo-solo@3x.png" rel="shortcut icon" type="image/png"/>
+   <!--[if lt IE 9]>
+    
+        <script src="//d3eto7onm69fcz.cloudfront.net/assets/javascripts/html5shiv.min.js"></script>
+    
+    <![endif]-->
+   <script async="" defer="" src="https://www.google.com/recaptcha/api.js">
+   </script>
+   <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebSite","url":"https://recruiterbox.helpscoutdocs.com","potentialAction":{"@type":"SearchAction","target":"https://recruiterbox.helpscoutdocs.com/search?query={query}","query-input":"required name=query"}}
+   </script>
+  </meta>
+ </head>
+ <body>
+  <script>
+   window.onload = function() {
+                $("#searchBar input.search-query" ).focus();
+            };
+  </script>
+  <header class="navbar" id="mainNav">
+   <div class="navbar-inner">
+    <div class="container-fluid">
+     <a class="brand" href="/">
+      <img alt="Recruiterbox Knowledge Base" height="75" src="//d33v4339jhl8k0.cloudfront.net/docs/assets/59b173692c7d3a73488cae07/images/5a6a30e82c7d3a39e6265e24/Blue-logo-solo@3x.png" width="75"/>
+     </a>
+     <button class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle Navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+     <div class="nav-collapse collapse">
+      <nav role="navigation">
+       <!-- added for accessibility -->
+       <ul class="nav">
+        <li id="getting-started">
+         <a href="/collection/20-getting-started">
+          Getting Started
+          <b class="caret">
+          </b>
+         </a>
+        </li>
+        <li id="videos">
+         <a href="/collection/12-videos">
+          Videos
+          <b class="caret">
+          </b>
+         </a>
+        </li>
+        <li id="creating-managing-openings">
+         <a href="/collection/120-creating-managing-openings">
+          Creating &amp; Managing Openings
+          <b class="caret">
+          </b>
+         </a>
+        </li>
+        <li id="sourcing-managing-candidates">
+         <a href="/collection/123-sourcing-managing-candidates">
+          Sourcing &amp; Managing Candidates
+          <b class="caret">
+          </b>
+         </a>
+        </li>
+        <li id="metrics-reporting">
+         <a href="/collection/129-metrics-reporting">
+          Metrics &amp; Reporting
+          <b class="caret">
+          </b>
+         </a>
+        </li>
+        <li id="general-account-settings">
+         <a href="/collection/126-general-account-settings">
+          General Account Settings
+          <b class="caret">
+          </b>
+         </a>
+        </li>
+       </ul>
+      </nav>
+     </div>
+     <!--/.nav-collapse -->
+    </div>
+    <!--/container-->
+   </div>
+   <!--/navbar-inner-->
+  </header>
+  <section id="docsSearch">
+   <h1>
+    Recruiterbox tips and tricks!
+   </h1>
+   <form action="/search" autocomplete="off" id="searchBar" method="GET">
+    <input aria-labelledby="Search the knowledge base" class="search-query" name="query" placeholder="Search the knowledge base" title="search-query" type="text" value=""/>
+    <button aria-labelledby="Search" type="submit">
+     <i class="icon-search lp">
+     </i>
+     <span>
+      Search
+     </span>
+    </button>
+    <div id="serp-dd" style="display:none;">
+     <ul class="result">
+     </ul>
+    </div>
+   </form>
+  </section>
+  <!--/docsSearch-->
+  <section class="container-fluid" id="contentArea">
+   <div id="noResults" style="display:none;">
+    No results found
+   </div>
+   <section class="collection-category" id="collection-category-20">
+    <h2 id="collection-20">
+     <a href="/collection/20-getting-started">
+      Getting Started
+     </a>
+    </h2>
+    <section class="category-list">
+     <a class="category" href="/category/24-im-a-new-super-admin" id="category-24">
+      <h3>
+       I'm a new Super Admin
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        5
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/25-im-a-new-user" id="category-25">
+      <h3>
+       I'm a new user
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        5
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/27-im-helping-recruit-as-an-agency" id="category-27">
+      <h3>
+       I'm helping recruit, as an agency
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        1
+       </span>
+       article
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/28-im-referring-candidates-as-an-employee" id="category-28">
+      <h3>
+       I'm referring candidates, as an employee
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        1
+       </span>
+       article
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/23-im-setting-up-a-new-account" id="category-23">
+      <h3>
+       I'm Setting up a new Account
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        3
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/26-ive-been-asked-to-interview-or-review-candidates" id="category-26">
+      <h3>
+       I've been asked to Interview or Review candidates
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        3
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+    </section>
+    <!-- /category-list -->
+   </section>
+   <!-- /collection -->
+   <section class="collection-category" id="collection-category-12">
+    <h2 id="collection-12">
+     <a href="/collection/12-videos">
+      Videos
+     </a>
+    </h2>
+    <section class="category-list">
+     <a class="category" href="/category/15-webinar-recordings" id="category-15">
+      <h3>
+       Webinar Recordings
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        21
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/18-general-settings" id="category-18">
+      <h3>
+       General Settings
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        14
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/17-candidates" id="category-17">
+      <h3>
+       Candidates
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        18
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/16-openings" id="category-16">
+      <h3>
+       Openings
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        17
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/19-reporting" id="category-19">
+      <h3>
+       Reporting
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        9
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+    </section>
+    <!-- /category-list -->
+   </section>
+   <!-- /collection -->
+   <section class="collection-category" id="collection-category-120">
+    <h2 id="collection-120">
+     <a href="/collection/120-creating-managing-openings">
+      Creating &amp; Managing Openings
+     </a>
+    </h2>
+    <section class="category-list two-col">
+     <a class="category" href="/category/133-creating-editing-and-managing-openings" id="category-133">
+      <h3>
+       Creating, Editing and Managing Openings
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        14
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/132-sharing-openings-across-the-web" id="category-132">
+      <h3>
+       Sharing Openings Across the Web
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        7
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+    </section>
+    <!-- /category-list -->
+   </section>
+   <!-- /collection -->
+   <section class="collection-category" id="collection-category-123">
+    <h2 id="collection-123">
+     <a href="/collection/123-sourcing-managing-candidates">
+      Sourcing &amp; Managing Candidates
+     </a>
+    </h2>
+    <section class="category-list">
+     <a class="category" href="/category/139-emailing-interviewing-reviewing-and-sharing-candidates" id="category-139">
+      <h3>
+       Emailing, Interviewing, Reviewing and Sharing Candidates
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        18
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/138-managing-candidate-information" id="category-138">
+      <h3>
+       Managing Candidate Information
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        24
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/134-sourcing-and-uploading-candidates" id="category-134">
+      <h3>
+       Sourcing and Uploading Candidates
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        12
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/135-making-data-private" id="category-135">
+      <h3>
+       Making Data Private
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        2
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+    </section>
+    <!-- /category-list -->
+   </section>
+   <!-- /collection -->
+   <section class="collection-category" id="collection-category-129">
+    <h2 id="collection-129">
+     <a href="/collection/129-metrics-reporting">
+      Metrics &amp; Reporting
+     </a>
+    </h2>
+    <section class="category-list two-col">
+     <a class="category" href="/category/142-reporting-on-candidates" id="category-142">
+      <h3>
+       Reporting on Candidates
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        12
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/141-reporting-on-openings" id="category-141">
+      <h3>
+       Reporting on Openings
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        10
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+    </section>
+    <!-- /category-list -->
+   </section>
+   <!-- /collection -->
+   <section class="collection-category" id="collection-category-126">
+    <h2 id="collection-126">
+     <a href="/collection/126-general-account-settings">
+      General Account Settings
+     </a>
+    </h2>
+    <section class="category-list">
+     <a class="category" href="/category/136-company---wide-settings" id="category-136">
+      <h3>
+       Company - Wide Settings
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        10
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/140-integrations" id="category-140">
+      <h3>
+       Integrations
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        9
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+     <a class="category" href="/category/137-your-own-settings" id="category-137">
+      <h3>
+       Your own Settings
+      </h3>
+      <p>
+      </p>
+      <p class="article-count">
+       <span class="notranslate">
+        14
+       </span>
+       articles
+      </p>
+     </a>
+     <!-- /category -->
+    </section>
+    <!-- /category-list -->
+   </section>
+   <!-- /collection -->
+   <footer class="center">
+    <p>
+     ©
+    
+        Recruiterbox
+    
+    2020.
+     <span>
+      Powered by
+      <a href="https://www.helpscout.com/knowledge-base/?utm_source=docs&amp;utm_medium=footerlink&amp;utm_campaign=Docs+Branding" rel="nofollow" target="_blank">
+       Help Scout
+      </a>
+     </span>
+    </p>
+   </footer>
+  </section>
+  <!--/.fluid-container-->
+  <section class="modal hide" id="contactModal" tabindex="-1">
+   <h2>
+    Contact Us
+   </h2>
+   <a data-dismiss="modal" href="#" id="closeBtn">
+    <i class="icon-close">
+    </i>
+   </a>
+   <div class="modal-body">
+    <form action="/contact" class="form-horizontal contact" data-parsley-validate="" enctype="multipart/form-data" method="post" novalidate="">
+     <div class="control-group">
+      <label class="control-label" for="md-name">
+       Name
+      </label>
+      <div class="controls">
+       <input id="md-name" name="name" placeholder="(optional)" type="text"/>
+      </div>
+      <!--/controls-->
+     </div>
+     <!--/control-group-->
+     <div class="control-group">
+      <label class="control-label" for="md-email">
+       Email
+      </label>
+      <div class="controls">
+       <input data-parsley-notblank="true" data-parsley-required="true" data-parsley-required-message="Email is required" data-parsley-trigger="change" data-parsley-type="email" id="md-email" name="email" type="email"/>
+       <input id="phone" name="phone" type="text" value=""/>
+      </div>
+      <!--/controls-->
+     </div>
+     <!--/control-group-->
+     <div class="control-group">
+      <label class="control-label" for="md-subject">
+       Subject
+      </label>
+      <div class="controls">
+       <input data-parsley-notblank="true" data-parsley-required="true" data-parsley-required-message="Subject is required" id="md-subject" name="subject" type="text"/>
+      </div>
+      <!--/controls-->
+     </div>
+     <!--/control-group-->
+     <div class="control-group">
+      <label class="control-label" for="md-message">
+       Message
+      </label>
+      <div class="controls">
+       <textarea data-parsley-notblank="true" data-parsley-required="true" data-parsley-required-message="Message is required" id="md-message" name="message"></textarea>
+      </div>
+      <!--/controls-->
+     </div>
+     <!-- /control-group -->
+     <div class="control-group">
+      <label class="control-label" for="file-upload">
+       Upload file
+      </label>
+      <div class="controls">
+       <input data-parsley-max-file-size="10" id="file-upload" name="upload" type="file">
+       </input>
+      </div>
+     </div>
+     <!--/control-group-->
+     <div class="form-actions">
+      <input class="btn" type="submit" value="Send"/>
+     </div>
+     <!--/form-actions-->
+    </form>
+   </div>
+   <!--/modal-body-->
+  </section>
+  <script src="//d3eto7onm69fcz.cloudfront.net/assets/javascripts/app3.min.js">
+  </script>
+  <script>
+   // keep iOS links from opening safari
+if(("standalone" in window.navigator) && window.navigator.standalone){
+// If you want to prevent remote links in standalone web apps opening Mobile Safari, change 'remotes' to true
+var noddy, remotes = false;
+document.addEventListener('click', function(event) {
+noddy = event.target;
+while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+noddy = noddy.parentNode;
+}
+
+if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes)){
+event.preventDefault();
+document.location.href = noddy.href;
+}
+
+},false);
+}
+$('#contactModal').on('shown', function () {
+  $('#md-name').focus();
+});
+  </script>
+ </body>
+</html>
