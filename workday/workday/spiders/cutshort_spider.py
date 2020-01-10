@@ -10,7 +10,7 @@ from scrapy.selector import Selector
 from ..items import WorkdayItem
  
 class CrawlworkDay(scrapy.Spider):
-    name = "workday"
+    name = "cutshort"
     start_urls = [
         'https://cutshort.io/sitemap'
     ]
@@ -34,7 +34,7 @@ class CrawlworkDay(scrapy.Spider):
         with open ('../cutshortfetched/level1data/datas.csv','w', encoding='utf-8') as csvfile:
             fieldnames = ['url']
             writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
-            writer.writeheader()
+            # writer.writeheader()
             for i in range(len(arr)):
                 writer.writerow({'url': str(html.prettify())})
          
@@ -83,7 +83,7 @@ class CrawlworkDay(scrapy.Spider):
         with open ('../cutshortfetched/level2data/datas.csv','a', encoding='utf-8') as csvfile:
             fieldnames = ['Job_Title','Company_Name','Pay_Scale','Location','Parent_Source','Job_Type','Company_Type','Apply_Now']
             writer = csv.DictWriter(csvfile,fieldnames=fieldnames)
-            writer.writeheader()
+            # writer.writeheader()
             for i in range(len(arr_company_name)):
                 writer.writerow({'Job_Title': [job_title],'Company_Name': company_name, 'Pay_Scale': pay_scale, 'Location':location,'Parent_Source':parent_source,'Job_Type':job_type, 'Company_Type':company_type, 'Apply_Now':apply_now})
             return json.dumps({"response": "done"})
