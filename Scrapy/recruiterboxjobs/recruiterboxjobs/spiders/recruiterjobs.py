@@ -16,11 +16,6 @@ class CrawlRecruiterBox(scrapy.Spider):
     inner_pages = 0
     page_count = 0
 
-    # custom_settings = {
-    #     "DOWNLOAD_DELAY": 10,
-    #     "CONCURRENT_REQUESTS_PER_DOMAIN": 2
-    # }
-
     # LEVEL-1 CRAWLING
 
     def parse(self, response):
