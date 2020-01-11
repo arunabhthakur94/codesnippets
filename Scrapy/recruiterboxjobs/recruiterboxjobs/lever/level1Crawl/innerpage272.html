@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"fb4e40776b",applicationID:"308893147"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <script src="https://cdn.optimizely.com/js/15777290433.js">
+  </script>
+  <title>
+   A Step-by-Step Guide to Cultivating Diversity and Inclusion
+  </title>
+  <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+  <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+   //<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+  </script>
+  <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+  <!-- This site is optimized with the Yoast SEO plugin v12.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
+  <meta content="To help companies get started, here are over 50 ideas for investing in diversity and inclusion. Find 50+ ways to improve diversity and inclusion." name="description">
+   <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots">
+    <link href="https://www.lever.co/blog/50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace/" rel="canonical">
+     <meta content="en_US" property="og:locale"/>
+     <meta content="article" property="og:type"/>
+     <meta content="A Step-by-Step Guide to Cultivating Diversity and Inclusion" property="og:title"/>
+     <meta content="To help companies get started, here are over 50 ideas for investing in diversity and inclusion. Find 50+ ways to improve diversity and inclusion." property="og:description"/>
+     <meta content="https://www.lever.co/blog/50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace/" property="og:url"/>
+     <meta content="Lever" property="og:site_name"/>
+     <meta content="Diversity &amp; inclusion" property="article:section"/>
+     <meta content="2017-03-22T16:25:00+00:00" property="article:published_time"/>
+     <meta content="2019-07-02T00:53:02+00:00" property="article:modified_time"/>
+     <meta content="2019-07-02T00:53:02+00:00" property="og:updated_time"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/diversity-inclusion-50_-ideas-1024x683.jpg" property="og:image"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/diversity-inclusion-50_-ideas-1024x683.jpg" property="og:image:secure_url"/>
+     <meta content="1024" property="og:image:width"/>
+     <meta content="683" property="og:image:height"/>
+     <meta content="summary_large_image" name="twitter:card"/>
+     <meta content="To help companies get started, here are over 50 ideas for investing in diversity and inclusion. Find 50+ ways to improve diversity and inclusion." name="twitter:description"/>
+     <meta content="A Step-by-Step Guide to Cultivating Diversity and Inclusion" name="twitter:title"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/diversity-inclusion-50_-ideas.jpg" name="twitter:image"/>
+     <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lever.co/#website","url":"https://www.lever.co/","name":"Lever","description":"Lever Recruiting Software","potentialAction":{"@type":"SearchAction","target":"https://www.lever.co/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.lever.co/blog/50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace/#primaryimage","url":"https://www.lever.co/wp-content/uploads/2019/04/diversity-inclusion-50_-ideas.jpg","width":5616,"height":3744},{"@type":"WebPage","@id":"https://www.lever.co/blog/50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace/#webpage","url":"https://www.lever.co/blog/50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace/","inLanguage":"en-US","name":"A Step-by-Step Guide to Cultivating Diversity and Inclusion","isPartOf":{"@id":"https://www.lever.co/#website"},"primaryImageOfPage":{"@id":"https://www.lever.co/blog/50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace/#primaryimage"},"datePublished":"2017-03-22T16:25:00+00:00","dateModified":"2019-07-02T00:53:02+00:00","author":{"@id":"https://www.lever.co/#/schema/person/3107e10652ebccaf6dc8c1adf19b73f0"},"description":"To help companies get started, here are over 50 ideas for investing in diversity and inclusion. Find 50+ ways to improve diversity and inclusion."},{"@type":["Person"],"@id":"https://www.lever.co/#/schema/person/3107e10652ebccaf6dc8c1adf19b73f0","name":"Jennifer Kim","image":{"@type":"ImageObject","@id":"https://www.lever.co/#authorlogo","url":"https://www.lever.co/wp-content/uploads/2019/03/Jen_Avatar-1-96x96.jpeg","caption":"Jennifer Kim"},"description":"Head of Employee Experience","sameAs":[]}]}
+     </script>
+     <!-- / Yoast SEO plugin. -->
+     <link href="//www.lever.co" rel="dns-prefetch"/>
+     <link href="//munchkin.marketo.net" rel="dns-prefetch"/>
+     <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
+     <link href="//s.w.org" rel="dns-prefetch"/>
+     <link href="https://www.lever.co/feed/" rel="alternate" title="Lever » Feed" type="application/rss+xml"/>
+     <link href="https://www.lever.co/comments/feed/" rel="alternate" title="Lever » Comments Feed" type="application/rss+xml"/>
+     <link href="https://www.lever.co/blog/50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace/feed/" rel="alternate" title="Lever » A Step-by-Step Guide to Cultivating Diversity and Inclusion Part 1: 50+ Ideas Comments Feed" type="application/rss+xml"/>
+     <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.lever.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+     </script>
+     <style type="text/css">
+      img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+     </style>
+     <link href="https://www.lever.co/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css?ver=2.3.9" id="mpp_gutenberg-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/css/style.css?ver=5.3.2" id="cookie-consent-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/css/ult_marketo_forms-public.css?ver=1.0.1" id="ult_marketo_forms-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=5.0.1" id="wordpress-popular-posts-css-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/css/minifycss/magnific-popup.min.css?ver=1.0.2" id="lib-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/underscores.min.css?ver=5.3.2" id="lever-underscores-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/style.min.css?ver=1.0.0-742" id="lever-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/header.min.css?ver=1.0.0-742" id="lever-header-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/footer.min.css?ver=1.0.0-742" id="lever-footer-css" media="all" rel="stylesheet" type="text/css"/>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/forms2.min.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com, @yourdomain.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/ult_marketo_forms-public.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script src="//munchkin.marketo.net/munchkin.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      Munchkin.init('293-AOQ-024');
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.2" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/www.lever.co\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","ID":"5995","token":"ce76045b3d","debug":""};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/assets/js/wpp-5.0.0.min.js?ver=5.0.1" type="text/javascript">
+     </script>
+     <link href="https://www.lever.co/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+     <link href="https://www.lever.co/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+     <meta content="WordPress 5.3.2" name="generator"/>
+     <link href="https://www.lever.co/?p=5995" rel="shortlink"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fblog%2F50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace%2F" rel="alternate" type="application/json+oembed"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fblog%2F50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+     <style id="ctcc-css" media="screen" type="text/css">
+      #catapult-cookie-bar {
+					box-sizing: border-box;
+					max-height: 0;
+					opacity: 0;
+					z-index: 99999;
+					overflow: hidden;
+					color: #ddd;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					background-color: #464646;
+				}
+				#catapult-cookie-bar a {
+					color: #fff;
+				}
+				#catapult-cookie-bar .x_close span {
+					background-color: ;
+				}
+				button#catapultCookie {
+					background:;
+					color: ;
+					border: 0; padding: 6px 9px; border-radius: 3px;
+				}
+				#catapult-cookie-bar h3 {
+					color: #ddd;
+				}
+				.has-cookie-bar #catapult-cookie-bar {
+					opacity: 1;
+					max-height: 999px;
+					min-height: 30px;
+				}
+     </style>
+     <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+     <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+      //<![CDATA[
+	var dataLayer_content = {"pagePostType":"post","pagePostType2":"single-post","pageCategory":["diversity-inclusion"],"pagePostAuthor":"Jennifer Kim"};
+	dataLayer.push( dataLayer_content );//]]>
+     </script>
+     <script data-cfasync="false">
+      //<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSF9Z3W');//]]>
+     </script>
+     <!-- End Google Tag Manager -->
+     <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+     <link href="https://www.lever.co/xmlrpc.php" rel="pingback"/>
+     <style type="text/css">
+      .site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+     </style>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="32x32">
+      <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="192x192"/>
+      <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="apple-touch-icon-precomposed"/>
+      <meta content="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" name="msapplication-TileImage"/>
+     </link>
+    </link>
+   </meta>
+  </meta>
+ </head>
+ <body class="post-template-default single single-post postid-5995 single-format-standard wp-custom-logo no-sidebar post-50-ideas-for-cultivating-diversity-and-inclusion-in-the-workplace elementor-default">
+  <div class="site page-wrap body-page-wrap" id="page">
+   <a class="skip-link screen-reader-text" href="#content">
+    Skip to content
+   </a>
+   <header class="site-header header" id="masthead">
+    <div class="header__wrapper">
+     <div class="site-branding">
+      <a class="custom-logo-link" href="https://www.lever.co/" rel="home">
+       <img alt="lever recruiting software" class="custom-logo" height="48" src="https://www.lever.co/wp-content/uploads/2019/03/lever_rgb_logo_standard.svg" width="169.001"/>
+      </a>
+      <p class="site-title">
+       <a href="https://www.lever.co/" rel="home">
+        Lever
+       </a>
+      </p>
+      <p class="site-description">
+       Lever Recruiting Software
+      </p>
+     </div>
+     <!-- .site-branding -->
+     <div class="menu-overflow hidden-large">
+     </div>
+     <div class="menu-wrapper">
+      <nav class="main-navigation" id="site-navigation">
+       <div class="menu-main-menu-container">
+        <ul class="menu" id="primary-menu">
+         <li class="hidden-large menu-item menu-item-type-custom menu-item-object-custom menu-item-76" id="menu-item-76">
+          <a href="https://hire.lever.co/">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32" id="menu-item-32">
+          <a href="/talent-suite">
+           Products
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13835" id="menu-item-13835">
+            <a href="https://www.lever.co/talent-suite/">
+             Lever Talent Suite
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39" id="menu-item-39">
+            <a href="/hire">
+             Lever Hire
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49" id="menu-item-49">
+            <a href="/nurture">
+             Lever Nurture
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50" id="menu-item-50">
+            <a href="/analytics">
+             Lever Analytics
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13834" id="menu-item-13834">
+            <a href="https://www.lever.co/talent-cloud-connect/">
+             Talent Cloud Connect
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51" id="menu-item-51">
+            <a href="/pricing">
+             Plans and Pricing
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40" id="menu-item-40">
+            <a href="/ecosystem">
+             Ecosystem
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15555" id="menu-item-15555">
+          <a href="/pricing">
+           Pricing
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" id="menu-item-33">
+          <a href="/customers">
+           Customers
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4561" id="menu-item-4561">
+          <a href="https://www.lever.co/recruiting-resources/">
+           Resources
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4562" id="menu-item-4562">
+            <a href="https://www.lever.co/recruiting-resources/">
+             All
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-342" id="menu-item-342">
+            <a href="https://www.lever.co/recruiting-resources/ebook/">
+             eBooks
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-343" id="menu-item-343">
+            <a href="https://www.lever.co/recruiting-resources/video/">
+             Videos
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-346" id="menu-item-346">
+            <a href="https://www.lever.co/recruiting-resources/webinar/">
+             Webinars
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-345" id="menu-item-345">
+            <a href="https://www.lever.co/recruiting-resources/tools/">
+             Tools and Templates
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-344" id="menu-item-344">
+            <a href="https://www.lever.co/recruiting-resources/datasheet/">
+             Product Datasheets
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13391" id="menu-item-13391">
+            <a href="https://www.lever.co/gdpr-recruiting/">
+             GDPR
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16854" id="menu-item-16854">
+            <a href="https://www.lever.co/lever-for-startups/">
+             Lever for Startups
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-35" id="menu-item-35">
+          <a href="/about">
+           Company
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44" id="menu-item-44">
+            <a href="/about">
+             About Us
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4566" id="menu-item-4566">
+            <a href="https://www.lever.co/diversity-and-inclusion/">
+             Diversity
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47" id="menu-item-47">
+            <a href="/press">
+             Press
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46" id="menu-item-46">
+            <a href="/careers">
+             Careers
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48" id="menu-item-48">
+            <a href="/partner-referral-application">
+             Referral Program
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15716" id="menu-item-15716">
+            <a href="https://www.lever.co/events/">
+             Events
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17257" id="menu-item-17257">
+            <a href="https://www.lever.co/contact/">
+             Contact Us
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" id="menu-item-36">
+          <a href="/blog">
+           Blog
+          </a>
+         </li>
+        </ul>
+       </div>
+      </nav>
+      <!-- #site-navigation -->
+      <div class="user-navigation">
+       <div class="menu-user-menu-container">
+        <ul class="menu" id="menu-user-menu">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" id="menu-item-37">
+          <a href="https://hire.lever.co" rel="noopener noreferrer" target="_blank">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-button menu-item menu-item-type-custom menu-item-object-custom menu-item-38" id="menu-item-38">
+          <a href="/1801-demo-signup">
+           Get Started
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="social-links hidden-large">
+       <div class="menu-socail-links-container">
+        <ul class="menu" id="menu-socail-links">
+         <li class="fa fa-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-73" id="menu-item-73">
+          <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+           Twitter
+          </a>
+         </li>
+         <li class="fa fa-linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-74" id="menu-item-74">
+          <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+           Linkedin
+          </a>
+         </li>
+         <li class="fa fa-facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-75" id="menu-item-75">
+          <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+           Facebook
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- .menu-wrapper -->
+     <button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle hidden-large">
+      <span class="fa fa-bars">
+      </span>
+     </button>
+    </div>
+    <!-- .header__wrapper -->
+   </header>
+   <!-- #masthead -->
+   <div class="site-content" id="content">
+    <div class="popup-takeover">
+     <div class="popup-takeover__wrapper">
+      <div class="popup-takeover__image" style="background-image: url(' https://www.lever.co/wp-content/uploads/2019/06/icon-newsletter.png')">
+      </div>
+      <h2 class="popup-takeover__header">
+       Recruit ahead of the curve
+      </h2>
+      <div class="popup-takeover__content">
+       <p>
+        Get innovative, expert insights and recruiting best practices delivered straight to your inbox.
+       </p>
+      </div>
+      <div class="popup-takeover__subscription">
+       <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+        <div class="umfwrap">
+         <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-1" datalink="">
+         </form>
+         <div class="mkto_ty_message" style="display:none">
+          Thanks for subscribing.
+         </div>
+        </div>
+       </div>
+       <script>
+        if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+       </script>
+       <div id="iframe_area">
+       </div>
+      </div>
+      <a class="popup-takeover__close close">
+      </a>
+     </div>
+    </div>
+    <div class="content-area" id="primary">
+     <main class="site-main" id="main">
+      <article class="post-5995 post type-post status-publish format-standard has-post-thumbnail hentry category-diversity-inclusion" id="post-5995">
+       <div class="entry-header">
+        <div class="blog-subscribe-wrap">
+         <div class="blog-subscribe">
+          <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+           <div class="umfwrap">
+            <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-2" datalink="">
+            </form>
+            <div class="mkto_ty_message" style="display:none">
+             Thanks for subscribing.
+            </div>
+           </div>
+          </div>
+          <script>
+           if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+          </script>
+          <div id="iframe_area">
+          </div>
+         </div>
+        </div>
+        <div class="container header-single-wrap">
+         <a class="all-posts-link" href="https://www.lever.co/blog">
+          ALL POSTS
+         </a>
+         <h1 class="entry-title single-title">
+          A Step-by-Step Guide to Cultivating Diversity and Inclusion Part 1: 50+ Ideas
+         </h1>
+        </div>
+       </div>
+       <!-- .entry-title -->
+       <div class="top-banner top-banner--narrow">
+        <img alt="" src="https://www.lever.co/wp-content/uploads/2019/04/diversity-inclusion-50_-ideas.jpg"/>
+       </div>
+       <div class="content-wrap container container--medium single-content-wrap single-content-wrap--has-banner">
+        <div class="content-sidebar">
+         <div class="author-sidebar">
+          <div class="author-detail">
+           <div class="author-label">
+            written by
+           </div>
+           <div class="avatar-wrap">
+            <img alt="Jennifer Kim" src="https://www.lever.co/wp-content/uploads/2019/03/Jen_Avatar-1-48x48.jpeg"/>
+           </div>
+           <div class="author-wrap">
+            <div class="author-name">
+             <span class="author vcard">
+              <a class="url fn n" href="https://www.lever.co/author/jennifer-kim/">
+               Jennifer Kim
+              </a>
+             </span>
+            </div>
+            <div class="author-description">
+             Head of Employee Experience
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="postdate-sidebar">
+          <div class="postdate-title">
+           published
+          </div>
+          <div class="postdate-date">
+           3/22/17 9:25 AM
+          </div>
+         </div>
+         <div class="category-sidebar">
+          <div class="cat-links">
+           <div class="cat-links__lable">
+            Category
+           </div>
+           <span class="cat-links__content">
+            <a href="https://www.lever.co/category/diversity-inclusion/" rel="category tag">
+             Diversity &amp; inclusion
+            </a>
+           </span>
+          </div>
+         </div>
+         <div class="addthis_sharing">
+          <div class="addthis_sharing_title">
+           share
+          </div>
+          <div class="addthis_sharing__wrap">
+           <div class="addthis_sharing_toolbox">
+           </div>
+           <div class="addthis_counter">
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="entry-content">
+         <p>
+          <i style="font-size: 2rem; background-color: transparent;">
+           We believe passionately that diverse and inclusive companies make for more innovative, engaged, and happy teams, and we speak with forward-thinking talent leaders all the time who feel the same. We’re writing this series on how to implement and promote diversity and inclusion in the workplace because people are ready for the next level of discourse around diversity and inclusion; one aimed at actual solutions. In it, you’ll find tactical advice, beneficial resources, and examples of what you can do today to make real progress in diversity and inclusion. Read the
+          </i>
+          <a href="/blog/cultivating-diversity-and-inclusion-in-the-workplace-blog-series-introduction" style="font-size: 2rem;">
+           <i>
+            series introduction
+           </i>
+          </a>
+          <i style="font-size: 2rem; background-color: transparent;">
+           for more on what we cover.
+          </i>
+         </p>
+         <p>
+          <span id="more-5995">
+          </span>
+          Nobody’s ever said that diversity and inclusion work is easy. But having grown
+          <a href="https://medium.com/initialized-capital/how-lever-got-to-50-50-between-women-men-b8db05b7d3ee#.y5l8g1ivm" rel="nofollow noopener noreferrer" target="_blank">
+           a team that recently hit a 50:50 gender ratio
+          </a>
+          (an uncommon feat, especially in Silicon Valley), I can let everyone in on a secret: It’s not rocket science, either.
+         </p>
+         <p>
+          The key is starting. And the earlier the better – the longer you wait to build a diverse workforce and inclusive culture, the harder it will be in the future.
+         </p>
+         <p>
+          To help companies get started today, I’m excited to share over 50 of the ways you can foster diversity and inclusion. Understandably, every team worries about headcount, budget, and bandwidth, but diversity and inclusion should – and more importantly, can – be a priority in resource-strapped companies.
+         </p>
+         <p>
+          So much of what it takes to cultivate a diverse and inclusive workplace is about approaching tasks every company has to do anyway, but in much more a thoughtful and deliberate way. Here’s what we’ve done, and you can too:
+         </p>
+         <p>
+          <strong>
+           1. Convert all job descriptions to using gender-neutral language.
+          </strong>
+          Audit all of your JDs to check for any use of ‘he/his/him’ as a default and convert them to gender-neutral pronouns like ‘he or she’ or ‘they’.
+          <a href="https://business.linkedin.com/talent-solutions/blog/2015/07/finally-an-app-that-determines-if-your-job-descriptions-are-sexist" rel="noopener noreferrer" target="_blank">
+           Text.io
+          </a>
+          is a fantastic platform for this, as well as
+          <a href="https://business.linkedin.com/talent-solutions/blog/2015/07/finally-an-app-that-determines-if-your-job-descriptions-are-sexist" rel="noopener noreferrer" target="_blank">
+           this app you can copy-paste your JDs into
+          </a>
+          .
+         </p>
+         <p>
+          <strong>
+           2. State your commitment to building a diverse and inclusive culture
+          </strong>
+          in your job descriptions and careers page. One simple sentence can send a strong message to your applicants.
+         </p>
+         <p>
+          <img alt="diversity and inclusion equal opportunity workplace" class="" src="/wp-content/uploads/2019/04/lever-equal-opportunity.jpg"/>
+         </p>
+         <p>
+          <strong>
+           3. Write results-based job descriptions.
+          </strong>
+          Studies have found, men apply for a job when they meet only
+          <a href="https://hbr.org/2014/08/why-women-dont-apply-for-jobs-unless-theyre-100-qualified" rel="nofollow noopener noreferrer" target="_blank">
+           60 percent of the qualifications
+          </a>
+          , but women will only apply when they meet 100 percent of them. Instead of being based on a checklist of skills that may weed great female and minority candidates out, JDs should ideally focus on what a candidate will be expected to achieve, say, a month, six months, and a year into the job. Here are some
+          <a href="/jobs" rel="nofollow noopener noreferrer" target="_blank">
+           examples
+          </a>
+          you’re welcome to adapt.
+         </p>
+         <p>
+          <strong>
+           4. Diversify your pipeline
+          </strong>
+          by actively sourcing candidates. Start driving a diversity and inclusion program by pushing yourself and team to go beyond the “obvious” sources, and aim to send one email or set up one coffee per week with a different type of profile. You might end up uncovering a gem who may become a star employee months later.
+         </p>
+         <p>
+          <strong>
+           5. Conduct blind screenings
+          </strong>
+          to
+          <a href="https://business.linkedin.com/talent-solutions/blog/diversity/2017/how-companies-are-taking-unconscious-bias-out-of-the-hiring-equation" rel="noopener noreferrer" target="_blank">
+           minimize unconscious biases
+          </a>
+          in the resume review process. Studies have shown that people with ethnic names need to send out
+          <a href="http://www.nber.org/digest/sep03/w9873.html" rel="nofollow noopener noreferrer" target="_blank">
+           more resumes
+          </a>
+          before they get a callback, and that resumes with female names are
+          <a href="http://blogs.discovermagazine.com/cosmicvariance/2012/09/19/scientists-your-gender-bias-is-showing/#.WH67Q7YrIxd" rel="nofollow noopener noreferrer" target="_blank">
+           rated lower
+          </a>
+          than ones with male names when all other things on a resume are equal.
+         </p>
+         <p>
+          <strong>
+           6.
+           <a href="https://business.linkedin.com/talent-solutions/blog/diversity/2016/ban-the-term-culture-fit-and-other-great-diversity-tips-from-pandora" rel="noopener noreferrer" target="_blank">
+            Ban “culture fit”
+           </a>
+           as a reason for rejecting a candidate.
+          </strong>
+          When interviewers want to reject candidates for “culture fit,” or a “gut feeling”, it’s an indication that unconscious bias is at play. Challenge your interviewers to articulate a more specific explanation – it’s a great way to uncover hidden biases and have open conversations about them (never punish or shame people – we are all inherently biased a little bit!).
+         </p>
+         <p>
+          <strong>
+           7. Explicitly request a diverse range of referrals.
+          </strong>
+          Challenge your employees to think beyond the obvious – past their three best friends that may or may not be all from the same demographic. Emphasize that diversity requires deliberate effort, and it’s something all employees can help with – by making introductions to great people they know, even if they don’t fit the “traditional” profile. It only makes the team stronger in the long run.
+         </p>
+         <p>
+          <strong>
+           8. Invest in a structured interviewing process and training.
+          </strong>
+          This isn’t to say that you must stick to a strict script in your interviews – candidates often share important insights when conversations flow naturally – but structured interviews lead to higher-quality hires because they help reduce bias and “gut-feeling” hiring. By asking each candidate the same or a similar set of questions, you have a consistent “data set” to help boost objective decision-making. Structured interviews will allow your team to learn and improve your recruiting process faster, as well.
+         </p>
+         <p>
+          <strong>
+           9. Ensure that underrepresented employees are included in your interviews.
+          </strong>
+          But don’t overload them either! As much as candidates want to meet with diverse faces in their potential coworkers, if your one female engineer is in every single interview panel, it’s not fair to her performance and sanity either.
+         </p>
+         <p>
+          <strong>
+           10. Introduce diversity and inclusion early on in the employee’s cycle.
+          </strong>
+          In Lever’s onboarding session, we deliberately exclude any kind of “teaching,” like defining privilege, dropping a bunch of stats, or talking about the latest diversity and inclusion issues in tech, so that we don’t overwhelm. Instead, we communicate why Lever cares about D&amp;I and explain how we define it. Find what works for you.
+         </p>
+         <p>
+          <strong>
+           11. Use
+           <a href="http://alexjs.com/" rel="nofollow noopener noreferrer" target="_blank">
+            Alex
+           </a>
+           to catch gendered language in team communications.
+          </strong>
+          Alex is an open source tool that you can install wherever you do text editing (like Chrome or Slack). It will catch potentially hurtful language and nicely remind individuals how they might rephrase.
+         </p>
+         <p>
+          <strong>
+           12. Start a “guys jar.”
+          </strong>
+          Take a page from the Bay Area startup npm’s book, and implement a “
+          <a href="http://blog.npmjs.org/post/120475872425/this-is-npms-guys-jar-we-didnt-invent-the" rel="nofollow noopener noreferrer" target="_blank">
+           Guys jar
+          </a>
+          ” for a friendly reminder against unnecessarily gendered language in the office. Whenever someone at npm accidentally genders something gender-neutral, they put a dollar in the jar. When they reach $50, they donate the money to a charity.
+         </p>
+         <p>
+          <strong>
+           13. Have every employee take a working styles test
+          </strong>
+          to help coworkers understand each other’s work and communication styles. Understanding ourselves leads to better understanding of others, and furthermore, appreciation of differences. At Lever, we chose the
+          <a href="https://www.insights.com/" rel="nofollow noopener noreferrer" target="_blank">
+           Insights Discovery
+          </a>
+          test; every hire takes the assessment and go through a workshop with their results during their new hire onboarding.
+         </p>
+         <p>
+          <strong>
+           14. Create a channel for D&amp;I in your company’s communication tool.
+          </strong>
+          If you were interested in learning how to talk about diversity in the workplace, then this can be a powerful solution. At Lever, we have a Slack channel called “inclusion” where employees share D&amp;I articles and news. Make it present and establish a norm for talking actively about D&amp;I in the workplace, and employees will follow!
+         </p>
+         <p>
+          <img alt="diversity and inclusion slack channel" class="" src="/wp-content/uploads/2019/04/lever-open-conversation.jpg"/>
+         </p>
+         <p>
+          <strong>
+           15. Celebrate holidays and events
+          </strong>
+          for underrepresented minorities like Black History Month or Gay Pride Week. Why should Christmas get all the love?
+         </p>
+         <p>
+          <strong>
+           16. Start a dish duty rotation.
+          </strong>
+          Have you ever noticed that it’s women who pick up a lot of the slack for “office chores”? At Lever, we started a rotating dish duty (two people every day) to make sure that everyone shares in the responsibility.
+         </p>
+         <p>
+          <strong>
+           17. Related, give visible recognition
+          </strong>
+          when employees do go above and beyond to pick up extra duties. Contributing to your workplace isn’t just hitting sales goals or shipping product – it’s also doing your part to make your company a great place to work, and it deserves props too.
+         </p>
+         <p>
+          <strong>
+           18. Start an
+           <a href="http://www.catalyst.org/knowledge/topics/ergs-employee-resource-groups" rel="nofollow noopener noreferrer" target="_blank">
+            employee resource group
+           </a>
+           .
+          </strong>
+          Lever’s ERGs include
+          <a href="https://inside.lever.co/lever-traditions-leverette-dinner-f020372884b3#.wa8ty88do" rel="nofollow noopener noreferrer" target="_blank">
+           Leverettes
+          </a>
+          (a group for female employees) and LeverHues (for LGBT employees). Provide a forum for open discussion, learning, and support – they’re a powerful tool for empowering underrepresented groups.
+         </p>
+         <p>
+          <strong>
+           19. Allow flexible work hours.
+          </strong>
+          Show your employees you trust them to get their work done with the freedom to create their own work hours. People have all sorts of personal situations that may affect their ability to work a strict 9 to 5 (like picking up or dropping off children at school). Lack of flexibility makes lives of some employees unnecessarily difficult – and they may respond by leaving for a company that does, and we all want to retain our best talent.
+         </p>
+         <p>
+          <strong>
+           20. Order a set of
+           <a href="http://www.arup.com/news/2014_07_july/17_july_diversity_and_inclusion_knowledge_cards_released" rel="nofollow noopener noreferrer" target="_blank">
+            knowledge cards
+           </a>
+           .
+          </strong>
+          It can be hard to know how to talk about D&amp;I and bring awareness to your coworkers. The Society of Women’s Engineers partnered to create a set of knowledge cards designed to facilitate a discussion and prompt reflection around D&amp;I.
+         </p>
+         <p>
+          <strong>
+           21. Run an unconscious bias training.
+          </strong>
+          Facebook released its unconscious bias training videos,
+          <a href="https://managingbias.fb.com/" rel="nofollow noopener noreferrer" target="_blank">
+           here
+          </a>
+          , which can be a good place to start in creating your own. The videos are designed to help people recognize their biases so they can start to combat them.
+         </p>
+         <p>
+          <strong>
+           22. Have coworkers take an
+           <a href="https://implicit.harvard.edu/implicit/takeatest.html" rel="nofollow noopener noreferrer" target="_blank">
+            Implicit Association Test
+           </a>
+          </strong>
+          to help them realize their own biases. Acknowledging that we all have biases and that that is okay, is often a very important first step of deeper D&amp;I conversations.
+         </p>
+         <p>
+          <strong>
+           23. Check the temperature of your office.
+          </strong>
+          The temperature in
+          <a href="https://business.linkedin.com/talent-solutions/blog/2015/08/if-really-want-to-recruit-more-women-turn-up-the-heat-literally" rel="noopener noreferrer" target="_blank">
+           most buildings default to what’s most comfortable for men
+          </a>
+          . It’s entirely possible a subset of your employees can’t even be comfortable at work without constantly layering themselves in sweaters and jackets, how could we ignore that?
+         </p>
+         <p>
+          <strong>
+           24. Check what reading materials you have in your lobby.
+          </strong>
+          If you’re going to provide magazines, try to make sure them relevant to your industry as opposed to clearly gendered options. Unless you’re in fashion, GQ probably doesn’t belong in your lobby.
+         </p>
+         <p>
+          <strong>
+           25. Print inclusive bathroom signs.
+          </strong>
+          Lever’s bathroom doors have a sticker that says “For those who identify as,” above the mens and womens signs.
+         </p>
+         <p>
+          <strong>
+           26. Hang a poster
+          </strong>
+          describing how every employee can contribute to an inclusive workplace.
+         </p>
+         <p>
+          <img alt="diversity and inclusion - inclusive workplace poster" class="" src="/wp-content/uploads/2019/04/lever_inclusion_poster_2x_1024.jpg"/>
+         </p>
+         <p>
+          <strong>
+           27. Establish a mother’s room
+          </strong>
+          where nursing women have a private space for pumping breast milk. If you’re strapped for space, try converting a conference rooms into a mother’s room. When it’s not in use, you can still use it as a conference space.
+         </p>
+         <p>
+          <strong>
+           28. Schedule team bonding activities during the day.
+          </strong>
+          When everything fun happens at 5 PM, working parents may not be able to participate!
+         </p>
+         <p>
+          <strong>
+           29. Order swag in women’s sizes
+          </strong>
+          or from a non-gender binary shirt company.
+         </p>
+         <p>
+          <strong>
+           30. Hold an international foods potluck
+          </strong>
+          as a way of appreciating different cultures present in your employee population and opening up organic discussion.
+         </p>
+         <p>
+          <strong>
+           31. Take a fresh look the visuals of your careers page.
+          </strong>
+          What demographics are represented in your photos? In your leadership bios? Candidates can interpret a non-diverse careers page as a sign of a non-inclusive workplace.
+         </p>
+         <p>
+          <strong>
+           32. Start blogging.
+          </strong>
+          Diversity attracts diversity, as so much of the talent pool is seeking a safe, inclusive place where they can do their best work. Ask your current employees from underrepresented groups to write about their experience at your company so prospective candidates have an authentic perspective. We’ve found huge success with
+          <a href="https://inside.lever.co/tagged/diversity-and-inclusion" rel="nofollow noopener noreferrer" target="_blank">
+           our team blog Inside.Lever,
+          </a>
+          which candidates consistently cite as one of the top reasons they chose to apply with us.
+         </p>
+         <p>
+          <strong>
+           33. Invite a guest speaker from the D&amp;I community
+          </strong>
+          to speak at your company. Especially if you already have regular talks on technical topics, or on leadership – just set aside a couple of slots for D&amp;I!
+         </p>
+         <p>
+          <strong>
+           34. Share discussion points and an agenda prior to meetings
+          </strong>
+          so more voices are heard. Some people like to talk through new information immediately, whereas others like to have time to process information. By presenting a problem on the spot, you’re less likely to receive the latter group’s contributions.
+         </p>
+         <p>
+          <strong>
+           35.
+           <a href="https://betterhumans.coach.me/round-robin-a-dead-simple-management-skill-that-works-6ec3df250326#.qt6krbpva" rel="nofollow noopener noreferrer" target="_blank">
+            Try the Round Robin technique in meetings
+           </a>
+          </strong>
+          , where you ask every person in the room for a contribution to the discussion at hand. People can either share an idea, or pass.
+         </p>
+         <p>
+          <strong>
+           36. Point out interruptions.
+          </strong>
+          <a href="https://bitchmedia.org/post/seven-studies-proving-mansplaining-exists" rel="nofollow noopener noreferrer" target="_blank">
+           Studies
+          </a>
+          show that women are far more likely than men to be interrupted in meetings.
+         </p>
+         <p>
+          <strong>
+           37. Have a parental leave policy.
+          </strong>
+          Optimizely’s
+          <a href="https://blog.optimizely.com/2015/10/30/parental-leave-policy/" rel="nofollow noopener noreferrer" target="_blank">
+           post
+          </a>
+          on how they increased their parental leave policy from six to 17 weeks – along with the financial model they used to advocate the policy – is a helpful blueprint.
+         </p>
+         <p>
+          <strong>
+           38. Aim for as close to a no-negotiation compensation policy as you can get.
+          </strong>
+          Studies show that men negotiate
+          <a href="https://hbr.org/2014/06/why-women-dont-negotiate-their-job-offers" rel="nofollow noopener noreferrer" target="_blank">
+           more often
+          </a>
+          than women, and when women do negotiate, they can actually be
+          <a href="https://www.cfa.harvard.edu/cfawis/bowles.pdf" rel="nofollow noopener noreferrer" target="_blank">
+           punished
+          </a>
+          for it. If no negotiation isn’t realistic, consider narrow bands for each role.
+         </p>
+         <p>
+          <strong>
+           39. Hold office hours.
+          </strong>
+          If your HR team has the bandwidth, hold recurring office hours and welcome input around D&amp;I.
+         </p>
+         <p>
+          <strong>
+           40. Sponsor an event.
+          </strong>
+          Get other companies together to talk about D&amp;I, what’s working and what isn’t working. Turns out all you need is something to drink and somewhere to sit for ideas to flow.
+         </p>
+         <p>
+          <strong>
+           41. Sponsor organizations.
+          </strong>
+          If there are organizations doing the work that you would like to be doing or the work that you admire, offer to sponsor them. By sponsoring them you’re dedicating funds to their cause even if you don’t think you have the resources to help in any other way.
+         </p>
+         <p>
+          <strong>
+           42. Have a performance review system.
+          </strong>
+          Standardized reviews help reduce unfairness in promotion decisions. If you’re not in a position to implement a formal review process, solicit 360 reviews, so managers at least have multiple perspectives.
+         </p>
+         <p>
+          <strong>
+           43. Include D&amp;I in performance conversations.
+          </strong>
+          If you’re not tying D&amp;I directly to individual goals, you can still touch upon hiring managers’ efforts, progress, and the expectations you have for them in performance conversations.
+         </p>
+         <p>
+          <strong>
+           44. Provide workshops
+          </strong>
+          for adjacent skills like communication and empathy for employees. An inclusive workforce is an
+          <a href="https://business.linkedin.com/talent-solutions/blog/interview-questions/2016/ask-these-4-interview-questions-to-screen-for-emotional-intelligence" rel="noopener noreferrer" target="_blank">
+           emotionally intelligent
+          </a>
+          one.
+         </p>
+         <p>
+          <strong>
+           45. Offer flexible PTO.
+          </strong>
+          Empower your employees to decide when the right time for them to take a break is. By giving them the option to take time when they need it, you’re inherently telling them that you trust their judgement.
+         </p>
+         <p>
+          <strong>
+           46. Check your office decorations.
+          </strong>
+          Make an effort to put up decorations, signage, or even fun company memories that promote the values you want your employees to feel or think.
+         </p>
+         <p>
+          <strong>
+           47. Approve budget for ergonomic workspaces.
+          </strong>
+          Everyone is different, so promote a healthy working environment by catering to individual needs in their workspaces.
+         </p>
+         <p>
+          <strong>
+           48. Expand benefits coverage to domestic partners.
+          </strong>
+          Legality of same-sex marriage varies state by state in the US still, but if you have the power to expand your benefits offerings, your employees will appreciate the extra mile you go for them.
+         </p>
+         <p>
+          <strong>
+           49. Host a book club.
+          </strong>
+          There’s so much great literature out there that can stimulate valuable conversation. Hosting a book club can be a way to get employees to open up and connect with each other. Here’s
+          <a href="https://inside.lever.co/book-club-developing-your-skills-to-a-dream-job-11f51440b778#.kd8kvlwh8" rel="nofollow noopener noreferrer" target="_blank">
+           one example
+          </a>
+          of a successful office book club.
+         </p>
+         <p>
+          <strong>
+           50. Host a movie night.
+          </strong>
+          A movie night is another way to stimulate meaningful conversation without the commitment of reading a full book. The historical drama
+          <a href="https://en.wikipedia.org/wiki/Selma_(film)" rel="nofollow noopener noreferrer" target="_blank">
+           Selma
+          </a>
+          was a good one, and so would be
+          <a href="https://en.wikipedia.org/wiki/Hidden_Figures" rel="nofollow noopener noreferrer" target="_blank">
+           Hidden Figures
+          </a>
+          when it’s available to rent!
+         </p>
+         <p>
+          <strong>
+           51. Encourage your leaders to get involved in the dialogue.
+          </strong>
+          Executive buy-in is mission-critical for D&amp;I efforts to succeed. Ask your execs to get involved through things like sharing articles, tweeting, and including D&amp;I on the agenda in company-wide meetings so everyone feels encouraged. D&amp;I candidates often feel discouraged inadvertently by silence from the top.
+         </p>
+         <p>
+          <strong>
+           52. Above all else, listen to your employees.
+          </strong>
+          Invest in the things they care about.
+         </p>
+         <p>
+          Start small. Don’t let the immense scope of things that need to be done keep you from doing anything at all. Because you can talk about diversity and inclusion forever, but taking action is the only way to change anything.
+         </p>
+         <p>
+          <em>
+           If you’re interested in more ideas like these, read our next post on how to
+           <a href="/blog/a-step-by-step-guide-to-cultivating-diversity-and-inclusion-part-1-fixing-your-culture">
+            fix your culture
+           </a>
+           before you dive into diversity hiring. Then,
+          </em>
+          <em style="font-size: 2rem; background-color: transparent;">
+           download our
+           <a href="/resources/the-diversity-and-inclusion-handbook">
+            Diversity &amp; Inclusion Handbook
+           </a>
+           <em>
+            for
+           </em>
+           <em style="font-size: 2rem; background-color: transparent;">
+            <i>
+             hundreds of impactful tactics like the ones above.
+            </i>
+           </em>
+          </em>
+         </p>
+         <p>
+         </p>
+        </div>
+        <!-- .entry-content -->
+       </div>
+       <!-- Popups -->
+       <div class="blog-related-posts">
+        <div class="related-posts-wrapper">
+         <h4>
+          Further reading
+         </h4>
+         <div class="related-posts">
+          <div class="related-posts__item related-post">
+           <div class="related-post__image" style="background-image: url(https://www.lever.co/wp-content/uploads/2019/10/KateeVanHorn-1200x600.png)">
+           </div>
+           <div class="related-post__content">
+            <h3 class="related-post__title">
+             <a href="https://www.lever.co/blog/talent-spotlight-katee-van-horn-on-building-diversity-inclusion-for-your-company/">
+              Talent Spotlight: Katee Van Horn on Building Diversity &amp; Inclusion for Your Company
+             </a>
+            </h3>
+            <div class="related-post__body">
+             When it comes to diversity and inclusion, every company wishes they had the secret recipe to maintaining inclusivity while hiring for speed in today’s talent market, especially when the very best talent is off the market in just a cool...
+            </div>
+            <a class="link-more" href="https://www.lever.co/blog/talent-spotlight-katee-van-horn-on-building-diversity-inclusion-for-your-company/">
+             Read more
+            </a>
+           </div>
+          </div>
+          <div class="related-posts__item related-post">
+           <div class="related-post__image" style="background-image: url(https://www.lever.co/wp-content/uploads/2019/10/unconscious-gender-bias.jpg)">
+           </div>
+           <div class="related-post__content">
+            <h3 class="related-post__title">
+             <a href="https://www.lever.co/blog/unconscious-gender-bias/">
+              Combating Unconscious Gender Bias in the Workplace
+             </a>
+            </h3>
+            <div class="related-post__body">
+             “Gender bias holds women back from being hired and advancing in their careers. It’s important to be aware of how that manifests,” says Raena Saddler from Lean In. That’s why Lean In created an activity that helps you combat gender...
+            </div>
+            <a class="link-more" href="https://www.lever.co/blog/unconscious-gender-bias/">
+             Read more
+            </a>
+           </div>
+          </div>
+          <div class="related-posts__item related-post">
+           <div class="related-post__image" style="background-image: url(https://www.lever.co/wp-content/uploads/2019/10/Disability-Employment-Awareness-Month_October.jpg)">
+           </div>
+           <div class="related-post__content">
+            <h3 class="related-post__title">
+             <a href="https://www.lever.co/blog/busting-the-myths-around-workers-with-disabilities/">
+              Busting the Myths Around Workers With Disabilities
+             </a>
+            </h3>
+            <div class="related-post__body">
+             The theme for this year’s National Disability Employment Awareness Month is “The Right Talent, Right Now.” This annual initiative held in October for the past 70+ years “celebrates the contributions of workers with disabilities and educates about the value of...
+            </div>
+            <a class="link-more" href="https://www.lever.co/blog/busting-the-myths-around-workers-with-disabilities/">
+             Read more
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <footer class="entry-footer">
+       </footer>
+       <!-- .entry-footer -->
+      </article>
+      <!-- #post-16213 -->
+     </main>
+     <!-- #main -->
+    </div>
+    <!-- #primary -->
+   </div>
+   <!-- #content -->
+   <script async="" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-559e959a0e65babe" type="text/javascript">
+   </script>
+   <footer class="site-footer footer" id="colophon">
+    <div class="footer__wrapper">
+     <div class="footer__top">
+      <div class="widget_link_list widget-column" id="list-2">
+       <h3 class="widget-title">
+        products
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/talent-suite">
+          Lever Talent Suite
+         </a>
+        </li>
+        <li class="">
+         <a href="/hire">
+          Lever Hire
+         </a>
+        </li>
+        <li class="">
+         <a href="/nurture">
+          Lever Nurture
+         </a>
+        </li>
+        <li class="">
+         <a href="/analytics">
+          Lever Analytics
+         </a>
+        </li>
+        <li class="">
+         <a href="/talent-cloud-connect">
+          Talent Cloud Connect
+         </a>
+        </li>
+        <li class="">
+         <a href="/pricing">
+          Plans and Pricing
+         </a>
+        </li>
+        <li class="">
+         <a href="/ecosystem">
+          Ecosystem
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-3">
+       <h3 class="widget-title">
+        company
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/about">
+          About us
+         </a>
+        </li>
+        <li class="">
+         <a href="/customers">
+          Customers
+         </a>
+        </li>
+        <li class="">
+         <a href="/press">
+          Press
+         </a>
+        </li>
+        <li class="">
+         <a href="/careers">
+          Careers
+         </a>
+        </li>
+        <li class="">
+         <a href="/events/">
+          Events
+         </a>
+        </li>
+        <li class="">
+         <a href="https://www.lever.co/contact/">
+          Contact Us
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-4">
+       <h3 class="widget-title">
+        resources
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/recruiting-resources">
+          Resource center
+         </a>
+        </li>
+        <li class="">
+         <a href="/blog">
+          Blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://inside.lever.co/" target="_blank">
+          Inside Lever blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://fulcrum.lever.co/" target="_blank">
+          Lever Engineering blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-5">
+       <h3 class="widget-title">
+        support
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us" target="_blank">
+          Help center
+         </a>
+        </li>
+        <li class="">
+         <a href="https://status.lever.co/" target="_blank">
+          Product status
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Support
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Submit a ticket
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-6">
+       <h3 class="widget-title">
+        contact sales
+       </h3>
+       <ul class="list">
+        <li class="phone-footer-bg phone-icon-left">
+         (415) 458-2731
+        </li>
+        <li class="">
+         155 5th St 6th floor
+        </li>
+        <li class="">
+         San Francisco, CA 94103
+        </li>
+        <li class="contact-form__wrap">
+         <a href="mailto:info@lever.co">
+          info@lever.co
+         </a>
+        </li>
+        <li class="">
+         Toronto Office
+        </li>
+        <li class="">
+         176 Yonge Street, 6F
+        </li>
+        <li class="">
+         Toronto, ON M5C 2L7
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__bottom-wrapper">
+      <div class="footer__bottom">
+       <div class="widget_text" id="text-2">
+        <div class="textwidget">
+         <div class="block-about-footer">
+          <div class="block-about-footer__left">
+           <div class="footer-circle-image">
+            <img alt="Image of Lever team members" class="border-radius-50" src="https://www.lever.co/wp-content/uploads/2019/03/footer-image-leveroo-group.jpg"/>
+           </div>
+          </div>
+          <div class="block-about-footer__right">
+           <p class="social-footer-bg">
+            Follow us on
+            <a href="https://www.linkedin.com/company/3254533">
+             LinkedIn
+            </a>
+            ,
+            <a href="https://www.facebook.com/leverapp/">
+             Facebook
+            </a>
+            , and
+            <a href="https://twitter.com/lever">
+             Twitter
+            </a>
+            .
+           </p>
+           <div class="social-links">
+            <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+             <img alt="twitter" src="/wp-content/uploads/2019/04/twitter.png"/>
+            </a>
+            <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+             <img alt="linkedin" src="/wp-content/uploads/2019/04/LinkedIn-3.png"/>
+            </a>
+            <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+             <img alt="facebook" src="/wp-content/uploads/2019/04/facebook.png"/>
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="footer__subscribe">
+       <strong>
+        Sign up for our blog
+       </strong>
+       <p>
+        Keep up with the latest in recruiting.
+       </p>
+       <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+        <div class="umfwrap">
+         <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-3" datalink="">
+         </form>
+         <div class="mkto_ty_message" style="display:none">
+          Thanks for subscribing.
+         </div>
+        </div>
+       </div>
+       <script>
+        if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+       </script>
+       <div id="iframe_area">
+       </div>
+      </div>
+     </div>
+     <div class="footer__copyright">
+      <div class="widget_text" id="text-4">
+       <h4 class="widget-title hidden">
+        copyright
+       </h4>
+       <div class="textwidget">
+        <p>
+         <span class="copyright-content">
+          © 2019 Lever
+          <a href="/privacy">
+           Privacy
+          </a>
+          |
+          <a href="https://www.lever.co/legal/">
+           Legal
+          </a>
+          |
+          <a href="/levers-data-selling-policy">
+           Do Not Sell My Personal Information
+          </a>
+         </span>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <!-- #colophon -->
+  </div>
+  <!-- #page -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NSF9Z3W" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script type="text/javascript">
+   (function(){
+                document.addEventListener('DOMContentLoaded', function(){
+                    let wpp_widgets = document.querySelectorAll('.popular-posts-sr');
+
+                    if ( wpp_widgets ) {
+                        for (let i = 0; i < wpp_widgets.length; i++) {
+                            let wpp_widget = wpp_widgets[i];
+                            WordPressPopularPosts.theme(wpp_widget);
+                        }
+                    }
+                });
+            })();
+  </script>
+  <script>
+   var WPPImageObserver = null;
+
+            function wpp_load_img(img) {
+                if ( ! 'imgSrc' in img.dataset || ! img.dataset.imgSrc )
+                    return;
+
+                img.src = img.dataset.imgSrc;
+
+                if ( 'imgSrcset' in img.dataset ) {
+                    img.srcset = img.dataset.imgSrcset;
+                    img.removeAttribute('data-img-srcset');
+                }
+
+                img.classList.remove('wpp-lazyload');
+                img.removeAttribute('data-img-src');
+                img.classList.add('wpp-lazyloaded');
+            }
+
+            function wpp_observe_imgs(){
+                let wpp_images = document.querySelectorAll('img.wpp-lazyload'),
+                    wpp_widgets = document.querySelectorAll('.popular-posts-sr');
+
+                if ( wpp_images.length || wpp_widgets.length ) {
+                    if ( 'IntersectionObserver' in window ) {
+                        WPPImageObserver = new IntersectionObserver(function(entries, observer) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    let img = entry.target;
+                                    wpp_load_img(img);
+                                    WPPImageObserver.unobserve(img);
+                                }
+                            });
+                        });
+
+                        if ( wpp_images.length ) {
+                            wpp_images.forEach(function(image) {
+                                WPPImageObserver.observe(image);
+                            });
+                        }
+
+                        if ( wpp_widgets.length ) {
+                            for (var i = 0; i < wpp_widgets.length; i++) {
+                                let wpp_widget_images = wpp_widgets[i].querySelectorAll('img.wpp-lazyload');
+
+                                if ( ! wpp_widget_images.length && wpp_widgets[i].shadowRoot ) {
+                                    wpp_widget_images = wpp_widgets[i].shadowRoot.querySelectorAll('img.wpp-lazyload');
+                                }
+
+                                if ( wpp_widget_images.length ) {
+                                    wpp_widget_images.forEach(function(image) {
+                                        WPPImageObserver.observe(image);
+                                    });
+                                }
+                            }
+                        }
+                    } /** Fallback for older browsers */
+                    else {
+                        if ( wpp_images.length ) {
+                            for (var i = 0; i < wpp_images.length; i++) {
+                                wpp_load_img(wpp_images[i]);
+                                wpp_images[i].classList.remove('wpp-lazyloaded');
+                            }
+                        }
+
+                        if ( wpp_widgets.length ) {
+                            for (var j = 0; j < wpp_widgets.length; j++) {
+                                let wpp_widget = wpp_widgets[j],
+                                    wpp_widget_images = wpp_widget.querySelectorAll('img.wpp-lazyload');
+
+                                if ( ! wpp_widget_images.length && wpp_widget.shadowRoot ) {
+                                    wpp_widget_images = wpp_widget.shadowRoot.querySelectorAll('img.wpp-lazyload');
+                                }
+
+                                if ( wpp_widget_images.length ) {
+                                    for (var k = 0; k < wpp_widget_images.length; k++) {
+                                        wpp_load_img(wpp_widget_images[k]);
+                                        wpp_widget_images[k].classList.remove('wpp-lazyloaded');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                wpp_observe_imgs();
+
+                // When an ajaxified WPP widget loads,
+                // Lazy load its images
+                document.addEventListener('wpp-onload', function(){
+                    wpp_observe_imgs();
+                });
+            });
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js?ver=2.3.9" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var ctcc_vars = {"expiry":"","method":"","version":"1"};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js?ver=2.3.0" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/navigation-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/skip-link-focus-fix-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/libs/jquery.magnific-popup.min.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js?ver=2.1.3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com, @yourdomain.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+var customAjax = {"ajaxurl":"https:\/\/www.lever.co\/wp-admin\/admin-ajax.php"};
+var timeConfigPopupFull = {"time_full_value":"1"};
+var timeConfigPopupSidebar = {"time_sidebar_value":"0.5"};
+var popupIdConfigPopupFull = {"popup_id":"14920"};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-min.js?ver=1.0.0-742" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-header-min.js?ver=1.0.0-742" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/comment-reply.min.js?ver=5.3.2" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/wp-embed.min.js?ver=5.3.2" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   jQuery(document).ready(function($){
+												if(!catapultReadCookie("catAccCookies")){ // If the cookie has not been set then show the bar
+							$("html").addClass("has-cookie-bar");
+							$("html").addClass("cookie-bar-bottom-bar");
+							$("html").addClass("cookie-bar-bar");
+													}
+																	});
+  </script>
+  <div class="" id="catapult-cookie-bar">
+   <div class="ctcc-inner">
+    <span class="ctcc-left-side">
+     This site uses cookies to offer you a better browsing experience.
+     <a class="ctcc-more-info-link" href="https://www.lever.co/cookie-policy" tabindex="0" target="_blank">
+      Learn more.
+     </a>
+    </span>
+    <span class="ctcc-right-side">
+     <button id="catapultCookie" onclick="catapultAcceptCookies();" tabindex="0">
+      Thank you
+     </button>
+    </span>
+   </div>
+   <!-- custom wrapper class -->
+  </div>
+  <!-- #catapult-cookie-bar -->
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb4e40776b","applicationID":"308893147","transactionName":"ZF0EbBcHWxZWVEUIWV0XJ1sRD1oLGERYD1FfXQ==","queueTime":0,"applicationTime":216,"atts":"SBoHGl8dSBg=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

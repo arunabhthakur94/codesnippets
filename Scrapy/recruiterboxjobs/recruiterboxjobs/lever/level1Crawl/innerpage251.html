@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <script>
+   !function(c,f){var t,o,i,e=[],r={passive:!0,capture:!0},n=new Date,a="pointerup",u="pointercancel";function p(n,e){t||(t=e,o=n,i=new Date,w(f),s())}function s(){0<=o&&o<i-n&&(e.forEach(function(n){n(o,t)}),e=[])}function l(n){if(n.cancelable){var e=(1e12<n.timeStamp?new Date:performance.now())-n.timeStamp;"pointerdown"==n.type?function(n,e){function t(){p(n,e),i()}function o(){i()}function i(){f(a,t,r),f(u,o,r)}c(a,t,r),c(u,o,r)}(e,n):p(e,n)}}function w(e){["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(n){e(n,l,r)})}w(c),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){e.push(n),s()}}(addEventListener,removeEventListener)
+  </script>
+  <title data-rh="true">
+   A better way to interview software engineers - Lever Engineering
+  </title>
+  <meta charset="utf-8" data-rh="true"/>
+  <meta content="width=device-width,minimum-scale=1,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="#000000" data-rh="true" name="theme-color"/>
+  <meta content="Medium" data-rh="true" name="twitter:app:name:iphone"/>
+  <meta content="828256236" data-rh="true" name="twitter:app:id:iphone"/>
+  <meta content="Medium" data-rh="true" property="al:ios:app_name"/>
+  <meta content="828256236" data-rh="true" property="al:ios:app_store_id"/>
+  <meta content="com.medium.reader" data-rh="true" property="al:android:package"/>
+  <meta content="542599432471018" data-rh="true" property="fb:app_id"/>
+  <meta content="Medium" data-rh="true" property="og:site_name"/>
+  <meta content="article" data-rh="true" property="og:type"/>
+  <meta content="2018-11-14T21:14:40.146Z" data-rh="true" property="article:published_time"/>
+  <meta content="A better way to interview software engineers - Lever Engineering" data-rh="true" name="title"/>
+  <meta content="A better way to interview software engineers" data-rh="true" property="og:title"/>
+  <meta content="A better way to interview software engineers" data-rh="true" property="twitter:title"/>
+  <meta content="@lever" data-rh="true" name="twitter:site"/>
+  <meta content="medium://p/fa9b5d2b5316" data-rh="true" name="twitter:app:url:iphone"/>
+  <meta content="medium://p/fa9b5d2b5316" data-rh="true" property="al:android:url"/>
+  <meta content="medium://p/fa9b5d2b5316" data-rh="true" property="al:ios:url"/>
+  <meta content="Medium" data-rh="true" property="al:android:app_name"/>
+  <meta content="Problem-solving and getting things done are important, but ideally we’d also hire engineers who are great at API design, naming, testing, maintenance, scaling, extensibility, etc. — all of those…" data-rh="true" name="description"/>
+  <meta content="We’re trying a new format: mock code reviews." data-rh="true" property="og:description"/>
+  <meta content="We’re trying a new format: mock code reviews." data-rh="true" property="twitter:description"/>
+  <meta content="https://fulcrum.lever.co/a-better-way-to-interview-software-engineers-fa9b5d2b5316" data-rh="true" property="og:url"/>
+  <meta content="https://fulcrum.lever.co/a-better-way-to-interview-software-engineers-fa9b5d2b5316" data-rh="true" property="al:web:url"/>
+  <meta content="https://miro.medium.com/max/640/0*lTR6oUictqQaTiBl." data-rh="true" property="og:image"/>
+  <meta content="https://miro.medium.com/max/640/0*lTR6oUictqQaTiBl." data-rh="true" name="twitter:image:src"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://fulcrum.lever.co/@zmillman" data-rh="true" property="article:author"/>
+  <meta content="@zmillman" data-rh="true" name="twitter:creator"/>
+  <meta content="Zach Millman" data-rh="true" name="author"/>
+  <meta content="index,follow" data-rh="true" name="robots"/>
+  <meta content="unsafe-url" data-rh="true" name="referrer"/>
+  <meta data-rh="true" name="twitter:label1" value="Reading time"/>
+  <meta data-rh="true" name="twitter:data1" value="4 min read"/>
+  <meta content="fa9b5d2b5316" data-rh="true" name="parsely-post-id"/>
+  <link data-rh="true" href="/osd.xml" rel="search" title="Medium" type="application/opensearchdescription+xml"/>
+  <link data-rh="true" href="https://cdn-images-1.medium.com/fit/c/152/152/1*8I-HPL0bfoIzGied-dzOvA.png" rel="apple-touch-icon" sizes="152x152"/>
+  <link data-rh="true" href="https://cdn-images-1.medium.com/fit/c/120/120/1*8I-HPL0bfoIzGied-dzOvA.png" rel="apple-touch-icon" sizes="120x120"/>
+  <link data-rh="true" href="https://cdn-images-1.medium.com/fit/c/76/76/1*8I-HPL0bfoIzGied-dzOvA.png" rel="apple-touch-icon" sizes="76x76"/>
+  <link data-rh="true" href="https://cdn-images-1.medium.com/fit/c/60/60/1*8I-HPL0bfoIzGied-dzOvA.png" rel="apple-touch-icon" sizes="60x60"/>
+  <link color="#171717" data-rh="true" href="https://cdn-static-1.medium.com/_/fp/icons/monogram-mask.KPLCSFEZviQN0jQ7veN2RQ.svg" rel="mask-icon"/>
+  <link data-rh="true" href="https://cdn-static-1.medium.com/_/fp/icons/favicon-rebrand-medium.3Y6xpZ-0FSdWDnPM3hSBIA.ico" rel="icon"/>
+  <link data-rh="true" href="https://glyph.medium.com/css/e/sr/latin/e/ssr/latin/e/ssb/latin/m2.css" id="glyph_link" rel="stylesheet" type="text/css"/>
+  <link data-rh="true" href="https://fulcrum.lever.co/@zmillman" rel="author"/>
+  <link data-rh="true" href="https://fulcrum.lever.co/a-better-way-to-interview-software-engineers-fa9b5d2b5316" rel="canonical"/>
+  <link data-rh="true" href="android-app://com.medium.reader/https/medium.com/p/fa9b5d2b5316" rel="alternate"/>
+  <script data-rh="true" type="application/ld+json">
+   {"@context":"http:\u002F\u002Fschema.org","@type":"NewsArticle","image":["https:\u002F\u002Fmiro.medium.com\u002Fmax\u002F1200\u002F0*lTR6oUictqQaTiBl."],"url":"https:\u002F\u002Ffulcrum.lever.co\u002Fa-better-way-to-interview-software-engineers-fa9b5d2b5316","dateCreated":"2017-01-26T20:16:50.681Z","datePublished":"2017-01-26T20:16:50.681Z","dateModified":"2018-11-14T21:14:40.146Z","headline":"A better way to interview software engineers","name":"A better way to interview software engineers","description":"Problem-solving and getting things done are important, but ideally we’d also hire engineers who are great at API design, naming, testing, maintenance, scaling, extensibility, etc. — all of those…","identifier":"fa9b5d2b5316","keywords":["Lite:true","Tag:Software Development","Tag:Interview","Tag:Hiring","Tag:Code Review","Tag:Engineering Mangement","Publication:levers-fulcrum","Elevated:false","LockedPostSource:LOCKED_POST_SOURCE_NONE","LayerCake:0"],"author":{"@type":"Person","name":"Zach Millman","url":"https:\u002F\u002Ffulcrum.lever.co\u002F@zmillman"},"creator":["Zach Millman"],"publisher":{"@type":"Organization","name":"Lever Engineering","url":"fulcrum.lever.co","logo":{"@type":"ImageObject","width":308,"height":60,"url":"https:\u002F\u002Fmiro.medium.com\u002Fmax\u002F616\u002F1*OMF3fSqH8t4xBJ9-6oZDZw.png"}},"mainEntityOfPage":"https:\u002F\u002Ffulcrum.lever.co\u002Fa-better-way-to-interview-software-engineers-fa9b5d2b5316"}
+  </script>
+  <script data-rh="true">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-24232453-2', 'auto');
+ga('send', 'pageview');
+  </script>
+  <link as="script" href="https://cdn.optimizely.com/js/16180790160.js" rel="preload"/>
+  <style data-fela-rehydration="436" data-fela-type="STATIC" type="text/css">
+   html{box-sizing:border-box}*, *:before, *:after{box-sizing:inherit}body{margin:0;padding:0;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;color:rgba(0,0,0,0.8);position:relative;min-height:100vh}h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, menu, figure, blockquote, p, pre, form{margin:0}menu, ol, ul{padding:0;list-style:none;list-style-image:none}main{display:block}a{color:inherit;text-decoration:none}a, button, input{-webkit-tap-highlight-color:transparent}img, svg{vertical-align:middle}button{background:transparent;overflow:visible}button, input, optgroup, select, textarea{margin:0}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="KEYFRAME" type="text/css">
+   @-webkit-keyframes k1{0%{transform:scale(1);opacity:1}70%{transform:scale(1.4);opacity:0}100%{opacity:0}}@-moz-keyframes k1{0%{transform:scale(1);opacity:1}70%{transform:scale(1.4);opacity:0}100%{opacity:0}}@keyframes k1{0%{transform:scale(1);opacity:1}70%{transform:scale(1.4);opacity:0}100%{opacity:0}}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" type="text/css">
+   .a{font-family:medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif}.b{font-weight:400}.c{background-color:rgba(255, 255, 255, 1)}.l{height:100vh}.m{width:100vw}.n{display:flex}.o{align-items:center}.p{justify-content:center}.q{fill:rgba(0, 0, 0, 0.84)}.r{display:block}.s{position:fixed}.t{top:0}.u{left:0}.v{right:0}.w{z-index:500}.x{box-shadow:0 4px 12px 0 rgba(0, 0, 0, 0.05)}.ai{max-width:1192px}.aj{min-width:0}.ak{width:100%}.al{height:65px}.ao{flex:1 0 auto}.ap{border-left:1px solid rgba(0, 0, 0, 0.2)}.aq{margin-left:15px}.ar{margin-right:14px}.as{height:24px}.at{width:1px}.au{font-family:medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif}.av{font-weight:600}.aw{font-size:28px}.ax{line-height:36px}.ay{overflow:hidden}.az{max-height:36px}.ba{text-overflow:ellipsis}.bb{display:-webkit-box}.bc{-webkit-line-clamp:1}.bd{-webkit-box-orient:vertical}.be{color:rgba(0, 0, 0, 0.9)}.bf{flex:0 0 auto}.bg{visibility:hidden}.bh{margin-left:16px}.bi{font-style:normal}.bj{line-height:20px}.bk{font-size:15.8px}.bl{letter-spacing:0px}.bm{color:rgba(0, 0, 0, 0.54)}.bn{fill:rgba(0, 0, 0, 0.54)}.bo{color:rgba(113, 114, 115, 1)}.bp{fill:rgba(131, 133, 135, 1)}.bq{font-size:inherit}.br{border:inherit}.bs{font-family:inherit}.bt{letter-spacing:inherit}.bu{font-weight:inherit}.bv{padding:0}.bw{margin:0}.bx:hover{cursor:pointer}.by:hover{color:rgba(103, 104, 106, 1)}.bz:hover{fill:rgba(113, 114, 115, 1)}.ca:focus{outline:none}.cb:disabled{cursor:default}.cc:disabled{color:rgba(3, 168, 124, 0.5)}.cd:disabled{fill:rgba(3, 168, 124, 0.5)}.ce{padding:8px 16px}.cf{background:0}.cg{border-color:rgba(131, 133, 135, 1)}.ch:hover{border-color:rgba(113, 114, 115, 1)}.ci{border-radius:4px}.cj{border-width:1px}.ck{border-style:solid}.cl{box-sizing:border-box}.cm{display:inline-block}.cn{text-decoration:none}.co{border-top:1px solid rgba(0, 0, 0, 0.1)}.cp{display:none}.cr{height:54px}.cs{margin-right:40px}.ct{font-size:22px}.cu{line-height:28px}.cv{max-height:28px}.cw{color:rgba(0, 0, 0, 0.84)}.cx{overflow:auto}.cy{flex:0 1 auto}.cz{list-style-type:none}.da{line-height:40px}.db{white-space:nowrap}.dc{overflow-x:auto}.dd{align-items:flex-start}.de{margin-top:20px}.df{padding-top:20px}.dg{height:80px}.dh{margin-bottom:0px}.dk{padding-left:24px}.dl{padding-right:24px}.dm{margin-left:auto}.dn{margin-right:auto}.do{max-width:728px}.dp{flex-direction:column}.dq{position:absolute}.dr{top:calc(100vh + 100px)}.ds{bottom:calc(100vh + 100px)}.dt{width:10px}.du{pointer-events:none}.dv{word-break:break-word}.dw{word-wrap:break-word}.dx:after{display:block}.dy:after{content:""}.dz:after{clear:both}.ea{max-width:680px}.eb{line-height:1.23}.ec{letter-spacing:0}.ed{font-family:medium-content-title-font, Georgia, Cambria, "Times New Roman", Times, serif}.eo{margin-bottom:-0.27em}.eu{margin-top:32px}.ev{justify-content:space-between}.ez{border-radius:50%}.fa{height:48px}.fb{width:48px}.fc{margin-left:12px}.fd{margin-bottom:2px}.ff{font-weight:300}.fg{font-size:16px}.fh{max-height:20px}.fi{color:inherit}.fj{fill:inherit}.fk:hover{text-decoration:underline}.fl:disabled{color:rgba(0, 0, 0, 0.54)}.fm:disabled{fill:rgba(0, 0, 0, 0.54)}.fn{margin-left:8px}.fo{padding:0px 8px}.fp{border-color:rgba(0, 0, 0, 0.54)}.fq:hover{color:rgba(0, 0, 0, 0.97)}.fr:hover{fill:rgba(0, 0, 0, 0.97)}.fs:hover{border-color:rgba(0, 0, 0, 0.84)}.ft:disabled{fill:rgba(0, 0, 0, 0.76)}.fu:disabled{border-color:rgba(0, 0, 0, 0.2)}.fv:disabled{cursor:inherit}.fw:disabled:hover{color:rgba(0, 0, 0, 0.54)}.fx:disabled:hover{fill:rgba(0, 0, 0, 0.76)}.fy:disabled:hover{border-color:rgba(0, 0, 0, 0.2)}.fz{line-height:18px}.ga{font-size:15px}.gb{align-items:flex-end}.gj{padding-right:8px}.gk:hover{color:rgba(0, 0, 0, 0.9)}.gl:hover{fill:rgba(0, 0, 0, 0.9)}.gm{margin-right:-6px}.gn{line-height:1.58}.go{letter-spacing:-0.004em}.gp{font-family:medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif}.ha{margin-bottom:-0.46em}.hb{list-style-type:decimal}.hc{margin-left:30px}.hd{padding-left:0px}.he{background-repeat:repeat-x}.hf{background-image:linear-gradient(to right,rgba(0, 0, 0, 0.84) 100%,rgba(0, 0, 0, 0.84) 0);background-image:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(0, 0, 0, 0.84)" /></svg>')}.hg{background-size:1px 1px}.hh{background-position:0 1.05em;background-position:0 calc(1em + 1px)}.hn{font-style:italic}.ho{background:none}.hp{line-height:1.18}.hq{letter-spacing:-0.022em}.ib{margin-bottom:-0.31em}.ih{font-weight:700}.ii{max-width:1400px}.io{clear:both}.ip{transition:transform 300ms cubic-bezier(0.2, 0, 0.2, 1)}.iq{cursor:zoom-in}.ir{position:relative}.is{z-index:auto}.it{opacity:0}.iu{transition:opacity 100ms 400ms}.iv{height:100%}.iw{will-change:transform}.ix{transform:translateZ(0)}.iy{margin:auto}.iz{background-color:rgba(0, 0, 0, 0.05)}.ja{padding-bottom:68.35714285714286%}.jb{filter:blur(20px)}.jc{transform:scale(1.1)}.jd{visibility:visible}.je{background:rgba(255, 255, 255, 1)}.jf{line-height:1.4}.jg{margin-top:10px}.jh{text-align:center}.jk{font-family:medium-content-slab-serif-font, Georgia, Cambria, "Times New Roman", Times, serif}.jl{border:none}.jm{margin-top:30px}.jn:before{content:"..."}.jo:before{letter-spacing:0.6em}.jp:before{text-indent:0.6em}.jq:before{font-style:italic}.jr:before{line-height:1.4}.js{line-height:1.12}.kb{margin-bottom:-0.28em}.kc{list-style-type:disc}.kd{max-width:626px}.ke{padding-bottom:115.01597444089457%}.kf{max-width:640px}.kg{border-width:2px}.kh{border-color:rgba(255, 255, 255, 1)}.ki{float:left}.kj{margin-left:-150px}.kk{margin-right:30px}.kl{width:75%}.km{padding-bottom:10px}.kr{margin-bottom:16px}.ks{padding-bottom:67.34375%}.ky{will-change:opacity}.kz{width:188px}.la{left:50%}.lb{transform:translateX(406px)}.lc{top:calc(65px + 54px + 14px)}.lf{top:calc(65px + 54px + 40px)}.lh{width:131px}.li{padding-bottom:28px}.lj{border-bottom:1px solid rgba(0, 0, 0, 0.1)}.lk{font-size:18px}.ll{padding-bottom:20px}.lm{padding-top:2px}.ln{max-height:120px}.lo{-webkit-line-clamp:6}.lp{padding:4px 12px}.lq{padding-top:28px}.lr{margin-bottom:19px}.ls{margin-left:-5px}.lt{margin-right:5px}.lu{outline:0}.lv{border:0}.lw{user-select:none}.lx{cursor:pointer}.ly> svg{pointer-events:none}.lz:active{border-style:none}.ma{-webkit-user-select:none}.mb:focus{fill:rgba(113, 114, 115, 1)}.mc{margin-top:5px}.md button{text-align:left}.me{margin-top:40px}.mf{flex-wrap:wrap}.mg{margin-top:25px}.mh{margin-right:8px}.mi{margin-bottom:8px}.mj{border-radius:3px}.mk{padding:5px 10px}.ml{background:rgba(0, 0, 0, 0.05)}.mm{line-height:22px}.mn{margin-top:15px}.mo{margin-right:16px}.mp{border:1px solid rgba(0, 0, 0, 0.1)}.mq{height:60px}.mr{width:60px}.ne:active{border-style:solid}.nf{z-index:2}.nh{padding-top:32px}.ni{margin-bottom:25px}.nj{margin-bottom:32px}.nk{min-height:80px}.np{width:80px}.nq{padding-left:102px}.ns{text-transform:uppercase}.nt{letter-spacing:0.05em}.nu{margin-bottom:6px}.nv{max-width:555px}.nw{max-width:450px}.nx{line-height:24px}.nz{max-width:550px}.oa{padding-top:25px}.ob{color:rgba(0, 0, 0, 0.76)}.oc{opacity:1}.od{padding:20px}.oe{border:1px solid rgba(131, 133, 135, 1)}.of{margin-top:64px}.og{background-color:rgba(0, 0, 0, 0.02)}.oh{padding:60px 0}.oi{background-color:rgba(0, 0, 0, 0.9)}.oz{padding-bottom:48px}.pa{border-bottom:1px solid rgba(255, 255, 255, 0.54)}.pb{margin:0 -12px}.pc{margin:0 12px}.pd{flex:1 1 0}.pe{padding-bottom:12px}.pf:hover{color:rgba(255, 255, 255, 0.99)}.pg:hover{fill:rgba(255, 255, 255, 0.99)}.ph:disabled{color:rgba(255, 255, 255, 0.7)}.pi:disabled{fill:rgba(255, 255, 255, 0.7)}.pj{color:rgba(255, 255, 255, 0.98)}.pk{fill:rgba(255, 255, 255, 0.98)}.pl{text-align:inherit}.pm{font-size:21.6px}.pn{letter-spacing:-0.32px}.po{color:rgba(255, 255, 255, 0.7)}.pp{fill:rgba(255, 255, 255, 0.7)}.pq{text-decoration:underline}.pr{padding-bottom:8px}.ps{padding-top:8px}.pt{width:200px}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (min-width: 1080px)" type="text/css">
+   .d{display:none}.ah{margin:0 64px}.em{font-size:40px}.en{margin-top:0.78em}.et{line-height:48px}.gi{margin-left:30px}.gy{font-size:21px}.gz{margin-top:2em}.hm{margin-top:1.05em}.hz{font-size:26px}.ia{margin-top:1.72em}.ig{margin-top:0.86em}.in{margin-top:56px}.jz{font-size:34px}.ka{margin-top:1.25em}.kx{margin-top:1.95em}.ow{padding-left:64px}.ox{padding-right:64px}.oy{max-width:1320px}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (max-width: 1079.98px)" type="text/css">
+   .e{display:none}.gh{margin-left:30px}.ji{margin-left:auto}.jj{text-align:center}.kn{float:none}.ko{margin-left:0}.kp{margin-right:0}.kq{width:100%}.ot{padding-left:64px}.ou{padding-right:64px}.ov{max-width:1080px}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (max-width: 903.98px)" type="text/css">
+   .f{display:none}.gg{margin-left:30px}.oq{padding-left:48px}.or{padding-right:48px}.os{max-width:904px}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (max-width: 727.98px)" type="text/css">
+   .g{display:none}.am{height:56px}.an{display:flex}.cq{display:block}.di{margin-bottom:0px}.dj{height:110px}.ex{margin-top:32px}.ey{flex-direction:column-reverse}.ge{margin-bottom:30px}.gf{margin-left:0px}.nl{margin-bottom:24px}.nm{align-items:center}.nn{width:102px}.no{position:relative}.nr{padding-left:0}.ny{margin-top:24px}.oj{padding:32px 0}.on{padding-left:24px}.oo{padding-right:24px}.op{max-width:728px}.pu{width:140px}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (max-width: 551.98px)" type="text/css">
+   .h{display:none}.ac{margin:0 24px}.ee{font-size:30px}.ef{margin-top:0.72em}.ep{line-height:40px}.ew{margin-top:32px}.fe{margin-bottom:0px}.gc{margin-bottom:30px}.gd{margin-left:0px}.gq{font-size:18px}.gr{margin-top:1.56em}.hi{margin-top:1.34em}.hr{font-size:24px}.hs{margin-top:1.23em}.ic{margin-top:0.67em}.ij{margin-top:40px}.jt{margin-top:0.93em}.kt{margin-top:1.2em}.ok{padding-left:24px}.ol{padding-right:24px}.om{max-width:552px}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (min-width: 904px) and (max-width: 1079.98px)" type="text/css">
+   .i{display:none}.ag{margin:0 64px}.ek{font-size:40px}.el{margin-top:0.78em}.es{line-height:48px}.gw{font-size:21px}.gx{margin-top:2em}.hl{margin-top:1.05em}.hx{font-size:26px}.hy{margin-top:1.72em}.if{margin-top:0.86em}.im{margin-top:56px}.jx{font-size:34px}.jy{margin-top:1.25em}.kw{margin-top:1.95em}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (min-width: 728px) and (max-width: 903.98px)" type="text/css">
+   .j{display:none}.af{margin:0 48px}.ei{font-size:40px}.ej{margin-top:0.78em}.er{line-height:48px}.gu{font-size:21px}.gv{margin-top:2em}.hk{margin-top:1.05em}.hv{font-size:26px}.hw{margin-top:1.72em}.ie{margin-top:0.86em}.il{margin-top:56px}.jv{font-size:34px}.jw{margin-top:1.25em}.kv{margin-top:1.95em}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (min-width: 552px) and (max-width: 727.98px)" type="text/css">
+   .k{display:none}.ae{margin:0 24px}.eg{font-size:30px}.eh{margin-top:0.72em}.eq{line-height:40px}.gs{font-size:18px}.gt{margin-top:1.56em}.hj{margin-top:1.34em}.ht{font-size:24px}.hu{margin-top:1.23em}.id{margin-top:0.67em}.ik{margin-top:40px}.ju{margin-top:0.93em}.ku{margin-top:1.2em}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="print" type="text/css">
+   .ab{display:none}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="(prefers-reduced-motion: no-preference)" type="text/css">
+   .y{transition:transform 300ms ease}.z{will-change:transform}.ld{transition:opacity 200ms}.ms{transition:border-color 150ms ease}.mt::before{background:
+      radial-gradient(circle, rgba(113, 114, 115, 1) 60%, transparent 70%)
+    }.mu::before{border-radius:50%}.mv::before{content:""}.mw::before{display:block}.mx::before{z-index:0}.my::before{left:0}.mz::before{height:100%}.na::before{position:absolute}.nb::before{top:0}.nc::before{width:100%}.nd:hover::before{animation:k1 2000ms infinite cubic-bezier(.1,.12,.25,1)}.ng{transition:fill 200ms ease}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (max-width: 1230px)" type="text/css">
+   .le{display:none}
+  </style>
+  <style data-fela-rehydration="436" data-fela-type="RULE" media="all and (max-width: 1198px)" type="text/css">
+   .lg{display:none}
+  </style>
+ </head>
+ <body>
+  <div id="root">
+   <div class="a b c">
+    <div class="d e f g h i j k">
+    </div>
+    <script>
+     document.domain = document.domain;
+    </script>
+    <script>
+     window.PARSELY = window.PARSELY || {autotrack: false}
+    </script>
+    <nav class="r s t u v c w x y z ab">
+     <div class="branch-journeys-top">
+      <div class="r c">
+       <div class="n p">
+        <div class="ac ae af ag ah ai aj ak">
+         <div class="al n o am an">
+          <div class="n o ao w">
+           <a aria-label="Homepage" href="https://medium.com/?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+            <svg class="q" height="35" viewbox="5 5 35 35" width="35">
+             <path d="M5 40V5h35v35H5zm8.56-12.63c0 .56-.03.69-.32 1.03L10.8 31.4v.4h6.97v-.4L15.3 28.4c-.29-.34-.34-.5-.34-1.03v-8.95l6.13 13.36h.71l5.26-13.36v10.64c0 .3 0 .35-.19.53l-1.85 1.8v.4h9.2v-.4l-1.83-1.8c-.18-.18-.2-.24-.2-.53V15.94c0-.3.02-.35.2-.53l1.82-1.8v-.4h-6.47l-4.62 11.55-5.2-11.54h-6.8v.4l2.15 2.63c.24.3.29.37.29.77v10.35z">
+             </path>
+            </svg>
+           </a>
+           <div class="ap aq ar as at r g">
+           </div>
+           <div class="r g">
+            <a href="https://fulcrum.lever.co/?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+             <span class="au av aw ax ay az ba bb bc bd be">
+              Lever Engineering
+             </span>
+            </a>
+           </div>
+          </div>
+          <div class="r bf w">
+           <div class="n o">
+            <div class="n g">
+             <div class="bg" id="lo-post-page-navbar-sign-in-link">
+              <div class="bh r">
+               <span class="au b bi bj bk bl r bm bn">
+                <a class="bo bp bq br bs bt bu bv bw bx by bz ca cb cc cd" href="https://medium.com/m/signin?operation=login&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=post_page-----fa9b5d2b5316---------------------nav_reg-" rel="noopener">
+                 Sign in
+                </a>
+               </span>
+              </div>
+             </div>
+            </div>
+            <div class="bg" id="lo-post-page-navbar-get-started-button">
+             <div class="bh r">
+              <a class="ce cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=post_page-----fa9b5d2b5316---------------------nav_reg-" rel="noopener">
+               Get started
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="co cp c cq">
+       <div class="n p">
+        <div class="ac ae af ag ah ai aj ak">
+         <div class="cr ay n o">
+          <div class="cs r bf">
+           <a href="https://fulcrum.lever.co/?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+            <span class="au av ct cu ay cv ba bb bc bd cw">
+             Lever Engineering
+            </span>
+           </a>
+          </div>
+          <div class="cx r cy">
+           <ul class="cz bw da db dc n dd g de df dg">
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </nav>
+    <div class="dh al r di dj">
+    </div>
+    <article>
+     <section class="dk dl dm dn ak do cl n dp">
+     </section>
+     <span class="r">
+     </span>
+     <div>
+      <div class="dq u dr ds dt du">
+      </div>
+      <section class="dv dw dx dy dz">
+       <div class="n p">
+        <div class="ac ae af ag ah ea aj ak">
+         <div>
+          <div class="eb ec cw bi ed b ee ef eg eh ei ej ek el em en eo" id="59de">
+           <h1 class="ed b ee ep eg eq ei er ek es em et cw">
+            A better way to interview software engineers
+           </h1>
+          </div>
+          <div class="eu">
+           <div class="n ev ew ex ey">
+            <div class="o n">
+             <div>
+              <a href="/@zmillman?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+               <img alt="Zach Millman" class="r ez fa fb" height="48" src="https://miro.medium.com/fit/c/96/96/1*CgWiBegI4xBU84cau5XVkQ.jpeg" width="48"/>
+              </a>
+             </div>
+             <div class="fc ak r">
+              <div class="n">
+               <div style="flex:1">
+                <span class="au b bi bj bk bl r cw q">
+                 <div class="fd n o fe">
+                  <span class="au ff fg bj ay fh ba bb bc bd cw">
+                   <a class="fi fj bq br bs bt bu bv bw bx fk ca cb fl fm" href="/@zmillman?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+                    Zach Millman
+                   </a>
+                  </span>
+                  <div class="fn r bf h">
+                   <a class="fo cw q cf fp fq fr fs bx fl ft fu fv fw fx fy ci au b bi fz ga bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=-3432da600a80-------------------------follow_byline-" rel="noopener">
+                    Follow
+                   </a>
+                  </div>
+                 </div>
+                </span>
+               </div>
+              </div>
+              <span class="au b bi bj bk bl r bm bn">
+               <span class="au ff fg bj ay fh ba bb bc bd bm">
+                <div>
+                 <a class="fi fj bq br bs bt bu bv bw bx fk ca cb fl fm" href="/a-better-way-to-interview-software-engineers-fa9b5d2b5316?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+                  Jan 26, 2017
+                 </a>
+                 <!-- -->
+                 ·
+                 <!-- -->
+                 <!-- -->
+                 4
+                 <!-- -->
+                 min read
+                </div>
+               </span>
+              </span>
+             </div>
+            </div>
+            <div class="n gb gc gd ge gf gg gh gi ab">
+             <div class="n o">
+              <div class="gj r bf">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="//medium.com/p/fa9b5d2b5316/share/twitter?source=post_actions_header---------------------------" rel="noopener" target="_blank">
+                <svg class="q" height="29" width="29">
+                 <path d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z">
+                 </path>
+                </svg>
+               </a>
+              </div>
+              <div class="gj r bf">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="//medium.com/p/fa9b5d2b5316/share/facebook?source=post_actions_header---------------------------" rel="noopener" target="_blank">
+                <svg class="q" height="29" width="29">
+                 <path d="M23.2 5H5.8a.8.8 0 0 0-.8.8V23.2c0 .44.35.8.8.8h9.3v-7.13h-2.38V13.9h2.38v-2.38c0-2.45 1.55-3.66 3.74-3.66 1.05 0 1.95.08 2.2.11v2.57h-1.5c-1.2 0-1.48.57-1.48 1.4v1.96h2.97l-.6 2.97h-2.37l.05 7.12h5.1a.8.8 0 0 0 .79-.8V5.8a.8.8 0 0 0-.8-.79">
+                 </path>
+                </svg>
+               </a>
+              </div>
+              <div class="gm r ao">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=post_actions_header--------------------------bookmark_sidebar-" rel="noopener">
+                <svg height="25" viewbox="0 0 25 25" width="25">
+                 <path d="M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z" fill-rule="evenodd">
+                 </path>
+                </svg>
+               </a>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="11f2">
+          I don’t think most companies know how to interview software engineers.
+         </p>
+         <ol class="">
+          <li class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha hb hc hd" id="320a">
+           Hiring with brainteasers and whiteboard problems (the vast majority of current interviews) builds teams of junior CS grads and products full of clever but useless code. They’re also
+           <a class="fi cn he hf hg hh" href="https://medium.freecodecamp.com/why-is-hiring-broken-it-starts-at-the-whiteboard-34b088e5a5db#.5092c8fm6" rel="noopener" target="_blank">
+            bad interviews
+           </a>
+           and people spend weeks studying for them.
+          </li>
+          <li class="gn go cw bi gp b gq hi gs hj gu hk gw hl gy hm ha hb hc hd" id="ebfb">
+           On the other end: Hiring for hackers who
+           <em class="hn">
+            Get Things Done
+           </em>
+           leads to crippling tech debt a year later and critical payment systems collapsing in the middle of the night. (
+           <a class="ho bo cn" href="https://medium.com/u/283cd4117ac1?source=post_page-----fa9b5d2b5316----------------------" rel="noopener" target="_blank">
+            Chris Maddox
+           </a>
+           is
+           <a class="fi cn he hf hg hh" href="https://gusto.com/blog/zenpayroll-is-not-hiring-hackers/" rel="noopener" target="_blank">
+            way more eloquent
+           </a>
+           about this.)
+          </li>
+         </ol>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="8739">
+          Problem-solving and getting things done are important, but ideally we’d also hire engineers who are great at API design, naming, testing, maintenance, scaling, extensibility, etc. — all of those unglamorous things that actually make software projects successful and sustainable. In short, “code quality”.
+         </p>
+         <h2 class="hp hq cw bi au av hr hs ht hu hv hw hx hy hz ia ib" id="4de2">
+          <strong class="bu">
+           Well then, what kind of interview do you use to look for code quality?
+          </strong>
+         </h2>
+         <p class="gn go cw bi gp b gq ic gs id gu ie gw if gy ig ha" id="54c7">
+          As far as I know there aren’t any…
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="d61d">
+          So we’re trying a new one:
+          <strong class="gp ih">
+           mock code review.
+          </strong>
+         </p>
+         <figure class="ij ik il im in io dm dn paragraph-image">
+          <div class="ip iq ir is ak">
+           <div class="dm dn ii">
+            <div class="iy r ir iz">
+             <div class="ja r">
+              <div class="it iu dq t u iv ak ay iw ix">
+               <img class="dq t u iv ak jb jc jd" height="957" role="presentation" src="https://miro.medium.com/max/60/0*_hYMppiSgxVWbfQM.?q=20" width="1400"/>
+              </div>
+              <img class="it iu dq t u iv ak je" height="957" role="presentation" width="1400"/>
+              <noscript>
+               <img class="dq t u iv ak" height="957" role="presentation" src="https://miro.medium.com/max/2800/0*_hYMppiSgxVWbfQM." width="1400"/>
+              </noscript>
+             </div>
+            </div>
+           </div>
+          </div>
+          <figcaption class="bm fg jf jg jh do dm dn ji jj au ff">
+           You may want to use a command queue here.
+          </figcaption>
+         </figure>
+        </div>
+       </div>
+      </section>
+      <hr class="jk ff aw jl jm jh jn jo jp jq jr"/>
+      <section class="dv dw dx dy dz">
+       <div class="n p">
+        <div class="ac ae af ag ah ea aj ak">
+         <h1 class="js hq cw bi au av ee jt eg ju jv jw jx jy jz ka kb" id="1072">
+          Running a mock code review
+         </h1>
+         <p class="gn go cw bi gp b gq ic gs id gu ie gw if gy ig ha" id="8f9e">
+          At the end of a perfect code review interview, you’d have a spring in your step and a confident feeling of “Oh my god, yes! This engineer will help us write even better software, and the entire team will love getting feedback from them.”
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="7f69">
+          To get there, we start with a set of standard questions about past code review experience for some background, then dive into a GitHub pull request of around 200 lines of intentionally buggy and messy code and ask the candidate for feedback on how to improve it. We finish with a few last questions about the code as a whole and time for them to ask about our development process.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="c805">
+          To measure the springiness of our steps as fairly as we can, we use a rubric which evaluates three areas:
+         </p>
+         <ul class="">
+          <li class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha kc hc hd" id="c8b4">
+           <strong class="gp ih">
+            Technical Feedback.
+           </strong>
+           Engineers should be able to find
+           <a class="fi cn he hf hg hh" href="https://www.kevinlondon.com/2015/05/05/code-review-best-practices.html" rel="noopener" target="_blank">
+            issues in code
+           </a>
+           which will cause errors, poor performance, or will be a pain to maintain and extend — and then propose improvements or practices which will address those issues effectively.
+          </li>
+          <li class="gn go cw bi gp b gq hi gs hj gu hk gw hl gy hm ha kc hc hd" id="74f8">
+           <strong class="gp ih">
+            Communication.
+           </strong>
+           Critiquing code requires telling someone that they’re wrong about a mix of objective errors and subjective preferences. The best reviewers understand how to give that kind of feedback and keep it constructive.
+          </li>
+          <li class="gn go cw bi gp b gq hi gs hj gu hk gw hl gy hm ha kc hc hd" id="cd91">
+           <strong class="gp ih">
+            Prioritization.
+           </strong>
+           Any change takes extra time, so feedback must also be mindful of the trade-offs in a project between speed, correctness, clarity, and so on. We look for engineers who can analyze those concerns and apply them to their feedback.
+          </li>
+         </ul>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="e9be">
+          The trickiest part of running this interview is definitely the mix of technical and behavioral interviewing. It’s relatively clear how an engineer can assess whether candidates are finding bugs in code, but “How would you improve this?” is a very open-ended question. Getting a good signal requires listening and asking clarifying questions, so don’t forget that as part of the interview training.
+         </p>
+         <figure class="ij ik il im in io dm dn paragraph-image">
+          <div class="dm dn kd">
+           <div class="iy r ir iz">
+            <div class="ke r">
+             <div class="it iu dq t u iv ak ay iw ix">
+              <img class="dq t u iv ak jb jc jd" height="720" role="presentation" src="https://miro.medium.com/max/52/0*2gf8xPsXH3lLATs1.?q=20" width="626"/>
+             </div>
+             <img class="it iu dq t u iv ak je" height="720" role="presentation" width="626"/>
+             <noscript>
+              <img class="dq t u iv ak" height="720" role="presentation" src="https://miro.medium.com/max/1252/0*2gf8xPsXH3lLATs1." width="626"/>
+             </noscript>
+            </div>
+           </div>
+          </div>
+          <figcaption class="bm fg jf jg jh do dm dn ji jj au ff">
+           Not the right way to handle feedback
+          </figcaption>
+         </figure>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="9542">
+          <em class="hn">
+           (We’re also still figuring out how to best use this evaluation for junior candidates. They don’t have the same depth of experience yet, but “how would you improve this code?” in phone screens and pair programming interviews seems to get at a lot of the same signals.)
+          </em>
+         </p>
+        </div>
+       </div>
+      </section>
+      <hr class="jk ff aw jl jm jh jn jo jp jq jr"/>
+      <section class="dv dw dx dy dz">
+       <div class="n p">
+        <div class="ac ae af ag ah ea aj ak">
+         <h1 class="js hq cw bi au av ee jt eg ju jv jw jx jy jz ka kb" id="3a14">
+          It’s worked well so far
+         </h1>
+         <p class="gn go cw bi gp b gq ic gs id gu ie gw if gy ig ha" id="1d6e">
+          We’ve interviewed over 30 software engineer and engineering manager candidates with this question so far, and the ones we’ve hired have been great communicators and pushed us to really improve our documentation, pairing, and release processes.
+         </p>
+         <figure class="ij ik il im in io je kg ck kh ki kj kk kl bv km kn ko kp kq kr paragraph-image">
+          <div class="ip iq ir is ak">
+           <div class="dm dn kf">
+            <div class="iy r ir iz">
+             <div class="ks r">
+              <div class="it iu dq t u iv ak ay iw ix">
+               <img class="dq t u iv ak jb jc jd" height="431" role="presentation" src="https://miro.medium.com/max/60/0*lTR6oUictqQaTiBl.?q=20" width="640"/>
+              </div>
+              <img class="it iu dq t u iv ak je" height="431" role="presentation" width="640"/>
+              <noscript>
+               <img class="dq t u iv ak" height="431" role="presentation" src="https://miro.medium.com/max/1280/0*lTR6oUictqQaTiBl." width="640"/>
+              </noscript>
+             </div>
+            </div>
+           </div>
+          </div>
+          <figcaption class="bm fg jf jg jh do dm dn ji jj au ff">
+           A new hire joins the team
+          </figcaption>
+         </figure>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="4c5a">
+          Engineers also
+          <em class="hn">
+           really
+          </em>
+          like reviewing code.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="344d">
+          Senior engineers want to work in an environment where they’re challenged to write great code and share their expertise. Junior engineers want great code and mentors to learn from. And managers want to work with teams which are already collaborative and looking to improve.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="72ea">
+          We’ve consistently heard from candidates that the code review question was their favorite on-site interview, and it’s been instrumental in convincing several engineers to join the team.
+          <strong class="gp ih">
+           When you spend an hour asking how to improve some code, it shows that you really care about code quality and collaborative engineering.
+          </strong>
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="b5a8">
+          And as far I know, it’s also really hard to game this interview. Worst case: more people study up on code quality that they will actually use on the job and it’ll be a net positive for the world.
+         </p>
+         <h1 class="js hq cw bi au av ee kt eg ku jv kv jx kw jz kx kb" id="0ef4">
+          Interviewing at Lever
+         </h1>
+         <p class="gn go cw bi gp b gq ic gs id gu ie gw if gy ig ha" id="0c6a">
+          Building an effective and fair hiring process is hard (it’s why we build Lever, after all) and there’s still so much borked with interviewing in general. I don’t think we’ll ever have a perfect interview panel, but an interview closer to what software engineers actually do is a step in the right direction.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="243f">
+          …and if you’ve seen or tried an interview like this, please comment and let me know! I’d love to know how it went :)
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="470c">
+          <em class="hn">
+           🙇 to
+          </em>
+          <a class="ho bo cn" href="https://medium.com/u/722bf1348ae3?source=post_page-----fa9b5d2b5316----------------------" rel="noopener" target="_blank">
+           <em class="hn">
+            Aline Lerner
+           </em>
+          </a>
+          <em class="hn">
+           ,
+          </em>
+          <a class="ho bo cn" href="https://medium.com/u/92f7c193686a?source=post_page-----fa9b5d2b5316----------------------" rel="noopener" target="_blank">
+           <em class="hn">
+            Bhavin Parikh
+           </em>
+          </a>
+          <em class="hn">
+           ,
+          </em>
+          <a class="ho bo cn" href="https://medium.com/u/a1a49583183?source=post_page-----fa9b5d2b5316----------------------" rel="noopener" target="_blank">
+           <em class="hn">
+            Leighton Wallace
+           </em>
+          </a>
+          <em class="hn">
+           and many others who read versions of this article which were much worse.
+          </em>
+         </p>
+        </div>
+       </div>
+      </section>
+     </div>
+    </article>
+    <div class="it du ky s ak lf ld lg" data-test-id="post-sidebar">
+     <div class="n p">
+      <div class="ac ae af ag ah ai aj ak">
+       <div class="lh n dp">
+        <div class="du">
+         <div class="li lj r">
+          <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://fulcrum.lever.co/?source=post_sidebar--------------------------post_sidebar-" rel="noopener">
+           <h2 class="au av lk bj cw">
+            Lever Engineering
+           </h2>
+          </a>
+          <div class="ll lm r">
+           <h4 class="au ff fg bj ay ln ba bb lo bd bm">
+            We ask before we build so our products really work for our users. This is our blog about knowing why.
+           </h4>
+          </div>
+          <div aria-hidden="true" class="cm">
+           <a class="lp cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=post_sidebar--------------------------follow_sidebar-" rel="noopener">
+            Follow
+           </a>
+          </div>
+         </div>
+         <div class="lq lr ls n">
+          <div class="n o">
+           <div class="lt r ir">
+            <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=post_sidebar-----fa9b5d2b5316---------------------clap_sidebar-" rel="noopener">
+             <div class="bv lu lv lw lx ly lz ma bp mb bz">
+              <svg height="29" width="29">
+               <g fill-rule="evenodd">
+                <path d="M13.74 1l.76 2.97.76-2.97zM16.82 4.78l1.84-2.56-1.43-.47zM10.38 2.22l1.84 2.56-.41-3.03zM22.38 22.62a5.11 5.11 0 0 1-3.16 1.61l.49-.45c2.88-2.89 3.45-5.98 1.69-9.21l-1.1-1.94-.96-2.02c-.31-.67-.23-1.18.25-1.55a.84.84 0 0 1 .66-.16c.34.05.66.28.88.6l2.85 5.02c1.18 1.97 1.38 5.12-1.6 8.1M9.1 22.1l-5.02-5.02a1 1 0 0 1 .7-1.7 1 1 0 0 1 .72.3l2.6 2.6a.44.44 0 0 0 .63-.62L6.1 15.04l-1.75-1.75a1 1 0 1 1 1.41-1.41l4.15 4.15a.44.44 0 0 0 .63 0 .44.44 0 0 0 0-.62L6.4 11.26l-1.18-1.18a1 1 0 0 1 0-1.4 1.02 1.02 0 0 1 1.41 0l1.18 1.16L11.96 14a.44.44 0 0 0 .62 0 .44.44 0 0 0 0-.63L8.43 9.22a.99.99 0 0 1-.3-.7.99.99 0 0 1 .3-.7 1 1 0 0 1 1.41 0l7 6.98a.44.44 0 0 0 .7-.5l-1.35-2.85c-.31-.68-.23-1.19.25-1.56a.85.85 0 0 1 .66-.16c.34.06.66.28.88.6L20.63 15c1.57 2.88 1.07 5.54-1.55 8.16a5.62 5.62 0 0 1-5.06 1.65 9.35 9.35 0 0 1-4.93-2.72zM13 6.98l2.56 2.56c-.5.6-.56 1.41-.15 2.28l.26.56-4.25-4.25a.98.98 0 0 1-.12-.45 1 1 0 0 1 .29-.7 1.02 1.02 0 0 1 1.41 0zm8.89 2.06c-.38-.56-.9-.92-1.49-1.01a1.74 1.74 0 0 0-1.34.33c-.38.29-.61.65-.71 1.06a2.1 2.1 0 0 0-1.1-.56 1.78 1.78 0 0 0-.99.13l-2.64-2.64a1.88 1.88 0 0 0-2.65 0 1.86 1.86 0 0 0-.48.85 1.89 1.89 0 0 0-2.67-.01 1.87 1.87 0 0 0-.5.9c-.76-.75-2-.75-2.7-.04a1.88 1.88 0 0 0 0 2.66c-.3.12-.61.29-.87.55a1.88 1.88 0 0 0 0 2.66l.62.62a1.88 1.88 0 0 0-.9 3.16l5.01 5.02c1.6 1.6 3.52 2.64 5.4 2.96a7.16 7.16 0 0 0 1.18.1c1.03 0 2-.25 2.9-.7A5.9 5.9 0 0 0 23 23.24c3.34-3.34 3.08-6.93 1.74-9.17l-2.87-5.04z">
+                </path>
+               </g>
+              </svg>
+             </div>
+            </a>
+           </div>
+           <div class="mc r">
+            <div class="md">
+             <h4 class="au ff fg bj bm">
+              <button class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm">
+               596
+              </button>
+             </h4>
+            </div>
+           </div>
+          </div>
+         </div>
+         <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=post_sidebar--------------------------bookmark_sidebar-" rel="noopener">
+          <svg height="25" viewbox="0 0 25 25" width="25">
+           <path d="M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z" fill-rule="evenodd">
+           </path>
+          </svg>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="it du ky s kz la lb lc ld le">
+    </div>
+    <div>
+     <div class="me io n dp p">
+      <div class="n p">
+       <div class="ac ae af ag ah ea aj ak">
+        <div class="n mf">
+        </div>
+        <div class="n o mf">
+        </div>
+        <div class="mg r">
+         <ul class="bv bw">
+          <li class="cm cz mh mi">
+           <a class="mj mk cn bm r ml mm a b ga" href="/tag/software-development">
+            Software Development
+           </a>
+          </li>
+          <li class="cm cz mh mi">
+           <a class="mj mk cn bm r ml mm a b ga" href="/tag/interview">
+            Interview
+           </a>
+          </li>
+          <li class="cm cz mh mi">
+           <a class="mj mk cn bm r ml mm a b ga" href="/tag/hiring">
+            Hiring
+           </a>
+          </li>
+          <li class="cm cz mh mi">
+           <a class="mj mk cn bm r ml mm a b ga" href="/tag/code-review">
+            Code Review
+           </a>
+          </li>
+          <li class="cm cz mh mi">
+           <a class="mj mk cn bm r ml mm a b ga" href="/tag/engineering-mangement">
+            Engineering Mangement
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="mn n ev ab">
+         <div class="n o">
+          <div class="mo r ir">
+           <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=post_actions_footer-----fa9b5d2b5316---------------------clap_footer-" rel="noopener">
+            <div class="c mp ez n o mq ir mr ms mt mu mv mw mx my mz na nb nc nd ch">
+             <div class="bv lu lv lw lx ly ne ma o je ez n p nf u iv dq t ak bp mb bz ng">
+              <svg height="33" viewbox="0 0 33 33" width="33">
+               <path d="M28.86 17.34l-3.64-6.4c-.3-.43-.71-.73-1.16-.8a1.12 1.12 0 0 0-.9.21c-.62.5-.73 1.18-.32 2.06l1.22 2.6 1.4 2.45c2.23 4.09 1.51 8-2.15 11.66a9.6 9.6 0 0 1-.8.71 6.53 6.53 0 0 0 4.3-2.1c3.82-3.82 3.57-7.87 2.05-10.39zm-6.25 11.08c3.35-3.35 4-6.78 1.98-10.47L21.2 12c-.3-.43-.71-.72-1.16-.8a1.12 1.12 0 0 0-.9.22c-.62.49-.74 1.18-.32 2.06l1.72 3.63a.5.5 0 0 1-.81.57l-8.91-8.9a1.33 1.33 0 0 0-1.89 1.88l5.3 5.3a.5.5 0 0 1-.71.7l-5.3-5.3-1.49-1.49c-.5-.5-1.38-.5-1.88 0a1.34 1.34 0 0 0 0 1.89l1.49 1.5 5.3 5.28a.5.5 0 0 1-.36.86.5.5 0 0 1-.36-.15l-5.29-5.29a1.34 1.34 0 0 0-1.88 0 1.34 1.34 0 0 0 0 1.89l2.23 2.23L9.3 21.4a.5.5 0 0 1-.36.85.5.5 0 0 1-.35-.14l-3.32-3.33a1.33 1.33 0 0 0-1.89 0 1.32 1.32 0 0 0-.39.95c0 .35.14.69.4.94l6.39 6.4c3.53 3.53 8.86 5.3 12.82 1.35zM12.73 9.26l5.68 5.68-.49-1.04c-.52-1.1-.43-2.13.22-2.89l-3.3-3.3a1.34 1.34 0 0 0-1.88 0 1.33 1.33 0 0 0-.4.94c0 .22.07.42.17.61zm14.79 19.18a7.46 7.46 0 0 1-6.41 2.31 7.92 7.92 0 0 1-3.67.9c-3.05 0-6.12-1.63-8.36-3.88l-6.4-6.4A2.31 2.31 0 0 1 2 19.72a2.33 2.33 0 0 1 1.92-2.3l-.87-.87a2.34 2.34 0 0 1 0-3.3 2.33 2.33 0 0 1 1.24-.64l-.14-.14a2.34 2.34 0 0 1 0-3.3 2.39 2.39 0 0 1 3.3 0l.14.14a2.33 2.33 0 0 1 3.95-1.24l.09.09c.09-.42.29-.83.62-1.16a2.34 2.34 0 0 1 3.3 0l3.38 3.39a2.17 2.17 0 0 1 1.27-.17c.54.08 1.03.35 1.45.76.1-.55.41-1.03.9-1.42a2.12 2.12 0 0 1 1.67-.4 2.8 2.8 0 0 1 1.85 1.25l3.65 6.43c1.7 2.83 2.03 7.37-2.2 11.6zM13.22.48l-1.92.89 2.37 2.83-.45-3.72zm8.48.88L19.78.5l-.44 3.7 2.36-2.84zM16.5 3.3L15.48 0h2.04L16.5 3.3z" fill-rule="evenodd">
+               </path>
+              </svg>
+             </div>
+            </div>
+           </a>
+          </div>
+          <div class="mc r">
+           <div class="md">
+            <h4 class="au ff fg bj cw">
+             <button class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm">
+              596 claps
+             </button>
+            </h4>
+           </div>
+          </div>
+         </div>
+         <div class="n o">
+          <div class="gj r bf">
+           <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="//medium.com/p/fa9b5d2b5316/share/twitter?source=post_actions_footer---------------------------" rel="noopener" target="_blank">
+            <svg class="q" height="29" width="29">
+             <path d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z">
+             </path>
+            </svg>
+           </a>
+          </div>
+          <div class="gj r bf">
+           <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="//medium.com/p/fa9b5d2b5316/share/facebook?source=post_actions_footer---------------------------" rel="noopener" target="_blank">
+            <svg class="q" height="29" width="29">
+             <path d="M23.2 5H5.8a.8.8 0 0 0-.8.8V23.2c0 .44.35.8.8.8h9.3v-7.13h-2.38V13.9h2.38v-2.38c0-2.45 1.55-3.66 3.74-3.66 1.05 0 1.95.08 2.2.11v2.57h-1.5c-1.2 0-1.48.57-1.48 1.4v1.96h2.97l-.6 2.97h-2.37l.05 7.12h5.1a.8.8 0 0 0 .79-.8V5.8a.8.8 0 0 0-.8-.79">
+             </path>
+            </svg>
+           </a>
+          </div>
+          <div class="gj r bf">
+           <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=post_actions_footer--------------------------bookmark_sidebar-" rel="noopener">
+            <svg height="25" viewbox="0 0 25 25" width="25">
+             <path d="M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z" fill-rule="evenodd">
+             </path>
+            </svg>
+           </a>
+          </div>
+          <div aria-hidden="true" class="cm">
+           <div aria-hidden="true" class="cm">
+            <div class="r bf">
+             <button class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm">
+              <svg class="q" height="25" viewbox="-480.5 272.5 21 21" width="25">
+               <path d="M-463 284.6c.9 0 1.6-.7 1.6-1.6s-.7-1.6-1.6-1.6-1.6.7-1.6 1.6.7 1.6 1.6 1.6zm0 .9c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-7-.9c.9 0 1.6-.7 1.6-1.6s-.7-1.6-1.6-1.6-1.6.7-1.6 1.6.7 1.6 1.6 1.6zm0 .9c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-7-.9c.9 0 1.6-.7 1.6-1.6s-.7-1.6-1.6-1.6-1.6.7-1.6 1.6.7 1.6 1.6 1.6zm0 .9c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z">
+               </path>
+              </svg>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="nh co ni mg r ab">
+         <div class="nj nk r ir">
+          <span class="r nl an nm">
+           <div class="r dq nn no">
+            <a href="/@zmillman?source=follow_footer--------------------------follow_footer-" rel="noopener">
+             <img alt="Zach Millman" class="r ez dg np" height="80" src="https://miro.medium.com/fit/c/160/160/1*CgWiBegI4xBU84cau5XVkQ.jpeg" width="80"/>
+            </a>
+           </div>
+           <span class="r">
+            <div class="nq r nr">
+             <p class="au ff ga bj bm ns nt">
+              Written by
+             </p>
+            </div>
+            <div class="nq nu n nr">
+             <div class="ak n o ev">
+              <h2 class="au av aw ax cw">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="/@zmillman?source=follow_footer--------------------------follow_footer-" rel="noopener">
+                Zach Millman
+               </a>
+              </h2>
+              <div class="r g">
+               <a class="lp cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=follow_footer-3432da600a80-------------------------follow_footer-" rel="noopener">
+                Follow
+               </a>
+              </div>
+             </div>
+            </div>
+           </span>
+          </span>
+          <div class="nq nv r nr cq">
+           <div class="nw r">
+            <h4 class="au ff lk nx bm">
+             Weirdly Alive // Code at Lever
+            </h4>
+           </div>
+           <div class="cp ny cq">
+            <a class="lp cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=follow_footer-3432da600a80-------------------------follow_footer-" rel="noopener">
+             Follow
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="nh r">
+         </div>
+         <div class="nj nk r ir">
+          <span class="r nl an nm">
+           <div class="r dq nn no">
+            <a href="https://fulcrum.lever.co/?source=follow_footer--------------------------follow_footer-" rel="noopener">
+             <img alt="Lever Engineering" class="ci np dg" height="80" src="https://miro.medium.com/fit/c/160/160/1*8qRozIq9onIZRNPvxzhH1g.png" width="80"/>
+            </a>
+           </div>
+           <span class="r">
+            <div class="nq nu n nr">
+             <div class="ak n o ev">
+              <h2 class="au av aw ax cw">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://fulcrum.lever.co/?source=follow_footer--------------------------follow_footer-" rel="noopener">
+                Lever Engineering
+               </a>
+              </h2>
+              <div class="r g">
+               <div aria-hidden="true" class="cm">
+                <a class="lp cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=follow_footer--------------------------follow_footer-" rel="noopener">
+                 Follow
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </span>
+          </span>
+          <div class="nq nz r nr cq">
+           <div class="nw r">
+            <h4 class="au ff lk nx bm">
+             We ask before we build so our products really work for our users. This is our blog about knowing why.
+            </h4>
+           </div>
+           <div class="cp ny cq">
+            <div aria-hidden="true" class="cm">
+             <a class="lp cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fa-better-way-to-interview-software-engineers-fa9b5d2b5316&amp;source=follow_footer--------------------------follow_footer-" rel="noopener">
+              Follow
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="oa co r ab">
+         <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/p/fa9b5d2b5316/responses/show?source=follow_footer--------------------------follow_footer-" rel="noopener">
+          <span class="ob oc lx">
+           <div class="od oe ci r jh cq">
+            <span class="bo">
+             See responses (20)
+            </span>
+           </div>
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="of r og ab">
+       <div class="n p">
+        <div class="ac ae af ag ah ai aj ak">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="oh r oi oj">
+     <section class="dm dn ak cl r ok ol om on oo op oq or os ot ou ov ow ox oy">
+      <div class="oz pa nj n ev g">
+       <div class="pb n ev">
+        <div class="pc r pd">
+         <div class="pe r">
+          <a class="fi fj bq br bs bt bu bv bw bx pf pg ca cb ph pi" href="https://medium.com/about?autoplay=1&amp;source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+           <h4 class="pj pk pl au av bi nx pm pn r">
+            Discover
+            <!-- -->
+            Medium
+           </h4>
+          </a>
+         </div>
+         <span class="au b bi bj bk bl r po pp">
+          Welcome to a place where words matter. On
+          <!-- -->
+          Medium
+          <!-- -->
+          , smart voices and original ideas take center stage - with no ads in sight.
+          <!-- -->
+          <a class="fi fj bq br bs bt bu bv bw bx ca cb ph pi pq" href="https://medium.com/about?autoplay=1&amp;source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+           Watch
+          </a>
+         </span>
+        </div>
+        <div class="pc r pd">
+         <div class="pr r">
+          <a class="fi fj bq br bs bt bu bv bw bx pf pg ca cb ph pi" href="https://medium.com/topics?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+           <h4 class="pj pk pl au av bi nx pm pn r">
+            Make
+            <!-- -->
+            Medium
+            <!-- -->
+            yours
+           </h4>
+          </a>
+         </div>
+         <span class="au b bi bj bk bl r po pp">
+          Follow all the topics you care about, and we’ll deliver the best stories for you to your homepage and inbox.
+          <!-- -->
+          <a class="fi fj bq br bs bt bu bv bw bx ca cb ph pi pq" href="https://medium.com/topics?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+           Explore
+          </a>
+         </span>
+        </div>
+        <div class="pc r pd">
+         <div class="pe r">
+          <a class="fi fj bq br bs bt bu bv bw bx pf pg ca cb ph pi" href="https://medium.com/membership?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+           <h4 class="pj pk pl au av bi nx pm pn r">
+            Become a member
+           </h4>
+          </a>
+         </div>
+         <span class="au b bi bj bk bl r po pp">
+          Get unlimited access to the best stories on
+          <!-- -->
+          Medium
+          <!-- -->
+          — and support writers while you’re at it. Just $5/month.
+          <!-- -->
+          <a class="fi fj bq br bs bt bu bv bw bx ca cb ph pi pq" href="https://medium.com/membership?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+           Upgrade
+          </a>
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="n o ev">
+       <a class="fi fj bq br bs bt bu bv bw bx pf pg ca cb ph pi" href="https://medium.com/?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+        <svg class="pk" height="22" viewbox="0 0 111.5 22" width="112">
+         <path d="M56.3 19.5c0 .4 0 .5.3.7l1.5 1.4v.1h-6.5V19c-.7 1.8-2.4 3-4.3 3-3.3 0-5.8-2.6-5.8-7.5 0-4.5 2.6-7.6 6.3-7.6 1.6-.1 3.1.8 3.8 2.4V3.2c0-.3-.1-.6-.3-.7l-1.4-1.4V1l6.5-.8v19.3zm-4.8-.8V9.5c-.5-.6-1.2-.9-1.9-.9-1.6 0-3.1 1.4-3.1 5.7 0 4 1.3 5.4 3 5.4.8.1 1.6-.3 2-1zm9.1 3.1V9.4c0-.3-.1-.6-.3-.7l-1.4-1.5v-.1h6.5v12.5c0 .4 0 .5.3.7l1.4 1.4v.1h-6.5zm-.2-19.2C60.4 1.2 61.5 0 63 0c1.4 0 2.6 1.2 2.6 2.6S64.4 5.3 63 5.3a2.6 2.6 0 0 1-2.6-2.7zm22.5 16.9c0 .4 0 .5.3.7l1.5 1.4v.1h-6.5v-3.2c-.6 2-2.4 3.4-4.5 3.4-2.9 0-4.4-2.1-4.4-6.2 0-1.9 0-4.1.1-6.5 0-.3-.1-.5-.3-.7L67.7 7v.1H74v8c0 2.6.4 4.4 2 4.4.9-.1 1.7-.6 2.1-1.3V9.5c0-.3-.1-.6-.3-.7l-1.4-1.5v-.2h6.5v12.4zm22 2.3c0-.5.1-6.5.1-7.9 0-2.6-.4-4.5-2.2-4.5-.9 0-1.8.5-2.3 1.3.2.8.3 1.7.3 2.5 0 1.8-.1 4.2-.1 6.5 0 .3.1.5.3.7l1.5 1.4v.1H96c0-.4.1-6.5.1-7.9 0-2.7-.4-4.5-2.2-4.5-.9 0-1.7.5-2.2 1.3v9c0 .4 0 .5.3.7l1.4 1.4v.1h-6.5V9.5c0-.3-.1-.6-.3-.7l-1.4-1.5v-.2h6.5v3.1a4.6 4.6 0 0 1 4.6-3.4c2.2 0 3.6 1.2 4.2 3.5.7-2.1 2.7-3.6 4.9-3.5 2.9 0 4.5 2.2 4.5 6.2 0 1.9-.1 4.2-.1 6.5-.1.3.1.6.3.7l1.4 1.4v.1h-6.6zm-81.4-2l1.9 1.9v.1h-9.8v-.1l2-1.9c.2-.2.3-.4.3-.7V7.3c0-.5 0-1.2.1-1.8L11.4 22h-.1L4.5 6.8c-.1-.4-.2-.4-.3-.6v10c-.1.7 0 1.3.3 1.9l2.7 3.6v.1H0v-.1L2.7 18c.3-.6.4-1.3.3-1.9v-11c0-.5-.1-1.1-.5-1.5L.7 1.1V1h7l5.8 12.9L18.6 1h6.8v.1l-1.9 2.2c-.2.2-.3.5-.3.7v15.2c0 .2.1.5.3.6zm7.6-5.9c0 3.8 1.9 5.3 4.2 5.3 1.9.1 3.6-1 4.4-2.7h.1c-.8 3.7-3.1 5.5-6.5 5.5-3.7 0-7.2-2.2-7.2-7.4 0-5.5 3.5-7.6 7.3-7.6 3.1 0 6.4 1.5 6.4 6.2v.8h-8.7zm0-.8h4.3v-.8c0-3.9-.8-4.9-2-4.9-1.4.1-2.3 1.6-2.3 5.7z">
+         </path>
+        </svg>
+       </a>
+       <span class="au b bi bj bk bl r po pp">
+        <div class="ps pt n ev pu an">
+         <a class="fi fj bq br bs bt bu bv bw bx fk ca cb ph pi" href="https://medium.com/about?autoplay=1&amp;source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+          About
+         </a>
+         <a class="fi fj bq br bs bt bu bv bw bx fk ca cb ph pi" href="https://help.medium.com/?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+          Help
+         </a>
+         <a class="fi fj bq br bs bt bu bv bw bx fk ca cb ph pi" href="https://medium.com/policy/9db0094a1e0f?source=post_page-----fa9b5d2b5316----------------------" rel="noopener">
+          Legal
+         </a>
+        </div>
+       </span>
+      </div>
+     </section>
+    </div>
+   </div>
+  </div>
+  <script src="https://cdn.optimizely.com/js/16180790160.js">
+  </script>
+  <script>
+   window.__BUILD_ID__ = "development"
+  </script>
+  <script>
+   window.__GRAPHQL_URI__ = "https://fulcrum.lever.co/_/graphql"
+  </script>
+  <script>
+   window.__PRELOADED_STATE__ = {"config":{"nodeEnv":"production","version":"master-20200110-200758-1b2110e825","productName":"Medium","publicUrl":"https:\u002F\u002Fcdn-client.medium.com\u002Flite","authDomain":"medium.com","authGoogleClientId":"216296035834-k1k6qe060s2tp2a2jam4ljdcms00sttg.apps.googleusercontent.com","favicon":"production","glyphUrl":"https:\u002F\u002Fglyph.medium.com","branchKey":"key_live_ofxXr2qTrrU9NqURK8ZwEhknBxiI6KBm","lightStep":{"name":"lite-web","host":"collector-medium.lightstep.com","token":"ce5be895bef60919541332990ac9fef2","appVersion":"master-20200110-200758-1b2110e825"},"algolia":{"appId":"MQ57UUUQZ2","apiKeySearch":"394474ced050e3911ae2249ecc774921","indexPrefix":"medium_","host":"-dsn.algolia.net"},"recaptchaKey":"6Lfc37IUAAAAAKGGtC6rLS13R1Hrw_BqADfS1LRk","sentry":{"dsn":"https:\u002F\u002F589e367c28ca47b195ce200d1507d18b@sentry.io\u002F1423575","environment":"production"},"isAmp":false,"googleAnalyticsCode":"UA-24232453-2","signInWallCustomDomainCollectionIds":["3a8144eabfe3","336d898217ee","61061eb0c96b","138adf9c44c","819cc2aaeee0"],"mediumOwnedAndOperatedCollectionIds":["544c7006046e","bcc38c8f6edf","444d13b52878","8d6b8a439e32","92d2092dc598","1285ba81cada","cb8577c9149e","8ccfed20cbb2","ae2a65f35510","3f6ecf56618","7b6769f2748b","fc8964313712","ef8e90590e66","191186aaafa0","d944778ce714","bdc4052bbdba","88d9857e584e"],"tierOneDomains":["medium.com","thebolditalic.com","arcdigital.media","towardsdatascience.com","uxdesign.cc","codeburst.io","psiloveyou.xyz","writingcooperative.com","entrepreneurshandbook.co","prototypr.io","betterhumans.coach.me","theascent.pub"],"defaultImages":{"avatar":{"imageId":"1*dmbNkD5D-u45r44go_cf0g.png","height":150,"width":150},"orgLogo":{"imageId":"1*OMF3fSqH8t4xBJ9-6oZDZw.png","height":106,"width":545},"postLogo":{"imageId":"1*3sela1OADrJr7dJk_CXaEQ.png","height":810,"width":1440}}},"debug":{"requestId":"5aee6849-1c5c-49e8-9596-b4b141a01f80","originalSpanCarrier":{"ot-tracer-spanid":"1d9347ac5ecbe18d","ot-tracer-traceid":"726fc2573f048901","ot-tracer-sampled":"true"}},"session":{"user":{"id":"lo_3c9a1ee33bf2"},"xsrf":""},"stats":{"itemCount":0,"sending":false,"timeout":null,"backup":{}},"navigation":{"showBranchBanner":null,"hasRenderedBranchBanner":null,"hideGoogleOneTap":false,"branchData":{"loaded":false},"currentLocation":"https:\u002F\u002Ffulcrum.lever.co\u002Fa-better-way-to-interview-software-engineers-fa9b5d2b5316","host":"fulcrum.lever.co","hostname":"fulcrum.lever.co","referrer":"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260","susiModal":{"step":null,"operation":"register","reportEventInfo":{"eventName":"","data":{}}}},"client":{"isBot":false,"isEu":false,"isNativeMedium":false,"isCustomDomain":true},"multiVote":{"clapsPerPost":{}},"metadata":{"faviconImageId":null}}
+  </script>
+  <script>
+   window.__APOLLO_STATE__ = {"ROOT_QUERY":{"viewer":null,"variantFlags":[{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.0","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.1","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.2","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.3","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.4","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.5","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.6","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.7","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.8","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.9","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.10","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.11","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.12","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.13","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.14","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.15","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.16","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.17","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.18","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.19","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.20","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.21","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.22","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.23","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.24","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.25","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.26","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.27","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.28","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.29","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.30","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.31","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.32","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.33","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.34","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.35","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.36","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.37","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.38","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.39","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.40","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.41","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.42","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.43","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.44","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.45","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.46","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.47","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.48","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.49","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.50","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.51","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.52","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.53","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.54","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.55","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.56","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.57","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.58","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.59","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.60","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.61","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.62","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.63","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.64","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.65","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.66","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.67","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.68","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.69","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.70","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.71","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.72","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.73","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.74","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.75","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.76","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.77","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.78","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.79","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.80","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.81","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.82","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.83","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.84","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.85","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.86","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.87","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.88","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.89","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.90","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.91","typename":"VariantFlag"}],"meterPost({\"postId\":\"fa9b5d2b5316\",\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}})":{"type":"id","generated":false,"id":"MeteringInfo:singleton","typename":"MeteringInfo"},"postResult({\"id\":\"fa9b5d2b5316\"})":{"type":"id","generated":false,"id":"Post:fa9b5d2b5316","typename":"Post"}},"ROOT_QUERY.variantFlags.0":{"name":"add_friction_to_signup","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.0.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.0.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.1":{"name":"allow_access","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.1.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.1.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.2":{"name":"allow_signup","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.2.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.2.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.3":{"name":"allow_test_auth","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.3.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.3.valueType":{"__typename":"VariantFlagString","value":"disallow"},"ROOT_QUERY.variantFlags.4":{"name":"assign_default_topic_to_posts","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.4.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.4.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.5":{"name":"available_annual_plan","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.5.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.5.valueType":{"__typename":"VariantFlagString","value":"2c754bcc2995"},"ROOT_QUERY.variantFlags.6":{"name":"available_monthly_plan","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.6.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.6.valueType":{"__typename":"VariantFlagString","value":"60e220181034"},"ROOT_QUERY.variantFlags.7":{"name":"branch_seo_metadata","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.7.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.7.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.8":{"name":"browsable_stream_config_bucket","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.8.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.8.valueType":{"__typename":"VariantFlagString","value":"curated-topics"},"ROOT_QUERY.variantFlags.9":{"name":"disable_gosocial_followers_that_you_follow","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.9.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.9.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.10":{"name":"disable_ios_resume_reading_toast","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.10.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.10.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.11":{"name":"disable_mobile_featured_chunk","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.11.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.11.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.12":{"name":"disable_post_recommended_from_friends_provider","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.12.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.12.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.13":{"name":"enable_android_local_currency","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.13.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.13.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.14":{"name":"enable_annual_renewal_reminder_email","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.14.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.14.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.15":{"name":"enable_app_flirty_thirty","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.15.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.15.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.16":{"name":"enable_auto_tier","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.16.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.16.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.17":{"name":"enable_automated_mission_control_triggers","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.17.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.17.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.18":{"name":"enable_branch_io","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.18.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.18.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.19":{"name":"enable_branding","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.19.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.19.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.20":{"name":"enable_branding_fonts","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.20.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.20.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.21":{"name":"enable_canvas_3_web","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.21.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.21.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.22":{"name":"enable_dedicated_series_tab_api_ios","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.22.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.22.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.23":{"name":"enable_different_grid","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.23.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.23.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.24":{"name":"enable_disregard_trunc_state_for_footer","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.24.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.24.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.25":{"name":"enable_edit_alt_text","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.25.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.25.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.26":{"name":"enable_email_sign_in_captcha","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.26.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.26.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.27":{"name":"enable_embedding_based_diversification","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.27.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.27.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.28":{"name":"enable_expanded_feature_chunk_pool","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.28.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.28.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.29":{"name":"enable_filter_by_resend_rules","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.29.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.29.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.30":{"name":"enable_first_name_on_paywall","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.30.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.30.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.31":{"name":"enable_geolocation_stripe_standard","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.31.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.31.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.32":{"name":"enable_google_one_tap","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.32.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.32.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.33":{"name":"enable_ios_post_stats","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.33.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.33.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.34":{"name":"enable_janky_spam_rules","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.34.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.34.valueType":{"__typename":"VariantFlagString","value":"users,posts"},"ROOT_QUERY.variantFlags.35":{"name":"enable_json_logs_trained_ranker","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.35.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.35.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.36":{"name":"enable_kafka_events","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.36.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.36.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.37":{"name":"enable_kbfd_rex","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.37.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.37.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.38":{"name":"enable_kbfd_rex_app_highlights","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.38.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.38.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.39":{"name":"enable_kbfd_rex_daily_digest","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.39.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.39.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.40":{"name":"enable_lite_notifications","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.40.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.40.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.41":{"name":"enable_lite_post","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.41.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.41.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.42":{"name":"enable_lite_post_cd","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.42.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.42.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.43":{"name":"enable_lite_post_highlights","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.43.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.43.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.44":{"name":"enable_lite_post_highlights_view_only","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.44.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.44.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.45":{"name":"enable_lite_profile","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.45.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.45.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.46":{"name":"enable_lite_pub_header_menu","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.46.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.46.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.47":{"name":"enable_lite_reading_list","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.47.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.47.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.48":{"name":"enable_lite_server_upstream_deadlines","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.48.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.48.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.49":{"name":"enable_lite_stories","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.49.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.49.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.50":{"name":"enable_lite_topics","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.50.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.50.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.51":{"name":"enable_lite_unread_notification_count_mutation","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.51.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.51.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.52":{"name":"enable_lo_scroll_away_metabar","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.52.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.52.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.53":{"name":"enable_logged_out_homepage_signup","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.53.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.53.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.54":{"name":"enable_marketing_emails","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.54.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.54.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.55":{"name":"enable_media_resource_try_catch","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.55.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.55.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.56":{"name":"enable_membership_remove_section_a","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.56.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.56.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.57":{"name":"enable_more_branch_data","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.57.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.57.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.58":{"name":"enable_new_collaborative_filtering_data","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.58.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.58.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.59":{"name":"enable_new_pub_fonts","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.59.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.59.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.60":{"name":"enable_new_pub_modules","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.60.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.60.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.61":{"name":"enable_new_suspended_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.61.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.61.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.62":{"name":"enable_new_three_dot_menu","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.62.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.62.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.63":{"name":"enable_optimizely","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.63.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.63.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.64":{"name":"enable_parsely","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.64.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.64.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.65":{"name":"enable_patronus_on_kubernetes","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.65.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.65.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.66":{"name":"enable_popularity_feature","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.66.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.66.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.67":{"name":"enable_post_import","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.67.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.67.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.68":{"name":"enable_post_seo_settings_screen","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.68.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.68.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.69":{"name":"enable_post_settings_screen","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.69.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.69.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.70":{"name":"enable_primary_topic_for_mobile","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.70.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.70.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.71":{"name":"enable_rito_upstream_deadlines","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.71.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.71.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.72":{"name":"enable_rtr_channel","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.72.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.72.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.73":{"name":"enable_save_to_medium","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.73.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.73.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.74":{"name":"enable_sign_up_with_email","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.74.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.74.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.75":{"name":"enable_suggest_account","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.75.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.75.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.76":{"name":"enable_suggest_account_li","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.76.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.76.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.77":{"name":"enable_tick_landing_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.77.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.77.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.78":{"name":"enable_tipalti_onboarding","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.78.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.78.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.79":{"name":"enable_tribute_landing_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.79.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.79.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.80":{"name":"enable_trumpland_landing_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.80.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.80.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.81":{"name":"glyph_font_set","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.81.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.81.valueType":{"__typename":"VariantFlagString","value":"m2"},"ROOT_QUERY.variantFlags.82":{"name":"google_sign_in_android","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.82.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.82.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.83":{"name":"is_not_medium_subscriber","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.83.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.83.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.84":{"name":"new_transition_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.84.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.84.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.85":{"name":"pub_sidebar","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.85.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.85.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.86":{"name":"rank_model","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.86.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.86.valueType":{"__typename":"VariantFlagString","value":"default"},"ROOT_QUERY.variantFlags.87":{"name":"redis_read_write_splitting","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.87.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.87.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.88":{"name":"signin_services","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.88.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.88.valueType":{"__typename":"VariantFlagString","value":"twitter,facebook,google,email,google-fastidv,google-one-tap"},"ROOT_QUERY.variantFlags.89":{"name":"signup_services","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.89.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.89.valueType":{"__typename":"VariantFlagString","value":"twitter,facebook,google,email,google-fastidv,google-one-tap"},"ROOT_QUERY.variantFlags.90":{"name":"use_new_admin_topic_backend","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.90.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.90.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.91":{"name":"use_sendgrid_queue_for_digest_sends","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.91.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.91.valueType":{"__typename":"VariantFlagBoolean","value":true},"MeteringInfo:singleton":{"__typename":"MeteringInfo","postIds":{"type":"json","json":[]},"maxUnlockCount":3,"unlocksRemaining":3},"Post:fa9b5d2b5316":{"__typename":"Post","visibility":"PUBLIC","latestPublishedVersion":"af64e3861b3e","collection":{"type":"id","generated":false,"id":"Collection:2be05fc5bd92","typename":"Collection"},"id":"fa9b5d2b5316","creator":{"type":"id","generated":false,"id":"User:3432da600a80","typename":"User"},"isLocked":false,"lockedSource":"LOCKED_POST_SOURCE_NONE","sequence":null,"mediumUrl":"https:\u002F\u002Ffulcrum.lever.co\u002Fa-better-way-to-interview-software-engineers-fa9b5d2b5316","canonicalUrl":"","content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}})":{"type":"id","generated":true,"id":"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}})","typename":"PostContent"},"firstPublishedAt":1485461810681,"isPublished":true,"layerCake":0,"primaryTopic":null,"title":"A better way to interview software engineers","isLimitedState":false,"pendingCollection":null,"shareKey":null,"statusForCollection":"APPROVED","readingTime":3.6141509433962264,"readingList":"READING_LIST_NONE","license":"ALL_RIGHTS_RESERVED","allowResponses":true,"tags":[{"type":"id","generated":false,"id":"Tag:software-development","typename":"Tag"},{"type":"id","generated":false,"id":"Tag:interview","typename":"Tag"},{"type":"id","generated":false,"id":"Tag:hiring","typename":"Tag"},{"type":"id","generated":false,"id":"Tag:code-review","typename":"Tag"},{"type":"id","generated":false,"id":"Tag:engineering-mangement","typename":"Tag"}],"viewerClapCount":0,"clapCount":596,"voterCount":265,"recommenders":[],"responsesCount":20,"collaborators":[],"translationSourcePost":null,"newsletterId":"","inResponseToPostResult":null,"inResponseToMediaResource":null,"curationEligibleAt":0,"isDistributionAlertDismissed":false,"audioVersionUrl":"","seoTitle":"","socialTitle":"","socialDek":"","metaDescription":"Problem-solving and getting things done are important, but ideally we’d also hire engineers who are great at API design, naming, testing, maintenance, scaling, extensibility, etc. — all of those…","latestPublishedAt":1542230080146,"previewContent":{"type":"id","generated":true,"id":"$Post:fa9b5d2b5316.previewContent","typename":"PreviewContent"},"previewImage":{"type":"id","generated":false,"id":"ImageMetadata:0*lTR6oUictqQaTiBl.","typename":"ImageMetadata"},"updatedAt":1542230080146,"topics":[],"seoDescription":"","isSuspended":false},"Collection:2be05fc5bd92":{"id":"2be05fc5bd92","domain":"fulcrum.lever.co","slug":"levers-fulcrum","__typename":"Collection","googleAnalyticsId":null,"colorBehavior":"ACCENT_COLOR","name":"Lever Engineering","logo":{"type":"id","generated":false,"id":"ImageMetadata:","typename":"ImageMetadata"},"avatar":{"type":"id","generated":false,"id":"ImageMetadata:1*8qRozIq9onIZRNPvxzhH1g.png","typename":"ImageMetadata"},"isEnrolledInHightower":false,"creator":{"type":"id","generated":false,"id":"User:cb91cba98e46","typename":"User"},"viewerIsEditor":false,"navItems":[],"colorPalette":{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette","typename":"ColorPalette"},"viewerCanEditOwnPosts":false,"viewerCanEditPosts":false,"description":"We ask before we build so our products really work for our users. This is our blog about knowing why.","viewerIsFollowing":false,"viewerIsSubscribedToLetters":false,"isUserSubscribedToCollectionEmails":false,"ampEnabled":false,"twitterUsername":"lever","facebookPageId":null,"favicon":{"type":"id","generated":false,"id":"ImageMetadata:1*S1otzh2zrjs3w-YIM2ai8Q.png","typename":"ImageMetadata"}},"User:3432da600a80":{"id":"3432da600a80","__typename":"User","isSuspended":false,"allowNotes":true,"name":"Zach Millman","isFollowing":false,"username":"zmillman","bio":"Weirdly Alive \u002F\u002F Code at Lever","imageId":"1*CgWiBegI4xBU84cau5XVkQ.jpeg","mediumMemberAt":0,"isBlocking":false,"isPartnerProgramEnrolled":false,"twitterScreenName":"zmillman"},"ImageMetadata:":{"id":"","originalWidth":0,"originalHeight":0,"__typename":"ImageMetadata"},"ImageMetadata:1*8qRozIq9onIZRNPvxzhH1g.png":{"id":"1*8qRozIq9onIZRNPvxzhH1g.png","__typename":"ImageMetadata"},"User:cb91cba98e46":{"id":"cb91cba98e46","__typename":"User"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum":{"backgroundColor":"#FFE3E4E6","colorPoints":[{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.0","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.1","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.2","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.3","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.4","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.5","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.6","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.7","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.8","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.9","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.10","typename":"ColorPoint"}],"__typename":"ColorSpectrum"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.0":{"color":"#FFE3E4E6","point":0,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.1":{"color":"#FFD5D6D8","point":0.1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.2":{"color":"#FFC6C7C9","point":0.2,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.3":{"color":"#FFB7B8BA","point":0.3,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.4":{"color":"#FFA7A9AB","point":0.4,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.5":{"color":"#FF98999B","point":0.5,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.6":{"color":"#FF87898B","point":0.6,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.7":{"color":"#FF77787A","point":0.7,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.8":{"color":"#FF656769","point":0.8,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.9":{"color":"#FF535557","point":0.9,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.10":{"color":"#FF404243","point":1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette":{"tintBackgroundSpectrum":{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum","typename":"ColorSpectrum"},"__typename":"ColorPalette","defaultBackgroundSpectrum":{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum","typename":"ColorSpectrum"},"highlightSpectrum":{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum","typename":"ColorSpectrum"}},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum":{"backgroundColor":"#FFFFFFFF","colorPoints":[{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.0","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.1","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.2","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.3","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.4","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.5","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.6","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.7","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.8","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.9","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.10","typename":"ColorPoint"}],"__typename":"ColorSpectrum"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.0":{"color":"#FF838587","point":0,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.1":{"color":"#FF7A7B7D","point":0.1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.2":{"color":"#FF717273","point":0.2,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.3":{"color":"#FF67686A","point":0.3,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.4":{"color":"#FF5E5E5F","point":0.4,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.5":{"color":"#FF545455","point":0.5,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.6":{"color":"#FF494A4A","point":0.6,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.7":{"color":"#FF3E3F3F","point":0.7,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.8":{"color":"#FF333334","point":0.8,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.9":{"color":"#FF272727","point":0.9,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.10":{"color":"#FF1A1A1A","point":1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum":{"backgroundColor":"#FFFFFFFF","colorPoints":[{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.0","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.1","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.2","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.3","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.4","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.5","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.6","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.7","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.8","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.9","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.10","typename":"ColorPoint"}],"__typename":"ColorSpectrum"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.0":{"color":"#FFF4F2F2","point":0,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.1":{"color":"#FFF2F0F0","point":0.1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.2":{"color":"#FFF0EEEF","point":0.2,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.3":{"color":"#FFEEECED","point":0.3,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.4":{"color":"#FFECEBEB","point":0.4,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.5":{"color":"#FFEAE9EA","point":0.5,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.6":{"color":"#FFE8E7E8","point":0.6,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.7":{"color":"#FFE6E5E6","point":0.7,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.8":{"color":"#FFE3E3E4","point":0.8,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.9":{"color":"#FFE1E1E3","point":0.9,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.10":{"color":"#FFDFDFE1","point":1,"__typename":"ColorPoint"},"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}})":{"isLockedPreviewOnly":false,"validatedShareKey":"","__typename":"PostContent","bodyModel":{"type":"id","generated":true,"id":"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}}).bodyModel","typename":"RichText"}},"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}}).bodyModel.sections.0":{"name":"f328","startIndex":0,"textLayout":null,"imageLayout":null,"backgroundImage":null,"videoLayout":null,"backgroundVideo":null,"__typename":"Section"},"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}}).bodyModel.sections.1":{"name":"4c74","startIndex":9,"textLayout":null,"imageLayout":null,"backgroundImage":null,"videoLayout":null,"backgroundVideo":null,"__typename":"Section"},"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}}).bodyModel.sections.2":{"name":"b80f","startIndex":19,"textLayout":null,"imageLayout":null,"backgroundImage":null,"videoLayout":null,"backgroundVideo":null,"__typename":"Section"},"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}}).bodyModel":{"sections":[{"type":"id","generated":true,"id":"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}}).bodyModel.sections.0","typename":"Section"},{"type":"id","generated":true,"id":"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}}).bodyModel.sections.1","typename":"Section"},{"type":"id","generated":true,"id":"$Post:fa9b5d2b5316.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=260\"}}).bodyModel.sections.2","typename":"Section"}],"paragraphs":[{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_0","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_1","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_2","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_3","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_4","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_5","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_6","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_7","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_8","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_9","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_10","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_11","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_12","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_13","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_14","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_15","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_16","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_17","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_18","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_19","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_20","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_21","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_22","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_23","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_24","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_25","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_26","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_27","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_28","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:af64e3861b3e_29","typename":"Paragraph"}],"__typename":"RichText"},"Paragraph:af64e3861b3e_0":{"id":"af64e3861b3e_0","name":"59de","type":"H3","href":null,"layout":null,"metadata":null,"text":"A better way to interview software engineers","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_1":{"id":"af64e3861b3e_1","name":"11f2","type":"P","href":null,"layout":null,"metadata":null,"text":"I don’t think most companies know how to interview software engineers.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_2":{"id":"af64e3861b3e_2","name":"320a","type":"OLI","href":null,"layout":null,"metadata":null,"text":"Hiring with brainteasers and whiteboard problems (the vast majority of current interviews) builds teams of junior CS grads and products full of clever but useless code. They’re also bad interviews and people spend weeks studying for them.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_2.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_2.markups.0":{"type":"A","start":182,"end":196,"href":"https:\u002F\u002Fmedium.freecodecamp.com\u002Fwhy-is-hiring-broken-it-starts-at-the-whiteboard-34b088e5a5db#.5092c8fm6","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_3":{"id":"af64e3861b3e_3","name":"ebfb","type":"OLI","href":null,"layout":null,"metadata":null,"text":"On the other end: Hiring for hackers who Get Things Done leads to crippling tech debt a year later and critical payment systems collapsing in the middle of the night. (Chris Maddox is way more eloquent about this.)","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_3.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_3.markups.1","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_3.markups.2","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_3.markups.0":{"type":"A","start":168,"end":180,"href":null,"anchorType":"USER","userId":"283cd4117ac1","linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_3.markups.1":{"type":"A","start":184,"end":201,"href":"https:\u002F\u002Fgusto.com\u002Fblog\u002Fzenpayroll-is-not-hiring-hackers\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_3.markups.2":{"type":"EM","start":41,"end":56,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_4":{"id":"af64e3861b3e_4","name":"8739","type":"P","href":null,"layout":null,"metadata":null,"text":"Problem-solving and getting things done are important, but ideally we’d also hire engineers who are great at API design, naming, testing, maintenance, scaling, extensibility, etc. — all of those unglamorous things that actually make software projects successful and sustainable. In short, “code quality”.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_5":{"id":"af64e3861b3e_5","name":"4de2","type":"H4","href":null,"layout":null,"metadata":null,"text":"Well then, what kind of interview do you use to look for code quality?","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_5.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_5.markups.0":{"type":"STRONG","start":0,"end":70,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_6":{"id":"af64e3861b3e_6","name":"54c7","type":"P","href":null,"layout":null,"metadata":null,"text":"As far as I know there aren’t any…","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_7":{"id":"af64e3861b3e_7","name":"d61d","type":"P","href":null,"layout":null,"metadata":null,"text":"So we’re trying a new one: mock code review.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_7.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_7.markups.0":{"type":"STRONG","start":27,"end":44,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_8":{"id":"af64e3861b3e_8","name":"510f","type":"IMG","href":null,"layout":"INSET_CENTER","metadata":{"type":"id","generated":false,"id":"ImageMetadata:0*_hYMppiSgxVWbfQM.","typename":"ImageMetadata"},"text":"You may want to use a command queue here.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"ImageMetadata:0*_hYMppiSgxVWbfQM.":{"id":"0*_hYMppiSgxVWbfQM.","originalHeight":957,"originalWidth":1400,"focusPercentX":null,"focusPercentY":null,"alt":null,"__typename":"ImageMetadata"},"Paragraph:af64e3861b3e_9":{"id":"af64e3861b3e_9","name":"1072","type":"H3","href":null,"layout":null,"metadata":null,"text":"Running a mock code review","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_10":{"id":"af64e3861b3e_10","name":"8f9e","type":"P","href":null,"layout":null,"metadata":null,"text":"At the end of a perfect code review interview, you’d have a spring in your step and a confident feeling of “Oh my god, yes! This engineer will help us write even better software, and the entire team will love getting feedback from them.”","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_11":{"id":"af64e3861b3e_11","name":"7f69","type":"P","href":null,"layout":null,"metadata":null,"text":"To get there, we start with a set of standard questions about past code review experience for some background, then dive into a GitHub pull request of around 200 lines of intentionally buggy and messy code and ask the candidate for feedback on how to improve it. We finish with a few last questions about the code as a whole and time for them to ask about our development process.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_12":{"id":"af64e3861b3e_12","name":"c805","type":"P","href":null,"layout":null,"metadata":null,"text":"To measure the springiness of our steps as fairly as we can, we use a rubric which evaluates three areas:","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_13":{"id":"af64e3861b3e_13","name":"c8b4","type":"ULI","href":null,"layout":null,"metadata":null,"text":"Technical Feedback. Engineers should be able to find issues in code which will cause errors, poor performance, or will be a pain to maintain and extend — and then propose improvements or practices which will address those issues effectively.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_13.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_13.markups.1","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_13.markups.0":{"type":"A","start":53,"end":67,"href":"https:\u002F\u002Fwww.kevinlondon.com\u002F2015\u002F05\u002F05\u002Fcode-review-best-practices.html","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_13.markups.1":{"type":"STRONG","start":0,"end":19,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_14":{"id":"af64e3861b3e_14","name":"74f8","type":"ULI","href":null,"layout":null,"metadata":null,"text":"Communication. Critiquing code requires telling someone that they’re wrong about a mix of objective errors and subjective preferences. The best reviewers understand how to give that kind of feedback and keep it constructive.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_14.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_14.markups.0":{"type":"STRONG","start":0,"end":15,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_15":{"id":"af64e3861b3e_15","name":"cd91","type":"ULI","href":null,"layout":null,"metadata":null,"text":"Prioritization. Any change takes extra time, so feedback must also be mindful of the trade-offs in a project between speed, correctness, clarity, and so on. We look for engineers who can analyze those concerns and apply them to their feedback.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_15.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_15.markups.0":{"type":"STRONG","start":0,"end":15,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_16":{"id":"af64e3861b3e_16","name":"e9be","type":"P","href":null,"layout":null,"metadata":null,"text":"The trickiest part of running this interview is definitely the mix of technical and behavioral interviewing. It’s relatively clear how an engineer can assess whether candidates are finding bugs in code, but “How would you improve this?” is a very open-ended question. Getting a good signal requires listening and asking clarifying questions, so don’t forget that as part of the interview training.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_17":{"id":"af64e3861b3e_17","name":"7f98","type":"IMG","href":null,"layout":"INSET_CENTER","metadata":{"type":"id","generated":false,"id":"ImageMetadata:0*2gf8xPsXH3lLATs1.","typename":"ImageMetadata"},"text":"Not the right way to handle feedback","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"ImageMetadata:0*2gf8xPsXH3lLATs1.":{"id":"0*2gf8xPsXH3lLATs1.","originalHeight":720,"originalWidth":626,"focusPercentX":null,"focusPercentY":null,"alt":null,"__typename":"ImageMetadata"},"Paragraph:af64e3861b3e_18":{"id":"af64e3861b3e_18","name":"9542","type":"P","href":null,"layout":null,"metadata":null,"text":"(We’re also still figuring out how to best use this evaluation for junior candidates. They don’t have the same depth of experience yet, but “how would you improve this code?” in phone screens and pair programming interviews seems to get at a lot of the same signals.)","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_18.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_18.markups.0":{"type":"EM","start":0,"end":267,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_19":{"id":"af64e3861b3e_19","name":"3a14","type":"H3","href":null,"layout":null,"metadata":null,"text":"It’s worked well so far","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_20":{"id":"af64e3861b3e_20","name":"1d6e","type":"P","href":null,"layout":null,"metadata":null,"text":"We’ve interviewed over 30 software engineer and engineering manager candidates with this question so far, and the ones we’ve hired have been great communicators and pushed us to really improve our documentation, pairing, and release processes.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_21":{"id":"af64e3861b3e_21","name":"32ee","type":"IMG","href":null,"layout":"OUTSET_LEFT","metadata":{"type":"id","generated":false,"id":"ImageMetadata:0*lTR6oUictqQaTiBl.","typename":"ImageMetadata"},"text":"A new hire joins the team","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"ImageMetadata:0*lTR6oUictqQaTiBl.":{"id":"0*lTR6oUictqQaTiBl.","originalHeight":431,"originalWidth":640,"focusPercentX":null,"focusPercentY":null,"alt":null,"__typename":"ImageMetadata"},"Paragraph:af64e3861b3e_22":{"id":"af64e3861b3e_22","name":"4c5a","type":"P","href":null,"layout":null,"metadata":null,"text":"Engineers also really like reviewing code.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_22.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_22.markups.0":{"type":"EM","start":15,"end":21,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_23":{"id":"af64e3861b3e_23","name":"344d","type":"P","href":null,"layout":null,"metadata":null,"text":"Senior engineers want to work in an environment where they’re challenged to write great code and share their expertise. Junior engineers want great code and mentors to learn from. And managers want to work with teams which are already collaborative and looking to improve.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_24":{"id":"af64e3861b3e_24","name":"72ea","type":"P","href":null,"layout":null,"metadata":null,"text":"We’ve consistently heard from candidates that the code review question was their favorite on-site interview, and it’s been instrumental in convincing several engineers to join the team. When you spend an hour asking how to improve some code, it shows that you really care about code quality and collaborative engineering.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_24.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_24.markups.0":{"type":"STRONG","start":186,"end":321,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_25":{"id":"af64e3861b3e_25","name":"b5a8","type":"P","href":null,"layout":null,"metadata":null,"text":"And as far I know, it’s also really hard to game this interview. Worst case: more people study up on code quality that they will actually use on the job and it’ll be a net positive for the world.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_26":{"id":"af64e3861b3e_26","name":"0ef4","type":"H3","href":null,"layout":null,"metadata":null,"text":"Interviewing at Lever","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_27":{"id":"af64e3861b3e_27","name":"0c6a","type":"P","href":null,"layout":null,"metadata":null,"text":"Building an effective and fair hiring process is hard (it’s why we build Lever, after all) and there’s still so much borked with interviewing in general. I don’t think we’ll ever have a perfect interview panel, but an interview closer to what software engineers actually do is a step in the right direction.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_28":{"id":"af64e3861b3e_28","name":"243f","type":"P","href":null,"layout":null,"metadata":null,"text":"…and if you’ve seen or tried an interview like this, please comment and let me know! I’d love to know how it went :)","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_29":{"id":"af64e3861b3e_29","name":"470c","type":"P","href":null,"layout":null,"metadata":null,"text":"🙇 to Aline Lerner, Bhavin Parikh, Leighton Wallace and many others who read versions of this article which were much worse.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_29.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_29.markups.1","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_29.markups.2","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:af64e3861b3e_29.markups.3","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:af64e3861b3e_29.markups.0":{"type":"A","start":6,"end":18,"href":null,"anchorType":"USER","userId":"722bf1348ae3","linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_29.markups.1":{"type":"A","start":20,"end":33,"href":null,"anchorType":"USER","userId":"92f7c193686a","linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_29.markups.2":{"type":"A","start":35,"end":51,"href":null,"anchorType":"USER","userId":"a1a49583183","linkMetadata":null,"__typename":"Markup"},"Paragraph:af64e3861b3e_29.markups.3":{"type":"EM","start":0,"end":124,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Tag:software-development":{"id":"software-development","displayTitle":"Software Development","__typename":"Tag"},"Tag:interview":{"id":"interview","displayTitle":"Interview","__typename":"Tag"},"Tag:hiring":{"id":"hiring","displayTitle":"Hiring","__typename":"Tag"},"Tag:code-review":{"id":"code-review","displayTitle":"Code Review","__typename":"Tag"},"Tag:engineering-mangement":{"id":"engineering-mangement","displayTitle":"Engineering Mangement","__typename":"Tag"},"ImageMetadata:1*S1otzh2zrjs3w-YIM2ai8Q.png":{"id":"1*S1otzh2zrjs3w-YIM2ai8Q.png","__typename":"ImageMetadata"},"$Post:fa9b5d2b5316.previewContent":{"subtitle":"We’re trying a new format: mock code reviews.","__typename":"PreviewContent"}}
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/manifest.62daf18b.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/vendors~main.26101d5d.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/main.a2624962.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/vendors~screen.collection.packageBuilder~screen.landingpages.pres45~screen.landingpages.tribute~scre~3e410f11.faa5af01.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/screen.collection.packageBuilder~screen.landingpages.pres45~screen.landingpages.tribute~screen.post~~73c4bb05.43adf86d.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/screen.post~screen.post.amp~screen.post.series~screen.profile~screen.sequence.library~screen.sequenc~036c6b37.d7f2bab9.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/screen.collection.packageBuilder~screen.landingpages.tribute~screen.post~screen.post.amp.28451819.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/screen.post.fdffaedc.chunk.js">
+  </script>
+  <script>
+   window.main();
+  </script>
+ </body>
+</html>

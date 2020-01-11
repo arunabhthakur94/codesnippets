@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <script>
+   !function(c,f){var t,o,i,e=[],r={passive:!0,capture:!0},n=new Date,a="pointerup",u="pointercancel";function p(n,e){t||(t=e,o=n,i=new Date,w(f),s())}function s(){0<=o&&o<i-n&&(e.forEach(function(n){n(o,t)}),e=[])}function l(n){if(n.cancelable){var e=(1e12<n.timeStamp?new Date:performance.now())-n.timeStamp;"pointerdown"==n.type?function(n,e){function t(){p(n,e),i()}function o(){i()}function i(){f(a,t,r),f(u,o,r)}c(a,t,r),c(u,o,r)}(e,n):p(e,n)}}function w(e){["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(n){e(n,l,r)})}w(c),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){e.push(n),s()}}(addEventListener,removeEventListener)
+  </script>
+  <title data-rh="true">
+   The Lever Tech Stack - Lever Engineering
+  </title>
+  <meta charset="utf-8" data-rh="true"/>
+  <meta content="width=device-width,minimum-scale=1,initial-scale=1" data-rh="true" name="viewport"/>
+  <meta content="#000000" data-rh="true" name="theme-color"/>
+  <meta content="Medium" data-rh="true" name="twitter:app:name:iphone"/>
+  <meta content="828256236" data-rh="true" name="twitter:app:id:iphone"/>
+  <meta content="Medium" data-rh="true" property="al:ios:app_name"/>
+  <meta content="828256236" data-rh="true" property="al:ios:app_store_id"/>
+  <meta content="com.medium.reader" data-rh="true" property="al:android:package"/>
+  <meta content="542599432471018" data-rh="true" property="fb:app_id"/>
+  <meta content="Medium" data-rh="true" property="og:site_name"/>
+  <meta content="article" data-rh="true" property="og:type"/>
+  <meta content="2019-08-28T21:12:40.615Z" data-rh="true" property="article:published_time"/>
+  <meta content="The Lever Tech Stack - Lever Engineering" data-rh="true" name="title"/>
+  <meta content="The Lever Tech Stack" data-rh="true" property="og:title"/>
+  <meta content="The Lever Tech Stack" data-rh="true" property="twitter:title"/>
+  <meta content="@lever" data-rh="true" name="twitter:site"/>
+  <meta content="medium://p/1b30e27d2bb0" data-rh="true" name="twitter:app:url:iphone"/>
+  <meta content="medium://p/1b30e27d2bb0" data-rh="true" property="al:android:url"/>
+  <meta content="medium://p/1b30e27d2bb0" data-rh="true" property="al:ios:url"/>
+  <meta content="Medium" data-rh="true" property="al:android:app_name"/>
+  <meta content="Lever was founded in 2012 with the idea that we could drastically improve on the existing talent acquisition and hiring technology that existed. We wanted to bring user-centric design and a deep…" data-rh="true" name="description"/>
+  <meta content="Lever was founded in 2012 with the idea that we could drastically improve on the existing talent acquisition and hiring technology that…" data-rh="true" property="og:description"/>
+  <meta content="Lever was founded in 2012 with the idea that we could drastically improve on the existing talent acquisition and hiring technology that…" data-rh="true" property="twitter:description"/>
+  <meta content="https://fulcrum.lever.co/the-lever-tech-stack-1b30e27d2bb0" data-rh="true" property="og:url"/>
+  <meta content="https://fulcrum.lever.co/the-lever-tech-stack-1b30e27d2bb0" data-rh="true" property="al:web:url"/>
+  <meta content="https://miro.medium.com/max/900/1*zCeGwV0SntUi-Zm1v47MoQ.png" data-rh="true" property="og:image"/>
+  <meta content="https://miro.medium.com/max/900/1*zCeGwV0SntUi-Zm1v47MoQ.png" data-rh="true" name="twitter:image:src"/>
+  <meta content="summary_large_image" data-rh="true" name="twitter:card"/>
+  <meta content="https://fulcrum.lever.co/@ericyhwang" data-rh="true" property="article:author"/>
+  <meta content="Eric Hwang" data-rh="true" name="author"/>
+  <meta content="index,follow" data-rh="true" name="robots"/>
+  <meta content="unsafe-url" data-rh="true" name="referrer"/>
+  <meta data-rh="true" name="twitter:label1" value="Reading time"/>
+  <meta data-rh="true" name="twitter:data1" value="8 min read"/>
+  <meta content="1b30e27d2bb0" data-rh="true" name="parsely-post-id"/>
+  <link data-rh="true" href="/osd.xml" rel="search" title="Medium" type="application/opensearchdescription+xml"/>
+  <link data-rh="true" href="https://cdn-images-1.medium.com/fit/c/152/152/1*8I-HPL0bfoIzGied-dzOvA.png" rel="apple-touch-icon" sizes="152x152"/>
+  <link data-rh="true" href="https://cdn-images-1.medium.com/fit/c/120/120/1*8I-HPL0bfoIzGied-dzOvA.png" rel="apple-touch-icon" sizes="120x120"/>
+  <link data-rh="true" href="https://cdn-images-1.medium.com/fit/c/76/76/1*8I-HPL0bfoIzGied-dzOvA.png" rel="apple-touch-icon" sizes="76x76"/>
+  <link data-rh="true" href="https://cdn-images-1.medium.com/fit/c/60/60/1*8I-HPL0bfoIzGied-dzOvA.png" rel="apple-touch-icon" sizes="60x60"/>
+  <link color="#171717" data-rh="true" href="https://cdn-static-1.medium.com/_/fp/icons/monogram-mask.KPLCSFEZviQN0jQ7veN2RQ.svg" rel="mask-icon"/>
+  <link data-rh="true" href="https://cdn-static-1.medium.com/_/fp/icons/favicon-rebrand-medium.3Y6xpZ-0FSdWDnPM3hSBIA.ico" rel="icon"/>
+  <link data-rh="true" href="https://glyph.medium.com/css/e/sr/latin/e/ssr/latin/e/ssb/latin/m2.css" id="glyph_link" rel="stylesheet" type="text/css"/>
+  <link data-rh="true" href="https://fulcrum.lever.co/@ericyhwang" rel="author"/>
+  <link data-rh="true" href="https://fulcrum.lever.co/the-lever-tech-stack-1b30e27d2bb0" rel="canonical"/>
+  <link data-rh="true" href="android-app://com.medium.reader/https/medium.com/p/1b30e27d2bb0" rel="alternate"/>
+  <script data-rh="true" type="application/ld+json">
+   {"@context":"http:\u002F\u002Fschema.org","@type":"NewsArticle","image":["https:\u002F\u002Fmiro.medium.com\u002Fmax\u002F1200\u002F1*zCeGwV0SntUi-Zm1v47MoQ.png"],"url":"https:\u002F\u002Ffulcrum.lever.co\u002Fthe-lever-tech-stack-1b30e27d2bb0","dateCreated":"2018-05-08T21:22:34.076Z","datePublished":"2018-05-08T21:22:34.076Z","dateModified":"2019-08-28T21:12:41.054Z","headline":"The Lever Tech Stack","name":"The Lever Tech Stack","description":"Lever was founded in 2012 with the idea that we could drastically improve on the existing talent acquisition and hiring technology that existed. We wanted to bring user-centric design and a deep…","identifier":"1b30e27d2bb0","keywords":["Lite:true","Tag:JavaScript","Tag:Tech Stack","Tag:Startup","Tag:Nodejs","Tag:Mongodb","Publication:levers-fulcrum","Elevated:false","LockedPostSource:LOCKED_POST_SOURCE_NONE","LayerCake:0"],"author":{"@type":"Person","name":"Eric Hwang","url":"https:\u002F\u002Ffulcrum.lever.co\u002F@ericyhwang"},"creator":["Eric Hwang"],"publisher":{"@type":"Organization","name":"Lever Engineering","url":"fulcrum.lever.co","logo":{"@type":"ImageObject","width":308,"height":60,"url":"https:\u002F\u002Fmiro.medium.com\u002Fmax\u002F616\u002F1*OMF3fSqH8t4xBJ9-6oZDZw.png"}},"mainEntityOfPage":"https:\u002F\u002Ffulcrum.lever.co\u002Fthe-lever-tech-stack-1b30e27d2bb0"}
+  </script>
+  <script data-rh="true">
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-24232453-2', 'auto');
+ga('send', 'pageview');
+  </script>
+  <link as="script" href="https://cdn.optimizely.com/js/16180790160.js" rel="preload"/>
+  <style data-fela-rehydration="448" data-fela-type="STATIC" type="text/css">
+   html{box-sizing:border-box}*, *:before, *:after{box-sizing:inherit}body{margin:0;padding:0;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;color:rgba(0,0,0,0.8);position:relative;min-height:100vh}h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, menu, figure, blockquote, p, pre, form{margin:0}menu, ol, ul{padding:0;list-style:none;list-style-image:none}main{display:block}a{color:inherit;text-decoration:none}a, button, input{-webkit-tap-highlight-color:transparent}img, svg{vertical-align:middle}button{background:transparent;overflow:visible}button, input, optgroup, select, textarea{margin:0}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="KEYFRAME" type="text/css">
+   @-webkit-keyframes k1{0%{transform:scale(1);opacity:1}70%{transform:scale(1.4);opacity:0}100%{opacity:0}}@-moz-keyframes k1{0%{transform:scale(1);opacity:1}70%{transform:scale(1.4);opacity:0}100%{opacity:0}}@keyframes k1{0%{transform:scale(1);opacity:1}70%{transform:scale(1.4);opacity:0}100%{opacity:0}}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" type="text/css">
+   .a{font-family:medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif}.b{font-weight:400}.c{background-color:rgba(255, 255, 255, 1)}.l{height:100vh}.m{width:100vw}.n{display:flex}.o{align-items:center}.p{justify-content:center}.q{fill:rgba(0, 0, 0, 0.84)}.r{display:block}.s{position:fixed}.t{top:0}.u{left:0}.v{right:0}.w{z-index:500}.x{box-shadow:0 4px 12px 0 rgba(0, 0, 0, 0.05)}.ai{max-width:1192px}.aj{min-width:0}.ak{width:100%}.al{height:65px}.ao{flex:1 0 auto}.ap{border-left:1px solid rgba(0, 0, 0, 0.2)}.aq{margin-left:15px}.ar{margin-right:14px}.as{height:24px}.at{width:1px}.au{font-family:medium-content-sans-serif-font, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Arial, sans-serif}.av{font-weight:600}.aw{font-size:28px}.ax{line-height:36px}.ay{overflow:hidden}.az{max-height:36px}.ba{text-overflow:ellipsis}.bb{display:-webkit-box}.bc{-webkit-line-clamp:1}.bd{-webkit-box-orient:vertical}.be{color:rgba(0, 0, 0, 0.9)}.bf{flex:0 0 auto}.bg{visibility:hidden}.bh{margin-left:16px}.bi{font-style:normal}.bj{line-height:20px}.bk{font-size:15.8px}.bl{letter-spacing:0px}.bm{color:rgba(0, 0, 0, 0.54)}.bn{fill:rgba(0, 0, 0, 0.54)}.bo{color:rgba(113, 114, 115, 1)}.bp{fill:rgba(131, 133, 135, 1)}.bq{font-size:inherit}.br{border:inherit}.bs{font-family:inherit}.bt{letter-spacing:inherit}.bu{font-weight:inherit}.bv{padding:0}.bw{margin:0}.bx:hover{cursor:pointer}.by:hover{color:rgba(103, 104, 106, 1)}.bz:hover{fill:rgba(113, 114, 115, 1)}.ca:focus{outline:none}.cb:disabled{cursor:default}.cc:disabled{color:rgba(3, 168, 124, 0.5)}.cd:disabled{fill:rgba(3, 168, 124, 0.5)}.ce{padding:8px 16px}.cf{background:0}.cg{border-color:rgba(131, 133, 135, 1)}.ch:hover{border-color:rgba(113, 114, 115, 1)}.ci{border-radius:4px}.cj{border-width:1px}.ck{border-style:solid}.cl{box-sizing:border-box}.cm{display:inline-block}.cn{text-decoration:none}.co{border-top:1px solid rgba(0, 0, 0, 0.1)}.cp{display:none}.cr{height:54px}.cs{margin-right:40px}.ct{font-size:22px}.cu{line-height:28px}.cv{max-height:28px}.cw{color:rgba(0, 0, 0, 0.84)}.cx{overflow:auto}.cy{flex:0 1 auto}.cz{list-style-type:none}.da{line-height:40px}.db{white-space:nowrap}.dc{overflow-x:auto}.dd{align-items:flex-start}.de{margin-top:20px}.df{padding-top:20px}.dg{height:80px}.dh{margin-bottom:0px}.dk{padding-left:24px}.dl{padding-right:24px}.dm{margin-left:auto}.dn{margin-right:auto}.do{max-width:728px}.dp{flex-direction:column}.dq{position:absolute}.dr{top:calc(100vh + 100px)}.ds{bottom:calc(100vh + 100px)}.dt{width:10px}.du{pointer-events:none}.dv{word-break:break-word}.dw{word-wrap:break-word}.dx:after{display:block}.dy:after{content:""}.dz:after{clear:both}.ea{max-width:680px}.eb{line-height:1.23}.ec{letter-spacing:0}.ed{font-family:medium-content-title-font, Georgia, Cambria, "Times New Roman", Times, serif}.eo{margin-bottom:-0.27em}.eu{margin-top:32px}.ev{justify-content:space-between}.ez{border-radius:50%}.fa{height:48px}.fb{width:48px}.fc{margin-left:12px}.fd{margin-bottom:2px}.ff{font-weight:300}.fg{font-size:16px}.fh{max-height:20px}.fi{color:inherit}.fj{fill:inherit}.fk:hover{text-decoration:underline}.fl:disabled{color:rgba(0, 0, 0, 0.54)}.fm:disabled{fill:rgba(0, 0, 0, 0.54)}.fn{margin-left:8px}.fo{padding:0px 8px}.fp{border-color:rgba(0, 0, 0, 0.54)}.fq:hover{color:rgba(0, 0, 0, 0.97)}.fr:hover{fill:rgba(0, 0, 0, 0.97)}.fs:hover{border-color:rgba(0, 0, 0, 0.84)}.ft:disabled{fill:rgba(0, 0, 0, 0.76)}.fu:disabled{border-color:rgba(0, 0, 0, 0.2)}.fv:disabled{cursor:inherit}.fw:disabled:hover{color:rgba(0, 0, 0, 0.54)}.fx:disabled:hover{fill:rgba(0, 0, 0, 0.76)}.fy:disabled:hover{border-color:rgba(0, 0, 0, 0.2)}.fz{line-height:18px}.ga{font-size:15px}.gb{align-items:flex-end}.gj{padding-right:8px}.gk:hover{color:rgba(0, 0, 0, 0.9)}.gl:hover{fill:rgba(0, 0, 0, 0.9)}.gm{margin-right:-6px}.gn{line-height:1.58}.go{letter-spacing:-0.004em}.gp{font-family:medium-content-serif-font, Georgia, Cambria, "Times New Roman", Times, serif}.ha{margin-bottom:-0.46em}.hb{line-height:1.12}.hc{letter-spacing:-0.022em}.hl{margin-bottom:-0.28em}.hr{font-weight:700}.hs{list-style-type:decimal}.ht{margin-left:30px}.hu{padding-left:0px}.hv{background-repeat:repeat-x}.hw{background-image:linear-gradient(to right,rgba(0, 0, 0, 0.84) 100%,rgba(0, 0, 0, 0.84) 0);background-image:url('data:image/svg+xml;utf8,<svg preserveAspectRatio="none" viewBox="0 0 1 1" xmlns="http://www.w3.org/2000/svg"><line x1="0" y1="0" x2="1" y2="1" stroke="rgba(0, 0, 0, 0.84)" /></svg>')}.hx{background-size:1px 1px}.hy{background-position:0 1.05em;background-position:0 calc(1em + 1px)}.ie{clear:both}.is{flex-direction:row}.it{margin-top:0px}.iu{width:50%}.iv{margin-right:10px}.iw{padding-top:5px}.ix{padding-bottom:5px}.iy:last-of-type{margin-right:0}.iz{transition:transform 300ms cubic-bezier(0.2, 0, 0.2, 1)}.ja{cursor:zoom-in}.jb{position:relative}.jc{z-index:auto}.jd{opacity:0}.je{transition:opacity 100ms 400ms}.jf{height:100%}.jg{will-change:transform}.jh{transform:translateZ(0)}.ji{margin:auto}.jj{background-color:rgba(0, 0, 0, 0.05)}.jk{padding-bottom:58.92857142857142%}.jl{filter:blur(20px)}.jm{transform:scale(1.1)}.jn{visibility:visible}.jo{background:rgba(255, 255, 255, 1)}.jp{line-height:1.4}.jq{margin-top:10px}.jr{text-align:center}.ju{width:200%}.jv{left:calc(0% - 8px)}.jw{transform:translateX(-50%)}.jx{max-width:1120px}.jy{max-width:900px}.jz{padding-bottom:83.33333333333334%}.ka{max-width:720px}.kb{padding-bottom:90.27777777777777%}.kc{box-shadow:inset 3px 0 0 0 rgba(0, 0, 0, 0.84)}.kd{padding-left:23px}.ke{margin-left:-20px}.kf{font-style:italic}.kg{list-style-type:disc}.kh{line-height:1.18}.ks{margin-bottom:-0.31em}.kt{padding:2px 4px}.ku{font-size:75%}.kv> strong{font-family:inherit}.kw{font-family:Menlo, Monaco, "Courier New", Courier, monospace}.kx{font-family:medium-content-slab-serif-font, Georgia, Cambria, "Times New Roman", Times, serif}.ky{border:none}.kz{margin-top:30px}.la:before{content:"..."}.lb:before{letter-spacing:0.6em}.lc:before{text-indent:0.6em}.ld:before{font-style:italic}.le:before{line-height:1.4}.lk{will-change:opacity}.ll{width:188px}.lm{left:50%}.ln{transform:translateX(406px)}.lo{top:calc(65px + 54px + 14px)}.lr{top:calc(65px + 54px + 40px)}.lt{width:131px}.lu{padding-bottom:28px}.lv{border-bottom:1px solid rgba(0, 0, 0, 0.1)}.lw{font-size:18px}.lx{padding-bottom:20px}.ly{padding-top:2px}.lz{max-height:120px}.ma{-webkit-line-clamp:6}.mb{padding:4px 12px}.mc{padding-top:28px}.md{margin-bottom:19px}.me{margin-left:-5px}.mf{margin-right:5px}.mg{outline:0}.mh{border:0}.mi{user-select:none}.mj{cursor:pointer}.mk> svg{pointer-events:none}.ml:active{border-style:none}.mm{-webkit-user-select:none}.mn:focus{fill:rgba(113, 114, 115, 1)}.mo{margin-top:5px}.mp button{text-align:left}.mq{margin-top:40px}.mr{flex-wrap:wrap}.ms{margin-top:25px}.mt{margin-right:8px}.mu{margin-bottom:8px}.mv{border-radius:3px}.mw{padding:5px 10px}.mx{background:rgba(0, 0, 0, 0.05)}.my{line-height:22px}.mz{margin-top:15px}.na{margin-right:16px}.nb{border:1px solid rgba(0, 0, 0, 0.1)}.nc{height:60px}.nd{width:60px}.nq:active{border-style:solid}.nr{z-index:2}.nt{padding-top:32px}.nu{margin-bottom:25px}.nv{margin-bottom:32px}.nw{min-height:80px}.ob{width:80px}.oc{padding-left:102px}.oe{text-transform:uppercase}.of{letter-spacing:0.05em}.og{margin-bottom:6px}.oh{max-width:555px}.oi{max-width:450px}.oj{line-height:24px}.ol{max-width:550px}.om{padding-top:25px}.on{color:rgba(0, 0, 0, 0.76)}.oo{opacity:1}.op{padding:20px}.oq{border:1px solid rgba(131, 133, 135, 1)}.or{margin-top:64px}.os{background-color:rgba(0, 0, 0, 0.02)}.ot{padding:60px 0}.ou{background-color:rgba(0, 0, 0, 0.9)}.pl{padding-bottom:48px}.pm{border-bottom:1px solid rgba(255, 255, 255, 0.54)}.pn{margin:0 -12px}.po{margin:0 12px}.pp{flex:1 1 0}.pq{padding-bottom:12px}.pr:hover{color:rgba(255, 255, 255, 0.99)}.ps:hover{fill:rgba(255, 255, 255, 0.99)}.pt:disabled{color:rgba(255, 255, 255, 0.7)}.pu:disabled{fill:rgba(255, 255, 255, 0.7)}.pv{color:rgba(255, 255, 255, 0.98)}.pw{fill:rgba(255, 255, 255, 0.98)}.px{text-align:inherit}.py{font-size:21.6px}.pz{letter-spacing:-0.32px}.qa{color:rgba(255, 255, 255, 0.7)}.qb{fill:rgba(255, 255, 255, 0.7)}.qc{text-decoration:underline}.qd{padding-bottom:8px}.qe{padding-top:8px}.qf{width:200px}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (min-width: 1080px)" type="text/css">
+   .d{display:none}.ah{margin:0 64px}.em{font-size:40px}.en{margin-top:0.78em}.et{line-height:48px}.gi{margin-left:30px}.gy{font-size:21px}.gz{margin-top:2em}.hj{font-size:34px}.hk{margin-top:1.95em}.hq{margin-top:0.86em}.id{margin-top:1.05em}.im{max-width:1192px}.ir{margin-top:56px}.kq{font-size:26px}.kr{margin-top:1.72em}.lj{margin-top:1.25em}.pi{padding-left:64px}.pj{padding-right:64px}.pk{max-width:1320px}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (max-width: 1079.98px)" type="text/css">
+   .e{display:none}.gh{margin-left:30px}.js{margin-left:auto}.jt{text-align:center}.pf{padding-left:64px}.pg{padding-right:64px}.ph{max-width:1080px}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (max-width: 903.98px)" type="text/css">
+   .f{display:none}.gg{margin-left:30px}.pc{padding-left:48px}.pd{padding-right:48px}.pe{max-width:904px}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (max-width: 727.98px)" type="text/css">
+   .g{display:none}.am{height:56px}.an{display:flex}.cq{display:block}.di{margin-bottom:0px}.dj{height:110px}.ex{margin-top:32px}.ey{flex-direction:column-reverse}.ge{margin-bottom:30px}.gf{margin-left:0px}.nx{margin-bottom:24px}.ny{align-items:center}.nz{width:102px}.oa{position:relative}.od{padding-left:0}.ok{margin-top:24px}.ov{padding:32px 0}.oz{padding-left:24px}.pa{padding-right:24px}.pb{max-width:728px}.qg{width:140px}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (max-width: 551.98px)" type="text/css">
+   .h{display:none}.ac{margin:0 24px}.ee{font-size:30px}.ef{margin-top:0.72em}.ep{line-height:40px}.ew{margin-top:32px}.fe{margin-bottom:0px}.gc{margin-bottom:30px}.gd{margin-left:0px}.gq{font-size:18px}.gr{margin-top:1.56em}.hd{margin-top:1.2em}.hm{margin-top:0.67em}.hz{margin-top:1.34em}.if{margin:0}.ig{max-width:100%}.in{margin-top:40px}.ki{font-size:24px}.kj{margin-top:1.23em}.lf{margin-top:0.93em}.ow{padding-left:24px}.ox{padding-right:24px}.oy{max-width:552px}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (min-width: 904px) and (max-width: 1079.98px)" type="text/css">
+   .i{display:none}.ag{margin:0 64px}.ek{font-size:40px}.el{margin-top:0.78em}.es{line-height:48px}.gw{font-size:21px}.gx{margin-top:2em}.hh{font-size:34px}.hi{margin-top:1.95em}.hp{margin-top:0.86em}.ic{margin-top:1.05em}.il{max-width:1192px}.iq{margin-top:56px}.ko{font-size:26px}.kp{margin-top:1.72em}.li{margin-top:1.25em}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (min-width: 728px) and (max-width: 903.98px)" type="text/css">
+   .j{display:none}.af{margin:0 48px}.ei{font-size:40px}.ej{margin-top:0.78em}.er{line-height:48px}.gu{font-size:21px}.gv{margin-top:2em}.hf{font-size:34px}.hg{margin-top:1.95em}.ho{margin-top:0.86em}.ib{margin-top:1.05em}.ij{margin:0}.ik{max-width:100%}.ip{margin-top:56px}.km{font-size:26px}.kn{margin-top:1.72em}.lh{margin-top:1.25em}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (min-width: 552px) and (max-width: 727.98px)" type="text/css">
+   .k{display:none}.ae{margin:0 24px}.eg{font-size:30px}.eh{margin-top:0.72em}.eq{line-height:40px}.gs{font-size:18px}.gt{margin-top:1.56em}.he{margin-top:1.2em}.hn{margin-top:0.67em}.ia{margin-top:1.34em}.ih{margin:0}.ii{max-width:100%}.io{margin-top:40px}.kk{font-size:24px}.kl{margin-top:1.23em}.lg{margin-top:0.93em}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="print" type="text/css">
+   .ab{display:none}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="(prefers-reduced-motion: no-preference)" type="text/css">
+   .y{transition:transform 300ms ease}.z{will-change:transform}.lp{transition:opacity 200ms}.ne{transition:border-color 150ms ease}.nf::before{background:
+      radial-gradient(circle, rgba(113, 114, 115, 1) 60%, transparent 70%)
+    }.ng::before{border-radius:50%}.nh::before{content:""}.ni::before{display:block}.nj::before{z-index:0}.nk::before{left:0}.nl::before{height:100%}.nm::before{position:absolute}.nn::before{top:0}.no::before{width:100%}.np:hover::before{animation:k1 2000ms infinite cubic-bezier(.1,.12,.25,1)}.ns{transition:fill 200ms ease}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (max-width: 1230px)" type="text/css">
+   .lq{display:none}
+  </style>
+  <style data-fela-rehydration="448" data-fela-type="RULE" media="all and (max-width: 1198px)" type="text/css">
+   .ls{display:none}
+  </style>
+ </head>
+ <body>
+  <div id="root">
+   <div class="a b c">
+    <div class="d e f g h i j k">
+    </div>
+    <script>
+     document.domain = document.domain;
+    </script>
+    <script>
+     window.PARSELY = window.PARSELY || {autotrack: false}
+    </script>
+    <nav class="r s t u v c w x y z ab">
+     <div class="branch-journeys-top">
+      <div class="r c">
+       <div class="n p">
+        <div class="ac ae af ag ah ai aj ak">
+         <div class="al n o am an">
+          <div class="n o ao w">
+           <a aria-label="Homepage" href="https://medium.com/?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+            <svg class="q" height="35" viewbox="5 5 35 35" width="35">
+             <path d="M5 40V5h35v35H5zm8.56-12.63c0 .56-.03.69-.32 1.03L10.8 31.4v.4h6.97v-.4L15.3 28.4c-.29-.34-.34-.5-.34-1.03v-8.95l6.13 13.36h.71l5.26-13.36v10.64c0 .3 0 .35-.19.53l-1.85 1.8v.4h9.2v-.4l-1.83-1.8c-.18-.18-.2-.24-.2-.53V15.94c0-.3.02-.35.2-.53l1.82-1.8v-.4h-6.47l-4.62 11.55-5.2-11.54h-6.8v.4l2.15 2.63c.24.3.29.37.29.77v10.35z">
+             </path>
+            </svg>
+           </a>
+           <div class="ap aq ar as at r g">
+           </div>
+           <div class="r g">
+            <a href="https://fulcrum.lever.co/?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+             <span class="au av aw ax ay az ba bb bc bd be">
+              Lever Engineering
+             </span>
+            </a>
+           </div>
+          </div>
+          <div class="r bf w">
+           <div class="n o">
+            <div class="n g">
+             <div class="bg" id="lo-post-page-navbar-sign-in-link">
+              <div class="bh r">
+               <span class="au b bi bj bk bl r bm bn">
+                <a class="bo bp bq br bs bt bu bv bw bx by bz ca cb cc cd" href="https://medium.com/m/signin?operation=login&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=post_page-----1b30e27d2bb0---------------------nav_reg-" rel="noopener">
+                 Sign in
+                </a>
+               </span>
+              </div>
+             </div>
+            </div>
+            <div class="bg" id="lo-post-page-navbar-get-started-button">
+             <div class="bh r">
+              <a class="ce cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=post_page-----1b30e27d2bb0---------------------nav_reg-" rel="noopener">
+               Get started
+              </a>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="co cp c cq">
+       <div class="n p">
+        <div class="ac ae af ag ah ai aj ak">
+         <div class="cr ay n o">
+          <div class="cs r bf">
+           <a href="https://fulcrum.lever.co/?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+            <span class="au av ct cu ay cv ba bb bc bd cw">
+             Lever Engineering
+            </span>
+           </a>
+          </div>
+          <div class="cx r cy">
+           <ul class="cz bw da db dc n dd g de df dg">
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </nav>
+    <div class="dh al r di dj">
+    </div>
+    <article>
+     <section class="dk dl dm dn ak do cl n dp">
+     </section>
+     <span class="r">
+     </span>
+     <div>
+      <div class="dq u dr ds dt du">
+      </div>
+      <section class="dv dw dx dy dz">
+       <div class="n p">
+        <div class="ac ae af ag ah ea aj ak">
+         <div>
+          <div class="eb ec cw bi ed b ee ef eg eh ei ej ek el em en eo" id="9371">
+           <h1 class="ed b ee ep eg eq ei er ek es em et cw">
+            The Lever Tech Stack
+           </h1>
+          </div>
+          <div class="eu">
+           <div class="n ev ew ex ey">
+            <div class="o n">
+             <div>
+              <a href="/@ericyhwang?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+               <img alt="Eric Hwang" class="r ez fa fb" height="48" src="https://miro.medium.com/fit/c/96/96/1*mRlXT_Jqy1m0_YlNhOuoqg.jpeg" width="48"/>
+              </a>
+             </div>
+             <div class="fc ak r">
+              <div class="n">
+               <div style="flex:1">
+                <span class="au b bi bj bk bl r cw q">
+                 <div class="fd n o fe">
+                  <span class="au ff fg bj ay fh ba bb bc bd cw">
+                   <a class="fi fj bq br bs bt bu bv bw bx fk ca cb fl fm" href="/@ericyhwang?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+                    Eric Hwang
+                   </a>
+                  </span>
+                  <div class="fn r bf h">
+                   <a class="fo cw q cf fp fq fr fs bx fl ft fu fv fw fx fy ci au b bi fz ga bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=-bf0bc1c4d3a1-------------------------follow_byline-" rel="noopener">
+                    Follow
+                   </a>
+                  </div>
+                 </div>
+                </span>
+               </div>
+              </div>
+              <span class="au b bi bj bk bl r bm bn">
+               <span class="au ff fg bj ay fh ba bb bc bd bm">
+                <div>
+                 <a class="fi fj bq br bs bt bu bv bw bx fk ca cb fl fm" href="/the-lever-tech-stack-1b30e27d2bb0?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+                  May 8, 2018
+                 </a>
+                 <!-- -->
+                 ·
+                 <!-- -->
+                 <!-- -->
+                 8
+                 <!-- -->
+                 min read
+                </div>
+               </span>
+              </span>
+             </div>
+            </div>
+            <div class="n gb gc gd ge gf gg gh gi ab">
+             <div class="n o">
+              <div class="gj r bf">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="//medium.com/p/1b30e27d2bb0/share/twitter?source=post_actions_header---------------------------" rel="noopener" target="_blank">
+                <svg class="q" height="29" width="29">
+                 <path d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z">
+                 </path>
+                </svg>
+               </a>
+              </div>
+              <div class="gj r bf">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="//medium.com/p/1b30e27d2bb0/share/facebook?source=post_actions_header---------------------------" rel="noopener" target="_blank">
+                <svg class="q" height="29" width="29">
+                 <path d="M23.2 5H5.8a.8.8 0 0 0-.8.8V23.2c0 .44.35.8.8.8h9.3v-7.13h-2.38V13.9h2.38v-2.38c0-2.45 1.55-3.66 3.74-3.66 1.05 0 1.95.08 2.2.11v2.57h-1.5c-1.2 0-1.48.57-1.48 1.4v1.96h2.97l-.6 2.97h-2.37l.05 7.12h5.1a.8.8 0 0 0 .79-.8V5.8a.8.8 0 0 0-.8-.79">
+                 </path>
+                </svg>
+               </a>
+              </div>
+              <div class="gm r ao">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=post_actions_header--------------------------bookmark_sidebar-" rel="noopener">
+                <svg height="25" viewbox="0 0 25 25" width="25">
+                 <path d="M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z" fill-rule="evenodd">
+                 </path>
+                </svg>
+               </a>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="7afa">
+          Lever was founded in 2012 with the idea that we could drastically improve on the existing talent acquisition and hiring technology that existed. We wanted to bring user-centric design and a deep product experience to the enterprise software space and help companies solve their most strategic problem: growing their teams.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="ec6d">
+          I joined Lever over 3 years ago as one of the earlier engineers on the team. Since then, Lever has grown a lot as a product and as a company. In this post, I’ll cover our tech stack, why we chose the technologies we did, and how they’ve grown with us.
+         </p>
+         <h1 class="hb hc cw bi au av ee hd eg he hf hg hh hi hj hk hl" id="ead6">
+          What is Lever?
+         </h1>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="21de">
+          Lever’s main service is an “Applicant Tracking System and CRM for candidates”. We help companies handle their hiring processes from end to end — posting jobs, accepting job applications, scheduling interviews and collecting feedback, sending out offers, and analyzing data from the whole process to get better at hiring.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="607c">
+          <strong class="gp hr">
+           The two main parts of Lever that people interact with are:
+          </strong>
+         </p>
+         <ol class="">
+          <li class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha hs ht hu" id="8843">
+           <strong class="gp hr">
+            Lever Postings
+           </strong>
+           is the public-facing job site system, which shows job postings and accepts job applications. For example, Lever’s own job site is
+           <a class="fi cn hv hw hx hy" href="https://jobs.lever.co/lever" rel="noopener" target="_blank">
+            jobs.lever.co/lever
+           </a>
+           . Companies can also create their own custom job sites using our
+           <a class="fi cn hv hw hx hy" href="https://github.com/lever/postings-api" rel="noopener" target="_blank">
+            API
+           </a>
+           .
+          </li>
+          <li class="gn go cw bi gp b gq hz gs ia gu ib gw ic gy id ha hs ht hu" id="6c72">
+           <a class="fi cn hv hw hx hy" href="http://www.lever.co/hire" rel="noopener" target="_blank">
+            <strong class="gp hr">
+             Lever Hire
+            </strong>
+           </a>
+           is the company-facing app for managing the hiring process. Recruiter, hiring manager, interviewers, and execs all use Lever Hire. If you’re curious what this looks like, see the following animations:
+          </li>
+         </ol>
+        </div>
+       </div>
+       <div class="ie">
+        <div class="n p">
+         <div class="if ig ih ii ij ik ag il ah im aj ak">
+          <div class="in io ip iq ir n is">
+           <figure class="it ie iu iv iw ix iy paragraph-image">
+            <div class="iz ja jb jc ak">
+             <div class="ji r jb jj">
+              <div class="jk r">
+               <div class="jd je dq t u jf ak ay jg jh">
+                <img class="dq t u jf ak jl jm jn" height="660" role="presentation" src="https://miro.medium.com/freeze/max/60/1*zzPxR-Edb_IurIY14VjMDw.gif?q=20" width="1120"/>
+               </div>
+               <img class="jd je dq t u jf ak jo" height="660" role="presentation" width="1120"/>
+               <noscript>
+                <img class="dq t u jf ak" height="660" role="presentation" src="https://miro.medium.com/max/2240/1*zzPxR-Edb_IurIY14VjMDw.gif" width="1120"/>
+               </noscript>
+              </div>
+             </div>
+            </div>
+           </figure>
+           <figure class="it ie iu iv iw ix iy paragraph-image">
+            <div class="iz ja jb jc ak">
+             <div class="ji r jb jj">
+              <div class="jk r">
+               <div class="jd je dq t u jf ak ay jg jh">
+                <img class="dq t u jf ak jl jm jn" height="660" role="presentation" src="https://miro.medium.com/freeze/max/60/1*ib5Beu8W7rSs7XV4MJ7opg.gif?q=20" width="1120"/>
+               </div>
+               <img class="jd je dq t u jf ak jo" height="660" role="presentation" width="1120"/>
+               <noscript>
+                <img class="dq t u jf ak" height="660" role="presentation" src="https://miro.medium.com/max/2240/1*ib5Beu8W7rSs7XV4MJ7opg.gif" width="1120"/>
+               </noscript>
+              </div>
+             </div>
+            </div>
+            <figcaption class="bm fg jp jq jr do dm dn js jt au ff ju jb jv jw">
+             On the left, the Lever Chrome Extension for sourcing candidates. On the right, the interview scheduling workflow.
+            </figcaption>
+           </figure>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="n p">
+        <div class="ac ae af ag ah ea aj ak">
+         <figure class="in io ip iq ir ie dm dn paragraph-image">
+          <div class="iz ja jb jc ak">
+           <div class="dm dn jx">
+            <div class="ji r jb jj">
+             <div class="jk r">
+              <div class="jd je dq t u jf ak ay jg jh">
+               <img class="dq t u jf ak jl jm jn" height="660" role="presentation" src="https://miro.medium.com/freeze/max/60/1*3clh9nQobQXmjZFUkyjuUA.gif?q=20" width="1120"/>
+              </div>
+              <img class="jd je dq t u jf ak jo" height="660" role="presentation" width="1120"/>
+              <noscript>
+               <img class="dq t u jf ak" height="660" role="presentation" src="https://miro.medium.com/max/2240/1*3clh9nQobQXmjZFUkyjuUA.gif" width="1120"/>
+              </noscript>
+             </div>
+            </div>
+           </div>
+          </div>
+          <figcaption class="bm fg jp jq jr do dm dn js jt au ff">
+           An example report in Lever on hiring data for a job posting.
+          </figcaption>
+         </figure>
+         <h1 class="hb hc cw bi au av ee hd eg he hf hg hh hi hj hk hl" id="4b08">
+          How does Lever work?
+         </h1>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="f5bd">
+          We pride ourselves on making software that promotes hiring as a collaborative and inclusive process and that is a joy to use. We picked a tech stack that helps us build collaborative and fast features.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="f640">
+          Let’s start with a diagram (of course):
+         </p>
+         <figure class="in io ip iq ir ie dm dn paragraph-image">
+          <div class="iz ja jb jc ak">
+           <div class="dm dn jy">
+            <div class="ji r jb jj">
+             <div class="jz r">
+              <div class="jd je dq t u jf ak ay jg jh">
+               <img class="dq t u jf ak jl jm jn" height="750" role="presentation" src="https://miro.medium.com/max/60/1*zCeGwV0SntUi-Zm1v47MoQ.png?q=20" width="900"/>
+              </div>
+              <img class="jd je dq t u jf ak jo" height="750" role="presentation" width="900"/>
+              <noscript>
+               <img class="dq t u jf ak" height="750" role="presentation" src="https://miro.medium.com/max/1800/1*zCeGwV0SntUi-Zm1v47MoQ.png" width="900"/>
+              </noscript>
+             </div>
+            </div>
+           </div>
+          </div>
+          <figcaption class="bm fg jp jq jr do dm dn js jt au ff">
+           Diagram showing part of Lever’s service architecture
+          </figcaption>
+         </figure>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="09f3">
+          For the most part, our stack doesn’t look too unusual for a cloud-hosted application — browser clients, various frontend and backend servers, and databases.
+         </p>
+         <h1 class="hb hc cw bi au av ee hd eg he hf hg hh hi hj hk hl" id="20d1">
+          The short version
+         </h1>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="6002">
+          Some of the major technologies you’ll find in our stack are: Node.js, Docker, MongoDB, Redis, and Elasticsearch. I’ll cover these later.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="9d24">
+          Lever is fully hosted on
+          <a class="fi cn hv hw hx hy" href="https://aws.amazon.com/" rel="noopener" target="_blank">
+           AWS
+          </a>
+          for cloud hosting. Some of the infrastructure technologies we use to help us manage our stack include Terraform, Chef, Amazon ECS (similar to Kubernetes), Hubot, and Grafana. An infrastructure engineer will cover these in a later post.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="08b2">
+          There’s one thing in the diagram that I haven’t mentioned yet. What’s up with the red horse icon?
+         </p>
+         <h1 class="hb hc cw bi au av ee hd eg he hf hg hh hi hj hk hl" id="c28a">
+          DerbyJS and ShareDB — Real-time collaboration
+         </h1>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="6846">
+          Lever Hire is a single-page application with a few twists. It’s built on
+          <a class="fi cn hv hw hx hy" href="http://derbyjs.com/" rel="noopener" target="_blank">
+           DerbyJS
+          </a>
+          , a web application framework for building real-time collaborative web applications that work like Google Docs. Prior to Lever, real-time data syncing and collaborative edits were fairly rare in enterprise apps.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="609d">
+          DerbyJS was created by our CTO &amp; Co-Founder, Nate Smith, together with a few others after working on the Google Search team. In Derby, changes made to something by one user will near-instantaneously show up for all other connected users viewing that entity, without users having to refresh:
+         </p>
+         <figure class="in io ip iq ir ie dm dn paragraph-image">
+          <div class="iz ja jb jc ak">
+           <div class="dm dn ka">
+            <div class="ji r jb jj">
+             <div class="kb r">
+              <div class="jd je dq t u jf ak ay jg jh">
+               <img class="dq t u jf ak jl jm jn" height="650" role="presentation" src="https://miro.medium.com/max/60/0*NL8tkpwIdc0JMBrN.?q=20" width="720"/>
+              </div>
+              <img class="jd je dq t u jf ak jo" height="650" role="presentation" width="720"/>
+              <noscript>
+               <img class="dq t u jf ak" height="650" role="presentation" src="https://miro.medium.com/max/1440/0*NL8tkpwIdc0JMBrN." width="720"/>
+              </noscript>
+             </div>
+            </div>
+           </div>
+          </div>
+          <figcaption class="bm fg jp jq jr do dm dn js jt au ff">
+           Two separate browser windows opened to the same page. Changes in one window are immediately reflected in the other window.
+          </figcaption>
+         </figure>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="b38b">
+          Why create a new framework? From Nate:
+         </p>
+         <blockquote class="kc kd ke">
+          <p class="gn go cw kf gp b gq gr gs gt gu gv gw gx gy gz ha" id="c81a">
+           Working on the Google Search team illuminated the fact that server-side in addition to client-side rendering was important in delivering a performant web app.
+          </p>
+          <p class="gn go cw kf gp b gq gr gs gt gu gv gw gx gy gz ha" id="1bcc">
+           The single-page app trend sacrificed page load time substantially. Even in enterprise applications, page load time is important since the web is built around hyperlinks. Links among calendars, emails, task lists, and websites make cloud software even more useful and productive.
+          </p>
+          <p class="gn go cw kf gp b gq gr gs gt gu gv gw gx gy gz ha" id="280d">
+           I wanted to deliver fast page load time as well as fast interactive single page applications, in a way that could be developed by a small team.
+          </p>
+         </blockquote>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="e2c0">
+          To deliver fast page load times, Derby can render pages either as HTML on the server or using DOM methods in the browser client. This gives us the benefits of both server-side and client-side rendering:
+         </p>
+         <ul class="">
+          <li class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha kg ht hu" id="5aeb">
+           When a user first opens the app, the browser can quickly display a visually-complete page based on the server-rendered HTML without having to wait for a lot of JavaScript to load.
+          </li>
+          <li class="gn go cw bi gp b gq hz gs ia gu ib gw ic gy id ha kg ht hu" id="6585">
+           Subsequently navigating inside the app triggers client-side page renders in the browser, which are faster and feel smoother than reloading new HTML pages from the server.
+          </li>
+         </ul>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="cfa6">
+          This approach of server-side and client-side rendering has been called
+          <a class="fi cn hv hw hx hy" href="https://cdb.reacttraining.com/universal-javascript-4761051b7ae9" rel="noopener" target="_blank">
+           Universal JavaScript
+          </a>
+          or isomorphic rendering. Airbnb’s engineering blog has a
+          <a class="fi cn hv hw hx hy" href="https://medium.com/airbnb-engineering/isomorphic-javascript-the-future-of-web-apps-10882b7a2ebc" rel="noopener" target="_blank">
+           good post
+          </a>
+          that goes more into depth on the benefits of isomorphism. Fast first time rendering, fast client-side rendering, and use of the browser’s History API are key tenets of Google’s checklist for
+          <a class="fi cn hv hw hx hy" href="https://developers.google.com/web/progressive-web-apps/" rel="noopener" target="_blank">
+           Progressive Web Apps
+          </a>
+          .
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="3475">
+          The backend of Derby is
+          <a class="fi cn hv hw hx hy" href="https://github.com/share/sharedb" rel="noopener" target="_blank">
+           ShareDB
+          </a>
+          , a database layer that handles concurrent edits from multiple users by using an Operational Transform (OT) algorithm. It also synchronizes data in real-time between multiple clients and servers.
+         </p>
+         <h1 class="hb hc cw bi au av ee hd eg he hf hg hh hi hj hk hl" id="2924">
+          The rest of the stack
+         </h1>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="5aaf">
+          The rest of Lever’s stack should look more familiar. I’ll briefly cover those technologies and why we chose them.
+         </p>
+         <h2 class="kh hc cw bi au av ki kj kk kl km kn ko kp kq kr ks" id="247f">
+          <strong class="bu">
+           Node.js
+          </strong>
+         </h2>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="a8df">
+          <a class="fi cn hv hw hx hy" href="https://nodejs.org/" rel="noopener" target="_blank">
+           Node.js
+          </a>
+          lets us run JavaScript on our servers in addition to in the browser. As mentioned above, this lets Derby use the same code to render on the server and on the client.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="b04e">
+          There’s one other benefit to us from using JavaScript everywhere: For the operational transforms in ShareDB, you need to run the same algorithm on the client and server, and using the exact same code in both places is an easy way to ensure that.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="1873">
+          Currently, we actually write most of our internal code in
+          <a class="fi cn hv hw hx hy" href="https://coffeescript.org/" rel="noopener" target="_blank">
+           CoffeeScript
+          </a>
+          , which we compile into JavaScript. This means the team only needs to learn one language, and every product engineer at Lever can contribute to any part of the codebase.
+          <em class="kf">
+           [2019–08–28: We have started migrating our codebase to
+          </em>
+          <a class="fi cn hv hw hx hy" href="https://www.typescriptlang.org/" rel="noopener" target="_blank">
+           <em class="kf">
+            TypeScript
+           </em>
+          </a>
+          <em class="kf">
+           , which gets us static types on top of JavaScript. We’ll have a series of upcoming posts on the whys behind the switch and our migration process!]
+          </em>
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="269e">
+          JavaScript does have some problems for large enterprise software codebases, such as a lack of static types, which pushes more work onto the people writing and changing the code. If we were building Lever today, we’d probably use TypeScript or Flow, but they didn’t exist back then.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="82cd">
+          Instead, to help manage our growing JavaScript codebase, we’ve done things like consolidating business logic into a central library, with a consistent entity-method naming convention like
+          <code class="jj kt ku kv kw b">
+           User.addNew
+          </code>
+          for both function definitions and usages, to make them easy to find. We’re also working on implementing
+          <a class="fi cn hv hw hx hy" href="http://json-schema.org/" rel="noopener" target="_blank">
+           JSON schemas
+          </a>
+          for our data, which we can eventually add to our Mongo database.
+         </p>
+         <h2 class="kh hc cw bi au av ki kj kk kl km kn ko kp kq kr ks" id="12c8">
+          <strong class="bu">
+           Docker
+          </strong>
+         </h2>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="475e">
+          <a class="fi cn hv hw hx hy" href="https://www.docker.com/" rel="noopener" target="_blank">
+           Docker
+          </a>
+          runs our server processes in isolated containers. This lets us use Amazon’s Elastic Container Service (ECS) to easily scale up the number of containers that we run as our number of users grows. (We’ve
+          <a class="fi cn hv hw hx hy" href="/up-level-your-web-automation-using-selenium-grid-with-docker-c1cda248a4e3" rel="noopener" target="_blank">
+           previously covered
+          </a>
+          the scaling benefits of Docker for our browser testing infrastructure.)
+         </p>
+         <h2 class="kh hc cw bi au av ki kj kk kl km kn ko kp kq kr ks" id="9a63">
+          <strong class="bu">
+           MongoDB
+          </strong>
+         </h2>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="5c55">
+          <a class="fi cn hv hw hx hy" href="https://www.mongodb.com/" rel="noopener" target="_blank">
+           Mongo
+          </a>
+          is a “NoSQL” database that holds most of our application data.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="89c6">
+          Why pick Mongo over a relational database like MySQL or Postgres? I asked Nate about that:
+         </p>
+         <blockquote class="kc kd ke">
+          <p class="gn go cw kf gp b gq gr gs gt gu gv gw gx gy gz ha" id="b953">
+           Mongo is a pretty good datastore for the [ShareDB] data model. [It supports] documents of potentially large size, and the tooling is all based around documents of arbitrary nature.
+          </p>
+          <p class="gn go cw kf gp b gq gr gs gt gu gv gw gx gy gz ha" id="a5ac">
+           The easiest way to implement OT was to do a generalized JSON implementation. You could have more specific types, but that’s more difficult. It’s also pretty good at storing operation logs for OT. It’s good at write speed when you don’t have a ton of indexes.
+          </p>
+          <p class="gn go cw kf gp b gq gr gs gt gu gv gw gx gy gz ha" id="d73e">
+           There were downsides, like not having joins or schemas at that time. [Newer versions of Mongo have some support for both.]
+          </p>
+         </blockquote>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="4029">
+          We also don’t require the strong transactional guarantees that many relational databases provide, as ShareDB implements
+          <a class="fi cn hv hw hx hy" href="https://en.wikipedia.org/wiki/Optimistic_concurrency_control" rel="noopener" target="_blank">
+           optimistic concurrency
+          </a>
+          for its commits.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="d30c">
+          Mongo has served us well, and we plan to continue using it as our main application database. We’ve been able to vertically scale it so far without much issue — it’s nice that we can do no-downtime cluster rotations to upgrade our Mongo servers — and Mongo also supports
+          <a class="fi cn hv hw hx hy" href="https://docs.mongodb.com/manual/sharding/" rel="noopener" target="_blank">
+           data sharding
+          </a>
+          for horizontal scaling.
+         </p>
+         <h2 class="kh hc cw bi au av ki kj kk kl km kn ko kp kq kr ks" id="a397">
+          <strong class="bu">
+           Redis
+          </strong>
+         </h2>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="1167">
+          <a class="fi cn hv hw hx hy" href="https://redis.io/" rel="noopener" target="_blank">
+           Redis
+          </a>
+          is a fast, in-memory datastore. One of our major uses of Redis is fairly typical: storing small pieces of data with high read/write volumes like session data and rate limiting info.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="c954">
+          Redis also backs ShareDB’s real-time features. Using Redis’ pub/sub functionality means that when one user changes some data, all servers that are subscribed to that data will get an immediate “push notification” about that change, which means changes get seen in real-time.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="8005">
+          We also use it to ensure high speed and availability for our link redirection service. It’s important to have fast response times for link redirection, so we don’t want to wait for a write to Mongo before redirecting. Instead, we quickly write events to Redis and then later process the events to update the stats for in Mongo.
+         </p>
+         <h2 class="kh hc cw bi au av ki kj kk kl km kn ko kp kq kr ks" id="3e6b">
+          <strong class="bu">
+           Elasticsearch
+          </strong>
+         </h2>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="8a1d">
+          We use
+          <a class="fi cn hv hw hx hy" href="https://www.elastic.co/products/elasticsearch" rel="noopener" target="_blank">
+           Elasticsearch
+          </a>
+          in addition to Mongo for some of ES’s advanced features: searching, ranking results, and performing fast, complex aggregations.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="85f2">
+          Elasticseach enables our full-text search on candidate info and resume data. It also powers our
+          <a class="fi cn hv hw hx hy" href="https://www.lever.co/blog/announcing-lever-nurture-recommendations-to-kickstart-your-hiring" rel="noopener" target="_blank">
+           recommendation ranking engine
+          </a>
+          , which helps recruiters resurface past candidates for new roles.
+         </p>
+         <h1 class="hb hc cw bi au av ee hd eg he hf hg hh hi hj hk hl" id="f08e">
+          Where do we go from here?
+         </h1>
+         <p class="gn go cw bi gp b gq hm gs hn gu ho gw hp gy hq ha" id="4ee5">
+          Our tech stack has served us well so far. Most of the core technologies in our stack are used by companies operating at a larger scale than we are, so we’re not planning on completely replacing any of them in the immediate future.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="4e73">
+          Most of the work on our stack in the next couple years will be in scaling up
+          <em class="kf">
+           how
+          </em>
+          we use those technologies.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="f164">
+          For example, I’m currently working on a partial re-architecture of our task processing service to allow it to scale beyond its current limits, as well as thinking about how to make the service easier to monitor and debug, for both our engineering and support teams. Organizations need to scale, too!
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="9933">
+          Other people on the team are tackling improvements like implementing schemas for our data or reporting test coverage results directly on pull requests.
+         </p>
+         <p class="gn go cw bi gp b gq gr gs gt gu gv gw gx gy gz ha" id="0633">
+          We’ll be writing about our work on these topics in the future, so stay tuned for more!
+         </p>
+        </div>
+       </div>
+      </section>
+      <hr class="kx ff aw ky kz jr la lb lc ld le"/>
+      <section class="dv dw dx dy dz">
+       <div class="n p">
+        <div class="ac ae af ag ah ea aj ak">
+         <h1 class="hb hc cw bi au av ee lf eg lg hf lh hh li hj lj hl" id="f18d">
+          If you’re interested in helping us build and scale Lever, our R&amp;D team is looking for engineers, product managers, and designers —
+          <a class="fi cn hv hw hx hy" href="https://www.lever.co/engineering-careers" rel="noopener" target="_blank">
+           get in touch here
+          </a>
+          .
+         </h1>
+        </div>
+       </div>
+      </section>
+     </div>
+    </article>
+    <div class="jd du lk s ak lr lp ls" data-test-id="post-sidebar">
+     <div class="n p">
+      <div class="ac ae af ag ah ai aj ak">
+       <div class="lt n dp">
+        <div class="du">
+         <div class="lu lv r">
+          <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://fulcrum.lever.co/?source=post_sidebar--------------------------post_sidebar-" rel="noopener">
+           <h2 class="au av lw bj cw">
+            Lever Engineering
+           </h2>
+          </a>
+          <div class="lx ly r">
+           <h4 class="au ff fg bj ay lz ba bb ma bd bm">
+            We ask before we build so our products really work for our users. This is our blog about knowing why.
+           </h4>
+          </div>
+          <div aria-hidden="true" class="cm">
+           <a class="mb cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=post_sidebar--------------------------follow_sidebar-" rel="noopener">
+            Follow
+           </a>
+          </div>
+         </div>
+         <div class="mc md me n">
+          <div class="n o">
+           <div class="mf r jb">
+            <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=post_sidebar-----1b30e27d2bb0---------------------clap_sidebar-" rel="noopener">
+             <div class="bv mg mh mi mj mk ml mm bp mn bz">
+              <svg height="29" width="29">
+               <g fill-rule="evenodd">
+                <path d="M13.74 1l.76 2.97.76-2.97zM16.82 4.78l1.84-2.56-1.43-.47zM10.38 2.22l1.84 2.56-.41-3.03zM22.38 22.62a5.11 5.11 0 0 1-3.16 1.61l.49-.45c2.88-2.89 3.45-5.98 1.69-9.21l-1.1-1.94-.96-2.02c-.31-.67-.23-1.18.25-1.55a.84.84 0 0 1 .66-.16c.34.05.66.28.88.6l2.85 5.02c1.18 1.97 1.38 5.12-1.6 8.1M9.1 22.1l-5.02-5.02a1 1 0 0 1 .7-1.7 1 1 0 0 1 .72.3l2.6 2.6a.44.44 0 0 0 .63-.62L6.1 15.04l-1.75-1.75a1 1 0 1 1 1.41-1.41l4.15 4.15a.44.44 0 0 0 .63 0 .44.44 0 0 0 0-.62L6.4 11.26l-1.18-1.18a1 1 0 0 1 0-1.4 1.02 1.02 0 0 1 1.41 0l1.18 1.16L11.96 14a.44.44 0 0 0 .62 0 .44.44 0 0 0 0-.63L8.43 9.22a.99.99 0 0 1-.3-.7.99.99 0 0 1 .3-.7 1 1 0 0 1 1.41 0l7 6.98a.44.44 0 0 0 .7-.5l-1.35-2.85c-.31-.68-.23-1.19.25-1.56a.85.85 0 0 1 .66-.16c.34.06.66.28.88.6L20.63 15c1.57 2.88 1.07 5.54-1.55 8.16a5.62 5.62 0 0 1-5.06 1.65 9.35 9.35 0 0 1-4.93-2.72zM13 6.98l2.56 2.56c-.5.6-.56 1.41-.15 2.28l.26.56-4.25-4.25a.98.98 0 0 1-.12-.45 1 1 0 0 1 .29-.7 1.02 1.02 0 0 1 1.41 0zm8.89 2.06c-.38-.56-.9-.92-1.49-1.01a1.74 1.74 0 0 0-1.34.33c-.38.29-.61.65-.71 1.06a2.1 2.1 0 0 0-1.1-.56 1.78 1.78 0 0 0-.99.13l-2.64-2.64a1.88 1.88 0 0 0-2.65 0 1.86 1.86 0 0 0-.48.85 1.89 1.89 0 0 0-2.67-.01 1.87 1.87 0 0 0-.5.9c-.76-.75-2-.75-2.7-.04a1.88 1.88 0 0 0 0 2.66c-.3.12-.61.29-.87.55a1.88 1.88 0 0 0 0 2.66l.62.62a1.88 1.88 0 0 0-.9 3.16l5.01 5.02c1.6 1.6 3.52 2.64 5.4 2.96a7.16 7.16 0 0 0 1.18.1c1.03 0 2-.25 2.9-.7A5.9 5.9 0 0 0 23 23.24c3.34-3.34 3.08-6.93 1.74-9.17l-2.87-5.04z">
+                </path>
+               </g>
+              </svg>
+             </div>
+            </a>
+           </div>
+           <div class="mo r">
+            <div class="mp">
+             <h4 class="au ff fg bj bm">
+              <button class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm">
+               158
+              </button>
+             </h4>
+            </div>
+           </div>
+          </div>
+         </div>
+         <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=post_sidebar--------------------------bookmark_sidebar-" rel="noopener">
+          <svg height="25" viewbox="0 0 25 25" width="25">
+           <path d="M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z" fill-rule="evenodd">
+           </path>
+          </svg>
+         </a>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="jd du lk s ll lm ln lo lp lq">
+    </div>
+    <div>
+     <div class="mq ie n dp p">
+      <div class="n p">
+       <div class="ac ae af ag ah ea aj ak">
+        <div class="n mr">
+         <div class="r">
+          <h4 class="au ff ga bj bm">
+           Thanks to
+           <!-- -->
+           Kate Reading
+           <!-- -->
+           .
+          </h4>
+         </div>
+        </div>
+        <div class="n o mr">
+        </div>
+        <div class="ms r">
+         <ul class="bv bw">
+          <li class="cm cz mt mu">
+           <a class="mv mw cn bm r mx my a b ga" href="/tag/javascript">
+            JavaScript
+           </a>
+          </li>
+          <li class="cm cz mt mu">
+           <a class="mv mw cn bm r mx my a b ga" href="/tag/tech-stack">
+            Tech Stack
+           </a>
+          </li>
+          <li class="cm cz mt mu">
+           <a class="mv mw cn bm r mx my a b ga" href="/tag/startup">
+            Startup
+           </a>
+          </li>
+          <li class="cm cz mt mu">
+           <a class="mv mw cn bm r mx my a b ga" href="/tag/nodejs">
+            Nodejs
+           </a>
+          </li>
+          <li class="cm cz mt mu">
+           <a class="mv mw cn bm r mx my a b ga" href="/tag/mongodb">
+            Mongodb
+           </a>
+          </li>
+         </ul>
+        </div>
+        <div class="mz n ev ab">
+         <div class="n o">
+          <div class="na r jb">
+           <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=post_actions_footer-----1b30e27d2bb0---------------------clap_footer-" rel="noopener">
+            <div class="c nb ez n o nc jb nd ne nf ng nh ni nj nk nl nm nn no np ch">
+             <div class="bv mg mh mi mj mk nq mm o jo ez n p nr u jf dq t ak bp mn bz ns">
+              <svg height="33" viewbox="0 0 33 33" width="33">
+               <path d="M28.86 17.34l-3.64-6.4c-.3-.43-.71-.73-1.16-.8a1.12 1.12 0 0 0-.9.21c-.62.5-.73 1.18-.32 2.06l1.22 2.6 1.4 2.45c2.23 4.09 1.51 8-2.15 11.66a9.6 9.6 0 0 1-.8.71 6.53 6.53 0 0 0 4.3-2.1c3.82-3.82 3.57-7.87 2.05-10.39zm-6.25 11.08c3.35-3.35 4-6.78 1.98-10.47L21.2 12c-.3-.43-.71-.72-1.16-.8a1.12 1.12 0 0 0-.9.22c-.62.49-.74 1.18-.32 2.06l1.72 3.63a.5.5 0 0 1-.81.57l-8.91-8.9a1.33 1.33 0 0 0-1.89 1.88l5.3 5.3a.5.5 0 0 1-.71.7l-5.3-5.3-1.49-1.49c-.5-.5-1.38-.5-1.88 0a1.34 1.34 0 0 0 0 1.89l1.49 1.5 5.3 5.28a.5.5 0 0 1-.36.86.5.5 0 0 1-.36-.15l-5.29-5.29a1.34 1.34 0 0 0-1.88 0 1.34 1.34 0 0 0 0 1.89l2.23 2.23L9.3 21.4a.5.5 0 0 1-.36.85.5.5 0 0 1-.35-.14l-3.32-3.33a1.33 1.33 0 0 0-1.89 0 1.32 1.32 0 0 0-.39.95c0 .35.14.69.4.94l6.39 6.4c3.53 3.53 8.86 5.3 12.82 1.35zM12.73 9.26l5.68 5.68-.49-1.04c-.52-1.1-.43-2.13.22-2.89l-3.3-3.3a1.34 1.34 0 0 0-1.88 0 1.33 1.33 0 0 0-.4.94c0 .22.07.42.17.61zm14.79 19.18a7.46 7.46 0 0 1-6.41 2.31 7.92 7.92 0 0 1-3.67.9c-3.05 0-6.12-1.63-8.36-3.88l-6.4-6.4A2.31 2.31 0 0 1 2 19.72a2.33 2.33 0 0 1 1.92-2.3l-.87-.87a2.34 2.34 0 0 1 0-3.3 2.33 2.33 0 0 1 1.24-.64l-.14-.14a2.34 2.34 0 0 1 0-3.3 2.39 2.39 0 0 1 3.3 0l.14.14a2.33 2.33 0 0 1 3.95-1.24l.09.09c.09-.42.29-.83.62-1.16a2.34 2.34 0 0 1 3.3 0l3.38 3.39a2.17 2.17 0 0 1 1.27-.17c.54.08 1.03.35 1.45.76.1-.55.41-1.03.9-1.42a2.12 2.12 0 0 1 1.67-.4 2.8 2.8 0 0 1 1.85 1.25l3.65 6.43c1.7 2.83 2.03 7.37-2.2 11.6zM13.22.48l-1.92.89 2.37 2.83-.45-3.72zm8.48.88L19.78.5l-.44 3.7 2.36-2.84zM16.5 3.3L15.48 0h2.04L16.5 3.3z" fill-rule="evenodd">
+               </path>
+              </svg>
+             </div>
+            </div>
+           </a>
+          </div>
+          <div class="mo r">
+           <div class="mp">
+            <h4 class="au ff fg bj cw">
+             <button class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm">
+              158 claps
+             </button>
+            </h4>
+           </div>
+          </div>
+         </div>
+         <div class="n o">
+          <div class="gj r bf">
+           <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="//medium.com/p/1b30e27d2bb0/share/twitter?source=post_actions_footer---------------------------" rel="noopener" target="_blank">
+            <svg class="q" height="29" width="29">
+             <path d="M22.05 7.54a4.47 4.47 0 0 0-3.3-1.46 4.53 4.53 0 0 0-4.53 4.53c0 .35.04.7.08 1.05A12.9 12.9 0 0 1 5 6.89a5.1 5.1 0 0 0-.65 2.26c.03 1.6.83 2.99 2.02 3.79a4.3 4.3 0 0 1-2.02-.57v.08a4.55 4.55 0 0 0 3.63 4.44c-.4.08-.8.13-1.21.16l-.81-.08a4.54 4.54 0 0 0 4.2 3.15 9.56 9.56 0 0 1-5.66 1.94l-1.05-.08c2 1.27 4.38 2.02 6.94 2.02 8.3 0 12.86-6.9 12.84-12.85.02-.24 0-.43 0-.65a8.68 8.68 0 0 0 2.26-2.34c-.82.38-1.7.62-2.6.72a4.37 4.37 0 0 0 1.95-2.51c-.84.53-1.81.9-2.83 1.13z">
+             </path>
+            </svg>
+           </a>
+          </div>
+          <div class="gj r bf">
+           <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="//medium.com/p/1b30e27d2bb0/share/facebook?source=post_actions_footer---------------------------" rel="noopener" target="_blank">
+            <svg class="q" height="29" width="29">
+             <path d="M23.2 5H5.8a.8.8 0 0 0-.8.8V23.2c0 .44.35.8.8.8h9.3v-7.13h-2.38V13.9h2.38v-2.38c0-2.45 1.55-3.66 3.74-3.66 1.05 0 1.95.08 2.2.11v2.57h-1.5c-1.2 0-1.48.57-1.48 1.4v1.96h2.97l-.6 2.97h-2.37l.05 7.12h5.1a.8.8 0 0 0 .79-.8V5.8a.8.8 0 0 0-.8-.79">
+             </path>
+            </svg>
+           </a>
+          </div>
+          <div class="gj r bf">
+           <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=post_actions_footer--------------------------bookmark_sidebar-" rel="noopener">
+            <svg height="25" viewbox="0 0 25 25" width="25">
+             <path d="M19 6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14.66h.01c.01.1.05.2.12.28a.5.5 0 0 0 .7.03l5.67-4.12 5.66 4.13a.5.5 0 0 0 .71-.03.5.5 0 0 0 .12-.29H19V6zm-6.84 9.97L7 19.64V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v13.64l-5.16-3.67a.49.49 0 0 0-.68 0z" fill-rule="evenodd">
+             </path>
+            </svg>
+           </a>
+          </div>
+          <div aria-hidden="true" class="cm">
+           <div aria-hidden="true" class="cm">
+            <div class="r bf">
+             <button class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm">
+              <svg class="q" height="25" viewbox="-480.5 272.5 21 21" width="25">
+               <path d="M-463 284.6c.9 0 1.6-.7 1.6-1.6s-.7-1.6-1.6-1.6-1.6.7-1.6 1.6.7 1.6 1.6 1.6zm0 .9c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-7-.9c.9 0 1.6-.7 1.6-1.6s-.7-1.6-1.6-1.6-1.6.7-1.6 1.6.7 1.6 1.6 1.6zm0 .9c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm-7-.9c.9 0 1.6-.7 1.6-1.6s-.7-1.6-1.6-1.6-1.6.7-1.6 1.6.7 1.6 1.6 1.6zm0 .9c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5z">
+               </path>
+              </svg>
+             </button>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="nt co nu ms r ab">
+         <div class="nv nw r jb">
+          <span class="r nx an ny">
+           <div class="r dq nz oa">
+            <a href="/@ericyhwang?source=follow_footer--------------------------follow_footer-" rel="noopener">
+             <img alt="Eric Hwang" class="r ez dg ob" height="80" src="https://miro.medium.com/fit/c/160/160/1*mRlXT_Jqy1m0_YlNhOuoqg.jpeg" width="80"/>
+            </a>
+           </div>
+           <span class="r">
+            <div class="oc r od">
+             <p class="au ff ga bj bm oe of">
+              Written by
+             </p>
+            </div>
+            <div class="oc og n od">
+             <div class="ak n o ev">
+              <h2 class="au av aw ax cw">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="/@ericyhwang?source=follow_footer--------------------------follow_footer-" rel="noopener">
+                Eric Hwang
+               </a>
+              </h2>
+              <div class="r g">
+               <a class="mb cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=follow_footer-bf0bc1c4d3a1-------------------------follow_footer-" rel="noopener">
+                Follow
+               </a>
+              </div>
+             </div>
+            </div>
+           </span>
+          </span>
+          <div class="oc oh r od cq">
+           <div class="oi r">
+            <h4 class="au ff lw oj bm">
+             Software engineer at Lever
+            </h4>
+           </div>
+           <div class="cp ok cq">
+            <a class="mb cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=follow_footer-bf0bc1c4d3a1-------------------------follow_footer-" rel="noopener">
+             Follow
+            </a>
+           </div>
+          </div>
+         </div>
+         <div class="nt r">
+         </div>
+         <div class="nv nw r jb">
+          <span class="r nx an ny">
+           <div class="r dq nz oa">
+            <a href="https://fulcrum.lever.co/?source=follow_footer--------------------------follow_footer-" rel="noopener">
+             <img alt="Lever Engineering" class="ci ob dg" height="80" src="https://miro.medium.com/fit/c/160/160/1*8qRozIq9onIZRNPvxzhH1g.png" width="80"/>
+            </a>
+           </div>
+           <span class="r">
+            <div class="oc og n od">
+             <div class="ak n o ev">
+              <h2 class="au av aw ax cw">
+               <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://fulcrum.lever.co/?source=follow_footer--------------------------follow_footer-" rel="noopener">
+                Lever Engineering
+               </a>
+              </h2>
+              <div class="r g">
+               <div aria-hidden="true" class="cm">
+                <a class="mb cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=follow_footer--------------------------follow_footer-" rel="noopener">
+                 Follow
+                </a>
+               </div>
+              </div>
+             </div>
+            </div>
+           </span>
+          </span>
+          <div class="oc ol r od cq">
+           <div class="oi r">
+            <h4 class="au ff lw oj bm">
+             We ask before we build so our products really work for our users. This is our blog about knowing why.
+            </h4>
+           </div>
+           <div class="cp ok cq">
+            <div aria-hidden="true" class="cm">
+             <a class="mb cf bo bp cg by bz ch bx ci au b bi bj bk bl cj ck cl cm cn ca" href="https://medium.com/m/signin?operation=register&amp;redirect=https%3A%2F%2Ffulcrum.lever.co%2Fthe-lever-tech-stack-1b30e27d2bb0&amp;source=follow_footer--------------------------follow_footer-" rel="noopener">
+              Follow
+             </a>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="om co r ab">
+         <a class="fi fj bq br bs bt bu bv bw bx gk gl ca cb fl fm" href="https://medium.com/p/1b30e27d2bb0/responses/show?source=follow_footer--------------------------follow_footer-" rel="noopener">
+          <span class="on oo mj">
+           <div class="op oq ci r jr cq">
+            <span class="bo">
+             See responses (1)
+            </span>
+           </div>
+          </span>
+         </a>
+        </div>
+       </div>
+      </div>
+      <div class="or r os ab">
+       <div class="n p">
+        <div class="ac ae af ag ah ai aj ak">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="ot r ou ov">
+     <section class="dm dn ak cl r ow ox oy oz pa pb pc pd pe pf pg ph pi pj pk">
+      <div class="pl pm nv n ev g">
+       <div class="pn n ev">
+        <div class="po r pp">
+         <div class="pq r">
+          <a class="fi fj bq br bs bt bu bv bw bx pr ps ca cb pt pu" href="https://medium.com/about?autoplay=1&amp;source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+           <h4 class="pv pw px au av bi oj py pz r">
+            Discover
+            <!-- -->
+            Medium
+           </h4>
+          </a>
+         </div>
+         <span class="au b bi bj bk bl r qa qb">
+          Welcome to a place where words matter. On
+          <!-- -->
+          Medium
+          <!-- -->
+          , smart voices and original ideas take center stage - with no ads in sight.
+          <!-- -->
+          <a class="fi fj bq br bs bt bu bv bw bx ca cb pt pu qc" href="https://medium.com/about?autoplay=1&amp;source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+           Watch
+          </a>
+         </span>
+        </div>
+        <div class="po r pp">
+         <div class="qd r">
+          <a class="fi fj bq br bs bt bu bv bw bx pr ps ca cb pt pu" href="https://medium.com/topics?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+           <h4 class="pv pw px au av bi oj py pz r">
+            Make
+            <!-- -->
+            Medium
+            <!-- -->
+            yours
+           </h4>
+          </a>
+         </div>
+         <span class="au b bi bj bk bl r qa qb">
+          Follow all the topics you care about, and we’ll deliver the best stories for you to your homepage and inbox.
+          <!-- -->
+          <a class="fi fj bq br bs bt bu bv bw bx ca cb pt pu qc" href="https://medium.com/topics?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+           Explore
+          </a>
+         </span>
+        </div>
+        <div class="po r pp">
+         <div class="pq r">
+          <a class="fi fj bq br bs bt bu bv bw bx pr ps ca cb pt pu" href="https://medium.com/membership?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+           <h4 class="pv pw px au av bi oj py pz r">
+            Become a member
+           </h4>
+          </a>
+         </div>
+         <span class="au b bi bj bk bl r qa qb">
+          Get unlimited access to the best stories on
+          <!-- -->
+          Medium
+          <!-- -->
+          — and support writers while you’re at it. Just $5/month.
+          <!-- -->
+          <a class="fi fj bq br bs bt bu bv bw bx ca cb pt pu qc" href="https://medium.com/membership?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+           Upgrade
+          </a>
+         </span>
+        </div>
+       </div>
+      </div>
+      <div class="n o ev">
+       <a class="fi fj bq br bs bt bu bv bw bx pr ps ca cb pt pu" href="https://medium.com/?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+        <svg class="pw" height="22" viewbox="0 0 111.5 22" width="112">
+         <path d="M56.3 19.5c0 .4 0 .5.3.7l1.5 1.4v.1h-6.5V19c-.7 1.8-2.4 3-4.3 3-3.3 0-5.8-2.6-5.8-7.5 0-4.5 2.6-7.6 6.3-7.6 1.6-.1 3.1.8 3.8 2.4V3.2c0-.3-.1-.6-.3-.7l-1.4-1.4V1l6.5-.8v19.3zm-4.8-.8V9.5c-.5-.6-1.2-.9-1.9-.9-1.6 0-3.1 1.4-3.1 5.7 0 4 1.3 5.4 3 5.4.8.1 1.6-.3 2-1zm9.1 3.1V9.4c0-.3-.1-.6-.3-.7l-1.4-1.5v-.1h6.5v12.5c0 .4 0 .5.3.7l1.4 1.4v.1h-6.5zm-.2-19.2C60.4 1.2 61.5 0 63 0c1.4 0 2.6 1.2 2.6 2.6S64.4 5.3 63 5.3a2.6 2.6 0 0 1-2.6-2.7zm22.5 16.9c0 .4 0 .5.3.7l1.5 1.4v.1h-6.5v-3.2c-.6 2-2.4 3.4-4.5 3.4-2.9 0-4.4-2.1-4.4-6.2 0-1.9 0-4.1.1-6.5 0-.3-.1-.5-.3-.7L67.7 7v.1H74v8c0 2.6.4 4.4 2 4.4.9-.1 1.7-.6 2.1-1.3V9.5c0-.3-.1-.6-.3-.7l-1.4-1.5v-.2h6.5v12.4zm22 2.3c0-.5.1-6.5.1-7.9 0-2.6-.4-4.5-2.2-4.5-.9 0-1.8.5-2.3 1.3.2.8.3 1.7.3 2.5 0 1.8-.1 4.2-.1 6.5 0 .3.1.5.3.7l1.5 1.4v.1H96c0-.4.1-6.5.1-7.9 0-2.7-.4-4.5-2.2-4.5-.9 0-1.7.5-2.2 1.3v9c0 .4 0 .5.3.7l1.4 1.4v.1h-6.5V9.5c0-.3-.1-.6-.3-.7l-1.4-1.5v-.2h6.5v3.1a4.6 4.6 0 0 1 4.6-3.4c2.2 0 3.6 1.2 4.2 3.5.7-2.1 2.7-3.6 4.9-3.5 2.9 0 4.5 2.2 4.5 6.2 0 1.9-.1 4.2-.1 6.5-.1.3.1.6.3.7l1.4 1.4v.1h-6.6zm-81.4-2l1.9 1.9v.1h-9.8v-.1l2-1.9c.2-.2.3-.4.3-.7V7.3c0-.5 0-1.2.1-1.8L11.4 22h-.1L4.5 6.8c-.1-.4-.2-.4-.3-.6v10c-.1.7 0 1.3.3 1.9l2.7 3.6v.1H0v-.1L2.7 18c.3-.6.4-1.3.3-1.9v-11c0-.5-.1-1.1-.5-1.5L.7 1.1V1h7l5.8 12.9L18.6 1h6.8v.1l-1.9 2.2c-.2.2-.3.5-.3.7v15.2c0 .2.1.5.3.6zm7.6-5.9c0 3.8 1.9 5.3 4.2 5.3 1.9.1 3.6-1 4.4-2.7h.1c-.8 3.7-3.1 5.5-6.5 5.5-3.7 0-7.2-2.2-7.2-7.4 0-5.5 3.5-7.6 7.3-7.6 3.1 0 6.4 1.5 6.4 6.2v.8h-8.7zm0-.8h4.3v-.8c0-3.9-.8-4.9-2-4.9-1.4.1-2.3 1.6-2.3 5.7z">
+         </path>
+        </svg>
+       </a>
+       <span class="au b bi bj bk bl r qa qb">
+        <div class="qe qf n ev qg an">
+         <a class="fi fj bq br bs bt bu bv bw bx fk ca cb pt pu" href="https://medium.com/about?autoplay=1&amp;source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+          About
+         </a>
+         <a class="fi fj bq br bs bt bu bv bw bx fk ca cb pt pu" href="https://help.medium.com/?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+          Help
+         </a>
+         <a class="fi fj bq br bs bt bu bv bw bx fk ca cb pt pu" href="https://medium.com/policy/9db0094a1e0f?source=post_page-----1b30e27d2bb0----------------------" rel="noopener">
+          Legal
+         </a>
+        </div>
+       </span>
+      </div>
+     </section>
+    </div>
+   </div>
+  </div>
+  <script src="https://cdn.optimizely.com/js/16180790160.js">
+  </script>
+  <script>
+   window.__BUILD_ID__ = "development"
+  </script>
+  <script>
+   window.__GRAPHQL_URI__ = "https://fulcrum.lever.co/_/graphql"
+  </script>
+  <script>
+   window.__PRELOADED_STATE__ = {"config":{"nodeEnv":"production","version":"master-20200110-200758-1b2110e825","productName":"Medium","publicUrl":"https:\u002F\u002Fcdn-client.medium.com\u002Flite","authDomain":"medium.com","authGoogleClientId":"216296035834-k1k6qe060s2tp2a2jam4ljdcms00sttg.apps.googleusercontent.com","favicon":"production","glyphUrl":"https:\u002F\u002Fglyph.medium.com","branchKey":"key_live_ofxXr2qTrrU9NqURK8ZwEhknBxiI6KBm","lightStep":{"name":"lite-web","host":"collector-medium.lightstep.com","token":"ce5be895bef60919541332990ac9fef2","appVersion":"master-20200110-200758-1b2110e825"},"algolia":{"appId":"MQ57UUUQZ2","apiKeySearch":"394474ced050e3911ae2249ecc774921","indexPrefix":"medium_","host":"-dsn.algolia.net"},"recaptchaKey":"6Lfc37IUAAAAAKGGtC6rLS13R1Hrw_BqADfS1LRk","sentry":{"dsn":"https:\u002F\u002F589e367c28ca47b195ce200d1507d18b@sentry.io\u002F1423575","environment":"production"},"isAmp":false,"googleAnalyticsCode":"UA-24232453-2","signInWallCustomDomainCollectionIds":["3a8144eabfe3","336d898217ee","61061eb0c96b","138adf9c44c","819cc2aaeee0"],"mediumOwnedAndOperatedCollectionIds":["544c7006046e","bcc38c8f6edf","444d13b52878","8d6b8a439e32","92d2092dc598","1285ba81cada","cb8577c9149e","8ccfed20cbb2","ae2a65f35510","3f6ecf56618","7b6769f2748b","fc8964313712","ef8e90590e66","191186aaafa0","d944778ce714","bdc4052bbdba","88d9857e584e"],"tierOneDomains":["medium.com","thebolditalic.com","arcdigital.media","towardsdatascience.com","uxdesign.cc","codeburst.io","psiloveyou.xyz","writingcooperative.com","entrepreneurshandbook.co","prototypr.io","betterhumans.coach.me","theascent.pub"],"defaultImages":{"avatar":{"imageId":"1*dmbNkD5D-u45r44go_cf0g.png","height":150,"width":150},"orgLogo":{"imageId":"1*OMF3fSqH8t4xBJ9-6oZDZw.png","height":106,"width":545},"postLogo":{"imageId":"1*3sela1OADrJr7dJk_CXaEQ.png","height":810,"width":1440}}},"debug":{"requestId":"704e1927-6c4b-4fae-acb2-9f83cde9fe8b","originalSpanCarrier":{"ot-tracer-spanid":"3dd7eb390a35116f","ot-tracer-traceid":"0371262354005670","ot-tracer-sampled":"true"}},"session":{"user":{"id":"lo_3c9a1ee33bf2"},"xsrf":""},"stats":{"itemCount":0,"sending":false,"timeout":null,"backup":{}},"navigation":{"showBranchBanner":null,"hasRenderedBranchBanner":null,"hideGoogleOneTap":false,"branchData":{"loaded":false},"currentLocation":"https:\u002F\u002Ffulcrum.lever.co\u002Fthe-lever-tech-stack-1b30e27d2bb0","host":"fulcrum.lever.co","hostname":"fulcrum.lever.co","referrer":"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230","susiModal":{"step":null,"operation":"register","reportEventInfo":{"eventName":"","data":{}}}},"client":{"isBot":false,"isEu":false,"isNativeMedium":false,"isCustomDomain":true},"multiVote":{"clapsPerPost":{}},"metadata":{"faviconImageId":null}}
+  </script>
+  <script>
+   window.__APOLLO_STATE__ = {"ROOT_QUERY.variantFlags.0":{"name":"add_friction_to_signup","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.0.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.0.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.1":{"name":"allow_access","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.1.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.1.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.2":{"name":"allow_signup","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.2.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.2.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.3":{"name":"allow_test_auth","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.3.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.3.valueType":{"__typename":"VariantFlagString","value":"disallow"},"ROOT_QUERY.variantFlags.4":{"name":"assign_default_topic_to_posts","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.4.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.4.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.5":{"name":"available_annual_plan","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.5.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.5.valueType":{"__typename":"VariantFlagString","value":"2c754bcc2995"},"ROOT_QUERY.variantFlags.6":{"name":"available_monthly_plan","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.6.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.6.valueType":{"__typename":"VariantFlagString","value":"60e220181034"},"ROOT_QUERY.variantFlags.7":{"name":"branch_seo_metadata","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.7.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.7.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.8":{"name":"browsable_stream_config_bucket","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.8.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.8.valueType":{"__typename":"VariantFlagString","value":"curated-topics"},"ROOT_QUERY.variantFlags.9":{"name":"disable_gosocial_followers_that_you_follow","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.9.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.9.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.10":{"name":"disable_ios_resume_reading_toast","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.10.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.10.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.11":{"name":"disable_mobile_featured_chunk","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.11.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.11.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.12":{"name":"disable_post_recommended_from_friends_provider","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.12.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.12.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.13":{"name":"enable_android_local_currency","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.13.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.13.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.14":{"name":"enable_annual_renewal_reminder_email","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.14.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.14.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.15":{"name":"enable_app_flirty_thirty","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.15.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.15.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.16":{"name":"enable_auto_tier","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.16.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.16.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.17":{"name":"enable_automated_mission_control_triggers","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.17.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.17.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.18":{"name":"enable_branch_io","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.18.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.18.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.19":{"name":"enable_branding","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.19.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.19.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.20":{"name":"enable_branding_fonts","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.20.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.20.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.21":{"name":"enable_canvas_3_web","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.21.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.21.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.22":{"name":"enable_dedicated_series_tab_api_ios","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.22.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.22.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.23":{"name":"enable_different_grid","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.23.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.23.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.24":{"name":"enable_disregard_trunc_state_for_footer","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.24.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.24.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.25":{"name":"enable_edit_alt_text","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.25.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.25.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.26":{"name":"enable_email_sign_in_captcha","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.26.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.26.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.27":{"name":"enable_embedding_based_diversification","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.27.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.27.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.28":{"name":"enable_expanded_feature_chunk_pool","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.28.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.28.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.29":{"name":"enable_filter_by_resend_rules","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.29.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.29.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.30":{"name":"enable_first_name_on_paywall","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.30.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.30.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.31":{"name":"enable_geolocation_stripe_standard","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.31.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.31.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.32":{"name":"enable_google_one_tap","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.32.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.32.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.33":{"name":"enable_ios_post_stats","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.33.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.33.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.34":{"name":"enable_janky_spam_rules","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.34.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.34.valueType":{"__typename":"VariantFlagString","value":"users,posts"},"ROOT_QUERY.variantFlags.35":{"name":"enable_json_logs_trained_ranker","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.35.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.35.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.36":{"name":"enable_kafka_events","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.36.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.36.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.37":{"name":"enable_kbfd_rex","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.37.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.37.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.38":{"name":"enable_kbfd_rex_app_highlights","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.38.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.38.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.39":{"name":"enable_kbfd_rex_daily_digest","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.39.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.39.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.40":{"name":"enable_lite_notifications","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.40.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.40.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.41":{"name":"enable_lite_post","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.41.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.41.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.42":{"name":"enable_lite_post_cd","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.42.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.42.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.43":{"name":"enable_lite_post_highlights","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.43.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.43.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.44":{"name":"enable_lite_post_highlights_view_only","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.44.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.44.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.45":{"name":"enable_lite_profile","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.45.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.45.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.46":{"name":"enable_lite_pub_header_menu","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.46.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.46.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.47":{"name":"enable_lite_reading_list","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.47.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.47.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.48":{"name":"enable_lite_server_upstream_deadlines","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.48.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.48.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.49":{"name":"enable_lite_stories","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.49.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.49.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.50":{"name":"enable_lite_topics","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.50.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.50.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.51":{"name":"enable_lite_unread_notification_count_mutation","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.51.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.51.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.52":{"name":"enable_lo_scroll_away_metabar","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.52.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.52.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.53":{"name":"enable_logged_out_homepage_signup","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.53.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.53.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.54":{"name":"enable_marketing_emails","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.54.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.54.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.55":{"name":"enable_media_resource_try_catch","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.55.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.55.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.56":{"name":"enable_membership_remove_section_a","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.56.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.56.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.57":{"name":"enable_more_branch_data","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.57.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.57.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.58":{"name":"enable_new_collaborative_filtering_data","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.58.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.58.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.59":{"name":"enable_new_pub_fonts","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.59.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.59.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.60":{"name":"enable_new_pub_modules","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.60.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.60.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.61":{"name":"enable_new_suspended_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.61.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.61.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.62":{"name":"enable_new_three_dot_menu","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.62.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.62.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.63":{"name":"enable_optimizely","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.63.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.63.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.64":{"name":"enable_parsely","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.64.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.64.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.65":{"name":"enable_patronus_on_kubernetes","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.65.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.65.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.66":{"name":"enable_popularity_feature","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.66.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.66.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.67":{"name":"enable_post_import","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.67.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.67.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.68":{"name":"enable_post_seo_settings_screen","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.68.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.68.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.69":{"name":"enable_post_settings_screen","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.69.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.69.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.70":{"name":"enable_primary_topic_for_mobile","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.70.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.70.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.71":{"name":"enable_rito_upstream_deadlines","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.71.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.71.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.72":{"name":"enable_rtr_channel","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.72.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.72.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.73":{"name":"enable_save_to_medium","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.73.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.73.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.74":{"name":"enable_sign_up_with_email","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.74.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.74.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.75":{"name":"enable_suggest_account","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.75.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.75.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.76":{"name":"enable_suggest_account_li","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.76.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.76.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.77":{"name":"enable_tick_landing_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.77.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.77.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.78":{"name":"enable_tipalti_onboarding","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.78.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.78.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.79":{"name":"enable_tribute_landing_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.79.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.79.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.80":{"name":"enable_trumpland_landing_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.80.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.80.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.81":{"name":"glyph_font_set","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.81.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.81.valueType":{"__typename":"VariantFlagString","value":"m2"},"ROOT_QUERY.variantFlags.82":{"name":"google_sign_in_android","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.82.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.82.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.83":{"name":"is_not_medium_subscriber","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.83.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.83.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.84":{"name":"new_transition_page","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.84.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.84.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.85":{"name":"pub_sidebar","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.85.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.85.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.86":{"name":"rank_model","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.86.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.86.valueType":{"__typename":"VariantFlagString","value":"default"},"ROOT_QUERY.variantFlags.87":{"name":"redis_read_write_splitting","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.87.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.87.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.88":{"name":"signin_services","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.88.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.88.valueType":{"__typename":"VariantFlagString","value":"twitter,facebook,google,email,google-fastidv,google-one-tap"},"ROOT_QUERY.variantFlags.89":{"name":"signup_services","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.89.valueType","typename":"VariantFlagString"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.89.valueType":{"__typename":"VariantFlagString","value":"twitter,facebook,google,email,google-fastidv,google-one-tap"},"ROOT_QUERY.variantFlags.90":{"name":"use_new_admin_topic_backend","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.90.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.90.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY.variantFlags.91":{"name":"use_sendgrid_queue_for_digest_sends","valueType":{"type":"id","generated":true,"id":"$ROOT_QUERY.variantFlags.91.valueType","typename":"VariantFlagBoolean"},"__typename":"VariantFlag"},"$ROOT_QUERY.variantFlags.91.valueType":{"__typename":"VariantFlagBoolean","value":true},"ROOT_QUERY":{"variantFlags":[{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.0","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.1","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.2","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.3","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.4","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.5","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.6","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.7","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.8","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.9","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.10","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.11","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.12","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.13","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.14","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.15","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.16","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.17","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.18","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.19","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.20","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.21","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.22","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.23","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.24","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.25","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.26","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.27","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.28","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.29","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.30","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.31","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.32","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.33","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.34","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.35","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.36","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.37","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.38","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.39","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.40","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.41","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.42","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.43","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.44","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.45","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.46","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.47","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.48","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.49","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.50","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.51","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.52","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.53","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.54","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.55","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.56","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.57","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.58","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.59","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.60","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.61","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.62","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.63","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.64","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.65","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.66","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.67","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.68","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.69","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.70","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.71","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.72","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.73","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.74","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.75","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.76","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.77","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.78","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.79","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.80","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.81","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.82","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.83","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.84","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.85","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.86","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.87","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.88","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.89","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.90","typename":"VariantFlag"},{"type":"id","generated":true,"id":"ROOT_QUERY.variantFlags.91","typename":"VariantFlag"}],"viewer":null,"meterPost({\"postId\":\"1b30e27d2bb0\",\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}})":{"type":"id","generated":false,"id":"MeteringInfo:singleton","typename":"MeteringInfo"},"postResult({\"id\":\"1b30e27d2bb0\"})":{"type":"id","generated":false,"id":"Post:1b30e27d2bb0","typename":"Post"}},"MeteringInfo:singleton":{"__typename":"MeteringInfo","postIds":{"type":"json","json":[]},"maxUnlockCount":3,"unlocksRemaining":3},"Post:1b30e27d2bb0":{"__typename":"Post","visibility":"PUBLIC","latestPublishedVersion":"c06ef353d851","collection":{"type":"id","generated":false,"id":"Collection:2be05fc5bd92","typename":"Collection"},"id":"1b30e27d2bb0","creator":{"type":"id","generated":false,"id":"User:bf0bc1c4d3a1","typename":"User"},"isLocked":false,"lockedSource":"LOCKED_POST_SOURCE_NONE","sequence":null,"mediumUrl":"https:\u002F\u002Ffulcrum.lever.co\u002Fthe-lever-tech-stack-1b30e27d2bb0","canonicalUrl":"","content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}})":{"type":"id","generated":true,"id":"$Post:1b30e27d2bb0.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}})","typename":"PostContent"},"firstPublishedAt":1525814554076,"isPublished":true,"layerCake":0,"primaryTopic":null,"title":"The Lever Tech Stack","isLimitedState":false,"pendingCollection":null,"shareKey":null,"statusForCollection":"APPROVED","readingTime":7.240880503144654,"readingList":"READING_LIST_NONE","license":"ALL_RIGHTS_RESERVED","allowResponses":true,"tags":[{"type":"id","generated":false,"id":"Tag:javascript","typename":"Tag"},{"type":"id","generated":false,"id":"Tag:tech-stack","typename":"Tag"},{"type":"id","generated":false,"id":"Tag:startup","typename":"Tag"},{"type":"id","generated":false,"id":"Tag:nodejs","typename":"Tag"},{"type":"id","generated":false,"id":"Tag:mongodb","typename":"Tag"}],"viewerClapCount":0,"clapCount":158,"voterCount":43,"recommenders":[],"responsesCount":1,"collaborators":[{"type":"id","generated":false,"id":"Collaborator:1b30e27d2bb0-9f8c84acd6f5","typename":"Collaborator"}],"translationSourcePost":null,"newsletterId":"","inResponseToPostResult":null,"inResponseToMediaResource":null,"curationEligibleAt":0,"isDistributionAlertDismissed":false,"audioVersionUrl":"","seoTitle":"","socialTitle":"","socialDek":"","metaDescription":"","latestPublishedAt":1567026760615,"previewContent":{"type":"id","generated":true,"id":"$Post:1b30e27d2bb0.previewContent","typename":"PreviewContent"},"previewImage":{"type":"id","generated":false,"id":"ImageMetadata:1*zCeGwV0SntUi-Zm1v47MoQ.png","typename":"ImageMetadata"},"updatedAt":1567026761054,"topics":[],"seoDescription":"","isSuspended":false},"Collection:2be05fc5bd92":{"id":"2be05fc5bd92","domain":"fulcrum.lever.co","slug":"levers-fulcrum","__typename":"Collection","googleAnalyticsId":null,"colorBehavior":"ACCENT_COLOR","name":"Lever Engineering","logo":{"type":"id","generated":false,"id":"ImageMetadata:","typename":"ImageMetadata"},"avatar":{"type":"id","generated":false,"id":"ImageMetadata:1*8qRozIq9onIZRNPvxzhH1g.png","typename":"ImageMetadata"},"isEnrolledInHightower":false,"creator":{"type":"id","generated":false,"id":"User:cb91cba98e46","typename":"User"},"viewerIsEditor":false,"navItems":[],"colorPalette":{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette","typename":"ColorPalette"},"viewerCanEditOwnPosts":false,"viewerCanEditPosts":false,"description":"We ask before we build so our products really work for our users. This is our blog about knowing why.","viewerIsFollowing":false,"viewerIsSubscribedToLetters":false,"isUserSubscribedToCollectionEmails":false,"ampEnabled":false,"twitterUsername":"lever","facebookPageId":null,"favicon":{"type":"id","generated":false,"id":"ImageMetadata:1*S1otzh2zrjs3w-YIM2ai8Q.png","typename":"ImageMetadata"}},"User:bf0bc1c4d3a1":{"id":"bf0bc1c4d3a1","__typename":"User","isSuspended":false,"allowNotes":true,"name":"Eric Hwang","isFollowing":false,"username":"ericyhwang","bio":"Software engineer at Lever","imageId":"1*mRlXT_Jqy1m0_YlNhOuoqg.jpeg","mediumMemberAt":0,"isBlocking":false,"isPartnerProgramEnrolled":false,"twitterScreenName":""},"ImageMetadata:":{"id":"","originalWidth":0,"originalHeight":0,"__typename":"ImageMetadata"},"ImageMetadata:1*8qRozIq9onIZRNPvxzhH1g.png":{"id":"1*8qRozIq9onIZRNPvxzhH1g.png","__typename":"ImageMetadata"},"User:cb91cba98e46":{"id":"cb91cba98e46","__typename":"User"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum":{"backgroundColor":"#FFE3E4E6","colorPoints":[{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.0","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.1","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.2","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.3","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.4","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.5","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.6","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.7","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.8","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.9","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.10","typename":"ColorPoint"}],"__typename":"ColorSpectrum"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.0":{"color":"#FFE3E4E6","point":0,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.1":{"color":"#FFD5D6D8","point":0.1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.2":{"color":"#FFC6C7C9","point":0.2,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.3":{"color":"#FFB7B8BA","point":0.3,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.4":{"color":"#FFA7A9AB","point":0.4,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.5":{"color":"#FF98999B","point":0.5,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.6":{"color":"#FF87898B","point":0.6,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.7":{"color":"#FF77787A","point":0.7,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.8":{"color":"#FF656769","point":0.8,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.9":{"color":"#FF535557","point":0.9,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum.colorPoints.10":{"color":"#FF404243","point":1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette":{"tintBackgroundSpectrum":{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.tintBackgroundSpectrum","typename":"ColorSpectrum"},"__typename":"ColorPalette","defaultBackgroundSpectrum":{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum","typename":"ColorSpectrum"},"highlightSpectrum":{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum","typename":"ColorSpectrum"}},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum":{"backgroundColor":"#FFFFFFFF","colorPoints":[{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.0","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.1","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.2","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.3","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.4","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.5","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.6","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.7","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.8","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.9","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.10","typename":"ColorPoint"}],"__typename":"ColorSpectrum"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.0":{"color":"#FF838587","point":0,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.1":{"color":"#FF7A7B7D","point":0.1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.2":{"color":"#FF717273","point":0.2,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.3":{"color":"#FF67686A","point":0.3,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.4":{"color":"#FF5E5E5F","point":0.4,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.5":{"color":"#FF545455","point":0.5,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.6":{"color":"#FF494A4A","point":0.6,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.7":{"color":"#FF3E3F3F","point":0.7,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.8":{"color":"#FF333334","point":0.8,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.9":{"color":"#FF272727","point":0.9,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.defaultBackgroundSpectrum.colorPoints.10":{"color":"#FF1A1A1A","point":1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum":{"backgroundColor":"#FFFFFFFF","colorPoints":[{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.0","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.1","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.2","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.3","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.4","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.5","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.6","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.7","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.8","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.9","typename":"ColorPoint"},{"type":"id","generated":true,"id":"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.10","typename":"ColorPoint"}],"__typename":"ColorSpectrum"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.0":{"color":"#FFF4F2F2","point":0,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.1":{"color":"#FFF2F0F0","point":0.1,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.2":{"color":"#FFF0EEEF","point":0.2,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.3":{"color":"#FFEEECED","point":0.3,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.4":{"color":"#FFECEBEB","point":0.4,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.5":{"color":"#FFEAE9EA","point":0.5,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.6":{"color":"#FFE8E7E8","point":0.6,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.7":{"color":"#FFE6E5E6","point":0.7,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.8":{"color":"#FFE3E3E4","point":0.8,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.9":{"color":"#FFE1E1E3","point":0.9,"__typename":"ColorPoint"},"$Collection:2be05fc5bd92.colorPalette.highlightSpectrum.colorPoints.10":{"color":"#FFDFDFE1","point":1,"__typename":"ColorPoint"},"$Post:1b30e27d2bb0.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}})":{"isLockedPreviewOnly":false,"validatedShareKey":"","__typename":"PostContent","bodyModel":{"type":"id","generated":true,"id":"$Post:1b30e27d2bb0.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}}).bodyModel","typename":"RichText"}},"$Post:1b30e27d2bb0.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}}).bodyModel.sections.0":{"name":"f96f","startIndex":0,"textLayout":null,"imageLayout":null,"backgroundImage":null,"videoLayout":null,"backgroundVideo":null,"__typename":"Section"},"$Post:1b30e27d2bb0.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}}).bodyModel.sections.1":{"name":"753b","startIndex":64,"textLayout":null,"imageLayout":null,"backgroundImage":null,"videoLayout":null,"backgroundVideo":null,"__typename":"Section"},"$Post:1b30e27d2bb0.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}}).bodyModel":{"sections":[{"type":"id","generated":true,"id":"$Post:1b30e27d2bb0.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}}).bodyModel.sections.0","typename":"Section"},{"type":"id","generated":true,"id":"$Post:1b30e27d2bb0.content({\"postMeteringOptions\":{\"referrer\":\"https:\u002F\u002Fwww.google.com\u002Fsearch?q=site:lever.co&start=230\"}}).bodyModel.sections.1","typename":"Section"}],"paragraphs":[{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_0","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_1","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_2","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_3","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_4","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_5","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_6","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_7","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_8","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_9","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_10","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_11","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_12","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_13","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_14","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_15","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_16","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_17","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_18","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_19","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_20","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_21","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_22","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_23","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_24","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_25","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_26","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_27","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_28","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_29","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_30","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_31","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_32","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_33","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_34","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_35","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_36","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_37","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_38","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_39","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_40","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_41","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_42","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_43","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_44","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_45","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_46","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_47","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_48","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_49","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_50","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_51","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_52","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_53","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_54","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_55","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_56","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_57","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_58","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_59","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_60","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_61","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_62","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_63","typename":"Paragraph"},{"type":"id","generated":false,"id":"Paragraph:c06ef353d851_64","typename":"Paragraph"}],"__typename":"RichText"},"Paragraph:c06ef353d851_0":{"id":"c06ef353d851_0","name":"9371","type":"H3","href":null,"layout":null,"metadata":null,"text":"The Lever Tech Stack","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_1":{"id":"c06ef353d851_1","name":"7afa","type":"P","href":null,"layout":null,"metadata":null,"text":"Lever was founded in 2012 with the idea that we could drastically improve on the existing talent acquisition and hiring technology that existed. We wanted to bring user-centric design and a deep product experience to the enterprise software space and help companies solve their most strategic problem: growing their teams.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_2":{"id":"c06ef353d851_2","name":"ec6d","type":"P","href":null,"layout":null,"metadata":null,"text":"I joined Lever over 3 years ago as one of the earlier engineers on the team. Since then, Lever has grown a lot as a product and as a company. In this post, I’ll cover our tech stack, why we chose the technologies we did, and how they’ve grown with us.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_3":{"id":"c06ef353d851_3","name":"ead6","type":"H3","href":null,"layout":null,"metadata":null,"text":"What is Lever?","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_4":{"id":"c06ef353d851_4","name":"21de","type":"P","href":null,"layout":null,"metadata":null,"text":"Lever’s main service is an “Applicant Tracking System and CRM for candidates”. We help companies handle their hiring processes from end to end — posting jobs, accepting job applications, scheduling interviews and collecting feedback, sending out offers, and analyzing data from the whole process to get better at hiring.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_5":{"id":"c06ef353d851_5","name":"607c","type":"P","href":null,"layout":null,"metadata":null,"text":"The two main parts of Lever that people interact with are:","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_5.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_5.markups.0":{"type":"STRONG","start":0,"end":58,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_6":{"id":"c06ef353d851_6","name":"8843","type":"OLI","href":null,"layout":null,"metadata":null,"text":"Lever Postings is the public-facing job site system, which shows job postings and accepts job applications. For example, Lever’s own job site is jobs.lever.co\u002Flever. Companies can also create their own custom job sites using our API.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_6.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_6.markups.1","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_6.markups.2","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_6.markups.0":{"type":"A","start":145,"end":164,"href":"https:\u002F\u002Fjobs.lever.co\u002Flever","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_6.markups.1":{"type":"A","start":229,"end":232,"href":"https:\u002F\u002Fgithub.com\u002Flever\u002Fpostings-api","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_6.markups.2":{"type":"STRONG","start":0,"end":15,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_7":{"id":"c06ef353d851_7","name":"6c72","type":"OLI","href":null,"layout":null,"metadata":null,"text":"Lever Hire is the company-facing app for managing the hiring process. Recruiter, hiring manager, interviewers, and execs all use Lever Hire. If you’re curious what this looks like, see the following animations:","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_7.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_7.markups.1","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_7.markups.0":{"type":"A","start":0,"end":10,"href":"http:\u002F\u002Fwww.lever.co\u002Fhire","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_7.markups.1":{"type":"STRONG","start":0,"end":10,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_8":{"id":"c06ef353d851_8","name":"5b1c","type":"IMG","href":null,"layout":"OUTSET_ROW","metadata":{"type":"id","generated":false,"id":"ImageMetadata:1*zzPxR-Edb_IurIY14VjMDw.gif","typename":"ImageMetadata"},"text":"","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"ImageMetadata:1*zzPxR-Edb_IurIY14VjMDw.gif":{"id":"1*zzPxR-Edb_IurIY14VjMDw.gif","originalHeight":660,"originalWidth":1120,"focusPercentX":null,"focusPercentY":null,"alt":null,"__typename":"ImageMetadata"},"Paragraph:c06ef353d851_9":{"id":"c06ef353d851_9","name":"cf2b","type":"IMG","href":null,"layout":"OUTSET_ROW_CONTINUE","metadata":{"type":"id","generated":false,"id":"ImageMetadata:1*ib5Beu8W7rSs7XV4MJ7opg.gif","typename":"ImageMetadata"},"text":"On the left, the Lever Chrome Extension for sourcing candidates. On the right, the interview scheduling workflow.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"ImageMetadata:1*ib5Beu8W7rSs7XV4MJ7opg.gif":{"id":"1*ib5Beu8W7rSs7XV4MJ7opg.gif","originalHeight":660,"originalWidth":1120,"focusPercentX":null,"focusPercentY":null,"alt":null,"__typename":"ImageMetadata"},"Paragraph:c06ef353d851_10":{"id":"c06ef353d851_10","name":"7e48","type":"IMG","href":null,"layout":"INSET_CENTER","metadata":{"type":"id","generated":false,"id":"ImageMetadata:1*3clh9nQobQXmjZFUkyjuUA.gif","typename":"ImageMetadata"},"text":"An example report in Lever on hiring data for a job posting.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"ImageMetadata:1*3clh9nQobQXmjZFUkyjuUA.gif":{"id":"1*3clh9nQobQXmjZFUkyjuUA.gif","originalHeight":660,"originalWidth":1120,"focusPercentX":null,"focusPercentY":null,"alt":null,"__typename":"ImageMetadata"},"Paragraph:c06ef353d851_11":{"id":"c06ef353d851_11","name":"4b08","type":"H3","href":null,"layout":null,"metadata":null,"text":"How does Lever work?","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_12":{"id":"c06ef353d851_12","name":"f5bd","type":"P","href":null,"layout":null,"metadata":null,"text":"We pride ourselves on making software that promotes hiring as a collaborative and inclusive process and that is a joy to use. We picked a tech stack that helps us build collaborative and fast features.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_13":{"id":"c06ef353d851_13","name":"f640","type":"P","href":null,"layout":null,"metadata":null,"text":"Let’s start with a diagram (of course):","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_14":{"id":"c06ef353d851_14","name":"9aab","type":"IMG","href":null,"layout":"INSET_CENTER","metadata":{"type":"id","generated":false,"id":"ImageMetadata:1*zCeGwV0SntUi-Zm1v47MoQ.png","typename":"ImageMetadata"},"text":"Diagram showing part of Lever’s service architecture","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"ImageMetadata:1*zCeGwV0SntUi-Zm1v47MoQ.png":{"id":"1*zCeGwV0SntUi-Zm1v47MoQ.png","originalHeight":750,"originalWidth":900,"focusPercentX":null,"focusPercentY":null,"alt":null,"__typename":"ImageMetadata"},"Paragraph:c06ef353d851_15":{"id":"c06ef353d851_15","name":"09f3","type":"P","href":null,"layout":null,"metadata":null,"text":"For the most part, our stack doesn’t look too unusual for a cloud-hosted application — browser clients, various frontend and backend servers, and databases.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_16":{"id":"c06ef353d851_16","name":"20d1","type":"H3","href":null,"layout":null,"metadata":null,"text":"The short version","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_17":{"id":"c06ef353d851_17","name":"6002","type":"P","href":null,"layout":null,"metadata":null,"text":"Some of the major technologies you’ll find in our stack are: Node.js, Docker, MongoDB, Redis, and Elasticsearch. I’ll cover these later.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_18":{"id":"c06ef353d851_18","name":"9d24","type":"P","href":null,"layout":null,"metadata":null,"text":"Lever is fully hosted on AWS for cloud hosting. Some of the infrastructure technologies we use to help us manage our stack include Terraform, Chef, Amazon ECS (similar to Kubernetes), Hubot, and Grafana. An infrastructure engineer will cover these in a later post.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_18.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_18.markups.0":{"type":"A","start":25,"end":28,"href":"https:\u002F\u002Faws.amazon.com\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_19":{"id":"c06ef353d851_19","name":"08b2","type":"P","href":null,"layout":null,"metadata":null,"text":"There’s one thing in the diagram that I haven’t mentioned yet. What’s up with the red horse icon?","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_20":{"id":"c06ef353d851_20","name":"c28a","type":"H3","href":null,"layout":null,"metadata":null,"text":"DerbyJS and ShareDB — Real-time collaboration","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_21":{"id":"c06ef353d851_21","name":"6846","type":"P","href":null,"layout":null,"metadata":null,"text":"Lever Hire is a single-page application with a few twists. It’s built on DerbyJS, a web application framework for building real-time collaborative web applications that work like Google Docs. Prior to Lever, real-time data syncing and collaborative edits were fairly rare in enterprise apps.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_21.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_21.markups.0":{"type":"A","start":73,"end":80,"href":"http:\u002F\u002Fderbyjs.com\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_22":{"id":"c06ef353d851_22","name":"609d","type":"P","href":null,"layout":null,"metadata":null,"text":"DerbyJS was created by our CTO & Co-Founder, Nate Smith, together with a few others after working on the Google Search team. In Derby, changes made to something by one user will near-instantaneously show up for all other connected users viewing that entity, without users having to refresh:","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_23":{"id":"c06ef353d851_23","name":"2fa9","type":"IMG","href":null,"layout":"INSET_CENTER","metadata":{"type":"id","generated":false,"id":"ImageMetadata:0*NL8tkpwIdc0JMBrN.","typename":"ImageMetadata"},"text":"Two separate browser windows opened to the same page. Changes in one window are immediately reflected in the other window.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"ImageMetadata:0*NL8tkpwIdc0JMBrN.":{"id":"0*NL8tkpwIdc0JMBrN.","originalHeight":650,"originalWidth":720,"focusPercentX":null,"focusPercentY":null,"alt":null,"__typename":"ImageMetadata"},"Paragraph:c06ef353d851_24":{"id":"c06ef353d851_24","name":"b38b","type":"P","href":null,"layout":null,"metadata":null,"text":"Why create a new framework? From Nate:","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_25":{"id":"c06ef353d851_25","name":"c81a","type":"BQ","href":null,"layout":null,"metadata":null,"text":"Working on the Google Search team illuminated the fact that server-side in addition to client-side rendering was important in delivering a performant web app.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_26":{"id":"c06ef353d851_26","name":"1bcc","type":"BQ","href":null,"layout":null,"metadata":null,"text":"The single-page app trend sacrificed page load time substantially. Even in enterprise applications, page load time is important since the web is built around hyperlinks. Links among calendars, emails, task lists, and websites make cloud software even more useful and productive.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_27":{"id":"c06ef353d851_27","name":"280d","type":"BQ","href":null,"layout":null,"metadata":null,"text":"I wanted to deliver fast page load time as well as fast interactive single page applications, in a way that could be developed by a small team.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_28":{"id":"c06ef353d851_28","name":"e2c0","type":"P","href":null,"layout":null,"metadata":null,"text":"To deliver fast page load times, Derby can render pages either as HTML on the server or using DOM methods in the browser client. This gives us the benefits of both server-side and client-side rendering:","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_29":{"id":"c06ef353d851_29","name":"5aeb","type":"ULI","href":null,"layout":null,"metadata":null,"text":"When a user first opens the app, the browser can quickly display a visually-complete page based on the server-rendered HTML without having to wait for a lot of JavaScript to load.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_30":{"id":"c06ef353d851_30","name":"6585","type":"ULI","href":null,"layout":null,"metadata":null,"text":"Subsequently navigating inside the app triggers client-side page renders in the browser, which are faster and feel smoother than reloading new HTML pages from the server.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_31":{"id":"c06ef353d851_31","name":"cfa6","type":"P","href":null,"layout":null,"metadata":null,"text":"This approach of server-side and client-side rendering has been called Universal JavaScript or isomorphic rendering. Airbnb’s engineering blog has a good post that goes more into depth on the benefits of isomorphism. Fast first time rendering, fast client-side rendering, and use of the browser’s History API are key tenets of Google’s checklist for Progressive Web Apps.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_31.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_31.markups.1","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_31.markups.2","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_31.markups.0":{"type":"A","start":71,"end":91,"href":"https:\u002F\u002Fcdb.reacttraining.com\u002Funiversal-javascript-4761051b7ae9","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_31.markups.1":{"type":"A","start":149,"end":158,"href":"https:\u002F\u002Fmedium.com\u002Fairbnb-engineering\u002Fisomorphic-javascript-the-future-of-web-apps-10882b7a2ebc","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_31.markups.2":{"type":"A","start":350,"end":370,"href":"https:\u002F\u002Fdevelopers.google.com\u002Fweb\u002Fprogressive-web-apps\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_32":{"id":"c06ef353d851_32","name":"3475","type":"P","href":null,"layout":null,"metadata":null,"text":"The backend of Derby is ShareDB, a database layer that handles concurrent edits from multiple users by using an Operational Transform (OT) algorithm. It also synchronizes data in real-time between multiple clients and servers.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_32.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_32.markups.0":{"type":"A","start":24,"end":31,"href":"https:\u002F\u002Fgithub.com\u002Fshare\u002Fsharedb","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_33":{"id":"c06ef353d851_33","name":"2924","type":"H3","href":null,"layout":null,"metadata":null,"text":"The rest of the stack","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_34":{"id":"c06ef353d851_34","name":"5aaf","type":"P","href":null,"layout":null,"metadata":null,"text":"The rest of Lever’s stack should look more familiar. I’ll briefly cover those technologies and why we chose them.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_35":{"id":"c06ef353d851_35","name":"247f","type":"H4","href":null,"layout":null,"metadata":null,"text":"Node.js","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_35.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_35.markups.0":{"type":"STRONG","start":0,"end":7,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_36":{"id":"c06ef353d851_36","name":"a8df","type":"P","href":null,"layout":null,"metadata":null,"text":"Node.js lets us run JavaScript on our servers in addition to in the browser. As mentioned above, this lets Derby use the same code to render on the server and on the client.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_36.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_36.markups.0":{"type":"A","start":0,"end":7,"href":"https:\u002F\u002Fnodejs.org\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_37":{"id":"c06ef353d851_37","name":"b04e","type":"P","href":null,"layout":null,"metadata":null,"text":"There’s one other benefit to us from using JavaScript everywhere: For the operational transforms in ShareDB, you need to run the same algorithm on the client and server, and using the exact same code in both places is an easy way to ensure that.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_38":{"id":"c06ef353d851_38","name":"1873","type":"P","href":null,"layout":null,"metadata":null,"text":"Currently, we actually write most of our internal code in CoffeeScript, which we compile into JavaScript. This means the team only needs to learn one language, and every product engineer at Lever can contribute to any part of the codebase. [2019–08–28: We have started migrating our codebase to TypeScript, which gets us static types on top of JavaScript. We’ll have a series of upcoming posts on the whys behind the switch and our migration process!]","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_38.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_38.markups.1","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_38.markups.2","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_38.markups.0":{"type":"A","start":58,"end":70,"href":"https:\u002F\u002Fcoffeescript.org\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_38.markups.1":{"type":"A","start":295,"end":305,"href":"https:\u002F\u002Fwww.typescriptlang.org\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_38.markups.2":{"type":"EM","start":240,"end":451,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_39":{"id":"c06ef353d851_39","name":"269e","type":"P","href":null,"layout":null,"metadata":null,"text":"JavaScript does have some problems for large enterprise software codebases, such as a lack of static types, which pushes more work onto the people writing and changing the code. If we were building Lever today, we’d probably use TypeScript or Flow, but they didn’t exist back then.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_40":{"id":"c06ef353d851_40","name":"82cd","type":"P","href":null,"layout":null,"metadata":null,"text":"Instead, to help manage our growing JavaScript codebase, we’ve done things like consolidating business logic into a central library, with a consistent entity-method naming convention like User.addNew for both function definitions and usages, to make them easy to find. We’re also working on implementing JSON schemas for our data, which we can eventually add to our Mongo database.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_40.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_40.markups.1","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_40.markups.0":{"type":"CODE","start":188,"end":199,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_40.markups.1":{"type":"A","start":304,"end":316,"href":"http:\u002F\u002Fjson-schema.org\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_41":{"id":"c06ef353d851_41","name":"12c8","type":"H4","href":null,"layout":null,"metadata":null,"text":"Docker","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_41.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_41.markups.0":{"type":"STRONG","start":0,"end":6,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_42":{"id":"c06ef353d851_42","name":"475e","type":"P","href":null,"layout":null,"metadata":null,"text":"Docker runs our server processes in isolated containers. This lets us use Amazon’s Elastic Container Service (ECS) to easily scale up the number of containers that we run as our number of users grows. (We’ve previously covered the scaling benefits of Docker for our browser testing infrastructure.)","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_42.markups.0","typename":"Markup"},{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_42.markups.1","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_42.markups.0":{"type":"A","start":0,"end":6,"href":"https:\u002F\u002Fwww.docker.com\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_42.markups.1":{"type":"A","start":208,"end":226,"href":"https:\u002F\u002Ffulcrum.lever.co\u002Fup-level-your-web-automation-using-selenium-grid-with-docker-c1cda248a4e3","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_43":{"id":"c06ef353d851_43","name":"9a63","type":"H4","href":null,"layout":null,"metadata":null,"text":"MongoDB","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_43.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_43.markups.0":{"type":"STRONG","start":0,"end":7,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_44":{"id":"c06ef353d851_44","name":"5c55","type":"P","href":null,"layout":null,"metadata":null,"text":"Mongo is a “NoSQL” database that holds most of our application data.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_44.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_44.markups.0":{"type":"A","start":0,"end":5,"href":"https:\u002F\u002Fwww.mongodb.com\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_45":{"id":"c06ef353d851_45","name":"89c6","type":"P","href":null,"layout":null,"metadata":null,"text":"Why pick Mongo over a relational database like MySQL or Postgres? I asked Nate about that:","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_46":{"id":"c06ef353d851_46","name":"b953","type":"BQ","href":null,"layout":null,"metadata":null,"text":"Mongo is a pretty good datastore for the [ShareDB] data model. [It supports] documents of potentially large size, and the tooling is all based around documents of arbitrary nature.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_47":{"id":"c06ef353d851_47","name":"a5ac","type":"BQ","href":null,"layout":null,"metadata":null,"text":"The easiest way to implement OT was to do a generalized JSON implementation. You could have more specific types, but that’s more difficult. It’s also pretty good at storing operation logs for OT. It’s good at write speed when you don’t have a ton of indexes.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_48":{"id":"c06ef353d851_48","name":"d73e","type":"BQ","href":null,"layout":null,"metadata":null,"text":"There were downsides, like not having joins or schemas at that time. [Newer versions of Mongo have some support for both.]","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_49":{"id":"c06ef353d851_49","name":"4029","type":"P","href":null,"layout":null,"metadata":null,"text":"We also don’t require the strong transactional guarantees that many relational databases provide, as ShareDB implements optimistic concurrency for its commits.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_49.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_49.markups.0":{"type":"A","start":120,"end":142,"href":"https:\u002F\u002Fen.wikipedia.org\u002Fwiki\u002FOptimistic_concurrency_control","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_50":{"id":"c06ef353d851_50","name":"d30c","type":"P","href":null,"layout":null,"metadata":null,"text":"Mongo has served us well, and we plan to continue using it as our main application database. We’ve been able to vertically scale it so far without much issue — it’s nice that we can do no-downtime cluster rotations to upgrade our Mongo servers — and Mongo also supports data sharding for horizontal scaling.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_50.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_50.markups.0":{"type":"A","start":270,"end":283,"href":"https:\u002F\u002Fdocs.mongodb.com\u002Fmanual\u002Fsharding\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_51":{"id":"c06ef353d851_51","name":"a397","type":"H4","href":null,"layout":null,"metadata":null,"text":"Redis","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_51.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_51.markups.0":{"type":"STRONG","start":0,"end":5,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_52":{"id":"c06ef353d851_52","name":"1167","type":"P","href":null,"layout":null,"metadata":null,"text":"Redis is a fast, in-memory datastore. One of our major uses of Redis is fairly typical: storing small pieces of data with high read\u002Fwrite volumes like session data and rate limiting info.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_52.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_52.markups.0":{"type":"A","start":0,"end":5,"href":"https:\u002F\u002Fredis.io\u002F","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_53":{"id":"c06ef353d851_53","name":"c954","type":"P","href":null,"layout":null,"metadata":null,"text":"Redis also backs ShareDB’s real-time features. Using Redis’ pub\u002Fsub functionality means that when one user changes some data, all servers that are subscribed to that data will get an immediate “push notification” about that change, which means changes get seen in real-time.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_54":{"id":"c06ef353d851_54","name":"8005","type":"P","href":null,"layout":null,"metadata":null,"text":"We also use it to ensure high speed and availability for our link redirection service. It’s important to have fast response times for link redirection, so we don’t want to wait for a write to Mongo before redirecting. Instead, we quickly write events to Redis and then later process the events to update the stats for in Mongo.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_55":{"id":"c06ef353d851_55","name":"3e6b","type":"H4","href":null,"layout":null,"metadata":null,"text":"Elasticsearch","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_55.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_55.markups.0":{"type":"STRONG","start":0,"end":13,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_56":{"id":"c06ef353d851_56","name":"8a1d","type":"P","href":null,"layout":null,"metadata":null,"text":"We use Elasticsearch in addition to Mongo for some of ES’s advanced features: searching, ranking results, and performing fast, complex aggregations.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_56.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_56.markups.0":{"type":"A","start":7,"end":20,"href":"https:\u002F\u002Fwww.elastic.co\u002Fproducts\u002Felasticsearch","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_57":{"id":"c06ef353d851_57","name":"85f2","type":"P","href":null,"layout":null,"metadata":null,"text":"Elasticseach enables our full-text search on candidate info and resume data. It also powers our recommendation ranking engine, which helps recruiters resurface past candidates for new roles.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_57.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_57.markups.0":{"type":"A","start":96,"end":125,"href":"https:\u002F\u002Fwww.lever.co\u002Fblog\u002Fannouncing-lever-nurture-recommendations-to-kickstart-your-hiring","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_58":{"id":"c06ef353d851_58","name":"f08e","type":"H3","href":null,"layout":null,"metadata":null,"text":"Where do we go from here?","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_59":{"id":"c06ef353d851_59","name":"4ee5","type":"P","href":null,"layout":null,"metadata":null,"text":"Our tech stack has served us well so far. Most of the core technologies in our stack are used by companies operating at a larger scale than we are, so we’re not planning on completely replacing any of them in the immediate future.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_60":{"id":"c06ef353d851_60","name":"4e73","type":"P","href":null,"layout":null,"metadata":null,"text":"Most of the work on our stack in the next couple years will be in scaling up how we use those technologies.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_60.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_60.markups.0":{"type":"EM","start":77,"end":80,"href":null,"anchorType":null,"userId":null,"linkMetadata":null,"__typename":"Markup"},"Paragraph:c06ef353d851_61":{"id":"c06ef353d851_61","name":"f164","type":"P","href":null,"layout":null,"metadata":null,"text":"For example, I’m currently working on a partial re-architecture of our task processing service to allow it to scale beyond its current limits, as well as thinking about how to make the service easier to monitor and debug, for both our engineering and support teams. Organizations need to scale, too!","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_62":{"id":"c06ef353d851_62","name":"9933","type":"P","href":null,"layout":null,"metadata":null,"text":"Other people on the team are tackling improvements like implementing schemas for our data or reporting test coverage results directly on pull requests.","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_63":{"id":"c06ef353d851_63","name":"0633","type":"P","href":null,"layout":null,"metadata":null,"text":"We’ll be writing about our work on these topics in the future, so stay tuned for more!","hasDropCap":null,"dropCapImage":null,"markups":[],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_64":{"id":"c06ef353d851_64","name":"f18d","type":"H3","href":null,"layout":null,"metadata":null,"text":"If you’re interested in helping us build and scale Lever, our R&D team is looking for engineers, product managers, and designers — get in touch here.","hasDropCap":null,"dropCapImage":null,"markups":[{"type":"id","generated":true,"id":"Paragraph:c06ef353d851_64.markups.0","typename":"Markup"}],"__typename":"Paragraph","iframe":null,"mixtapeMetadata":null},"Paragraph:c06ef353d851_64.markups.0":{"type":"A","start":131,"end":148,"href":"https:\u002F\u002Fwww.lever.co\u002Fengineering-careers","anchorType":"LINK","userId":null,"linkMetadata":null,"__typename":"Markup"},"Tag:javascript":{"id":"javascript","displayTitle":"JavaScript","__typename":"Tag"},"Tag:tech-stack":{"id":"tech-stack","displayTitle":"Tech Stack","__typename":"Tag"},"Tag:startup":{"id":"startup","displayTitle":"Startup","__typename":"Tag"},"Tag:nodejs":{"id":"nodejs","displayTitle":"Nodejs","__typename":"Tag"},"Tag:mongodb":{"id":"mongodb","displayTitle":"Mongodb","__typename":"Tag"},"Collaborator:1b30e27d2bb0-9f8c84acd6f5":{"id":"1b30e27d2bb0-9f8c84acd6f5","user":{"type":"id","generated":false,"id":"User:9f8c84acd6f5","typename":"User"},"state":"visible","__typename":"Collaborator"},"User:9f8c84acd6f5":{"id":"9f8c84acd6f5","name":"Kate Reading","__typename":"User"},"ImageMetadata:1*S1otzh2zrjs3w-YIM2ai8Q.png":{"id":"1*S1otzh2zrjs3w-YIM2ai8Q.png","__typename":"ImageMetadata"},"$Post:1b30e27d2bb0.previewContent":{"subtitle":"Lever was founded in 2012 with the idea that we could drastically improve on the existing talent acquisition and hiring technology that…","__typename":"PreviewContent"}}
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/manifest.62daf18b.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/vendors~main.26101d5d.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/main.a2624962.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/vendors~screen.collection.packageBuilder~screen.landingpages.pres45~screen.landingpages.tribute~scre~3e410f11.faa5af01.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/screen.collection.packageBuilder~screen.landingpages.pres45~screen.landingpages.tribute~screen.post~~73c4bb05.43adf86d.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/screen.post~screen.post.amp~screen.post.series~screen.profile~screen.sequence.library~screen.sequenc~036c6b37.d7f2bab9.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/screen.collection.packageBuilder~screen.landingpages.tribute~screen.post~screen.post.amp.28451819.chunk.js">
+  </script>
+  <script src="https://cdn-client.medium.com/lite/static/js/screen.post.fdffaedc.chunk.js">
+  </script>
+  <script>
+   window.main();
+  </script>
+ </body>
+</html>

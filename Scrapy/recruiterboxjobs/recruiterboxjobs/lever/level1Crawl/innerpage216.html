@@ -1,0 +1,2854 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"fb4e40776b",applicationID:"308893147"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <script src="https://cdn.optimizely.com/js/15777290433.js">
+  </script>
+  <title>
+   Candidate Sourcing Strategies to Build your Talent Pipeline
+  </title>
+  <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+  <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+   //<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+  </script>
+  <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+  <!-- This site is optimized with the Yoast SEO plugin v12.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
+  <meta content="Your detailed, step-by-step guide to building a candidate sourcing strategy that wins top talent. Find the best canddiate sourcing strategies." name="description">
+   <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots">
+    <link href="https://www.lever.co/recruiting-resources/articles/candidate-sourcing-strategies/" rel="canonical">
+     <meta content="en_US" property="og:locale"/>
+     <meta content="article" property="og:type"/>
+     <meta content="Candidate Sourcing Strategies to Build your Talent Pipeline" property="og:title"/>
+     <meta content="Your detailed, step-by-step guide to building a candidate sourcing strategy that wins top talent. Find the best canddiate sourcing strategies." property="og:description"/>
+     <meta content="https://www.lever.co/recruiting-resources/articles/candidate-sourcing-strategies/" property="og:url"/>
+     <meta content="Lever" property="og:site_name"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Candidate_Sourcing_Intake_Form.jpg" property="og:image"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Candidate_Sourcing_Intake_Form.jpg" property="og:image:secure_url"/>
+     <meta content="866" property="og:image:width"/>
+     <meta content="577" property="og:image:height"/>
+     <meta content="summary_large_image" name="twitter:card"/>
+     <meta content="Your detailed, step-by-step guide to building a candidate sourcing strategy that wins top talent. Find the best canddiate sourcing strategies." name="twitter:description"/>
+     <meta content="Candidate Sourcing Strategies to Build your Talent Pipeline" name="twitter:title"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Candidate_Sourcing_Intake_Form.jpg" name="twitter:image"/>
+     <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lever.co/#website","url":"https://www.lever.co/","name":"Lever","description":"Lever Recruiting Software","potentialAction":{"@type":"SearchAction","target":"https://www.lever.co/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.lever.co/recruiting-resources/articles/candidate-sourcing-strategies/#primaryimage","url":"https://www.lever.co/wp-content/uploads/2019/04/Candidate_Sourcing_Intake_Form.jpg","width":866,"height":577},{"@type":"WebPage","@id":"https://www.lever.co/recruiting-resources/articles/candidate-sourcing-strategies/#webpage","url":"https://www.lever.co/recruiting-resources/articles/candidate-sourcing-strategies/","inLanguage":"en-US","name":"Candidate Sourcing Strategies to Build your Talent Pipeline","isPartOf":{"@id":"https://www.lever.co/#website"},"primaryImageOfPage":{"@id":"https://www.lever.co/recruiting-resources/articles/candidate-sourcing-strategies/#primaryimage"},"datePublished":"2018-09-06T11:09:29+00:00","dateModified":"2019-07-01T11:47:45+00:00","description":"Your detailed, step-by-step guide to building a candidate sourcing strategy that wins top talent. Find the best canddiate sourcing strategies."}]}
+     </script>
+     <!-- / Yoast SEO plugin. -->
+     <link href="//www.lever.co" rel="dns-prefetch"/>
+     <link href="//munchkin.marketo.net" rel="dns-prefetch"/>
+     <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
+     <link href="//s.w.org" rel="dns-prefetch"/>
+     <link href="https://www.lever.co/feed/" rel="alternate" title="Lever » Feed" type="application/rss+xml"/>
+     <link href="https://www.lever.co/comments/feed/" rel="alternate" title="Lever » Comments Feed" type="application/rss+xml"/>
+     <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.lever.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+     </script>
+     <style type="text/css">
+      img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+     </style>
+     <link href="https://www.lever.co/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css?ver=2.3.9" id="mpp_gutenberg-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/css/style.css?ver=5.3.2" id="cookie-consent-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/css/ult_marketo_forms-public.css?ver=1.0.1" id="ult_marketo_forms-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=5.0.1" id="wordpress-popular-posts-css-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/css/minifycss/magnific-popup.min.css?ver=1.0.2" id="lib-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/css/html_migrated/minifycss/style.min.css?ver=5.3.2" id="html_migrated_base-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/underscores.min.css?ver=5.3.2" id="lever-underscores-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/style.min.css?ver=1.0.0-213" id="lever-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/header.min.css?ver=1.0.0-213" id="lever-header-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/footer.min.css?ver=1.0.0-213" id="lever-footer-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/levercss/html_migrated/style.css?ver=5.3.2" id="lever-html-migrated-css" media="all" rel="stylesheet" type="text/css"/>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/forms2.min.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com, @yourdomain.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/ult_marketo_forms-public.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script src="//munchkin.marketo.net/munchkin.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      Munchkin.init('293-AOQ-024');
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.2" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/www.lever.co\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","ID":"11370","token":"ce76045b3d","debug":""};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/assets/js/wpp-5.0.0.min.js?ver=5.0.1" type="text/javascript">
+     </script>
+     <link href="https://www.lever.co/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+     <link href="https://www.lever.co/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+     <meta content="WordPress 5.3.2" name="generator"/>
+     <link href="https://www.lever.co/?p=11370" rel="shortlink"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Frecruiting-resources%2Farticles%2Fcandidate-sourcing-strategies%2F" rel="alternate" type="application/json+oembed"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Frecruiting-resources%2Farticles%2Fcandidate-sourcing-strategies%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+     <style id="ctcc-css" media="screen" type="text/css">
+      #catapult-cookie-bar {
+					box-sizing: border-box;
+					max-height: 0;
+					opacity: 0;
+					z-index: 99999;
+					overflow: hidden;
+					color: #ddd;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					background-color: #464646;
+				}
+				#catapult-cookie-bar a {
+					color: #fff;
+				}
+				#catapult-cookie-bar .x_close span {
+					background-color: ;
+				}
+				button#catapultCookie {
+					background:;
+					color: ;
+					border: 0; padding: 6px 9px; border-radius: 3px;
+				}
+				#catapult-cookie-bar h3 {
+					color: #ddd;
+				}
+				.has-cookie-bar #catapult-cookie-bar {
+					opacity: 1;
+					max-height: 999px;
+					min-height: 30px;
+				}
+     </style>
+     <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+     <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+      //<![CDATA[
+	var dataLayer_content = {"pagePostType":"html_migrated","pagePostType2":"single-html_migrated","pagePostAuthor":"superuser"};
+	dataLayer.push( dataLayer_content );//]]>
+     </script>
+     <script data-cfasync="false">
+      //<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSF9Z3W');//]]>
+     </script>
+     <!-- End Google Tag Manager -->
+     <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+     <style type="text/css">
+      .site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+     </style>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="32x32"/>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="192x192"/>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="apple-touch-icon-precomposed"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" name="msapplication-TileImage"/>
+    </link>
+   </meta>
+  </meta>
+ </head>
+ <body class="html_migrated-template-default single single-html_migrated postid-11370 wp-custom-logo no-sidebar html_migrated-recruiting-resources-articles-candidate-sourcing-strategies elementor-default">
+  <div class="site page-wrap body-page-wrap" id="page">
+   <a class="skip-link screen-reader-text" href="#content">
+    Skip to content
+   </a>
+   <header class="site-header header" id="masthead">
+    <div class="header__wrapper">
+     <div class="site-branding">
+      <a class="custom-logo-link" href="https://www.lever.co/" rel="home">
+       <img alt="lever recruiting software" class="custom-logo" height="48" src="https://www.lever.co/wp-content/uploads/2019/03/lever_rgb_logo_standard.svg" width="169.001"/>
+      </a>
+      <p class="site-title">
+       <a href="https://www.lever.co/" rel="home">
+        Lever
+       </a>
+      </p>
+      <p class="site-description">
+       Lever Recruiting Software
+      </p>
+     </div>
+     <!-- .site-branding -->
+     <div class="menu-overflow hidden-large">
+     </div>
+     <div class="menu-wrapper">
+      <nav class="main-navigation" id="site-navigation">
+       <div class="menu-main-menu-container">
+        <ul class="menu" id="primary-menu">
+         <li class="hidden-large menu-item menu-item-type-custom menu-item-object-custom menu-item-76" id="menu-item-76">
+          <a href="https://hire.lever.co/">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32" id="menu-item-32">
+          <a href="/talent-suite">
+           Products
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13835" id="menu-item-13835">
+            <a href="https://www.lever.co/talent-suite/">
+             Lever Talent Suite
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39" id="menu-item-39">
+            <a href="/hire">
+             Lever Hire
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49" id="menu-item-49">
+            <a href="/nurture">
+             Lever Nurture
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50" id="menu-item-50">
+            <a href="/analytics">
+             Lever Analytics
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13834" id="menu-item-13834">
+            <a href="https://www.lever.co/talent-cloud-connect/">
+             Talent Cloud Connect
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51" id="menu-item-51">
+            <a href="/pricing">
+             Plans and Pricing
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40" id="menu-item-40">
+            <a href="/ecosystem">
+             Ecosystem
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15555" id="menu-item-15555">
+          <a href="/pricing">
+           Pricing
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" id="menu-item-33">
+          <a href="/customers">
+           Customers
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4561" id="menu-item-4561">
+          <a href="https://www.lever.co/recruiting-resources/">
+           Resources
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4562" id="menu-item-4562">
+            <a href="https://www.lever.co/recruiting-resources/">
+             All
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-342" id="menu-item-342">
+            <a href="https://www.lever.co/recruiting-resources/ebook/">
+             eBooks
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-343" id="menu-item-343">
+            <a href="https://www.lever.co/recruiting-resources/video/">
+             Videos
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-346" id="menu-item-346">
+            <a href="https://www.lever.co/recruiting-resources/webinar/">
+             Webinars
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-345" id="menu-item-345">
+            <a href="https://www.lever.co/recruiting-resources/tools/">
+             Tools and Templates
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-344" id="menu-item-344">
+            <a href="https://www.lever.co/recruiting-resources/datasheet/">
+             Product Datasheets
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13391" id="menu-item-13391">
+            <a href="https://www.lever.co/gdpr-recruiting/">
+             GDPR
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16854" id="menu-item-16854">
+            <a href="https://www.lever.co/lever-for-startups/">
+             Lever for Startups
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-35" id="menu-item-35">
+          <a href="/about">
+           Company
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44" id="menu-item-44">
+            <a href="/about">
+             About Us
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4566" id="menu-item-4566">
+            <a href="https://www.lever.co/diversity-and-inclusion/">
+             Diversity
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47" id="menu-item-47">
+            <a href="/press">
+             Press
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46" id="menu-item-46">
+            <a href="/careers">
+             Careers
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48" id="menu-item-48">
+            <a href="/partner-referral-application">
+             Referral Program
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15716" id="menu-item-15716">
+            <a href="https://www.lever.co/events/">
+             Events
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17257" id="menu-item-17257">
+            <a href="https://www.lever.co/contact/">
+             Contact Us
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" id="menu-item-36">
+          <a href="/blog">
+           Blog
+          </a>
+         </li>
+        </ul>
+       </div>
+      </nav>
+      <!-- #site-navigation -->
+      <div class="user-navigation">
+       <div class="menu-user-menu-container">
+        <ul class="menu" id="menu-user-menu">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" id="menu-item-37">
+          <a href="https://hire.lever.co" rel="noopener noreferrer" target="_blank">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-button menu-item menu-item-type-custom menu-item-object-custom menu-item-38" id="menu-item-38">
+          <a href="/1801-demo-signup">
+           Get Started
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="social-links hidden-large">
+       <div class="menu-socail-links-container">
+        <ul class="menu" id="menu-socail-links">
+         <li class="fa fa-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-73" id="menu-item-73">
+          <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+           Twitter
+          </a>
+         </li>
+         <li class="fa fa-linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-74" id="menu-item-74">
+          <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+           Linkedin
+          </a>
+         </li>
+         <li class="fa fa-facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-75" id="menu-item-75">
+          <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+           Facebook
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- .menu-wrapper -->
+     <button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle hidden-large">
+      <span class="fa fa-bars">
+      </span>
+     </button>
+    </div>
+    <!-- .header__wrapper -->
+   </header>
+   <!-- #masthead -->
+   <div class="site-content" id="content">
+    <div class="content-area" id="primary">
+     <main class="site-main" id="main">
+      <div class="entry-content" id="html-migrated-wrapper">
+       <h1 class="entry-title visibility-hidden">
+        Candidate Sourcing Strategies to Build Your Talent Pipeline
+       </h1>
+       <span id="more-11370">
+       </span>
+       <link href="/wp-content/themes/lever/css/html_migrated/3e709c0dadd0d16ffec18a9560c6218d.css" rel="stylesheet" type="text/css"/>
+       <link href="/wp-content/themes/lever/css/html_migrated/fadd72630217a689052acea79ab4919c.css" rel="stylesheet" type="text/css"/>
+       <link href="/wp-content/themes/lever/css/html_migrated/20433c2e33a80f49b8d8a84251e78354.css" rel="stylesheet" type="text/css"/>
+       <link href="/wp-content/themes/lever/css/html_migrated/2e5f64f9c6e5c9204557bd8b7d945d85.css" rel="stylesheet" type="text/css"/>
+       <style id="hs_editor_style" type="text/css">
+        #hs_cos_wrapper_module_1484168159224140  { display: block !important; padding-left: 60px !important } #hs_cos_wrapper_module_1484172278104127  { display: block !important; padding-left: 25px !important }
+       </style>
+       <div class="body-container-wrapper">
+        <div class="body-container container-fluid">
+         <div class="row-fluid-wrapper row-depth-1 row-number-1">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-rich_text ctr mt100 mb70" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148131531009120382" style="">
+              <h1>
+               Candidate Sourcing Strategies to Build Your Talent Pipeline
+              </h1>
+             </span>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-2">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_module_148131724829935492" style="">
+              <style>
+               .page-hero .content-wrap {         min-height: 500px;         }
+              </style>
+              <!-- Faded to remove CTA pop in issue above the fold -->
+              <div class="page-hero" style="      background-image: url(/wp-content/uploads/2019/04/Candidate_Sourcing_Intake_Form.jpg);       background-color: #cccccc; ">
+               <div class="overlay" style="     ">
+                <div class="content-wrap">
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-3">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-4">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text article-overlay" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148131753041241264" style="">
+                 <p>
+                  <span class="inline-callout">
+                   Attracting top talent is essential to the future of your organization. If you want to come out ahead of your competition, you need to hire the best talent in the market to help you get there.
+                   <strong>
+                    The problem is,
+                    <a href="https://www.lever.co/recruiting-resources/little-grey-book-of-recruiting-benchmarks-2016?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                     52 percent
+                    </a>
+                    of people who apply to a job are underqualified, and
+                    <span style="font-weight: 400;">
+                     <a href="http://www.nfib.com/Portals/0/pdf/sbet/sbet201512.pdf" rel="noopener noreferrer" target="_blank">
+                      47 percent
+                     </a>
+                     of companies report few or no qualified applicants for the positions they are trying to fill
+                    </span>
+                    .
+                   </strong>
+                   In today’s competitive job market, top talent won’t be falling into your lap any time soon.
+                  </span>
+                 </p>
+                 <p>
+                 </p>
+                 <p>
+                  <span class="inline-callout">
+                   Rather than waiting for candidates to come to you, direct your efforts toward strategically sourcing the best talent.
+                  </span>
+                  <br/>
+                  <br/>
+                 </p>
+                 <hr/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-5">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell ctr pb50" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-6">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148131506415811026" style="">
+                 <h2>
+                  What is candidate sourcing?
+                 </h2>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-7">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148228020551187463" style="">
+                 <p>
+                  <span style="font-weight: 400;">
+                   Candidate
+                  </span>
+                  <span style="font-weight: 400;">
+                   s
+                  </span>
+                  <span style="font-weight: 400;">
+                   ourcing
+                  </span>
+                  <span style="font-weight: 400;">
+                   involves proactively searching for and engaging qualified talent to fill your company’s current or future positions, and it’s more important than ever.
+                   <span>
+                    Only 36 percent of the workforce is actively looking for a new opportunity at any given time, but an incredible
+                   </span>
+                   <a href="https://business.linkedin.com/talent-solutions/blog/trends-and-research/2016/linkedin-new-report-reveals-the-latest-job-seeking-trends" rel="noopener noreferrer" target="_blank">
+                    <i>
+                     <span>
+                      90 percent
+                     </span>
+                    </i>
+                   </a>
+                   <span>
+                    is willing to talk and learn more
+                   </span>
+                   <span>
+                    .
+                   </span>
+                  </span>
+                  <span style="font-weight: 400;">
+                   Sourcing opens you up to huge swaths of the talent pool you didn’t have access to before – among both passive candidates, and active candidates who otherwise wouldn't apply because they don’t know about your company or open opportunities. Sourcing allows you to take control of your pipeline and initiate conversations with the talent you really want.
+                  </span>
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-8">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1484110661170560" style="">
+                 <p>
+                  What’s more, our recruiting benchmarks research found that sourced candidates are more than two times as efficient as candidates who apply. One in every 72 sourced candidates, on average, is hired, compared to one in every 152 for applicants. That figure is even more impressive when you consider that applicants are actively interested, while sourced candidates may not be.
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-9">
+             <div class="row-fluid">
+              <div class="span2 widget-span widget-type-space" data-w="2" data-widget-type="space" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_space" data-hs-cos-general-type="widget" data-hs-cos-type="space" id="hs_cos_wrapper_module_1484172711502129" style="">
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+              <div class="span10 widget-span widget-type-cell" data-w="10" data-widget-type="cell" data-x="2" style="">
+               <div class="row-fluid-wrapper row-depth-1 row-number-10">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-linked_image center" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+                  <div class="cell-wrapper layout-widget-wrapper">
+                   <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1484167494495137" style="">
+                    <img alt="Candidates per hire - sourced vs applied" class="hs-image-widget" sizes="(max-width: 640px) 100vw, 640px" src="/wp-content/uploads/2019/04/Candidates_per_hire_-_sourced_vs_applied.png?width=640&amp;name=Candidates%20per%20hire%20-%20sourced%20vs%20applied.png" srcset="/wp-content/uploads/2019/04/Candidates_per_hire_-_sourced_vs_applied.png?width=320&amp;name=Candidates%20per%20hire%20-%20sourced%20vs%20applied.png 320w, /wp-content/uploads/2019/04/Candidates_per_hire_-_sourced_vs_applied.png?width=640&amp;name=Candidates%20per%20hire%20-%20sourced%20vs%20applied.png 640w, /wp-content/uploads/2019/04/Candidates_per_hire_-_sourced_vs_applied.png?width=960&amp;name=Candidates%20per%20hire%20-%20sourced%20vs%20applied.png 960w, /wp-content/uploads/2019/04/Candidates_per_hire_-_sourced_vs_applied.png?width=1280&amp;name=Candidates%20per%20hire%20-%20sourced%20vs%20applied.png 1280w, /wp-content/uploads/2019/04/Candidates_per_hire_-_sourced_vs_applied.png?width=1600&amp;name=Candidates%20per%20hire%20-%20sourced%20vs%20applied.png 1600w, /wp-content/uploads/2019/04/Candidates_per_hire_-_sourced_vs_applied.png?width=1920&amp;name=Candidates%20per%20hire%20-%20sourced%20vs%20applied.png 1920w" style="width:640px;border-width:0px;border:0px;" title="Candidates per hire - sourced vs applied" width="640"/>
+                   </span>
+                  </div>
+                  <!--end layout-widget-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+               <div class="row-fluid-wrapper row-depth-1 row-number-11">
+                <div class="row-fluid">
+                 <div class="span9 widget-span widget-type-rich_text article-source pb50" data-w="9" data-widget-type="rich_text" data-x="0" style="">
+                  <div class="cell-wrapper layout-widget-wrapper">
+                   <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148190376897589643" style="">
+                    <p style="text-align: center;">
+                     <span style="font-size: 11px;">
+                      <a href="https://www.lever.co/recruiting-resources/little-grey-book-of-recruiting-benchmarks-2016?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                       Source: Lever, Recruiting Benchmarks Report 2016
+                      </a>
+                     </span>
+                    </p>
+                   </span>
+                  </div>
+                  <!--end layout-widget-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                 <div class="span3 widget-span widget-type-space" data-w="3" data-widget-type="space" data-x="9" style="">
+                  <div class="cell-wrapper layout-widget-wrapper">
+                   <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_space" data-hs-cos-general-type="widget" data-hs-cos-type="space" id="hs_cos_wrapper_module_1484172779724130" style="">
+                   </span>
+                  </div>
+                  <!--end layout-widget-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-12">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_module_1484950852824238" style="">
+              <div class="full-callout dark-blue">
+               <div class="ctr">
+                <p class="callout-copy">
+                 <span>
+                  Only 36 percent of the workforce is actively looking for a new opportunity at any given time, but an entire 90 percent is willing to talk and learn more.
+                 </span>
+                </p>
+                <a class="source-link" href="https://business.linkedin.com/talent-solutions/blog/trends-and-research/2016/linkedin-new-report-reveals-the-latest-job-seeking-trends" rel="noopener noreferrer" target="_blank">
+                 <p class="source-copy">
+                  Source: LinkedIn 2016 Talent Trends
+                 </p>
+                </a>
+               </div>
+              </div>
+             </span>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-13">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell ctr pb100" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-14">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148228029276189005" style="">
+                 <h2>
+                  10 candidate sourcing strategies
+                 </h2>
+                 <p>
+                  How do you find top talent? The following candidate sourcing strategies will help you fill your funnel with qualified talent.
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-15">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148157915501388147" style="">
+                 <h2>
+                  1. Stay in lockstep with the hiring manager
+                 </h2>
+                 <p>
+                  <span style="font-weight: 400;">
+                   Align with your hiring managers early and often to ensure that you’re on the same page about what a strong candidate looks like. Here are some ways to increase the quality of your communication and get on the same page.
+                  </span>
+                 </p>
+                 <ul class="checkmarks blue">
+                  <li style="font-weight: 400;">
+                   <span style="font-weight: 400;">
+                    Hold a
+                   </span>
+                   <a href="https://www.lever.co/blog/6-things-you-must-do-in-a-kickoff-meeting-with-your-hiring-manager?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                    <span style="font-weight: 400;">
+                     kickoff meeting
+                    </span>
+                   </a>
+                   <span style="font-weight: 400;">
+                    as soon as you receive a requisition to learn about the role and align on must-have and nice-to-have qualifications.
+                   </span>
+                  </li>
+                  <li style="font-weight: 400;">
+                   <span style="font-weight: 400;">
+                    Ask your hiring manager to help you build a list of
+                   </span>
+                   <a href="https://www.lever.co/blog/sourcing-candidates-7-places-to-uncover-hidden-talent?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                    <span style="font-weight: 400;">
+                     sourcing channels
+                    </span>
+                   </a>
+                   <span style="font-weight: 400;">
+                    where your ideal candidates may have a presence, and a list of role-specific keywords to search.
+                   </span>
+                  </li>
+                  <li style="font-weight: 400;">
+                   <span style="font-weight: 400;">
+                    Run a few searches together to discuss why specific candidates may or may not be a good fit for the role.
+                   </span>
+                  </li>
+                  <li style="font-weight: 400;">
+                   <span style="font-weight: 400;">
+                    Review the overall talent pool and determine if the requirements need to be tightened up or relaxed in order to find the right number of candidates.
+                   </span>
+                  </li>
+                 </ul>
+                 <p>
+                  Don’t stop at the kickoff meeting. Keep in constant contact with your hiring manager throughout the recruitment process to check on the quality and quantity of candidates, and fine-tune your search with their feedback.
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-16">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-17">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1481645799099123443" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-18">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_1481645817589126720" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-19">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_1481319591408113264" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1481726907145" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Candidate Sourcing Strategies" height="18" sizes="(max-width: 78px) 100vw, 78px" src="/wp-content/uploads/2019/04/article_resource-label_tools.png?width=78&amp;height=18&amp;name=article_resource-label_tools.png" srcset="/wp-content/uploads/2019/04/article_resource-label_tools.png?width=39&amp;height=9&amp;name=article_resource-label_tools.png 39w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=78&amp;height=18&amp;name=article_resource-label_tools.png 78w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=117&amp;height=27&amp;name=article_resource-label_tools.png 117w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=156&amp;height=36&amp;name=article_resource-label_tools.png 156w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=195&amp;height=45&amp;name=article_resource-label_tools.png 195w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=234&amp;height=54&amp;name=article_resource-label_tools.png 234w" width="78"/>
+                  <p class="resource-title">
+                   Candidate Sourcing Intake Form
+                  </p>
+                  <p class="resource-subhead">
+                   26 questions to review with your hiring manager before you kick off any candidate search.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/recruiting-resources/candidate-sourcing-intake-form?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   Download
+                  </a>
+                 </div>
+                </div>
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1482290270818" style="">
+                 <div class="additional-resources-article">
+                  <img alt="blogposts.png" height="18" sizes="(max-width: 115px) 100vw, 115px" src="/wp-content/uploads/2019/04/blogposts.png?width=115&amp;height=18&amp;name=blogposts.png" srcset="/wp-content/uploads/2019/04/blogposts.png?width=58&amp;height=9&amp;name=blogposts.png 58w, /wp-content/uploads/2019/04/blogposts.png?width=115&amp;height=18&amp;name=blogposts.png 115w, /wp-content/uploads/2019/04/blogposts.png?width=173&amp;height=27&amp;name=blogposts.png 173w, /wp-content/uploads/2019/04/blogposts.png?width=230&amp;height=36&amp;name=blogposts.png 230w, /wp-content/uploads/2019/04/blogposts.png?width=288&amp;height=45&amp;name=blogposts.png 288w, /wp-content/uploads/2019/04/blogposts.png?width=345&amp;height=54&amp;name=blogposts.png 345w" width="115"/>
+                  <p class="resource-title">
+                   6 Things You MUST Do in a Kickoff Meeting with Your Hiring Manager
+                  </p>
+                  <p class="resource-subhead">
+                   Make the most of both of your time with these tips for an efficient kickoff meeting.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/blog/6-things-you-must-do-in-a-kickoff-meeting-with-your-hiring-manager?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   Read blog
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-20">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-section-start ctr pb50" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-21">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281099918116633" style="">
+                 <h2>
+                  2. Source from your ATS first
+                 </h2>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-22">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-cell" data-w="12" data-widget-type="cell" data-x="0" style="">
+               <div class="row-fluid-wrapper row-depth-1 row-number-23">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-linked_image" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+                  <div class="cell-wrapper layout-widget-wrapper">
+                   <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1484164487727133" style="">
+                    <img alt="Source from your ATS first.png" class="hs-image-widget" sizes="(max-width: 1202px) 100vw, 1202px" src="/wp-content/uploads/2019/04/Source_from_your_ATS_first.png?width=1202&amp;name=Source%20from%20your%20ATS%20first.png" srcset="/wp-content/uploads/2019/04/Source_from_your_ATS_first.png?width=601&amp;name=Source%20from%20your%20ATS%20first.png 601w, /wp-content/uploads/2019/04/Source_from_your_ATS_first.png?width=1202&amp;name=Source%20from%20your%20ATS%20first.png 1202w, /wp-content/uploads/2019/04/Source_from_your_ATS_first.png?width=1803&amp;name=Source%20from%20your%20ATS%20first.png 1803w, /wp-content/uploads/2019/04/Source_from_your_ATS_first.png?width=2404&amp;name=Source%20from%20your%20ATS%20first.png 2404w, /wp-content/uploads/2019/04/Source_from_your_ATS_first.png?width=3005&amp;name=Source%20from%20your%20ATS%20first.png 3005w, /wp-content/uploads/2019/04/Source_from_your_ATS_first.png?width=3606&amp;name=Source%20from%20your%20ATS%20first.png 3606w" style="width:1202px;border-width:0px;border:0px;" title="Source from your ATS first.png" width="1202"/>
+                   </span>
+                  </div>
+                  <!--end layout-widget-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+               <div class="row-fluid-wrapper row-depth-1 row-number-24">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                  <div class="cell-wrapper layout-widget-wrapper">
+                   <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_module_1484171497418108" style="">
+                    <div class="gray-callout-wrap">
+                     <div class="gray-contain">
+                      <p class="gray-copy">
+                      </p>
+                      <p>
+                       <span>
+                        <img alt="candidate sourcing lightbulb" sizes="(max-width: 43px) 100vw, 43px" src="/wp-content/uploads/2019/04/lightIcon.png?width=43&amp;name=lightIcon.png" srcset="/wp-content/uploads/2019/04/lightIcon.png?width=22&amp;name=lightIcon.png 22w, /wp-content/uploads/2019/04/lightIcon.png?width=43&amp;name=lightIcon.png 43w, /wp-content/uploads/2019/04/lightIcon.png?width=65&amp;name=lightIcon.png 65w, /wp-content/uploads/2019/04/lightIcon.png?width=86&amp;name=lightIcon.png 86w, /wp-content/uploads/2019/04/lightIcon.png?width=108&amp;name=lightIcon.png 108w, /wp-content/uploads/2019/04/lightIcon.png?width=129&amp;name=lightIcon.png 129w" style="width: 43px;" title="lightIcon.png" width="43"/>
+                        Even though nearly all – 99 percent
+                       </span>
+                       <span>
+                        – of companies believe re-engaging candidates will help them build their talent community and protect their employer brand, fewer than half of employers re-engage declined candidates.
+                       </span>
+                      </p>
+                      <p>
+                       <span style="font-size: 11px;">
+                        <a href="https://workplacetrends.com/candidate-experience-study/" rel="noopener noreferrer" target="_blank">
+                         Source: WorkplaceTrends, Candidate Experience Study
+                        </a>
+                       </span>
+                      </p>
+                      <p>
+                      </p>
+                     </div>
+                    </div>
+                   </span>
+                  </div>
+                  <!--end layout-widget-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-25">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1484164066774131" style="">
+                 <p>
+                  <span>
+                   If you devote time to sourcing quality candidates, you won't just end up with a hire – you'll also have candidates who are qualified to recruit for future roles. But for many companies, re-engaging candidates is a missed opportunity. Even though nearly all –
+                  </span>
+                  <a href="https://workplacetrends.com/candidate-experience-study/" rel="noopener noreferrer" target="_blank">
+                   <span>
+                    99 percent
+                   </span>
+                  </a>
+                  <span>
+                   – of companies believe re-engaging candidates will help them build their talent community and protect their employer brand, fewer than half of employers re-engage declined candidates.
+                   <br/>
+                  </span>
+                  <br/>
+                  <span>
+                   Instead, you should leverage your team's past efforts by beginning every search with the candidates your team has already invested time in and deemed qualified to work at your organization. To pull this off, you'll need to provide a great candidate experience (so candidates want to re-engage) and archive candidates appropriately (so you can easily find them again). Here are three simple steps you can take to ensure that you leverage past recruiting work to generate future candidates:
+                  </span>
+                 </p>
+                 <ul class="blue-line">
+                  <li>
+                   <strong>
+                    <span style="font-weight: 400;">
+                     Track why candidates aren’t hired
+                    </span>
+                    .
+                   </strong>
+                   <br/>
+                   You can only re-engage candidates if you’re keeping tabs on why they don’t make it to ‘hired’. Were they a good fit for a role you don’t have yet? Did the role get filled? Are they underqualified now, but show potential for the future? It can help to use an
+                   <a href="https://www.lever.co?hsLang=en-us">
+                    applicant tracking system
+                   </a>
+                   , like Lever, to record all of this information.
+                  </li>
+                  <li>
+                   <strong>
+                    Give feedback.
+                    <br/>
+                   </strong>
+                   <span style="font-weight: 400;">
+                    Talent is
+                   </span>
+                   <a href="https://business.linkedin.com/talent-solutions/c/15/12/top-hiring-statistics-and-benchmarks-for-2016" rel="noopener noreferrer" target="_blank">
+                    <span style="font-weight: 400;">
+                     four times more likely
+                    </span>
+                   </a>
+                   <span style="font-weight: 400;">
+                    to consider your company for a future opportunity when you offer them constructive feedback, yet only 41 percent of candidates have received interview feedback before.
+                   </span>
+                  </li>
+                  <li>
+                   <strong>
+                    Circle back.
+                    <br/>
+                   </strong>
+                   <span style="font-weight: 400;">
+                    80 percent of job seekers say they would be discouraged from considering other relevant job openings at a company that failed to notify them of their application status. Yet, they would be
+                   </span>
+                   <a href="https://workplacetrends.com/candidate-experience-study/" rel="noopener noreferrer" target="_blank">
+                    <span style="font-weight: 400;">
+                     three and a half times more likely to re-apply
+                    </span>
+                   </a>
+                   <span style="font-weight: 400;">
+                    to a company if they were notified.
+                   </span>
+                  </li>
+                 </ul>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-26">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-27">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_1481646042416158344" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-28">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1481645535537109768" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-29">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_148131944281591743" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1481726809112" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Candidate Sourcing Strategies" height="18" sizes="(max-width: 115px) 100vw, 115px" src="/wp-content/uploads/2019/04/blogposts.png?width=115&amp;height=18&amp;name=blogposts.png" srcset="/wp-content/uploads/2019/04/blogposts.png?width=58&amp;height=9&amp;name=blogposts.png 58w, /wp-content/uploads/2019/04/blogposts.png?width=115&amp;height=18&amp;name=blogposts.png 115w, /wp-content/uploads/2019/04/blogposts.png?width=173&amp;height=27&amp;name=blogposts.png 173w, /wp-content/uploads/2019/04/blogposts.png?width=230&amp;height=36&amp;name=blogposts.png 230w, /wp-content/uploads/2019/04/blogposts.png?width=288&amp;height=45&amp;name=blogposts.png 288w, /wp-content/uploads/2019/04/blogposts.png?width=345&amp;height=54&amp;name=blogposts.png 345w" width="115"/>
+                  <p class="resource-title">
+                   7 Ways to Overhaul Your Candidate Experience
+                  </p>
+                  <p class="resource-subhead">
+                   See what recruiting expert Ed Nathanson has to say about handling feedback.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/blog/7-ways-to-overhaul-your-candidate-experience?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   Read blog
+                  </a>
+                 </div>
+                </div>
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1482293084889" style="">
+                 <div class="additional-resources-article">
+                  <img alt="webinarLabel.png" height="17" sizes="(max-width: 98px) 100vw, 98px" src="/wp-content/uploads/2019/04/webinarLabel.png?width=98&amp;height=17&amp;name=webinarLabel.png" srcset="/wp-content/uploads/2019/04/webinarLabel.png?width=49&amp;height=9&amp;name=webinarLabel.png 49w, /wp-content/uploads/2019/04/webinarLabel.png?width=98&amp;height=17&amp;name=webinarLabel.png 98w, /wp-content/uploads/2019/04/webinarLabel.png?width=147&amp;height=26&amp;name=webinarLabel.png 147w, /wp-content/uploads/2019/04/webinarLabel.png?width=196&amp;height=34&amp;name=webinarLabel.png 196w, /wp-content/uploads/2019/04/webinarLabel.png?width=245&amp;height=43&amp;name=webinarLabel.png 245w, /wp-content/uploads/2019/04/webinarLabel.png?width=294&amp;height=51&amp;name=webinarLabel.png 294w" width="98"/>
+                  <p class="resource-title">
+                   How to Build a World-Class Candidate Experience
+                  </p>
+                  <p class="resource-subhead">
+                   Learn how companies like Lyft and Eventbrite have built great candidate experiences, and get a step-by-step guide on how you can, too.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/recruiting-resources/how-to-build-a-world-class-candidate-experience?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   Download
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-30">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-section-start ctr pb50" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-31">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281103927118104" style="">
+                 <h2>
+                  3. Diversify your online sourcing channels
+                 </h2>
+                 <p>
+                  <span>
+                   Most recruiters and sourcers have their go-to channels to find candidates.
+                   <a href="http://www.futurestep.com/news/futurestep-survey-motivations-and-drivers-trump-skills-and-experience-when-sourcing-job-candidates/" rel="noopener noreferrer" target="_blank">
+                    <span style="font-weight: 400;">
+                     Fifty-two
+                    </span>
+                   </a>
+                   percent say they first turn to their professional network, and another 28 percent say they first turn to LinkedIn
+                  </span>
+                  <span>
+                   . But why stop there? The most common channels are common for a reason – they're good! – but consider adding some other, less frequently fished sources into the mix. Candidates may be more receptive to outreach messages on less conventional websites, and profiles on such sites can yield unique information that provides good fodder for personalized outreach.
+                  </span>
+                 </p>
+                 <p>
+                  <span>
+                   Where should you look? The internet abounds with possibilities. They key is to understand your target candidates so you can better predict where to find them online. For instance,
+                  </span>
+                  <a href="https://www.lever.co/blog/recruiting-developers-on-github-a-step-by-step-guide?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   <span>
+                    GitHub
+                   </span>
+                  </a>
+                  <span>
+                   is a great place to find developers, while
+                  </span>
+                  <a href="https://www.lever.co/blog/designer-recruitment-sourcing-candidates-on-dribbble?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   <span>
+                    Dribbble
+                   </span>
+                  </a>
+                  <span>
+                   is ideal to find design candidates. If you're new to sourcing for a job, rely on your team members to find out where to go, and ask them questions like:
+                  </span>
+                 </p>
+                 <ul class="checkmarks blue">
+                  <li>
+                   From the perspective of someone who’s been deep in this domain for a while, where might you start a
+                   <br/>
+                   search for this?
+                  </li>
+                  <li>
+                   Where might this community congregate?
+                  </li>
+                  <li>
+                   What companies are focused on similar tech/products/services?
+                  </li>
+                  <li>
+                   <span>
+                    Do people in this role go by multiple job titles? What are they?
+                   </span>
+                  </li>
+                 </ul>
+                 <p>
+                  <span>
+                   Other, more general, but worthwhile online sourcing channels include Aevy,
+                  </span>
+                  <span>
+                   <a href="https://www.lever.co/blog/a-step-by-step-guide-to-sourcing-untapped-talent-on-angellist?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                    AngelList
+                   </a>
+                   (for tech talent)
+                  </span>
+                  <span>
+                   , Entelo,
+                  </span>
+                  <a href="https://www.lever.co/blog/facebook-recruitment-how-to-source-candidates-on-the-largest-social-network?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   <span>
+                    Facebook
+                   </span>
+                  </a>
+                  <span>
+                   , Hired,
+                  </span>
+                  <a href="https://www.lever.co/blog/recruiting-software-engineers-on-sourcing.io?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   <span>
+                    Sourcing.io
+                   </span>
+                  </a>
+                  <span>
+                   ,
+                  </span>
+                  <a href="https://www.lever.co/blog/twitter-recruiting-sourcing-candidates-in-140-characters?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   <span>
+                    Twitter
+                   </span>
+                  </a>
+                  <span>
+                   , and
+                  </span>
+                  <a href="https://www.lever.co/blog/xing-recruiting-how-to-source-candidates-on-europes-largest-professional-network?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   <span>
+                    Xing
+                   </span>
+                  </a>
+                  <span>
+                   .
+                  </span>
+                 </p>
+                 <p>
+                  P.S. All of these sourcing channels integrate with Lever’s best-in-class
+                  <a href="//cdn2.hubspot.net/hubfs/463671/Datasheets/Lever_Chrome_Extension_Feature_Data_Sheet.pdf" rel="noopener noreferrer" target="_blank">
+                   Chrome Extension
+                  </a>
+                  to make sourcing faster and easier.
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-32">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-33">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_148164502175698004" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-34">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1481646047175159753" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-35">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_148157912701982958" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1481727327328" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Recruiting Resources" height="18" sizes="(max-width: 78px) 100vw, 78px" src="/wp-content/uploads/2019/04/article_resource-label_tools.png?width=78&amp;height=18&amp;name=article_resource-label_tools.png" srcset="/wp-content/uploads/2019/04/article_resource-label_tools.png?width=39&amp;height=9&amp;name=article_resource-label_tools.png 39w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=78&amp;height=18&amp;name=article_resource-label_tools.png 78w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=117&amp;height=27&amp;name=article_resource-label_tools.png 117w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=156&amp;height=36&amp;name=article_resource-label_tools.png 156w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=195&amp;height=45&amp;name=article_resource-label_tools.png 195w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=234&amp;height=54&amp;name=article_resource-label_tools.png 234w" width="78"/>
+                  <p class="resource-title">
+                   15 Fresh Ideas for Sourcing Candidates
+                  </p>
+                  <p class="resource-subhead">
+                   Download our tip sheet for 15 find creative sourcing strategies.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/recruiting-resources/15-fresh-ideas-for-sourcing-candidates?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   Download
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-36">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-rich_text article-section-start ctr pb50" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281107885119562" style="">
+              <h2>
+               4. Include offline sourcing channels
+              </h2>
+              <p>
+               <span style="font-weight: 400;">
+                Going offline and meeting people face-to-face at events is a great way to source new candidates. Attend job or industry-specific conferences and events, or host your own meetups to bring together groups of people you’d like to meet. There will be less competition to stand out as an employer, and candidates will be more likely to respond to your follow-up messages after they’ve had a conversation with you in person. If other people in your organization attend events, ask them to stay on the lookout for great candidates too – sourcing should be a team sport!
+               </span>
+              </p>
+             </span>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-37">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-38">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1481645941081145473" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-39">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_1481645937864144054" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-40">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_148157907914971754" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1481727256946" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Candidate Sourcing Strategies" height="17" sizes="(max-width: 98px) 100vw, 98px" src="/wp-content/uploads/2019/04/webinarLabel.png?width=98&amp;height=17&amp;name=webinarLabel.png" srcset="/wp-content/uploads/2019/04/webinarLabel.png?width=49&amp;height=9&amp;name=webinarLabel.png 49w, /wp-content/uploads/2019/04/webinarLabel.png?width=98&amp;height=17&amp;name=webinarLabel.png 98w, /wp-content/uploads/2019/04/webinarLabel.png?width=147&amp;height=26&amp;name=webinarLabel.png 147w, /wp-content/uploads/2019/04/webinarLabel.png?width=196&amp;height=34&amp;name=webinarLabel.png 196w, /wp-content/uploads/2019/04/webinarLabel.png?width=245&amp;height=43&amp;name=webinarLabel.png 245w, /wp-content/uploads/2019/04/webinarLabel.png?width=294&amp;height=51&amp;name=webinarLabel.png 294w" width="98"/>
+                  <p class="resource-title">
+                   Next-Level Candidate Sourcing: How to Leverage Events to Fill Your Recruiting Pipeline
+                  </p>
+                  <p class="resource-subhead">
+                   Learn how recruiter at Lost my Name, Jess Hayes, successfully leverages events to fill her recruiting pipeline.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/webinars/next-level-candidate-sourcing-how-to-leverage-events-to-fill-your-recruiting-pipeline?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   watch webinar
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-41">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-section-start ctr pb50" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-42">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281110738121035" style="">
+                 <h2>
+                  5. Utilize your employees’ networks
+                 </h2>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-43">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1484167855008129" style="">
+                 <img alt="Utilize employee networks.png" class="hs-image-widget" sizes="(max-width: 1024px) 100vw, 1024px" src="/wp-content/uploads/2019/04/Utilize_employee_networks.png?width=1024&amp;name=Utilize%20employee%20networks.png" srcset="/wp-content/uploads/2019/04/Utilize_employee_networks.png?width=512&amp;name=Utilize%20employee%20networks.png 512w, /wp-content/uploads/2019/04/Utilize_employee_networks.png?width=1024&amp;name=Utilize%20employee%20networks.png 1024w, /wp-content/uploads/2019/04/Utilize_employee_networks.png?width=1536&amp;name=Utilize%20employee%20networks.png 1536w, /wp-content/uploads/2019/04/Utilize_employee_networks.png?width=2048&amp;name=Utilize%20employee%20networks.png 2048w, /wp-content/uploads/2019/04/Utilize_employee_networks.png?width=2560&amp;name=Utilize%20employee%20networks.png 2560w, /wp-content/uploads/2019/04/Utilize_employee_networks.png?width=3072&amp;name=Utilize%20employee%20networks.png 3072w" style="width:1024px;border-width:0px;border:0px;" title="Utilize employee networks.png" width="1024"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-44">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_module_1484172241722126" style="">
+                 <div class="gray-callout-wrap">
+                  <div class="gray-contain">
+                   <p class="gray-copy">
+                   </p>
+                   <p>
+                    <img alt="" sizes="(max-width: 43px) 100vw, 43px" src="/wp-content/uploads/2019/04/lightIcon.png?width=43&amp;name=lightIcon.png" srcset="/wp-content/uploads/2019/04/lightIcon.png?width=22&amp;name=lightIcon.png 22w, /wp-content/uploads/2019/04/lightIcon.png?width=43&amp;name=lightIcon.png 43w, /wp-content/uploads/2019/04/lightIcon.png?width=65&amp;name=lightIcon.png 65w, /wp-content/uploads/2019/04/lightIcon.png?width=86&amp;name=lightIcon.png 86w, /wp-content/uploads/2019/04/lightIcon.png?width=108&amp;name=lightIcon.png 108w, /wp-content/uploads/2019/04/lightIcon.png?width=129&amp;name=lightIcon.png 129w" style="width: 43px;" title="lightIcon.png" width="43"/>
+                    Organizations can expand their talent pool by 10 times by recruiting through their employees' networks.
+                   </p>
+                   <p>
+                    <span style="font-size: 11px;">
+                     <a href="https://business.linkedin.com/talent-solutions/c/15/12/top-hiring-statistics-and-benchmarks-for-2016" rel="noopener noreferrer" target="_blank">
+                      Source: LinkedIn, Top hiring statistics and benchmarks for 2016
+                     </a>
+                    </span>
+                   </p>
+                   <p>
+                   </p>
+                  </div>
+                 </div>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-45">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1484167867674132" style="">
+                 <p>
+                  <span style="font-weight: 400;">
+                   Organizations can expand their talent pool
+                   <a href="https://business.linkedin.com/talent-solutions/c/15/12/top-hiring-statistics-and-benchmarks-for-2016" rel="noopener noreferrer" target="_blank">
+                    10 times
+                   </a>
+                   by recruiting through their employees’ networks
+                  </span>
+                  <span style="font-weight: 400;">
+                   . Run sourcing sessions with your team to see if anyone in your employees’ networks would be a good fit for one of your open roles. Your employees can help you reach untapped talent, and improve response rates from candidates they know. Facebook, for instance, will show your employees different candidate search results based on their own social graph, so you can uncover candidates you wouldn’t have otherwise found. Sourcing.io allows your employees to connect their LinkedIn, Twitter, and GitHub accounts so you can see who is already connected to your team. You can also systemize this process with a tool like Teamable or Simppler, which automatically recommend candidates to you based on your employee’s social networks. When you find a qualified candidate, you should request a warm introduction from your employee, rather than sending a cold email, to increase your candidate response rate.
+                  </span>
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-46">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-47">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_14819304571305882" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-48">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_14819304419104355" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-49">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-cell ctr" data-w="12" data-widget-type="cell" data-x="0" style="">
+               <div class="row-fluid-wrapper row-depth-1 row-number-50">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                  <div class="cell-wrapper layout-widget-wrapper">
+                   <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_module_14819304296252902" style="">
+                    <div class="additional-resources-article">
+                     <img alt="Lever - Candidate Sourcing Strategies" height="18" sizes="(max-width: 115px) 100vw, 115px" src="/wp-content/uploads/2019/04/blogposts.png?width=115&amp;height=18&amp;name=blogposts.png" srcset="/wp-content/uploads/2019/04/blogposts.png?width=58&amp;height=9&amp;name=blogposts.png 58w, /wp-content/uploads/2019/04/blogposts.png?width=115&amp;height=18&amp;name=blogposts.png 115w, /wp-content/uploads/2019/04/blogposts.png?width=173&amp;height=27&amp;name=blogposts.png 173w, /wp-content/uploads/2019/04/blogposts.png?width=230&amp;height=36&amp;name=blogposts.png 230w, /wp-content/uploads/2019/04/blogposts.png?width=288&amp;height=45&amp;name=blogposts.png 288w, /wp-content/uploads/2019/04/blogposts.png?width=345&amp;height=54&amp;name=blogposts.png 345w" width="115"/>
+                     <p class="resource-title">
+                      9 Tricks to Put your Employee Referral Program into Overdrive
+                     </p>
+                     <p class="resource-subhead">
+                      Read our post to learn how to build a successful employee referral program.
+                     </p>
+                     <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/blog/9-tricks-to-put-your-employee-referral-program-into-overdrive?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                      read blog
+                     </a>
+                    </div>
+                   </div>
+                  </div>
+                  <!--end layout-widget-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-51">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-rich_text article-section-start ctr pb50" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281164011127005" style="">
+              <h2>
+               6. Source for roles you don’t have open yet
+              </h2>
+              <p>
+               <span style="font-weight: 400;">
+                Most sourcing goes like this: “I have X job to fill, so I’m going to source people for X job.” But the most advanced sourcers get even more proactive with their sourcing efforts, and get ahead on roles they’ll need to hire for in the future. As Sedef Buyukataman, Talent Brand Strategist at Proactive Talent Strategies, explained in a webinar with Lever, a proactive approach starts by building personas.
+               </span>
+              </p>
+              <p>
+               How? First, take a look at your business growth plans. Then, build a corresponding workforce hiring strategy that gives you insight into when hires need to be made across the year to sustain your company's vision and cost model. Once you have a picture of which teams need to grow, you can work with your leaders and partners in Finance and HR to identify the level and skill sets required. Aggregate those skills and what you know about company and team culture so you can begin to source for specific profiles (personas) in a focused but on ongoing way.
+              </p>
+              <p>
+               <span style="font-weight: 400;">
+                Then, when your hiring manager asks for a junior-level Java developer who also happens to be a master of automated testing, you'll already have candidates in your ATS ready to review. You may even hire some of them! To hear more from Sedef on building talent personas for future-focused sourcing, listen to the webinar featured in the additional resources below, and fast-forward to minute 13.
+               </span>
+              </p>
+             </span>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-52">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-53">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_148165212677820882" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-54">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_148165212330119483" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-55">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_1481580872077169101" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1481727548990" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Candidate Sourcing Strategies" height="17" sizes="(max-width: 98px) 100vw, 98px" src="/wp-content/uploads/2019/04/webinarLabel.png?width=98&amp;height=17&amp;name=webinarLabel.png" srcset="/wp-content/uploads/2019/04/webinarLabel.png?width=49&amp;height=9&amp;name=webinarLabel.png 49w, /wp-content/uploads/2019/04/webinarLabel.png?width=98&amp;height=17&amp;name=webinarLabel.png 98w, /wp-content/uploads/2019/04/webinarLabel.png?width=147&amp;height=26&amp;name=webinarLabel.png 147w, /wp-content/uploads/2019/04/webinarLabel.png?width=196&amp;height=34&amp;name=webinarLabel.png 196w, /wp-content/uploads/2019/04/webinarLabel.png?width=245&amp;height=43&amp;name=webinarLabel.png 245w, /wp-content/uploads/2019/04/webinarLabel.png?width=294&amp;height=51&amp;name=webinarLabel.png 294w" width="98"/>
+                  <p class="resource-title">
+                   Data-Driven Tips for Your 2017 Recruiting Plan
+                  </p>
+                  <p class="resource-subhead">
+                   Take your sourcing to the next-level with tips on building a future-focused pipeline from Sedef Buyukataman of Proactive Talent Strategies.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://attendee.gotowebinar.com/recording/viewRecording/8720808739321078532/621390474213545985/cheri@recruiter.com" rel="noopener noreferrer" target="_blank">
+                   watch webinar
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-56">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-rich_text article-section-start ctr pb50" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281168436128504" style="">
+              <h2>
+               7. Perfect your outreach messages
+              </h2>
+              <p>
+               <span style="font-weight: 400;">
+                You’ve worked hard to source the right candidates, but that doesn’t matter if they won’t engage with you. A few rules of thumb: Lead with a subject line that will stand out and make the candidate want to open and read your message; always personalize your message with relevant information you found about them; paint a brief picture of the role and your organization; and explain how you think they could contribute to the team.
+               </span>
+              </p>
+              <p>
+               <span style="font-weight: 400;">
+                Knowing your audience is also crucial to writing a strong outreach message. While
+               </span>
+               <a href="http://b2b-assets.glassdoor.com/50-hr-and-recruiting-stats.pdf" rel="noopener noreferrer" target="_blank">
+                <span style="font-weight: 400;">
+                 78 percent
+                </span>
+               </a>
+               <span style="font-weight: 400;">
+                of sales professionals said they would accept less money to work at a company selling something compelling, 66 percent of healthcare professionals are likely to accept less money to work at a company with a great culture
+               </span>
+               <span style="font-weight: 400;">
+                . Improve your response rates by focusing on the things that matter to each type of candidate. Your goal is to give them just enough information to pique their interest and respond, but you want to be careful about overloading them with information. Ask your recent hires for feedback on your outreach messages, and use that feedback to test different messaging and improve your response rates.
+               </span>
+              </p>
+             </span>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-57">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-58">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_148164661305822999" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-59">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_148164660915621616" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-60">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_1481580389524136766" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1481727485437" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Candidate Sourcing Strategies" height="18" sizes="(max-width: 78px) 100vw, 78px" src="/wp-content/uploads/2019/04/article_resource-label_tools.png?width=78&amp;height=18&amp;name=article_resource-label_tools.png" srcset="/wp-content/uploads/2019/04/article_resource-label_tools.png?width=39&amp;height=9&amp;name=article_resource-label_tools.png 39w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=78&amp;height=18&amp;name=article_resource-label_tools.png 78w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=117&amp;height=27&amp;name=article_resource-label_tools.png 117w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=156&amp;height=36&amp;name=article_resource-label_tools.png 156w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=195&amp;height=45&amp;name=article_resource-label_tools.png 195w, /wp-content/uploads/2019/04/article_resource-label_tools.png?width=234&amp;height=54&amp;name=article_resource-label_tools.png 234w" width="78"/>
+                  <p class="resource-title">
+                   Three REAL Candidate Sourcing Email Examples
+                  </p>
+                  <p class="resource-subhead">
+                   Not sure where to start? Download our tip sheet for actual sourcing email examples from three seasoned professionals.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/recruiting-resources/guide-candidate-sourcing-email-examples?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   Download
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-61">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-section-start ctr pb50" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-62">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281174846129995" style="">
+                 <h2>
+                  8. Build a strong employer brand
+                 </h2>
+                 <p>
+                  <span style="font-weight: 400;">
+                   Your
+                   <a href="https://www.lever.co/blog/5-steps-to-building-a-marketing-machine-for-your-employer-brand?hsLang=en-us">
+                    employer brand
+                   </a>
+                   could be the difference between a candidate responding to your outreach, or ignoring it. Candidates aren’t likley to respond to your outreach if they perceive your employer brand negatively, and an unknown employer brand can stymie your efforts as well. In contrast, a strong employer brand is an incredibly effective recruiting tool: Ninety-two percent of candidates say they would
+                  </span>
+                  <a href="http://www.thecro.com/uncategorized/cr-survey-report-corporate-reputation-affects-talent-acquisition/" rel="noopener noreferrer" target="_blank">
+                   <span style="font-weight: 400;">
+                    consider leaving their current jobs
+                   </span>
+                  </a>
+                  <span style="font-weight: 400;">
+                   if a company with an excellent corporate reputation offered them another role
+                  </span>
+                  <span style="font-weight: 400;">
+                   .
+                  </span>
+                 </p>
+                 <p>
+                  To increase your sourcing (and overall recruiting) success, here are some tips on both repairing and building your employer brand:
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-63">
+             <div class="row-fluid">
+              <div class="span6 widget-span widget-type-rich_text" data-w="6" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1484168169867143" style="">
+                 <ul class="blue-line">
+                  <li>
+                   <strong>
+                    <span>
+                     Respond to reviews
+                    </span>
+                   </strong>
+                   <br/>
+                   <p>
+                    <span>
+                     Sixty one percent of candidates
+                    </span>
+                    <a href="https://www.glassdoor.com/employers/popular-topics/hr-stats.htm" rel="noopener noreferrer" target="_blank">
+                     <span>
+                      check company reviews
+                     </span>
+                    </a>
+                    <span>
+                     and ratings before they determine their interest in a job
+                    </span>
+                    <span>
+                     . Regularly check review sites like Glassdoor and InHerSight, and respond to the feedback to let people know you appreciate their input and will take action where it’s necessary. This will generate goodwill, and help your employees feel engaged and heard.
+                    </span>
+                   </p>
+                  </li>
+                  <li>
+                   <span>
+                    <strong>
+                     Tell your story
+                     <br/>
+                    </strong>
+                    <span>
+                     Engaging your employees in storytelling, encouraging them to personalize their LinkedIn profiles, starting a company blog, being active in the press, and speaking at conferences are just a few of the ways employers can spread awareness about their brand. At Lever, for example, employees regularly contribute to our
+                    </span>
+                    <a href="https://inside.lever.co/" rel="noopener noreferrer" target="_blank">
+                     <span>
+                      company blog
+                     </span>
+                    </a>
+                    <span>
+                     , where they share authentic stories about their professional experiences, topics they’re passionate about, and their journey to Lever. If you’re a small company and candidates want to know more about your brand, having these proof points can be the factor that sparks conversation.
+                    </span>
+                   </span>
+                  </li>
+                 </ul>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+              <div class="span6 widget-span widget-type-cell" data-w="6" data-widget-type="cell" data-x="6" style="">
+               <div class="row-fluid-wrapper row-depth-1 row-number-64">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-linked_image" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+                  <div class="cell-wrapper layout-widget-wrapper">
+                   <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1484168159224140" style="">
+                    <img alt="61 percent of job seekers read reviews.png" class="hs-image-widget" sizes="(max-width: 400px) 100vw, 400px" src="/wp-content/uploads/2019/04/61_percent_of_job_seekers_read_reviews.png?width=400&amp;name=61%20percent%20of%20job%20seekers%20read%20reviews.png" srcset="/wp-content/uploads/2019/04/61_percent_of_job_seekers_read_reviews.png?width=200&amp;name=61%20percent%20of%20job%20seekers%20read%20reviews.png 200w, /wp-content/uploads/2019/04/61_percent_of_job_seekers_read_reviews.png?width=400&amp;name=61%20percent%20of%20job%20seekers%20read%20reviews.png 400w, /wp-content/uploads/2019/04/61_percent_of_job_seekers_read_reviews.png?width=600&amp;name=61%20percent%20of%20job%20seekers%20read%20reviews.png 600w, /wp-content/uploads/2019/04/61_percent_of_job_seekers_read_reviews.png?width=800&amp;name=61%20percent%20of%20job%20seekers%20read%20reviews.png 800w, /wp-content/uploads/2019/04/61_percent_of_job_seekers_read_reviews.png?width=1000&amp;name=61%20percent%20of%20job%20seekers%20read%20reviews.png 1000w, /wp-content/uploads/2019/04/61_percent_of_job_seekers_read_reviews.png?width=1200&amp;name=61%20percent%20of%20job%20seekers%20read%20reviews.png 1200w" style="width:400px;border-width:0px;border:0px;" title="61 percent of job seekers read reviews.png" width="400"/>
+                   </span>
+                  </div>
+                  <!--end layout-widget-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+               <div class="row-fluid-wrapper row-depth-1 row-number-65">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                  <div class="cell-wrapper layout-widget-wrapper">
+                   <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_module_1484172278104127" style="">
+                    <div class="gray-callout-wrap">
+                     <div class="gray-contain">
+                      <p class="gray-copy">
+                      </p>
+                      <p>
+                       <img alt="" sizes="(max-width: 43px) 100vw, 43px" src="/wp-content/uploads/2019/04/lightIcon.png?width=43&amp;name=lightIcon.png" srcset="/wp-content/uploads/2019/04/lightIcon.png?width=22&amp;name=lightIcon.png 22w, /wp-content/uploads/2019/04/lightIcon.png?width=43&amp;name=lightIcon.png 43w, /wp-content/uploads/2019/04/lightIcon.png?width=65&amp;name=lightIcon.png 65w, /wp-content/uploads/2019/04/lightIcon.png?width=86&amp;name=lightIcon.png 86w, /wp-content/uploads/2019/04/lightIcon.png?width=108&amp;name=lightIcon.png 108w, /wp-content/uploads/2019/04/lightIcon.png?width=129&amp;name=lightIcon.png 129w" style="width: 43px;" title="lightIcon.png" width="43"/>
+                       Sixty-one percent of candidates check company reviews and ratings before they determine their interest in a job.
+                      </p>
+                      <p>
+                       <span style="font-size: 11px;">
+                        <a href="https://www.glassdoor.com/employers/popular-topics/hr-stats.htm" rel="noopener noreferrer" target="_blank">
+                         Source: Glassdoor, Top HR Statistics
+                        </a>
+                       </span>
+                      </p>
+                      <p>
+                      </p>
+                     </div>
+                    </div>
+                   </span>
+                  </div>
+                  <!--end layout-widget-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-66">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1484168165597142" style="">
+                 <ul class="blue-line">
+                  <li>
+                   <strong>
+                    Partner with marketing
+                    <br/>
+                   </strong>
+                   <span>
+                    Many of the strategies needed to help spread your employer brand are the same ones you’ll find marketing using to promote your corporate brand. See if you can partner closely with them on both content creation and distribution.
+                   </span>
+                  </li>
+                 </ul>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-67">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-68">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_148165228670340806" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-69">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_148165228346339396" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-70">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_1481581054295186120" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1481727598750" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Candidate Sourcing Strategies" height="17" sizes="(max-width: 98px) 100vw, 98px" src="/wp-content/uploads/2019/04/webinarLabel.png?width=98&amp;height=17&amp;name=webinarLabel.png" srcset="/wp-content/uploads/2019/04/webinarLabel.png?width=49&amp;height=9&amp;name=webinarLabel.png 49w, /wp-content/uploads/2019/04/webinarLabel.png?width=98&amp;height=17&amp;name=webinarLabel.png 98w, /wp-content/uploads/2019/04/webinarLabel.png?width=147&amp;height=26&amp;name=webinarLabel.png 147w, /wp-content/uploads/2019/04/webinarLabel.png?width=196&amp;height=34&amp;name=webinarLabel.png 196w, /wp-content/uploads/2019/04/webinarLabel.png?width=245&amp;height=43&amp;name=webinarLabel.png 245w, /wp-content/uploads/2019/04/webinarLabel.png?width=294&amp;height=51&amp;name=webinarLabel.png 294w" width="98"/>
+                  <p class="resource-title">
+                   How to Unlock Sales and Marketing Secrets for Recruiting Success
+                  </p>
+                  <p class="resource-subhead">
+                   Learn how to think like your sales and marketing counterparts who use marketing automation, along with strategic messaging, nurturing, and engagement tactics to get more targeted, efficient, and effective with your sourcing and recruiting strategy.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/webinars/how-to-unlock-sales-and-marketing-secrets-for-recruiting-success?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   watch webinar
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-71">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-section-start ctr pb50" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-72">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281182635131542" style="">
+                 <h2>
+                  9. Follow up with candidates who don’t respond
+                 </h2>
+                 <p>
+                  <span style="font-weight: 400;">
+                   You might get a few candidates to bite at the first
+                   <a href="https://www.lever.co/blog/cold-outreach-basics-foundational-guidelines-for-engaging-passive-talent?hsLang=en-us">
+                    cold outreach
+                   </a>
+                   email you send, but you spent too much time doing research and building lists to stop at one email. Imagine if a salesperson reached out to leads once and then called it quits; they’d never close any deals!
+                  </span>
+                 </p>
+                 <p>
+                  <span style="font-weight: 400;">
+                   In fact, follow ups can actually be
+                  </span>
+                  <i>
+                   <span style="font-weight: 400;">
+                    more
+                   </span>
+                  </i>
+                  <span style="font-weight: 400;">
+                   effective than the first email you send. In a recent Lever webinar, Founder and CEO of Social Talent Johnny Campbell said he has consistently seen follow-up recruiting emails generate more responses than initial reach-outs. He postulated that follow ups are effective because persistent outreach triggers obligation. Whatever the reason (maybe the candidate was busy the first day you emailed them, timing was off, they respect perseverance, etc.), repetition works.
+                  </span>
+                 </p>
+                 <p>
+                  <span style="font-weight: 400;">
+                   Once you do your first round of outreach and follow ups, you’ll also want to keep in touch with the candidates who weren’t ready to make a move when you first approached them, and strong candidates who you sourced, but didn’t hire, for other roles. With the snooze functionality in Lever, you can stay on top of these follow ups with ease – just snooze a candidate for your desired time period and leave yourself any notes for context (like “Wants to stay in their current role at least a year”). When it’s time to follow up with the candidate, you’ll get an email from Lever reminding you that the snooze is up, and the candidate will be placed back into your active pipeline.
+                  </span>
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-73">
+             <div class="row-fluid">
+              <div class="span4 widget-span widget-type-custom_widget" data-w="4" data-widget-type="custom_widget" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_module_1481579870897114283" style="">
+                 <div class="gray-callout-wrap">
+                  <div class="gray-contain">
+                   <p class="gray-copy">
+                   </p>
+                   <p>
+                    <img alt="" sizes="(max-width: 43px) 100vw, 43px" src="/wp-content/uploads/2019/04/lightIcon.png?width=43&amp;name=lightIcon.png" srcset="/wp-content/uploads/2019/04/lightIcon.png?width=22&amp;name=lightIcon.png 22w, /wp-content/uploads/2019/04/lightIcon.png?width=43&amp;name=lightIcon.png 43w, /wp-content/uploads/2019/04/lightIcon.png?width=65&amp;name=lightIcon.png 65w, /wp-content/uploads/2019/04/lightIcon.png?width=86&amp;name=lightIcon.png 86w, /wp-content/uploads/2019/04/lightIcon.png?width=108&amp;name=lightIcon.png 108w, /wp-content/uploads/2019/04/lightIcon.png?width=129&amp;name=lightIcon.png 129w" style="width: 43px;" title="lightIcon.png" width="43"/>
+                    <strong>
+                     Pro personalization tip:
+                    </strong>
+                   </p>
+                   <p>
+                    Set a
+                    <a href="https://www.google.com/alerts" rel="noopener noreferrer" target="_blank">
+                     Google Alert
+                    </a>
+                    to immediately hear when your highest-priority candidates appear in the news.
+                   </p>
+                   <p>
+                   </p>
+                  </div>
+                 </div>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+              <div class="span8 widget-span widget-type-rich_text" data-w="8" data-widget-type="rich_text" data-x="4" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_14829594243775532" style="">
+                 <p>
+                  Waiting six months is a good rule of thumb for when to reach out to a candidate, but there are also other occasions where it makes sense to re-engage. You can send candidates company news, congratulate them on work milestones, wish them a happy birthday, ask them how big projects went, and even congratulate them on new jobs. Even if these check ins don’t yield immediate results, you want to stay top of mind with your best candidates so you’re the first to know when they’re ready to make a move. Plus, even if they’re not interested, they may refer someone who would be a great fit.
+                 </p>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-74">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-75">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1482350020409206254" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-76">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_1482350197680218611" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-77">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_1482350291727227651" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1482353616946" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Candidate Sourcing Strategies" height="18" sizes="(max-width: 115px) 100vw, 115px" src="/wp-content/uploads/2019/04/blogposts.png?width=115&amp;height=18&amp;name=blogposts.png" srcset="/wp-content/uploads/2019/04/blogposts.png?width=58&amp;height=9&amp;name=blogposts.png 58w, /wp-content/uploads/2019/04/blogposts.png?width=115&amp;height=18&amp;name=blogposts.png 115w, /wp-content/uploads/2019/04/blogposts.png?width=173&amp;height=27&amp;name=blogposts.png 173w, /wp-content/uploads/2019/04/blogposts.png?width=230&amp;height=36&amp;name=blogposts.png 230w, /wp-content/uploads/2019/04/blogposts.png?width=288&amp;height=45&amp;name=blogposts.png 288w, /wp-content/uploads/2019/04/blogposts.png?width=345&amp;height=54&amp;name=blogposts.png 345w" width="115"/>
+                  <p class="resource-title">
+                   8 Quick Tricks to Level Up Your Cold Recruiting Emails
+                  </p>
+                  <p class="resource-subhead">
+                   Read more tips from Johnny on how to get a response on your sourcing emails.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/blog/8-quick-tricks-to-level-up-your-cold-recruiting-emails?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   read blog
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-78">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-rich_text article-section-start ctr pb50" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1482281185627133006" style="">
+              <h2>
+               10. Use the right tool
+              </h2>
+              <p>
+               <span style="font-weight: 400;">
+                Anyone who’s sourcing has a million balls up in the air at once. Managing all of that activity in docs and spreadsheets can get out of hand quickly, but that’s what most recruiters and sourcers have had to do – until now.
+               </span>
+              </p>
+              <p>
+               <span style="font-weight: 400;">
+                At Lever, we think sourcers and recruiters deserve better. That’s why we built
+                <a href="https://www.lever.co/nurture?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                 Lever Nurture
+                </a>
+                , to help you minimize the copious manual work involved in effective sourcing, and streamline your hundreds of touchpoints into one powerful automated workflow. With your newfound efficiency, you’ll have way more time to focus on the work that truly matters, like highly targeted outreach and relationship-building with your highest-quality candidates.
+               </span>
+              </p>
+             </span>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-79">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell article-resource-wrap" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-80">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-linked_image article-triangle" data-w="12" data-widget-type="linked_image" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1482350421256240156" style="">
+                 <img alt="article_triangle.png" class="hs-image-widget" sizes="(max-width: 47px) 100vw, 47px" src="/wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png" srcset="/wp-content/uploads/2019/04/article_triangle.png?width=24&amp;name=article_triangle.png 24w, /wp-content/uploads/2019/04/article_triangle.png?width=47&amp;name=article_triangle.png 47w, /wp-content/uploads/2019/04/article_triangle.png?width=71&amp;name=article_triangle.png 71w, /wp-content/uploads/2019/04/article_triangle.png?width=94&amp;name=article_triangle.png 94w, /wp-content/uploads/2019/04/article_triangle.png?width=118&amp;name=article_triangle.png 118w, /wp-content/uploads/2019/04/article_triangle.png?width=141&amp;name=article_triangle.png 141w" style="width:47px;border-width:0px;border:0px;" title="article_triangle.png" width="47"/>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-81">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-text additional-resource-header ctr" data-w="12" data-widget-type="text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_1482350614909255068" style="">
+                 Additional resources
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-82">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-widget_container ctr" data-w="12" data-widget-type="widget_container" data-x="0" style="">
+               <span class="hs_cos_wrapper hs_cos_wrapper_widget_container hs_cos_wrapper_type_widget_container" data-hs-cos-general-type="widget_container" data-hs-cos-type="widget_container" id="hs_cos_wrapper_module_1482350520400244492" style="">
+                <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_widget_1482353670061" style="">
+                 <div class="additional-resources-article">
+                  <img alt="Lever - Candidate Sourcing Strategies" height="18" sizes="(max-width: 80px) 100vw, 80px" src="/wp-content/uploads/2019/04/articleLabelEbook.png?width=80&amp;height=18&amp;name=articleLabelEbook.png" srcset="/wp-content/uploads/2019/04/articleLabelEbook.png?width=40&amp;height=9&amp;name=articleLabelEbook.png 40w, /wp-content/uploads/2019/04/articleLabelEbook.png?width=80&amp;height=18&amp;name=articleLabelEbook.png 80w, /wp-content/uploads/2019/04/articleLabelEbook.png?width=120&amp;height=27&amp;name=articleLabelEbook.png 120w, /wp-content/uploads/2019/04/articleLabelEbook.png?width=160&amp;height=36&amp;name=articleLabelEbook.png 160w, /wp-content/uploads/2019/04/articleLabelEbook.png?width=200&amp;height=45&amp;name=articleLabelEbook.png 200w, /wp-content/uploads/2019/04/articleLabelEbook.png?width=240&amp;height=54&amp;name=articleLabelEbook.png 240w" width="80"/>
+                  <p class="resource-title">
+                   The Definitive, No Frills Guide to Sourcing and Nurturing Candidates
+                  </p>
+                  <p class="resource-subhead">
+                   Download this ebook to see how Lever Nurture works and get tip after tip on how to execute your own sourcing campaigns like a pro.
+                  </p>
+                  <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/recruiting-resources/candidate-sourcing-and-nurturing-ebook?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                   Download
+                  </a>
+                 </div>
+                </div>
+               </span>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-83">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_custom_widget" data-hs-cos-general-type="widget" data-hs-cos-type="custom_widget" id="hs_cos_wrapper_module_1481581245141190286" style="">
+              <div class="conclusion-wrapper">
+               <div class="ctr">
+                <p class="conclusion-header">
+                 Conclusion
+                </p>
+                <p>
+                </p>
+                <p>
+                 <span style="font-weight: 400;">
+                  The best candidates are in such high demand that it’s necessary to be more strategic if you want to win them for your team. When the competition for top-tier talent is high, you have to go out and find the caliber of candidates you need for your organization to succeed. These candidate sourcing strategies can help you fill your pipeline with qualified talent so you can choose the best hire for your team.
+                 </span>
+                </p>
+                <p>
+                </p>
+               </div>
+              </div>
+             </span>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-84">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell ctr" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-85">
+             <div class="row-fluid">
+              <div class="span6 widget-span widget-type-rich_text clear-callout" data-w="6" data-widget-type="rich_text" data-x="0" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148193078227429800" style="">
+                 <img alt="recruiting resources" caption="false" data-constrained="true" sizes="(max-width: 156px) 100vw, 156px" src="/wp-content/uploads/2019/04/icon-benefit-integrations.png?width=156&amp;name=icon-benefit-integrations.png" srcset="/wp-content/uploads/2019/04/icon-benefit-integrations.png?width=78&amp;name=icon-benefit-integrations.png 78w, /wp-content/uploads/2019/04/icon-benefit-integrations.png?width=156&amp;name=icon-benefit-integrations.png 156w, /wp-content/uploads/2019/04/icon-benefit-integrations.png?width=234&amp;name=icon-benefit-integrations.png 234w, /wp-content/uploads/2019/04/icon-benefit-integrations.png?width=312&amp;name=icon-benefit-integrations.png 312w, /wp-content/uploads/2019/04/icon-benefit-integrations.png?width=390&amp;name=icon-benefit-integrations.png 390w, /wp-content/uploads/2019/04/icon-benefit-integrations.png?width=468&amp;name=icon-benefit-integrations.png 468w" style="width: 156px;" title="icon-benefit-integrations" width="156"/>
+                 <h3>
+                  Recruiting resources
+                 </h3>
+                 <p>
+                  Check out our full library of ebooks, webinars, tip sheets and more to level up your recruiting game.
+                 </p>
+                 <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/our-recruiting-resources?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                  Explore
+                 </a>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+              <div class="span6 widget-span widget-type-rich_text clear-callout" data-w="6" data-widget-type="rich_text" data-x="6" style="">
+               <div class="cell-wrapper layout-widget-wrapper">
+                <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_148193078429331245" style="">
+                 <img alt="Lever nurture" height="144" sizes="(max-width: 165px) 100vw, 165px" src="/wp-content/uploads/2019/04/icon-benefit-careers.png?width=165&amp;height=144&amp;name=icon-benefit-careers.png" srcset="/wp-content/uploads/2019/04/icon-benefit-careers.png?width=83&amp;height=72&amp;name=icon-benefit-careers.png 83w, /wp-content/uploads/2019/04/icon-benefit-careers.png?width=165&amp;height=144&amp;name=icon-benefit-careers.png 165w, /wp-content/uploads/2019/04/icon-benefit-careers.png?width=248&amp;height=216&amp;name=icon-benefit-careers.png 248w, /wp-content/uploads/2019/04/icon-benefit-careers.png?width=330&amp;height=288&amp;name=icon-benefit-careers.png 330w, /wp-content/uploads/2019/04/icon-benefit-careers.png?width=413&amp;height=360&amp;name=icon-benefit-careers.png 413w, /wp-content/uploads/2019/04/icon-benefit-careers.png?width=495&amp;height=432&amp;name=icon-benefit-careers.png 495w" title="icon-benefit-careers.png" width="165"/>
+                 <h3>
+                  Lever Nurture
+                 </h3>
+                 <p>
+                  Learn more about how Lever Nurture will streamline your efficiency and free you to focus on what truly matters .
+                 </p>
+                 <a class="link has-icon icon-arrow-right-red" href="https://www.lever.co/hire?hsLang=en-us" rel="noopener noreferrer" target="_blank">
+                  Learn more
+                 </a>
+                </span>
+               </div>
+               <!--end layout-widget-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+         <div class="row-fluid-wrapper row-depth-1 row-number-86">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cta full-width-cta" data-w="12" data-widget-type="cta" data-x="0" style="">
+            <div class="cell-wrapper layout-widget-wrapper">
+             <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" data-hs-cos-general-type="widget" data-hs-cos-type="cta" id="hs_cos_wrapper_module_14822501209396052" style="">
+              <!--HubSpot Call-to-Action Code -->
+              <span class="hs-cta-wrapper" id="hs-cta-wrapper-574b1ceb-4bf3-49e3-8c13-55e310042649">
+               <span class="hs-cta-node hs-cta-574b1ceb-4bf3-49e3-8c13-55e310042649" data-hs-drop="true" id="hs-cta-574b1ceb-4bf3-49e3-8c13-55e310042649" style="visibility: visible;">
+                <a class="cta_button" cta_dest_link="https://www.lever.co/demo-signup" href="https://www.lever.co/cs/c/?cta_guid=314ec992-e31d-47a1-8ecb-3c27e248b4a9&amp;placement_guid=574b1ceb-4bf3-49e3-8c13-55e310042649&amp;portal_id=463671&amp;canon=https%3A%2F%2Fwww.lever.co%2Frecruiting-resources%2Farticles%2Fcandidate-sourcing-strategies&amp;redirect_url=APefjpF_IyqLhPFKlmSJgIFR870p8Y3QuvwpQoGR4VzlcPg081YaoYhaqN8nbckbj4sLGFamCkH-totEQi_3INYRFIDDtGb-ZBCMNGLXuRG4p5xpsA3Wys7k-pzI-CUnAYGeUjeezwtC&amp;click=1fb8c3f9-f309-4eda-8ef5-3197110699cc&amp;hsutk=b550e0dde07d0d301d4fa5fec41fa0ac&amp;pageId=4663549253&amp;__hstc=57312437.b550e0dde07d0d301d4fa5fec41fa0ac.1554826388719.1554826388719.1554826388719.1&amp;__hssc=57312437.3.1554826388720&amp;__hsfp=4082957477" id="cta_button_463671_314ec992-e31d-47a1-8ecb-3c27e248b4a9" style="" title="Get started now  See our products and pick the perfect plan. Get a demo">
+                 <h3>
+                  Get started now
+                 </h3>
+                 <p>
+                  See our products and pick the perfect plan.
+                 </p>
+                 <button>
+                  Get a demo
+                 </button>
+                </a>
+               </span>
+               <script charset="utf-8" src="/hs/cta/cta/current.js">
+               </script>
+               <script type="text/javascript">
+                hbspt.cta._relativeUrls=true;hbspt.cta.load(463671, '574b1ceb-4bf3-49e3-8c13-55e310042649', {});
+               </script>
+              </span>
+              <!-- end HubSpot Call-to-Action Code -->
+             </span>
+            </div>
+            <!--end layout-widget-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+        </div>
+        <!--end body -->
+       </div>
+      </div>
+     </main>
+     <!-- #main -->
+    </div>
+    <!-- #primary -->
+   </div>
+   <!-- #content -->
+   <script async="" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-559e959a0e65babe" type="text/javascript">
+   </script>
+   <footer class="site-footer footer" id="colophon">
+    <div class="footer__wrapper">
+     <div class="footer__top">
+      <div class="widget_link_list widget-column" id="list-2">
+       <h3 class="widget-title">
+        products
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/talent-suite">
+          Lever Talent Suite
+         </a>
+        </li>
+        <li class="">
+         <a href="/hire">
+          Lever Hire
+         </a>
+        </li>
+        <li class="">
+         <a href="/nurture">
+          Lever Nurture
+         </a>
+        </li>
+        <li class="">
+         <a href="/analytics">
+          Lever Analytics
+         </a>
+        </li>
+        <li class="">
+         <a href="/talent-cloud-connect">
+          Talent Cloud Connect
+         </a>
+        </li>
+        <li class="">
+         <a href="/pricing">
+          Plans and Pricing
+         </a>
+        </li>
+        <li class="">
+         <a href="/ecosystem">
+          Ecosystem
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-3">
+       <h3 class="widget-title">
+        company
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/about">
+          About us
+         </a>
+        </li>
+        <li class="">
+         <a href="/customers">
+          Customers
+         </a>
+        </li>
+        <li class="">
+         <a href="/press">
+          Press
+         </a>
+        </li>
+        <li class="">
+         <a href="/careers">
+          Careers
+         </a>
+        </li>
+        <li class="">
+         <a href="/events/">
+          Events
+         </a>
+        </li>
+        <li class="">
+         <a href="https://www.lever.co/contact/">
+          Contact Us
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-4">
+       <h3 class="widget-title">
+        resources
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/recruiting-resources">
+          Resource center
+         </a>
+        </li>
+        <li class="">
+         <a href="/blog">
+          Blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://inside.lever.co/" target="_blank">
+          Inside Lever blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://fulcrum.lever.co/" target="_blank">
+          Lever Engineering blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-5">
+       <h3 class="widget-title">
+        support
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us" target="_blank">
+          Help center
+         </a>
+        </li>
+        <li class="">
+         <a href="https://status.lever.co/" target="_blank">
+          Product status
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Support
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Submit a ticket
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-6">
+       <h3 class="widget-title">
+        contact sales
+       </h3>
+       <ul class="list">
+        <li class="phone-footer-bg phone-icon-left">
+         (415) 458-2731
+        </li>
+        <li class="">
+         155 5th St 6th floor
+        </li>
+        <li class="">
+         San Francisco, CA 94103
+        </li>
+        <li class="contact-form__wrap">
+         <a href="mailto:info@lever.co">
+          info@lever.co
+         </a>
+        </li>
+        <li class="">
+         Toronto Office
+        </li>
+        <li class="">
+         176 Yonge Street, 6F
+        </li>
+        <li class="">
+         Toronto, ON M5C 2L7
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__bottom-wrapper">
+      <div class="footer__bottom">
+       <div class="widget_text" id="text-2">
+        <div class="textwidget">
+         <div class="block-about-footer">
+          <div class="block-about-footer__left">
+           <div class="footer-circle-image">
+            <img alt="Image of Lever team members" class="border-radius-50" src="https://www.lever.co/wp-content/uploads/2019/03/footer-image-leveroo-group.jpg"/>
+           </div>
+          </div>
+          <div class="block-about-footer__right">
+           <p class="social-footer-bg">
+            Follow us on
+            <a href="https://www.linkedin.com/company/3254533">
+             LinkedIn
+            </a>
+            ,
+            <a href="https://www.facebook.com/leverapp/">
+             Facebook
+            </a>
+            , and
+            <a href="https://twitter.com/lever">
+             Twitter
+            </a>
+            .
+           </p>
+           <div class="social-links">
+            <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+             <img alt="twitter" src="/wp-content/uploads/2019/04/twitter.png"/>
+            </a>
+            <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+             <img alt="linkedin" src="/wp-content/uploads/2019/04/LinkedIn-3.png"/>
+            </a>
+            <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+             <img alt="facebook" src="/wp-content/uploads/2019/04/facebook.png"/>
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="footer__subscribe">
+       <strong>
+        Sign up for our blog
+       </strong>
+       <p>
+        Keep up with the latest in recruiting.
+       </p>
+       <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+        <div class="umfwrap">
+         <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-1" datalink="">
+         </form>
+         <div class="mkto_ty_message" style="display:none">
+          Thanks for subscribing.
+         </div>
+        </div>
+       </div>
+       <script>
+        if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+       </script>
+       <div id="iframe_area">
+       </div>
+      </div>
+     </div>
+     <div class="footer__copyright">
+      <div class="widget_text" id="text-4">
+       <h4 class="widget-title hidden">
+        copyright
+       </h4>
+       <div class="textwidget">
+        <p>
+         <span class="copyright-content">
+          © 2019 Lever
+          <a href="/privacy">
+           Privacy
+          </a>
+          |
+          <a href="https://www.lever.co/legal/">
+           Legal
+          </a>
+          |
+          <a href="/levers-data-selling-policy">
+           Do Not Sell My Personal Information
+          </a>
+         </span>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <!-- #colophon -->
+  </div>
+  <!-- #page -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NSF9Z3W" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script type="text/javascript">
+   (function(){
+                document.addEventListener('DOMContentLoaded', function(){
+                    let wpp_widgets = document.querySelectorAll('.popular-posts-sr');
+
+                    if ( wpp_widgets ) {
+                        for (let i = 0; i < wpp_widgets.length; i++) {
+                            let wpp_widget = wpp_widgets[i];
+                            WordPressPopularPosts.theme(wpp_widget);
+                        }
+                    }
+                });
+            })();
+  </script>
+  <script>
+   var WPPImageObserver = null;
+
+            function wpp_load_img(img) {
+                if ( ! 'imgSrc' in img.dataset || ! img.dataset.imgSrc )
+                    return;
+
+                img.src = img.dataset.imgSrc;
+
+                if ( 'imgSrcset' in img.dataset ) {
+                    img.srcset = img.dataset.imgSrcset;
+                    img.removeAttribute('data-img-srcset');
+                }
+
+                img.classList.remove('wpp-lazyload');
+                img.removeAttribute('data-img-src');
+                img.classList.add('wpp-lazyloaded');
+            }
+
+            function wpp_observe_imgs(){
+                let wpp_images = document.querySelectorAll('img.wpp-lazyload'),
+                    wpp_widgets = document.querySelectorAll('.popular-posts-sr');
+
+                if ( wpp_images.length || wpp_widgets.length ) {
+                    if ( 'IntersectionObserver' in window ) {
+                        WPPImageObserver = new IntersectionObserver(function(entries, observer) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    let img = entry.target;
+                                    wpp_load_img(img);
+                                    WPPImageObserver.unobserve(img);
+                                }
+                            });
+                        });
+
+                        if ( wpp_images.length ) {
+                            wpp_images.forEach(function(image) {
+                                WPPImageObserver.observe(image);
+                            });
+                        }
+
+                        if ( wpp_widgets.length ) {
+                            for (var i = 0; i < wpp_widgets.length; i++) {
+                                let wpp_widget_images = wpp_widgets[i].querySelectorAll('img.wpp-lazyload');
+
+                                if ( ! wpp_widget_images.length && wpp_widgets[i].shadowRoot ) {
+                                    wpp_widget_images = wpp_widgets[i].shadowRoot.querySelectorAll('img.wpp-lazyload');
+                                }
+
+                                if ( wpp_widget_images.length ) {
+                                    wpp_widget_images.forEach(function(image) {
+                                        WPPImageObserver.observe(image);
+                                    });
+                                }
+                            }
+                        }
+                    } /** Fallback for older browsers */
+                    else {
+                        if ( wpp_images.length ) {
+                            for (var i = 0; i < wpp_images.length; i++) {
+                                wpp_load_img(wpp_images[i]);
+                                wpp_images[i].classList.remove('wpp-lazyloaded');
+                            }
+                        }
+
+                        if ( wpp_widgets.length ) {
+                            for (var j = 0; j < wpp_widgets.length; j++) {
+                                let wpp_widget = wpp_widgets[j],
+                                    wpp_widget_images = wpp_widget.querySelectorAll('img.wpp-lazyload');
+
+                                if ( ! wpp_widget_images.length && wpp_widget.shadowRoot ) {
+                                    wpp_widget_images = wpp_widget.shadowRoot.querySelectorAll('img.wpp-lazyload');
+                                }
+
+                                if ( wpp_widget_images.length ) {
+                                    for (var k = 0; k < wpp_widget_images.length; k++) {
+                                        wpp_load_img(wpp_widget_images[k]);
+                                        wpp_widget_images[k].classList.remove('wpp-lazyloaded');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                wpp_observe_imgs();
+
+                // When an ajaxified WPP widget loads,
+                // Lazy load its images
+                document.addEventListener('wpp-onload', function(){
+                    wpp_observe_imgs();
+                });
+            });
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js?ver=2.3.9" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var ctcc_vars = {"expiry":"","method":"","version":"1"};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js?ver=2.3.0" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/navigation-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/skip-link-focus-fix-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/libs/jquery.magnific-popup.min.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js?ver=2.1.3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com, @yourdomain.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+var customAjax = {"ajaxurl":"https:\/\/www.lever.co\/wp-admin\/admin-ajax.php"};
+var timeConfigPopupFull = {"time_full_value":"1"};
+var timeConfigPopupSidebar = {"time_sidebar_value":"0.5"};
+var popupIdConfigPopupFull = {"popup_id":""};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-min.js?ver=1.0.0-213" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-header-min.js?ver=1.0.0-213" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/wp-embed.min.js?ver=5.3.2" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   jQuery(document).ready(function($){
+												if(!catapultReadCookie("catAccCookies")){ // If the cookie has not been set then show the bar
+							$("html").addClass("has-cookie-bar");
+							$("html").addClass("cookie-bar-bottom-bar");
+							$("html").addClass("cookie-bar-bar");
+													}
+																	});
+  </script>
+  <div class="" id="catapult-cookie-bar">
+   <div class="ctcc-inner">
+    <span class="ctcc-left-side">
+     This site uses cookies to offer you a better browsing experience.
+     <a class="ctcc-more-info-link" href="https://www.lever.co/cookie-policy" tabindex="0" target="_blank">
+      Learn more.
+     </a>
+    </span>
+    <span class="ctcc-right-side">
+     <button id="catapultCookie" onclick="catapultAcceptCookies();" tabindex="0">
+      Thank you
+     </button>
+    </span>
+   </div>
+   <!-- custom wrapper class -->
+  </div>
+  <!-- #catapult-cookie-bar -->
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb4e40776b","applicationID":"308893147","transactionName":"ZF0EbBcHWxZWVEUIWV0XJ1sRD1oLGERYD1FfXUtQEQtZOlpeVhNXR10C","queueTime":0,"applicationTime":253,"atts":"SBoHGl8dSBg=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

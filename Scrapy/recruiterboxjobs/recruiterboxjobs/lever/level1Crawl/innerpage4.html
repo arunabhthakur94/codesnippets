@@ -1,0 +1,1974 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"fb4e40776b",applicationID:"308893147"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <script src="https://cdn.optimizely.com/js/15777290433.js">
+  </script>
+  <title>
+   Lever Brand Guidelines
+  </title>
+  <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+  <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+   //<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+  </script>
+  <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+  <!-- This site is optimized with the Yoast SEO plugin v12.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
+  <meta content="To preserve the integrity of our identity, we want to ensure that both the Lever logo and mark are always recognizable and legible, and stand out against any competing design elements." name="description">
+   <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots">
+    <link href="https://www.lever.co/brand/" rel="canonical">
+     <meta content="en_US" property="og:locale"/>
+     <meta content="article" property="og:type"/>
+     <meta content="Lever Brand Guidelines" property="og:title"/>
+     <meta content="To preserve the integrity of our identity, we want to ensure that both the Lever logo and mark are always recognizable and legible, and stand out against any competing design elements." property="og:description"/>
+     <meta content="https://www.lever.co/brand/" property="og:url"/>
+     <meta content="Lever" property="og:site_name"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=500&amp;height=140&amp;name=lever_rgb_logo_standard_transparent_no-padding.png" property="og:image"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=500&amp;height=140&amp;name=lever_rgb_logo_standard_transparent_no-padding.png" property="og:image:secure_url"/>
+     <meta content="summary_large_image" name="twitter:card"/>
+     <meta content="To preserve the integrity of our identity, we want to ensure that both the Lever logo and mark are always recognizable and legible, and stand out against any competing design elements." name="twitter:description"/>
+     <meta content="Lever Brand Guidelines" name="twitter:title"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=500&amp;height=140&amp;name=lever_rgb_logo_standard_transparent_no-padding.png" name="twitter:image"/>
+     <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lever.co/#website","url":"https://www.lever.co/","name":"Lever","description":"Lever Recruiting Software","potentialAction":{"@type":"SearchAction","target":"https://www.lever.co/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.lever.co/brand/#primaryimage","url":"/wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=500&amp;height=140&amp;name=lever_rgb_logo_standard_transparent_no-padding.png"},{"@type":"WebPage","@id":"https://www.lever.co/brand/#webpage","url":"https://www.lever.co/brand/","inLanguage":"en-US","name":"Lever Brand Guidelines","isPartOf":{"@id":"https://www.lever.co/#website"},"primaryImageOfPage":{"@id":"https://www.lever.co/brand/#primaryimage"},"datePublished":"2018-09-06T11:10:02+00:00","dateModified":"2019-05-21T15:38:57+00:00","description":"To preserve the integrity of our identity, we want to ensure that both the Lever logo and mark are always recognizable and legible, and stand out against any competing design elements."}]}
+     </script>
+     <!-- / Yoast SEO plugin. -->
+     <link href="//www.lever.co" rel="dns-prefetch"/>
+     <link href="//munchkin.marketo.net" rel="dns-prefetch"/>
+     <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
+     <link href="//s.w.org" rel="dns-prefetch"/>
+     <link href="https://www.lever.co/feed/" rel="alternate" title="Lever » Feed" type="application/rss+xml"/>
+     <link href="https://www.lever.co/comments/feed/" rel="alternate" title="Lever » Comments Feed" type="application/rss+xml"/>
+     <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.lever.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+     </script>
+     <style type="text/css">
+      img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+     </style>
+     <link href="https://www.lever.co/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css?ver=2.3.9" id="mpp_gutenberg-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/css/style.css?ver=5.3.2" id="cookie-consent-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/css/ult_marketo_forms-public.css?ver=1.0.1" id="ult_marketo_forms-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=5.0.1" id="wordpress-popular-posts-css-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/css/minifycss/magnific-popup.min.css?ver=1.0.2" id="lib-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/css/html_migrated/minifycss/style.min.css?ver=5.3.2" id="html_migrated_base-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/underscores.min.css?ver=5.3.2" id="lever-underscores-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/style.min.css?ver=1.0.0-441" id="lever-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/header.min.css?ver=1.0.0-441" id="lever-header-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/footer.min.css?ver=1.0.0-441" id="lever-footer-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/levercss/html_migrated/style.css?ver=5.3.2" id="lever-html-migrated-css" media="all" rel="stylesheet" type="text/css"/>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/forms2.min.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com, @yourdomain.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/ult_marketo_forms-public.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script src="//munchkin.marketo.net/munchkin.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      Munchkin.init('293-AOQ-024');
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.2" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/www.lever.co\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","ID":"11712","token":"ce76045b3d","debug":""};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/assets/js/wpp-5.0.0.min.js?ver=5.0.1" type="text/javascript">
+     </script>
+     <link href="https://www.lever.co/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+     <link href="https://www.lever.co/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+     <meta content="WordPress 5.3.2" name="generator"/>
+     <link href="https://www.lever.co/?p=11712" rel="shortlink"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fbrand%2F" rel="alternate" type="application/json+oembed"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fbrand%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+     <style id="ctcc-css" media="screen" type="text/css">
+      #catapult-cookie-bar {
+					box-sizing: border-box;
+					max-height: 0;
+					opacity: 0;
+					z-index: 99999;
+					overflow: hidden;
+					color: #ddd;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					background-color: #464646;
+				}
+				#catapult-cookie-bar a {
+					color: #fff;
+				}
+				#catapult-cookie-bar .x_close span {
+					background-color: ;
+				}
+				button#catapultCookie {
+					background:;
+					color: ;
+					border: 0; padding: 6px 9px; border-radius: 3px;
+				}
+				#catapult-cookie-bar h3 {
+					color: #ddd;
+				}
+				.has-cookie-bar #catapult-cookie-bar {
+					opacity: 1;
+					max-height: 999px;
+					min-height: 30px;
+				}
+     </style>
+     <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+     <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+      //<![CDATA[
+	var dataLayer_content = {"pagePostType":"html_migrated","pagePostType2":"single-html_migrated","pagePostAuthor":"superuser"};
+	dataLayer.push( dataLayer_content );//]]>
+     </script>
+     <script data-cfasync="false">
+      //<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSF9Z3W');//]]>
+     </script>
+     <!-- End Google Tag Manager -->
+     <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+     <style type="text/css">
+      .site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+     </style>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="32x32"/>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="192x192"/>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="apple-touch-icon-precomposed"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" name="msapplication-TileImage"/>
+    </link>
+   </meta>
+  </meta>
+ </head>
+ <body class="html_migrated-template-default single single-html_migrated postid-11712 wp-custom-logo no-sidebar html_migrated-brand elementor-default">
+  <div class="site page-wrap body-page-wrap" id="page">
+   <a class="skip-link screen-reader-text" href="#content">
+    Skip to content
+   </a>
+   <header class="site-header header" id="masthead">
+    <div class="header__wrapper">
+     <div class="site-branding">
+      <a class="custom-logo-link" href="https://www.lever.co/" rel="home">
+       <img alt="lever recruiting software" class="custom-logo" height="48" src="https://www.lever.co/wp-content/uploads/2019/03/lever_rgb_logo_standard.svg" width="169.001"/>
+      </a>
+      <p class="site-title">
+       <a href="https://www.lever.co/" rel="home">
+        Lever
+       </a>
+      </p>
+      <p class="site-description">
+       Lever Recruiting Software
+      </p>
+     </div>
+     <!-- .site-branding -->
+     <div class="menu-overflow hidden-large">
+     </div>
+     <div class="menu-wrapper">
+      <nav class="main-navigation" id="site-navigation">
+       <div class="menu-main-menu-container">
+        <ul class="menu" id="primary-menu">
+         <li class="hidden-large menu-item menu-item-type-custom menu-item-object-custom menu-item-76" id="menu-item-76">
+          <a href="https://hire.lever.co/">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32" id="menu-item-32">
+          <a href="/talent-suite">
+           Products
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13835" id="menu-item-13835">
+            <a href="https://www.lever.co/talent-suite/">
+             Lever Talent Suite
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39" id="menu-item-39">
+            <a href="/hire">
+             Lever Hire
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49" id="menu-item-49">
+            <a href="/nurture">
+             Lever Nurture
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50" id="menu-item-50">
+            <a href="/analytics">
+             Lever Analytics
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13834" id="menu-item-13834">
+            <a href="https://www.lever.co/talent-cloud-connect/">
+             Talent Cloud Connect
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51" id="menu-item-51">
+            <a href="/pricing">
+             Plans and Pricing
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40" id="menu-item-40">
+            <a href="/ecosystem">
+             Ecosystem
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15555" id="menu-item-15555">
+          <a href="/pricing">
+           Pricing
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" id="menu-item-33">
+          <a href="/customers">
+           Customers
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4561" id="menu-item-4561">
+          <a href="https://www.lever.co/recruiting-resources/">
+           Resources
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4562" id="menu-item-4562">
+            <a href="https://www.lever.co/recruiting-resources/">
+             All
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-342" id="menu-item-342">
+            <a href="https://www.lever.co/recruiting-resources/ebook/">
+             eBooks
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-343" id="menu-item-343">
+            <a href="https://www.lever.co/recruiting-resources/video/">
+             Videos
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-346" id="menu-item-346">
+            <a href="https://www.lever.co/recruiting-resources/webinar/">
+             Webinars
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-345" id="menu-item-345">
+            <a href="https://www.lever.co/recruiting-resources/tools/">
+             Tools and Templates
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-344" id="menu-item-344">
+            <a href="https://www.lever.co/recruiting-resources/datasheet/">
+             Product Datasheets
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13391" id="menu-item-13391">
+            <a href="https://www.lever.co/gdpr-recruiting/">
+             GDPR
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16854" id="menu-item-16854">
+            <a href="https://www.lever.co/lever-for-startups/">
+             Lever for Startups
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-35" id="menu-item-35">
+          <a href="/about">
+           Company
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44" id="menu-item-44">
+            <a href="/about">
+             About Us
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4566" id="menu-item-4566">
+            <a href="https://www.lever.co/diversity-and-inclusion/">
+             Diversity
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47" id="menu-item-47">
+            <a href="/press">
+             Press
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46" id="menu-item-46">
+            <a href="/careers">
+             Careers
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48" id="menu-item-48">
+            <a href="/partner-referral-application">
+             Referral Program
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15716" id="menu-item-15716">
+            <a href="https://www.lever.co/events/">
+             Events
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17257" id="menu-item-17257">
+            <a href="https://www.lever.co/contact/">
+             Contact Us
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" id="menu-item-36">
+          <a href="/blog">
+           Blog
+          </a>
+         </li>
+        </ul>
+       </div>
+      </nav>
+      <!-- #site-navigation -->
+      <div class="user-navigation">
+       <div class="menu-user-menu-container">
+        <ul class="menu" id="menu-user-menu">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" id="menu-item-37">
+          <a href="https://hire.lever.co" rel="noopener noreferrer" target="_blank">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-button menu-item menu-item-type-custom menu-item-object-custom menu-item-38" id="menu-item-38">
+          <a href="/1801-demo-signup">
+           Get Started
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="social-links hidden-large">
+       <div class="menu-socail-links-container">
+        <ul class="menu" id="menu-socail-links">
+         <li class="fa fa-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-73" id="menu-item-73">
+          <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+           Twitter
+          </a>
+         </li>
+         <li class="fa fa-linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-74" id="menu-item-74">
+          <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+           Linkedin
+          </a>
+         </li>
+         <li class="fa fa-facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-75" id="menu-item-75">
+          <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+           Facebook
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- .menu-wrapper -->
+     <button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle hidden-large">
+      <span class="fa fa-bars">
+      </span>
+     </button>
+    </div>
+    <!-- .header__wrapper -->
+   </header>
+   <!-- #masthead -->
+   <div class="site-content" id="content">
+    <div class="content-area" id="primary">
+     <main class="site-main" id="main">
+      <div class="entry-content" id="html-migrated-wrapper">
+       <h1 class="entry-title visibility-hidden">
+        Lever Brand Guidelines
+       </h1>
+       <link href="/wp-content/themes/lever/css/html_migrated/3e709c0dadd0d16ffec18a9560c6218d.css" rel="stylesheet" type="text/css"/>
+       <link href="/wp-content/themes/lever/css/html_migrated/4370d8209229ce97e7785dab6eaebdcd.css" rel="stylesheet" type="text/css"/>
+       <link href="/wp-content/themes/lever/css/html_migrated/fadd72630217a689052acea79ab4919c.css" rel="stylesheet" type="text/css"/>
+       <link href="/wp-content/themes/lever/css/html_migrated/4370d8209229ce97e7785dab6eaebdcd.css" rel="stylesheet" type="text/css"/>
+       <link href="/wp-content/themes/lever/css/html_migrated/c7ef387acfe10098a9c8a7c0588c8cca.css" rel="stylesheet" type="text/css"/>
+       <style id="hs_editor_style" type="text/css">
+        #hs_cos_wrapper_module_152519252584171  { display: block !important; padding-top: 48px !important } #hs_cos_wrapper_module_1525150035062251  { display: block !important; margin-top: 32px !important } #hs_cos_wrapper_module_152519250859667  { display: block !important; text-align:  !important } #hs_cos_wrapper_module_1525130906125136  { display: block !important; padding-bottom: 2px !important } #hs_cos_wrapper_module_152519250591765  { display: block !important; margin-bottom: 24px !important; text-align:  !important } #hs_cos_wrapper_module_152519307316184  { display: block !important; text-align:  !important }
+       </style>
+       <div class="body-container-wrapper">
+        <div class="body-container container-fluid">
+         <div class="row-fluid-wrapper row-depth-1 row-number-1">
+          <div class="row-fluid">
+           <div class="span12 widget-span widget-type-cell ctr relative mt50" data-w="12" data-widget-type="cell" data-x="0" style="">
+            <div class="row-fluid-wrapper row-depth-1 row-number-2">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-cell" data-w="12" data-widget-type="cell" data-x="0" id="main-column" style="">
+               <div class="row-fluid-wrapper row-depth-1 row-number-3">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-cell" data-w="12" data-widget-type="cell" data-x="0" id="overview" style="">
+                  <div class="row-fluid-wrapper row-depth-1 row-number-4">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+                     <div class="cell-wrapper layout-widget-wrapper">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525150171144257" style="">
+                       <br/>
+                       <h2 class="font-base">
+                        Overview
+                       </h2>
+                       <p>
+                        To preserve the integrity of our identity, we want to ensure that both the Lever logo and mark are always recognizable and legible, and stand out against any competing design elements.
+                       </p>
+                      </span>
+                     </div>
+                     <!--end layout-widget-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+               <div class="row-fluid-wrapper row-depth-1 row-number-5">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-cell" data-w="12" data-widget-type="cell" data-x="0" id="logo" style="">
+                  <div class="row-fluid-wrapper row-depth-1 row-number-6">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+                     <div class="cell-wrapper layout-widget-wrapper">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525150035062251" style="">
+                       <h2 class="font-base">
+                        Logo
+                       </h2>
+                       <p>
+                        This is the official Lever logo and mark for our company brand. For most cases, use the standard logo for white or light solid background colors. Inverted versions are also available for dark or other solid background colors. Most importantly, refer to our safe space and minimum size guidelines to ensure that the logo is legible with enough color contrast for accessibility.
+                       </p>
+                      </span>
+                     </div>
+                     <!--end layout-widget-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-7">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-raw_jinja" data-w="12" data-widget-type="raw_jinja" data-x="0" style="">
+                     <a class="btn-large-primary mt20 mb30" href="/wp-content/uploads/2019/05/Lever-logo-2018.zip">
+                      <!-- start coded_template: id:5747780227 path:Custom/page/icons/download.html -->
+                      <svg class="icon icon-download" height="16px" viewbox="0 0 16 16" width="16px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                       <path d="M8,15.5974351 C6.8314209,15.5974349 4.82369258,12.189232 2.62719727,12.189232 L0,12.189232 L0,13.6900647 C0,15.0703167 1.12508893,16.189232 2.5,16.189232 L13.5,16.189232 C14.8807119,16.189232 16,15.075009 16,13.6900647 L16,12.189232 L13.0529785,12.189232 C11.4468363,12.189232 9.1685791,15.5974353 8,15.5974351 Z M2.20243693,6.45473355 L7.29170396,12.6332592 C7.68218504,13.1073152 8.3177251,13.1084476 8.70913897,12.6332592 L13.798406,6.45473355 C14.1888871,5.9806776 13.9951847,5.59432885 13.3636761,5.59432885 L9.42057903,5.59432885 L9.42057895,1.13612873 C9.42057894,0.583087823 8.96627878,0.134759583 8.42253633,0.134759583 L7.15134966,0.134759583 C6.60014595,0.134759583 6.15330706,0.58153905 6.15330707,1.13612873 L6.15330714,5.59432885 L2.63716686,5.59432885 C2.00386029,5.59432885 1.81102306,5.97954515 2.20243693,6.45473355 Z M2.20243693,6.45473355">
+                       </path>
+                      </svg>
+                      <!-- end coded_template: id:5747780227 path:Custom/page/icons/download.html -->
+                      <span>
+                       Download all logo files
+                      </span>
+                     </a>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-8">
+                   <div class="row-fluid">
+                    <div class="span6 widget-span widget-type-custom_widget pv20" data-w="6" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_152519250591765" style="">
+                      <div class="lever-logo">
+                       <div class="logo" style="     padding: 20%;     background-color: #f9f9f9;">
+                        <img alt="lever_rgb_logo_standard_transparent_no-padding" height="140" sizes="(max-width: 500px) 100vw, 500px" src="/wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=500&amp;height=140&amp;name=lever_rgb_logo_standard_transparent_no-padding.png" srcset="/wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=250&amp;height=70&amp;name=lever_rgb_logo_standard_transparent_no-padding.png 250w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=500&amp;height=140&amp;name=lever_rgb_logo_standard_transparent_no-padding.png 500w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=750&amp;height=210&amp;name=lever_rgb_logo_standard_transparent_no-padding.png 750w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=1000&amp;height=280&amp;name=lever_rgb_logo_standard_transparent_no-padding.png 1000w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=1250&amp;height=350&amp;name=lever_rgb_logo_standard_transparent_no-padding.png 1250w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?width=1500&amp;height=420&amp;name=lever_rgb_logo_standard_transparent_no-padding.png 1500w" width="500"/>
+                       </div>
+                       <div class="logo-name mt10">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="logo_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_152519250591765_" style="">
+                         Standard logo
+                        </div>
+                       </div>
+                       <div class="logo-links">
+                        <a href="/wp-content/uploads/2019/04/lever_rgb_logo_standard_transparent_no-padding.png?hsLang=en-us">
+                         PNG
+                        </a>
+                        |
+                        <a href="/wp-content/uploads//2019/04/lever_rgb_logo_standard.svg?hsLang=en-us">
+                         Vector
+                        </a>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                    <div class="span6 widget-span widget-type-custom_widget pv20" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_152519250859667" style="">
+                      <div class="lever-logo">
+                       <div class="logo" style="     padding: 20%;     background-color: #3b3d3f;">
+                        <img alt="lever_rgb_logo_standard_inverted_transparent_no_padding" height="319" sizes="(max-width: 1128px) 100vw, 1128px" src="/wp-content/uploads/2019/04/lever_rgb_logo_standard_inverted_transparent_no_padding.png?width=1128&amp;height=319&amp;name=lever_rgb_logo_standard_inverted_transparent_no_padding.png" srcset="/wp-content/uploads/2019/04/lever_rgb_logo_standard_inverted_transparent_no_padding.png?width=564&amp;height=160&amp;name=lever_rgb_logo_standard_inverted_transparent_no_padding.png 564w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_inverted_transparent_no_padding.png?width=1128&amp;height=319&amp;name=lever_rgb_logo_standard_inverted_transparent_no_padding.png 1128w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_inverted_transparent_no_padding.png?width=1692&amp;height=479&amp;name=lever_rgb_logo_standard_inverted_transparent_no_padding.png 1692w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_inverted_transparent_no_padding.png?width=2256&amp;height=638&amp;name=lever_rgb_logo_standard_inverted_transparent_no_padding.png 2256w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_inverted_transparent_no_padding.png?width=2820&amp;height=798&amp;name=lever_rgb_logo_standard_inverted_transparent_no_padding.png 2820w, /wp-content/uploads/2019/04/lever_rgb_logo_standard_inverted_transparent_no_padding.png?width=3384&amp;height=957&amp;name=lever_rgb_logo_standard_inverted_transparent_no_padding.png 3384w" width="1128"/>
+                       </div>
+                       <div class="logo-name mt10">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="logo_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_152519250859667_" style="">
+                         Inverted logo
+                        </div>
+                       </div>
+                       <div class="logo-links">
+                        <a href="/wp-content/uploads/2019/04/lever_rgb_logo_standard_inverted_transparent_no_padding.png?hsLang=en-us">
+                         PNG
+                        </a>
+                        |
+                        <a href="/wp-content/uploads//2019/04/lever_rgb_logo_standard_inverted.svg?hsLang=en-us">
+                         Vector
+                        </a>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-9">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1537301902275243" style="">
+                      <hr/>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-10">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-rich_text" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+                     <div class="cell-wrapper layout-widget-wrapper">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1537301912366252" style="">
+                       <h3>
+                        Mark
+                       </h3>
+                       <p>
+                        The mark should only be used when the word "Lever" is mentioned elsewhere on the page/document, or if it's used as a watermark (e.g. in the corner of a slideshow).
+                       </p>
+                      </span>
+                     </div>
+                     <!--end layout-widget-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-11">
+                   <div class="row-fluid">
+                    <div class="span6 widget-span widget-type-custom_widget" data-w="6" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_152519251029768" style="">
+                      <div class="lever-logo">
+                       <div class="logo" style="     padding: 40%;     background-color: #f9f9f9;">
+                        <img alt="lever_rgb_mark_standard" height="400" src="/wp-content/uploads//2019/04/lever_rgb_mark_standard.svg" width="400"/>
+                       </div>
+                       <div class="logo-name mt10">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="logo_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_152519251029768_" style="">
+                         Standard mark
+                        </div>
+                       </div>
+                       <div class="logo-links">
+                        <a href="/wp-content/uploads//2019/04/lever_rgb_mark_standard.svg?hsLang=en-us">
+                         PNG
+                        </a>
+                        |
+                        <a href="/wp-content/uploads//2019/04/lever_rgb_mark_standard_transparent_no-padding.svg?hsLang=en-us">
+                         Vector
+                        </a>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                    <div class="span6 widget-span widget-type-custom_widget" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_152519251275870" style="">
+                      <div class="lever-logo">
+                       <div class="logo" style="     padding: 40%;     background-color: #3b3d3f;">
+                        <img alt="lever_rgb_mark_standard_inverted_transparent_no_padding" height="438" sizes="(max-width: 438px) 100vw, 438px" src="/wp-content/uploads/2019/04/lever_rgb_mark_standard_inverted_transparent_no_padding.png?width=438&amp;height=438&amp;name=lever_rgb_mark_standard_inverted_transparent_no_padding.png" srcset="/wp-content/uploads/2019/04/lever_rgb_mark_standard_inverted_transparent_no_padding.png?width=219&amp;height=219&amp;name=lever_rgb_mark_standard_inverted_transparent_no_padding.png 219w, /wp-content/uploads/2019/04/lever_rgb_mark_standard_inverted_transparent_no_padding.png?width=438&amp;height=438&amp;name=lever_rgb_mark_standard_inverted_transparent_no_padding.png 438w, /wp-content/uploads/2019/04/lever_rgb_mark_standard_inverted_transparent_no_padding.png?width=657&amp;height=657&amp;name=lever_rgb_mark_standard_inverted_transparent_no_padding.png 657w, /wp-content/uploads/2019/04/lever_rgb_mark_standard_inverted_transparent_no_padding.png?width=876&amp;height=876&amp;name=lever_rgb_mark_standard_inverted_transparent_no_padding.png 876w, /wp-content/uploads/2019/04/lever_rgb_mark_standard_inverted_transparent_no_padding.png?width=1095&amp;height=1095&amp;name=lever_rgb_mark_standard_inverted_transparent_no_padding.png 1095w, /wp-content/uploads/2019/04/lever_rgb_mark_standard_inverted_transparent_no_padding.png?width=1314&amp;height=1314&amp;name=lever_rgb_mark_standard_inverted_transparent_no_padding.png 1314w" width="438"/>
+                       </div>
+                       <div class="logo-name mt10">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="logo_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_152519251275870_" style="">
+                         Inverted mark
+                        </div>
+                       </div>
+                       <div class="logo-links">
+                        <a href="/wp-content/uploads/2019/04/lever_rgb_mark_standard_inverted_transparent_no_padding.png?hsLang=en-us">
+                         PNG
+                        </a>
+                        |
+                        <a href="/wp-content/uploads//2019/04/lever_rgb_mark_standard_inverted.svg?hsLang=en-us">
+                         Vector
+                        </a>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-12">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_152519252584171" style="">
+                      <hr/>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-13">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-text mv30" data-w="12" data-widget-type="text" data-x="0" style="">
+                     <div class="cell-wrapper layout-widget-wrapper">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_text" data-hs-cos-general-type="widget" data-hs-cos-type="text" id="hs_cos_wrapper_module_152519253223173" style="">
+                       We also have an alternative logo that should only be used for print formats that require a single color option. Use this option as sparingly as possible.
+                      </span>
+                     </div>
+                     <!--end layout-widget-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-14">
+                   <div class="row-fluid">
+                    <div class="span6 widget-span widget-type-custom_widget mb50" data-w="6" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_152519307102382" style="">
+                      <div class="lever-logo">
+                       <div class="logo" style="     padding: 20%;     background-color: #f9f9f9;">
+                        <img alt="lever_cmyk_logo_outline" height="272" sizes="(max-width: 960px) 100vw, 960px" src="/wp-content/uploads/2019/04/lever_cmyk_logo_outline.png?width=960&amp;height=272&amp;name=lever_cmyk_logo_outline.png" srcset="/wp-content/uploads/2019/04/lever_cmyk_logo_outline.png?width=480&amp;height=136&amp;name=lever_cmyk_logo_outline.png 480w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline.png?width=960&amp;height=272&amp;name=lever_cmyk_logo_outline.png 960w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline.png?width=1440&amp;height=408&amp;name=lever_cmyk_logo_outline.png 1440w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline.png?width=1920&amp;height=544&amp;name=lever_cmyk_logo_outline.png 1920w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline.png?width=2400&amp;height=680&amp;name=lever_cmyk_logo_outline.png 2400w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline.png?width=2880&amp;height=816&amp;name=lever_cmyk_logo_outline.png 2880w" width="960"/>
+                       </div>
+                       <div class="logo-name mt10">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="logo_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_152519307102382_" style="">
+                         Dark single color logo
+                        </div>
+                       </div>
+                       <div class="logo-links">
+                        <a href="/wp-content/uploads/2019/04/lever_cmyk_logo_outline.png?hsLang=en-us">
+                         PNG
+                        </a>
+                        |
+                        <a href="/wp-content/uploads/2019/05/lever_cmyk_logo_outline.svg">
+                         Vector
+                        </a>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                    <div class="span6 widget-span widget-type-custom_widget mb50" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_152519307316184" style="">
+                      <div class="lever-logo">
+                       <div class="logo" style="     padding: 20%;     background-color: #3b3d3f;">
+                        <img alt="lever_cmyk_logo_outline_inverted" height="272" sizes="(max-width: 960px) 100vw, 960px" src="/wp-content/uploads/2019/04/lever_cmyk_logo_outline_inverted.png?width=960&amp;height=272&amp;name=lever_cmyk_logo_outline_inverted.png" srcset="/wp-content/uploads/2019/04/lever_cmyk_logo_outline_inverted.png?width=480&amp;height=136&amp;name=lever_cmyk_logo_outline_inverted.png 480w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline_inverted.png?width=960&amp;height=272&amp;name=lever_cmyk_logo_outline_inverted.png 960w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline_inverted.png?width=1440&amp;height=408&amp;name=lever_cmyk_logo_outline_inverted.png 1440w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline_inverted.png?width=1920&amp;height=544&amp;name=lever_cmyk_logo_outline_inverted.png 1920w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline_inverted.png?width=2400&amp;height=680&amp;name=lever_cmyk_logo_outline_inverted.png 2400w, /wp-content/uploads/2019/04/lever_cmyk_logo_outline_inverted.png?width=2880&amp;height=816&amp;name=lever_cmyk_logo_outline_inverted.png 2880w" width="960"/>
+                       </div>
+                       <div class="logo-name mt10">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="logo_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_152519307316184_" style="">
+                         Light single color logo
+                        </div>
+                       </div>
+                       <div class="logo-links">
+                        <a href="/wp-content/uploads/2019/04/lever_cmyk_logo_outline_inverted.png?hsLang=en-us">
+                         PNG
+                        </a>
+                        |
+                        <a href="/wp-content/uploads/2019/05/lever_cmyk_logo_outline_inverted.svg">
+                         Vector
+                        </a>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-15">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-rich_text pb20" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+                     <div class="cell-wrapper layout-widget-wrapper">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525400520554211" style="">
+                       <h2 class="font-base">
+                        Guidelines
+                       </h2>
+                       <p>
+                        There should always be safe space free of any graphics or text surrounding the Lever logo. The ideal safe space is found by taking the height distance (x) of the logo and applying the same distance from the outer edges of the Lever logo or mark. Make sure that logo is not smaller than the defined minimum sizes for any format including web, print, and promotional items.
+                       </p>
+                      </span>
+                     </div>
+                     <!--end layout-widget-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-16">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_15372343907131444" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_15372343907131444_" style="">
+                       <p>
+                        <img alt="Lever-logo-guidelines-safe-space" sizes="(max-width: 1666px) 100vw, 1666px" src="/wp-content/uploads/2019/04/Lever-logo-guidelines-safe-space.png?width=1666&amp;name=Lever-logo-guidelines-safe-space.png" srcset="/wp-content/uploads/2019/04/Lever-logo-guidelines-safe-space.png?width=833&amp;name=Lever-logo-guidelines-safe-space.png 833w, /wp-content/uploads/2019/04/Lever-logo-guidelines-safe-space.png?width=1666&amp;name=Lever-logo-guidelines-safe-space.png 1666w, /wp-content/uploads/2019/04/Lever-logo-guidelines-safe-space.png?width=2499&amp;name=Lever-logo-guidelines-safe-space.png 2499w, /wp-content/uploads/2019/04/Lever-logo-guidelines-safe-space.png?width=3332&amp;name=Lever-logo-guidelines-safe-space.png 3332w, /wp-content/uploads/2019/04/Lever-logo-guidelines-safe-space.png?width=4165&amp;name=Lever-logo-guidelines-safe-space.png 4165w, /wp-content/uploads/2019/04/Lever-logo-guidelines-safe-space.png?width=4998&amp;name=Lever-logo-guidelines-safe-space.png 4998w" style="width: 1666px;" width="1666"/>
+                       </p>
+                       <p>
+                        Safe space
+                       </p>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-17">
+                   <div class="row-fluid">
+                    <div class="span6 widget-span widget-type-custom_widget mb10" data-w="6" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_15372344526651634" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_15372344526651634_" style="">
+                       <p>
+                        <img alt="Lever-logo-guidelines-min-digital" sizes="(max-width: 800px) 100vw, 800px" src="/wp-content/uploads/2019/04/Lever-logo-guidelines-min-digital.png?width=800&amp;name=Lever-logo-guidelines-min-digital.png" srcset="/wp-content/uploads/2019/04/Lever-logo-guidelines-min-digital.png?width=400&amp;name=Lever-logo-guidelines-min-digital.png 400w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-digital.png?width=800&amp;name=Lever-logo-guidelines-min-digital.png 800w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-digital.png?width=1200&amp;name=Lever-logo-guidelines-min-digital.png 1200w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-digital.png?width=1600&amp;name=Lever-logo-guidelines-min-digital.png 1600w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-digital.png?width=2000&amp;name=Lever-logo-guidelines-min-digital.png 2000w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-digital.png?width=2400&amp;name=Lever-logo-guidelines-min-digital.png 2400w" style="width: 800px;" width="800"/>
+                       </p>
+                       <p>
+                        Minimum size (digital)
+                       </p>
+                       <p class="fs14 text-color-50">
+                        To ensure the logo is always readable digitally, the logo height should always be 24px or larger.
+                       </p>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                    <div class="span6 widget-span widget-type-custom_widget mb10" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_15372344564001638" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_15372344564001638_" style="">
+                       <p>
+                        <img alt="Lever-logo-guidelines-min-print" sizes="(max-width: 800px) 100vw, 800px" src="/wp-content/uploads/2019/04/Lever-logo-guidelines-min-print.png?width=800&amp;name=Lever-logo-guidelines-min-print.png" srcset="/wp-content/uploads/2019/04/Lever-logo-guidelines-min-print.png?width=400&amp;name=Lever-logo-guidelines-min-print.png 400w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-print.png?width=800&amp;name=Lever-logo-guidelines-min-print.png 800w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-print.png?width=1200&amp;name=Lever-logo-guidelines-min-print.png 1200w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-print.png?width=1600&amp;name=Lever-logo-guidelines-min-print.png 1600w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-print.png?width=2000&amp;name=Lever-logo-guidelines-min-print.png 2000w, /wp-content/uploads/2019/04/Lever-logo-guidelines-min-print.png?width=2400&amp;name=Lever-logo-guidelines-min-print.png 2400w" style="width: 800px;" width="800"/>
+                       </p>
+                       <p>
+                        Minimum size - Print
+                       </p>
+                       <p class="fs14 text-color-50">
+                        The minimum logo height for print is 0.25 inches or 7 mm.
+                       </p>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-18">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget mt30" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_15372347493792166" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_15372347493792166_" style="">
+                       <p>
+                        <img alt="Lever-logo-guidelines-partner" sizes="(max-width: 1666px) 100vw, 1666px" src="/wp-content/uploads/2019/04/Lever-logo-guidelines-partner.png?width=1666&amp;name=Lever-logo-guidelines-partner.png" srcset="/wp-content/uploads/2019/04/Lever-logo-guidelines-partner.png?width=833&amp;name=Lever-logo-guidelines-partner.png 833w, /wp-content/uploads/2019/04/Lever-logo-guidelines-partner.png?width=1666&amp;name=Lever-logo-guidelines-partner.png 1666w, /wp-content/uploads/2019/04/Lever-logo-guidelines-partner.png?width=2499&amp;name=Lever-logo-guidelines-partner.png 2499w, /wp-content/uploads/2019/04/Lever-logo-guidelines-partner.png?width=3332&amp;name=Lever-logo-guidelines-partner.png 3332w, /wp-content/uploads/2019/04/Lever-logo-guidelines-partner.png?width=4165&amp;name=Lever-logo-guidelines-partner.png 4165w, /wp-content/uploads/2019/04/Lever-logo-guidelines-partner.png?width=4998&amp;name=Lever-logo-guidelines-partner.png 4998w" style="width: 1666px;" width="1666"/>
+                       </p>
+                       <p>
+                        Partner logos
+                       </p>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-19">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525988918991259" style="">
+                      <hr/>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-20">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget pt30 mb30" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525988615787227" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525988615787227_" style="">
+                       <h2 class="font-base">
+                        Logo misuse
+                       </h2>
+                       <p>
+                        The Lever logo is never meant to be altered in anyway. Please treat our logo with respect and avoid the following scenarios, some of which are illustrated below.
+                       </p>
+                       <p>
+                        <img alt="icon-close" class="va-middle" height="12" src="/wp-content/uploads//2019/04/icon-close.svg" style="width: 12px;" width="12"/>
+                        Don’t change the color of any part of the logo
+                        <br/>
+                        <img alt="icon-close" class="va-middle" height="12" src="/wp-content/uploads//2019/04/icon-close.svg" style="width: 12px;" width="12"/>
+                        Don’t distort the shape or proportion of the logo
+                        <br/>
+                        <img alt="icon-close" class="va-middle" height="12" src="/wp-content/uploads//2019/04/icon-close.svg" style="width: 12px;" width="12"/>
+                        Don’t rotate or turn the logo from the rest of the content
+                        <br/>
+                        <img alt="icon-close" class="va-middle" height="12" src="/wp-content/uploads//2019/04/icon-close.svg" style="width: 12px;" width="12"/>
+                        Don’t use the Lever word mark as a standalone without the logo mark
+                        <br/>
+                        <img alt="icon-close" class="va-middle" height="12" src="/wp-content/uploads//2019/04/icon-close.svg" style="width: 12px;" width="12"/>
+                        Never compromise or manipulate the Lever identity in anyway
+                       </p>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-21">
+                   <div class="row-fluid">
+                    <div class="span3 widget-span widget-type-custom_widget" data-w="3" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image widget-type-linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525471258539232" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1525471258539232_" style="">
+                       <img alt="lever-logo-misuse-color" class="hs-image-widget" sizes="(max-width: 228px) 100vw, 228px" src="/wp-content/uploads/2019/04/lever-logo-misuse-color.png?width=228&amp;name=lever-logo-misuse-color.png" srcset="/wp-content/uploads/2019/04/lever-logo-misuse-color.png?width=114&amp;name=lever-logo-misuse-color.png 114w, /wp-content/uploads/2019/04/lever-logo-misuse-color.png?width=228&amp;name=lever-logo-misuse-color.png 228w, /wp-content/uploads/2019/04/lever-logo-misuse-color.png?width=342&amp;name=lever-logo-misuse-color.png 342w, /wp-content/uploads/2019/04/lever-logo-misuse-color.png?width=456&amp;name=lever-logo-misuse-color.png 456w, /wp-content/uploads/2019/04/lever-logo-misuse-color.png?width=570&amp;name=lever-logo-misuse-color.png 570w, /wp-content/uploads/2019/04/lever-logo-misuse-color.png?width=684&amp;name=lever-logo-misuse-color.png 684w" style="width:228px;border-width:0px;border:0px;" title="lever-logo-misuse-color" width="228"/>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                    <div class="span3 widget-span widget-type-custom_widget" data-w="3" data-widget-type="custom_widget" data-x="3" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image widget-type-linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525471266687237" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1525471266687237_" style="">
+                       <img alt="lever-logo-misuse-stretch" class="hs-image-widget" sizes="(max-width: 228px) 100vw, 228px" src="/wp-content/uploads/2019/04/lever-logo-misuse-stretch.png?width=228&amp;name=lever-logo-misuse-stretch.png" srcset="/wp-content/uploads/2019/04/lever-logo-misuse-stretch.png?width=114&amp;name=lever-logo-misuse-stretch.png 114w, /wp-content/uploads/2019/04/lever-logo-misuse-stretch.png?width=228&amp;name=lever-logo-misuse-stretch.png 228w, /wp-content/uploads/2019/04/lever-logo-misuse-stretch.png?width=342&amp;name=lever-logo-misuse-stretch.png 342w, /wp-content/uploads/2019/04/lever-logo-misuse-stretch.png?width=456&amp;name=lever-logo-misuse-stretch.png 456w, /wp-content/uploads/2019/04/lever-logo-misuse-stretch.png?width=570&amp;name=lever-logo-misuse-stretch.png 570w, /wp-content/uploads/2019/04/lever-logo-misuse-stretch.png?width=684&amp;name=lever-logo-misuse-stretch.png 684w" style="width:228px;border-width:0px;border:0px;" title="lever-logo-misuse-stretch" width="228"/>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                    <div class="span3 widget-span widget-type-custom_widget" data-w="3" data-widget-type="custom_widget" data-x="6" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image widget-type-linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525471264169236" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1525471264169236_" style="">
+                       <img alt="lever-logo-misuse-rotate" class="hs-image-widget" sizes="(max-width: 228px) 100vw, 228px" src="/wp-content/uploads/2019/04/lever-logo-misuse-rotate.png?width=228&amp;name=lever-logo-misuse-rotate.png" srcset="/wp-content/uploads/2019/04/lever-logo-misuse-rotate.png?width=114&amp;name=lever-logo-misuse-rotate.png 114w, /wp-content/uploads/2019/04/lever-logo-misuse-rotate.png?width=228&amp;name=lever-logo-misuse-rotate.png 228w, /wp-content/uploads/2019/04/lever-logo-misuse-rotate.png?width=342&amp;name=lever-logo-misuse-rotate.png 342w, /wp-content/uploads/2019/04/lever-logo-misuse-rotate.png?width=456&amp;name=lever-logo-misuse-rotate.png 456w, /wp-content/uploads/2019/04/lever-logo-misuse-rotate.png?width=570&amp;name=lever-logo-misuse-rotate.png 570w, /wp-content/uploads/2019/04/lever-logo-misuse-rotate.png?width=684&amp;name=lever-logo-misuse-rotate.png 684w" style="width:228px;border-width:0px;border:0px;" title="lever-logo-misuse-rotate" width="228"/>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                    <div class="span3 widget-span widget-type-custom_widget" data-w="3" data-widget-type="custom_widget" data-x="9" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image widget-type-linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525471269328238" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image" id="hs_cos_wrapper_module_1525471269328238_" style="">
+                       <img alt="lever-logo-misuse-text-only" class="hs-image-widget" sizes="(max-width: 228px) 100vw, 228px" src="/wp-content/uploads/2019/04/lever-logo-misuse-text-only.png?width=228&amp;name=lever-logo-misuse-text-only.png" srcset="/wp-content/uploads/2019/04/lever-logo-misuse-text-only.png?width=114&amp;name=lever-logo-misuse-text-only.png 114w, /wp-content/uploads/2019/04/lever-logo-misuse-text-only.png?width=228&amp;name=lever-logo-misuse-text-only.png 228w, /wp-content/uploads/2019/04/lever-logo-misuse-text-only.png?width=342&amp;name=lever-logo-misuse-text-only.png 342w, /wp-content/uploads/2019/04/lever-logo-misuse-text-only.png?width=456&amp;name=lever-logo-misuse-text-only.png 456w, /wp-content/uploads/2019/04/lever-logo-misuse-text-only.png?width=570&amp;name=lever-logo-misuse-text-only.png 570w, /wp-content/uploads/2019/04/lever-logo-misuse-text-only.png?width=684&amp;name=lever-logo-misuse-text-only.png 684w" style="width:228px;border-width:0px;border:0px;" title="lever-logo-misuse-text-only" width="228"/>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-22">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget pt50" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525400632015238" style="">
+                      <hr/>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+               <div class="row-fluid-wrapper row-depth-1 row-number-23">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-cell pt4" data-w="12" data-widget-type="cell" data-x="0" id="colors" style="">
+                  <div class="row-fluid-wrapper row-depth-1 row-number-24">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-rich_text pb20" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+                     <div class="cell-wrapper layout-widget-wrapper">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525449233920263" style="">
+                       <h2 class="font-base">
+                        Colors
+                       </h2>
+                       <p>
+                        As you can tell, we’re obsessed with gray. These are the primary shades of gray used in our logo with white as a base.
+                       </p>
+                       <p class="text-caption">
+                        * Note that our Lever Black is a dark gray shade and is optimized for accessibility and legibility.
+                       </p>
+                      </span>
+                     </div>
+                     <!--end layout-widget-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-25">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1537329625121257" style="">
+                      <div class="wrap">
+                       <div class="row-fluid">
+                        <div class="p20 brand-color-card span3" style="background-color: #262933;">
+                         <h4 class="text-color-white">
+                          <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="color_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                           Lever Black *
+                          </div>
+                         </h4>
+                         <table class="fs14 text-color-gray300">
+                          <tbody>
+                           <tr>
+                            <td class="font-caps text-color-gray300 pr20">
+                             hex
+                            </td>
+                            <td>
+                             #262933
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray300 pr20">
+                             rgb
+                            </td>
+                            <td>
+                             38, 41, 51
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray300 pr20">
+                             cmyk
+                            </td>
+                            <td>
+                             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="cmyk_code" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                              25, 20, 0, 80
+                             </div>
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray300 pr20">
+                             pms
+                            </td>
+                            <td>
+                             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="pms_code" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                              426 C
+                             </div>
+                            </td>
+                           </tr>
+                          </tbody>
+                         </table>
+                        </div>
+                        <div class="p20 brand-color-card span3" style="background-color: #c3c6cc;">
+                         <h4 class="">
+                          <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="color_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                           Lever Medium Gray
+                          </div>
+                         </h4>
+                         <table class="fs14">
+                          <tbody>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             hex
+                            </td>
+                            <td>
+                             #c3c6cc
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             rgb
+                            </td>
+                            <td>
+                             195, 198, 204
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             cmyk
+                            </td>
+                            <td>
+                             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="cmyk_code" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                              4, 3, 0, 20
+                             </div>
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             pms
+                            </td>
+                            <td>
+                             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="pms_code" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                              428 C
+                             </div>
+                            </td>
+                           </tr>
+                          </tbody>
+                         </table>
+                        </div>
+                        <div class="p20 brand-color-card span3" style="background-color: #e1e3e6;">
+                         <h4 class="">
+                          <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="color_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                           Lever Light Gray
+                          </div>
+                         </h4>
+                         <table class="fs14">
+                          <tbody>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             hex
+                            </td>
+                            <td>
+                             #e1e3e6
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             rgb
+                            </td>
+                            <td>
+                             225, 227, 230
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             cmyk
+                            </td>
+                            <td>
+                             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="cmyk_code" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                              2, 1, 0, 10
+                             </div>
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             pms
+                            </td>
+                            <td>
+                             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="pms_code" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                              663 C
+                             </div>
+                            </td>
+                           </tr>
+                          </tbody>
+                         </table>
+                        </div>
+                        <div class="p20 brand-color-card span3 border" style="background-color: #ffffff;">
+                         <h4 class="">
+                          <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="color_name" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                           White
+                          </div>
+                         </h4>
+                         <table class="fs14">
+                          <tbody>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             hex
+                            </td>
+                            <td>
+                             #ffffff
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             rgb
+                            </td>
+                            <td>
+                             255, 255, 255
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             cmyk
+                            </td>
+                            <td>
+                             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="cmyk_code" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                              0, 0, 0, 0
+                             </div>
+                            </td>
+                           </tr>
+                           <tr>
+                            <td class="font-caps text-color-gray500 pr20">
+                             pms
+                            </td>
+                            <td>
+                             <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_inline_text" data-hs-cos-field="pms_code" data-hs-cos-general-type="widget" data-hs-cos-type="inline_text" id="hs_cos_wrapper_module_1537329625121257_" style="">
+                              n/a
+                             </div>
+                            </td>
+                           </tr>
+                          </tbody>
+                         </table>
+                        </div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-26">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget pt50 mt30" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525467755742206" style="">
+                      <hr/>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+               <div class="row-fluid-wrapper row-depth-1 row-number-27">
+                <div class="row-fluid">
+                 <div class="span12 widget-span widget-type-cell pt50" data-w="12" data-widget-type="cell" data-x="0" id="typography" style="">
+                  <div class="row-fluid-wrapper row-depth-1 row-number-28">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-rich_text mb30" data-w="12" data-widget-type="rich_text" data-x="0" style="">
+                     <div class="cell-wrapper layout-widget-wrapper">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525130906125136" style="">
+                       <h2 class="font-base">
+                        Typography
+                       </h2>
+                       <p>
+                        Our official brand font is Meta, which can be used internally without licensing issues.
+                       </p>
+                      </span>
+                     </div>
+                     <!--end layout-widget-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-29">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-cell p30 mb50 sans-serif-headlines" data-w="12" data-widget-type="cell" data-x="0" id="brand-font" style="background-color: #FBFBFB; border: 1px solid #EEEFF0;">
+                     <div class="row-fluid-wrapper row-depth-2 row-number-1">
+                      <div class="row-fluid">
+                       <div class="span6 widget-span widget-type-rich_text pb30" data-w="6" data-widget-type="rich_text" data-x="0" style="">
+                        <div class="cell-wrapper layout-widget-wrapper">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525468315229215" style="">
+                          <h1 class="font-base">
+                           Meta Bold Roman
+                          </h1>
+                          <p>
+                           Use for main headlines
+                          </p>
+                         </span>
+                        </div>
+                        <!--end layout-widget-wrapper -->
+                       </div>
+                       <!--end widget-span -->
+                       <div class="span6 widget-span widget-type-custom_widget pb30" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525468336436225" style="">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525468336436225_" style="">
+                          <p>
+                           Meta, Bold
+                           <br/>
+                           40pt
+                           <br/>
+                           Lever Black #262933
+                          </p>
+                         </span>
+                        </div>
+                       </div>
+                       <!--end widget-span -->
+                      </div>
+                      <!--end row-->
+                     </div>
+                     <!--end row-wrapper -->
+                     <div class="row-fluid-wrapper row-depth-2 row-number-2">
+                      <div class="row-fluid">
+                       <div class="span6 widget-span widget-type-rich_text pb30" data-w="6" data-widget-type="rich_text" data-x="0" style="">
+                        <div class="cell-wrapper layout-widget-wrapper">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525468348291226" style="">
+                          <h3 class="font-base">
+                           abcdefghijklmnopqrstuvwxyz 01234567890,:?!(@+=/*)
+                          </h3>
+                          <p>
+                           Use for smaller headlines
+                          </p>
+                         </span>
+                        </div>
+                        <!--end layout-widget-wrapper -->
+                       </div>
+                       <!--end widget-span -->
+                       <div class="span6 widget-span widget-type-custom_widget pb30" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525468351095228" style="">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525468351095228_" style="">
+                          <p>
+                           Meta, Bold
+                           <br/>
+                           24pt
+                           <br/>
+                           Lever Black #262933
+                          </p>
+                         </span>
+                        </div>
+                       </div>
+                       <!--end widget-span -->
+                      </div>
+                      <!--end row-->
+                     </div>
+                     <!--end row-wrapper -->
+                     <div class="row-fluid-wrapper row-depth-2 row-number-3">
+                      <div class="row-fluid">
+                       <div class="span6 widget-span widget-type-rich_text" data-w="6" data-widget-type="rich_text" data-x="0" style="">
+                        <div class="cell-wrapper layout-widget-wrapper">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525468354887229" style="">
+                          <p>
+                           abcdefghijklmnopqrstuvwxyz
+                           <br/>
+                           01234567890,:?!(@+=/*)
+                          </p>
+                          <p>
+                           Use for main body text
+                          </p>
+                         </span>
+                        </div>
+                        <!--end layout-widget-wrapper -->
+                       </div>
+                       <!--end widget-span -->
+                       <div class="span6 widget-span widget-type-custom_widget" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525468358408231" style="">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525468358408231_" style="">
+                          <p>
+                           Meta, Normal
+                           <br/>
+                           16pt
+                           <br/>
+                           Lever Black #262933 at 70% opacity
+                          </p>
+                         </span>
+                        </div>
+                       </div>
+                       <!--end widget-span -->
+                      </div>
+                      <!--end row-->
+                     </div>
+                     <!--end row-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-1">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget pt30" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1526602046946149" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1526602046946149_" style="">
+                       <p>
+                        Use Fira Sans as a fallback font fo
+                        <span>
+                         r other platforms (e.g., Google Docs or Slides)
+                        </span>
+                        , which is available via
+                        <a href="https://fonts.google.com/specimen/Fira+Sans">
+                         Google Fonts
+                        </a>
+                        .
+                       </p>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-2">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-cell p30" data-w="12" data-widget-type="cell" data-x="0" style="background-color: #FBFBFB; border: 1px solid #EEEFF0; margin-top: 32px; margin-bottom: 100px;">
+                     <div class="row-fluid-wrapper row-depth-2 row-number-1">
+                      <div class="row-fluid">
+                       <div class="span6 widget-span widget-type-rich_text pb30" data-w="6" data-widget-type="rich_text" data-x="0" style="">
+                        <div class="cell-wrapper layout-widget-wrapper">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525814135622366" style="">
+                          <h1 style="font-family: 'Fira Sans', sans-serif;">
+                           Fira Sans
+                          </h1>
+                          <p>
+                           Use for main headlines
+                          </p>
+                         </span>
+                        </div>
+                        <!--end layout-widget-wrapper -->
+                       </div>
+                       <!--end widget-span -->
+                       <div class="span6 widget-span widget-type-custom_widget pb30" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525814135622367" style="">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525814135622367_" style="">
+                          <p>
+                           Fira Sans, Bold
+                           <br/>
+                           40pt
+                           <br/>
+                           Lever Black #262933
+                          </p>
+                         </span>
+                        </div>
+                       </div>
+                       <!--end widget-span -->
+                      </div>
+                      <!--end row-->
+                     </div>
+                     <!--end row-wrapper -->
+                     <div class="row-fluid-wrapper row-depth-2 row-number-2">
+                      <div class="row-fluid">
+                       <div class="span6 widget-span widget-type-custom_widget pb30" data-w="6" data-widget-type="custom_widget" data-x="0" style="">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525988343399213" style="">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525988343399213_" style="">
+                          <h3 style="font-family: 'Fira Sans', sans-serif;">
+                           abcdefghijklmnopqrstuvwxyz 01234567890,:?!(@+=/*)
+                          </h3>
+                          <p>
+                           Use for smaller headlines
+                          </p>
+                         </span>
+                        </div>
+                       </div>
+                       <!--end widget-span -->
+                       <div class="span6 widget-span widget-type-custom_widget pb30" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525988348879215" style="">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525988348879215_" style="">
+                          <p>
+                           Fira Sans, Bold
+                           <br/>
+                           24pt
+                           <br/>
+                           Lever Black #262933
+                          </p>
+                         </span>
+                        </div>
+                       </div>
+                       <!--end widget-span -->
+                      </div>
+                      <!--end row-->
+                     </div>
+                     <!--end row-wrapper -->
+                     <div class="row-fluid-wrapper row-depth-2 row-number-3">
+                      <div class="row-fluid">
+                       <div class="span6 widget-span widget-type-custom_widget" data-w="6" data-widget-type="custom_widget" data-x="0" style="">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525988368996219" style="">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525988368996219_" style="">
+                          <p style="font-family: 'Fira Sans', sans-serif;">
+                           abcdefghijklmnopqrstuvwxyz
+                           <br/>
+                           01234567890,:?!(@+=/*)
+                          </p>
+                          <p>
+                           Use for main body text
+                          </p>
+                         </span>
+                        </div>
+                       </div>
+                       <!--end widget-span -->
+                       <div class="span6 widget-span widget-type-custom_widget" data-w="6" data-widget-type="custom_widget" data-x="6" style="">
+                        <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525988373912223" style="">
+                         <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525988373912223_" style="">
+                          <p>
+                           Fira Sans, Normal
+                           <br/>
+                           16pt
+                           <br/>
+                           Lever Black #262933 (at 70% opacity)
+                          </p>
+                         </span>
+                        </div>
+                       </div>
+                       <!--end widget-span -->
+                      </div>
+                      <!--end row-->
+                     </div>
+                     <!--end row-wrapper -->
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                  <div class="row-fluid-wrapper row-depth-1 row-number-1">
+                   <div class="row-fluid">
+                    <div class="span12 widget-span widget-type-custom_widget pb30" data-w="12" data-widget-type="custom_widget" data-x="0" style="">
+                     <div class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text widget-type-rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="module" id="hs_cos_wrapper_module_1525814476711401" style="">
+                      <span class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text" id="hs_cos_wrapper_module_1525814476711401_" style="">
+                       <p style="text-align: center;">
+                        © 2018 Lever
+                       </p>
+                      </span>
+                     </div>
+                    </div>
+                    <!--end widget-span -->
+                   </div>
+                   <!--end row-->
+                  </div>
+                  <!--end row-wrapper -->
+                 </div>
+                 <!--end widget-span -->
+                </div>
+                <!--end row-->
+               </div>
+               <!--end row-wrapper -->
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+            <div class="row-fluid-wrapper row-depth-1 row-number-2">
+             <div class="row-fluid">
+              <div class="span12 widget-span widget-type-raw_jinja sidebar absolute" data-w="12" data-widget-type="raw_jinja" data-x="0" style="top: 0; bottom: 0; width: 200px;">
+               <style>
+                #brand-nav ul {   	list-style-type: none; 		padding: 0;     /* border-top: 1px solid #E1E3E6; */   }   #brand-nav li {   	padding: 4px 0;     transition: all 0.2s ease-out;     margin-bottom: 8px;   }    #brand-nav li a {     text-decoration: none;     color: #969799;   }      #brand-nav li a:hover {     color: #0C92F3;     text-decoration: underline;   }      @media (min-width: 991px) {     #main-column {       padding-left: 240px;     }   }
+               </style>
+               <div class="sticky-wrapper is-sticky" id="brand-nav-sticky-wrapper" style="height: 0px;">
+                <nav id="brand-nav" style="width: 104px; position: fixed; top: 30px; z-index: auto;">
+                 <ul class="no-bullets">
+                  <li>
+                   <a href="#overview">
+                    Overview
+                   </a>
+                  </li>
+                  <li>
+                   <a href="#logo">
+                    Logo
+                   </a>
+                  </li>
+                  <li>
+                   <a href="#colors">
+                    Colors
+                   </a>
+                  </li>
+                  <li>
+                   <a href="#typography">
+                    Typography
+                   </a>
+                  </li>
+                 </ul>
+                </nav>
+               </div>
+              </div>
+              <!--end widget-span -->
+             </div>
+             <!--end row-->
+            </div>
+            <!--end row-wrapper -->
+           </div>
+           <!--end widget-span -->
+          </div>
+          <!--end row-->
+         </div>
+         <!--end row-wrapper -->
+        </div>
+        <!--end body -->
+       </div>
+      </div>
+     </main>
+     <!-- #main -->
+    </div>
+    <!-- #primary -->
+   </div>
+   <!-- #content -->
+   <script async="" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-559e959a0e65babe" type="text/javascript">
+   </script>
+   <footer class="site-footer footer" id="colophon">
+    <div class="footer__wrapper">
+     <div class="footer__top">
+      <div class="widget_link_list widget-column" id="list-2">
+       <h3 class="widget-title">
+        products
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/talent-suite">
+          Lever Talent Suite
+         </a>
+        </li>
+        <li class="">
+         <a href="/hire">
+          Lever Hire
+         </a>
+        </li>
+        <li class="">
+         <a href="/nurture">
+          Lever Nurture
+         </a>
+        </li>
+        <li class="">
+         <a href="/analytics">
+          Lever Analytics
+         </a>
+        </li>
+        <li class="">
+         <a href="/talent-cloud-connect">
+          Talent Cloud Connect
+         </a>
+        </li>
+        <li class="">
+         <a href="/pricing">
+          Plans and Pricing
+         </a>
+        </li>
+        <li class="">
+         <a href="/ecosystem">
+          Ecosystem
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-3">
+       <h3 class="widget-title">
+        company
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/about">
+          About us
+         </a>
+        </li>
+        <li class="">
+         <a href="/customers">
+          Customers
+         </a>
+        </li>
+        <li class="">
+         <a href="/press">
+          Press
+         </a>
+        </li>
+        <li class="">
+         <a href="/careers">
+          Careers
+         </a>
+        </li>
+        <li class="">
+         <a href="/events/">
+          Events
+         </a>
+        </li>
+        <li class="">
+         <a href="https://www.lever.co/contact/">
+          Contact Us
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-4">
+       <h3 class="widget-title">
+        resources
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/recruiting-resources">
+          Resource center
+         </a>
+        </li>
+        <li class="">
+         <a href="/blog">
+          Blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://inside.lever.co/" target="_blank">
+          Inside Lever blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://fulcrum.lever.co/" target="_blank">
+          Lever Engineering blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-5">
+       <h3 class="widget-title">
+        support
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us" target="_blank">
+          Help center
+         </a>
+        </li>
+        <li class="">
+         <a href="https://status.lever.co/" target="_blank">
+          Product status
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Support
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Submit a ticket
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-6">
+       <h3 class="widget-title">
+        contact sales
+       </h3>
+       <ul class="list">
+        <li class="phone-footer-bg phone-icon-left">
+         (415) 458-2731
+        </li>
+        <li class="">
+         155 5th St 6th floor
+        </li>
+        <li class="">
+         San Francisco, CA 94103
+        </li>
+        <li class="contact-form__wrap">
+         <a href="mailto:info@lever.co">
+          info@lever.co
+         </a>
+        </li>
+        <li class="">
+         Toronto Office
+        </li>
+        <li class="">
+         176 Yonge Street, 6F
+        </li>
+        <li class="">
+         Toronto, ON M5C 2L7
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__bottom-wrapper">
+      <div class="footer__bottom">
+       <div class="widget_text" id="text-2">
+        <div class="textwidget">
+         <div class="block-about-footer">
+          <div class="block-about-footer__left">
+           <div class="footer-circle-image">
+            <img alt="Image of Lever team members" class="border-radius-50" src="https://www.lever.co/wp-content/uploads/2019/03/footer-image-leveroo-group.jpg"/>
+           </div>
+          </div>
+          <div class="block-about-footer__right">
+           <p class="social-footer-bg">
+            Follow us on
+            <a href="https://www.linkedin.com/company/3254533">
+             LinkedIn
+            </a>
+            ,
+            <a href="https://www.facebook.com/leverapp/">
+             Facebook
+            </a>
+            , and
+            <a href="https://twitter.com/lever">
+             Twitter
+            </a>
+            .
+           </p>
+           <div class="social-links">
+            <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+             <img alt="twitter" src="/wp-content/uploads/2019/04/twitter.png"/>
+            </a>
+            <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+             <img alt="linkedin" src="/wp-content/uploads/2019/04/LinkedIn-3.png"/>
+            </a>
+            <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+             <img alt="facebook" src="/wp-content/uploads/2019/04/facebook.png"/>
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="footer__subscribe">
+       <strong>
+        Sign up for our blog
+       </strong>
+       <p>
+        Keep up with the latest in recruiting.
+       </p>
+       <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+        <div class="umfwrap">
+         <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-1" datalink="">
+         </form>
+         <div class="mkto_ty_message" style="display:none">
+          Thanks for subscribing.
+         </div>
+        </div>
+       </div>
+       <script>
+        if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+       </script>
+       <div id="iframe_area">
+       </div>
+      </div>
+     </div>
+     <div class="footer__copyright">
+      <div class="widget_text" id="text-4">
+       <h4 class="widget-title hidden">
+        copyright
+       </h4>
+       <div class="textwidget">
+        <p>
+         <span class="copyright-content">
+          © 2019 Lever
+          <a href="/privacy">
+           Privacy
+          </a>
+          |
+          <a href="https://www.lever.co/legal/">
+           Legal
+          </a>
+          |
+          <a href="/levers-data-selling-policy">
+           Do Not Sell My Personal Information
+          </a>
+         </span>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <!-- #colophon -->
+  </div>
+  <!-- #page -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NSF9Z3W" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script type="text/javascript">
+   (function(){
+                document.addEventListener('DOMContentLoaded', function(){
+                    let wpp_widgets = document.querySelectorAll('.popular-posts-sr');
+
+                    if ( wpp_widgets ) {
+                        for (let i = 0; i < wpp_widgets.length; i++) {
+                            let wpp_widget = wpp_widgets[i];
+                            WordPressPopularPosts.theme(wpp_widget);
+                        }
+                    }
+                });
+            })();
+  </script>
+  <script>
+   var WPPImageObserver = null;
+
+            function wpp_load_img(img) {
+                if ( ! 'imgSrc' in img.dataset || ! img.dataset.imgSrc )
+                    return;
+
+                img.src = img.dataset.imgSrc;
+
+                if ( 'imgSrcset' in img.dataset ) {
+                    img.srcset = img.dataset.imgSrcset;
+                    img.removeAttribute('data-img-srcset');
+                }
+
+                img.classList.remove('wpp-lazyload');
+                img.removeAttribute('data-img-src');
+                img.classList.add('wpp-lazyloaded');
+            }
+
+            function wpp_observe_imgs(){
+                let wpp_images = document.querySelectorAll('img.wpp-lazyload'),
+                    wpp_widgets = document.querySelectorAll('.popular-posts-sr');
+
+                if ( wpp_images.length || wpp_widgets.length ) {
+                    if ( 'IntersectionObserver' in window ) {
+                        WPPImageObserver = new IntersectionObserver(function(entries, observer) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    let img = entry.target;
+                                    wpp_load_img(img);
+                                    WPPImageObserver.unobserve(img);
+                                }
+                            });
+                        });
+
+                        if ( wpp_images.length ) {
+                            wpp_images.forEach(function(image) {
+                                WPPImageObserver.observe(image);
+                            });
+                        }
+
+                        if ( wpp_widgets.length ) {
+                            for (var i = 0; i < wpp_widgets.length; i++) {
+                                let wpp_widget_images = wpp_widgets[i].querySelectorAll('img.wpp-lazyload');
+
+                                if ( ! wpp_widget_images.length && wpp_widgets[i].shadowRoot ) {
+                                    wpp_widget_images = wpp_widgets[i].shadowRoot.querySelectorAll('img.wpp-lazyload');
+                                }
+
+                                if ( wpp_widget_images.length ) {
+                                    wpp_widget_images.forEach(function(image) {
+                                        WPPImageObserver.observe(image);
+                                    });
+                                }
+                            }
+                        }
+                    } /** Fallback for older browsers */
+                    else {
+                        if ( wpp_images.length ) {
+                            for (var i = 0; i < wpp_images.length; i++) {
+                                wpp_load_img(wpp_images[i]);
+                                wpp_images[i].classList.remove('wpp-lazyloaded');
+                            }
+                        }
+
+                        if ( wpp_widgets.length ) {
+                            for (var j = 0; j < wpp_widgets.length; j++) {
+                                let wpp_widget = wpp_widgets[j],
+                                    wpp_widget_images = wpp_widget.querySelectorAll('img.wpp-lazyload');
+
+                                if ( ! wpp_widget_images.length && wpp_widget.shadowRoot ) {
+                                    wpp_widget_images = wpp_widget.shadowRoot.querySelectorAll('img.wpp-lazyload');
+                                }
+
+                                if ( wpp_widget_images.length ) {
+                                    for (var k = 0; k < wpp_widget_images.length; k++) {
+                                        wpp_load_img(wpp_widget_images[k]);
+                                        wpp_widget_images[k].classList.remove('wpp-lazyloaded');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                wpp_observe_imgs();
+
+                // When an ajaxified WPP widget loads,
+                // Lazy load its images
+                document.addEventListener('wpp-onload', function(){
+                    wpp_observe_imgs();
+                });
+            });
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js?ver=2.3.9" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var ctcc_vars = {"expiry":"","method":"","version":"1"};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js?ver=2.3.0" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/navigation-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/skip-link-focus-fix-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/libs/jquery.magnific-popup.min.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js?ver=2.1.3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com, @yourdomain.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+var customAjax = {"ajaxurl":"https:\/\/www.lever.co\/wp-admin\/admin-ajax.php"};
+var timeConfigPopupFull = {"time_full_value":"1"};
+var timeConfigPopupSidebar = {"time_sidebar_value":"0.5"};
+var popupIdConfigPopupFull = {"popup_id":""};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-min.js?ver=1.0.0-441" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-header-min.js?ver=1.0.0-441" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/wp-embed.min.js?ver=5.3.2" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   jQuery(document).ready(function($){
+												if(!catapultReadCookie("catAccCookies")){ // If the cookie has not been set then show the bar
+							$("html").addClass("has-cookie-bar");
+							$("html").addClass("cookie-bar-bottom-bar");
+							$("html").addClass("cookie-bar-bar");
+													}
+																	});
+  </script>
+  <div class="" id="catapult-cookie-bar">
+   <div class="ctcc-inner">
+    <span class="ctcc-left-side">
+     This site uses cookies to offer you a better browsing experience.
+     <a class="ctcc-more-info-link" href="https://www.lever.co/cookie-policy" tabindex="0" target="_blank">
+      Learn more.
+     </a>
+    </span>
+    <span class="ctcc-right-side">
+     <button id="catapultCookie" onclick="catapultAcceptCookies();" tabindex="0">
+      Thank you
+     </button>
+    </span>
+   </div>
+   <!-- custom wrapper class -->
+  </div>
+  <!-- #catapult-cookie-bar -->
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb4e40776b","applicationID":"308893147","transactionName":"ZF0EbBcHWxZWVEUIWV0XJ1sRD1oLGERYD1FfXUtQEQtZOlpeVhNXR10C","queueTime":0,"applicationTime":277,"atts":"SBoHGl8dSBg=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>

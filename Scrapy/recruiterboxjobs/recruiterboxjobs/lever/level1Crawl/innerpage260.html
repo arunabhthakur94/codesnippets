@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript">
+   (window.NREUM||(NREUM={})).loader_config={licenseKey:"fb4e40776b",applicationID:"308893147"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1158.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);
+  </script>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <link href="https://gmpg.org/xfn/11" rel="profile"/>
+  <script src="https://cdn.optimizely.com/js/15777290433.js">
+  </script>
+  <title>
+   Beyond the Rejection Letter: 7 Tips to Soften Job Rejection Over the Phone
+  </title>
+  <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+  <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+   //<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+  </script>
+  <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+  <!-- This site is optimized with the Yoast SEO plugin v12.7.1 - https://yoast.com/wordpress/plugins/seo/ -->
+  <meta content="Two recruiters share tips on how they make job rejection less painful over the phone - when a rejection letter doesn't go far enough." name="description">
+   <meta content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" name="robots">
+    <link href="https://www.lever.co/blog/beyond-rejection-letter-soften-job-rejection-over-the-phone/" rel="canonical">
+     <meta content="en_US" property="og:locale"/>
+     <meta content="article" property="og:type"/>
+     <meta content="Beyond the Rejection Letter: 7 Tips to Soften Job Rejection Over the Phone" property="og:title"/>
+     <meta content="Two recruiters share tips on how they make job rejection less painful over the phone - when a rejection letter doesn't go far enough." property="og:description"/>
+     <meta content="https://www.lever.co/blog/beyond-rejection-letter-soften-job-rejection-over-the-phone/" property="og:url"/>
+     <meta content="Lever" property="og:site_name"/>
+     <meta content="Uncategorized" property="article:section"/>
+     <meta content="2017-04-06T16:00:00+00:00" property="article:published_time"/>
+     <meta content="2019-07-02T05:03:03+00:00" property="article:modified_time"/>
+     <meta content="2019-07-02T05:03:03+00:00" property="og:updated_time"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Stocksy_txpe378ca5aBTR100_Medium_287120.jpg" property="og:image"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Stocksy_txpe378ca5aBTR100_Medium_287120.jpg" property="og:image:secure_url"/>
+     <meta content="1727" property="og:image:width"/>
+     <meta content="1079" property="og:image:height"/>
+     <meta content="summary_large_image" name="twitter:card"/>
+     <meta content="Two recruiters share tips on how they make job rejection less painful over the phone - when a rejection letter doesn't go far enough." name="twitter:description"/>
+     <meta content="Beyond the Rejection Letter: 7 Tips to Soften Job Rejection Over the Phone" name="twitter:title"/>
+     <meta content="https://www.lever.co/wp-content/uploads/2019/04/Stocksy_txpe378ca5aBTR100_Medium_287120.jpg" name="twitter:image"/>
+     <script class="yoast-schema-graph yoast-schema-graph--main" type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.lever.co/#website","url":"https://www.lever.co/","name":"Lever","description":"Lever Recruiting Software","potentialAction":{"@type":"SearchAction","target":"https://www.lever.co/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.lever.co/blog/beyond-rejection-letter-soften-job-rejection-over-the-phone/#primaryimage","url":"https://www.lever.co/wp-content/uploads/2019/04/Stocksy_txpe378ca5aBTR100_Medium_287120.jpg","width":1727,"height":1079,"caption":"recruiting phone scripts"},{"@type":"WebPage","@id":"https://www.lever.co/blog/beyond-rejection-letter-soften-job-rejection-over-the-phone/#webpage","url":"https://www.lever.co/blog/beyond-rejection-letter-soften-job-rejection-over-the-phone/","inLanguage":"en-US","name":"Beyond the Rejection Letter: 7 Tips to Soften Job Rejection Over the Phone","isPartOf":{"@id":"https://www.lever.co/#website"},"primaryImageOfPage":{"@id":"https://www.lever.co/blog/beyond-rejection-letter-soften-job-rejection-over-the-phone/#primaryimage"},"datePublished":"2017-04-06T16:00:00+00:00","dateModified":"2019-07-02T05:03:03+00:00","author":{"@id":"https://www.lever.co/#/schema/person/c59a0396f43e577ecbdf8547f7ff4c31"},"description":"Two recruiters share tips on how they make job rejection less painful over the phone - when a rejection letter doesn't go far enough."},{"@type":["Person"],"@id":"https://www.lever.co/#/schema/person/c59a0396f43e577ecbdf8547f7ff4c31","name":"Maya Humes","image":{"@type":"ImageObject","@id":"https://www.lever.co/#authorlogo","url":"https://www.lever.co/wp-content/uploads/2019/03/linked_image_-96x96.jpg","caption":"Maya Humes"},"description":"Content Marketing Manager","sameAs":[]}]}
+     </script>
+     <!-- / Yoast SEO plugin. -->
+     <link href="//www.lever.co" rel="dns-prefetch"/>
+     <link href="//munchkin.marketo.net" rel="dns-prefetch"/>
+     <link href="//cdnjs.cloudflare.com" rel="dns-prefetch"/>
+     <link href="//s.w.org" rel="dns-prefetch"/>
+     <link href="https://www.lever.co/feed/" rel="alternate" title="Lever » Feed" type="application/rss+xml"/>
+     <link href="https://www.lever.co/comments/feed/" rel="alternate" title="Lever » Comments Feed" type="application/rss+xml"/>
+     <link href="https://www.lever.co/blog/beyond-rejection-letter-soften-job-rejection-over-the-phone/feed/" rel="alternate" title="Lever » Beyond the Rejection Letter: 7 Tips to Soften Job Rejection Over the Phone Comments Feed" type="application/rss+xml"/>
+     <script type="text/javascript">
+      window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.lever.co\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.3.2"}};
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+     </script>
+     <style type="text/css">
+      img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+     </style>
+     <link href="https://www.lever.co/wp-includes/css/dist/block-library/style.min.css?ver=5.3.2" id="wp-block-library-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/metronet-profile-picture/dist/blocks.style.build.css?ver=2.3.9" id="mpp_gutenberg-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/css/style.css?ver=5.3.2" id="cookie-consent-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/css/ult_marketo_forms-public.css?ver=1.0.1" id="ult_marketo_forms-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/assets/css/wpp.css?ver=5.0.1" id="wordpress-popular-posts-css-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/css/minifycss/magnific-popup.min.css?ver=1.0.2" id="lib-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/underscores.min.css?ver=5.3.2" id="lever-underscores-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/style.min.css?ver=1.0.0-228" id="lever-style-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/header.min.css?ver=1.0.0-228" id="lever-header-css" media="all" rel="stylesheet" type="text/css"/>
+     <link href="https://www.lever.co/wp-content/themes/lever/footer.min.css?ver=1.0.0-228" id="lever-footer-css" media="all" rel="stylesheet" type="text/css"/>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1" type="text/javascript">
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/forms2.min.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com, @yourdomain.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/ultimate-marketo-forms/public/js/ult_marketo_forms-public.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script src="//munchkin.marketo.net/munchkin.js?ver=1.0.1" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      Munchkin.init('293-AOQ-024');
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.11.2" type="text/javascript">
+     </script>
+     <script type="text/javascript">
+      /* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/www.lever.co\/wp-json\/wordpress-popular-posts\/v1\/popular-posts","ID":"5968","token":"ce76045b3d","debug":""};
+/* ]]> */
+     </script>
+     <script src="https://www.lever.co/wp-content/plugins/wordpress-popular-posts/assets/js/wpp-5.0.0.min.js?ver=5.0.1" type="text/javascript">
+     </script>
+     <link href="https://www.lever.co/xmlrpc.php?rsd" rel="EditURI" title="RSD" type="application/rsd+xml"/>
+     <link href="https://www.lever.co/wp-includes/wlwmanifest.xml" rel="wlwmanifest" type="application/wlwmanifest+xml"/>
+     <meta content="WordPress 5.3.2" name="generator"/>
+     <link href="https://www.lever.co/?p=5968" rel="shortlink"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fblog%2Fbeyond-rejection-letter-soften-job-rejection-over-the-phone%2F" rel="alternate" type="application/json+oembed"/>
+     <link href="https://www.lever.co/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.lever.co%2Fblog%2Fbeyond-rejection-letter-soften-job-rejection-over-the-phone%2F&amp;format=xml" rel="alternate" type="text/xml+oembed"/>
+     <style id="ctcc-css" media="screen" type="text/css">
+      #catapult-cookie-bar {
+					box-sizing: border-box;
+					max-height: 0;
+					opacity: 0;
+					z-index: 99999;
+					overflow: hidden;
+					color: #ddd;
+					position: fixed;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					background-color: #464646;
+				}
+				#catapult-cookie-bar a {
+					color: #fff;
+				}
+				#catapult-cookie-bar .x_close span {
+					background-color: ;
+				}
+				button#catapultCookie {
+					background:;
+					color: ;
+					border: 0; padding: 6px 9px; border-radius: 3px;
+				}
+				#catapult-cookie-bar h3 {
+					color: #ddd;
+				}
+				.has-cookie-bar #catapult-cookie-bar {
+					opacity: 1;
+					max-height: 999px;
+					min-height: 30px;
+				}
+     </style>
+     <!-- Google Tag Manager for WordPress by gtm4wp.com -->
+     <script data-cfasync="false" data-pagespeed-no-defer="" type="text/javascript">
+      //<![CDATA[
+	var dataLayer_content = {"pagePostType":"post","pagePostType2":"single-post","pageCategory":["uncategorized"],"pagePostAuthor":"Maya Humes"};
+	dataLayer.push( dataLayer_content );//]]>
+     </script>
+     <script data-cfasync="false">
+      //<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NSF9Z3W');//]]>
+     </script>
+     <!-- End Google Tag Manager -->
+     <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+     <link href="https://www.lever.co/xmlrpc.php" rel="pingback"/>
+     <style type="text/css">
+      .site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+     </style>
+     <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="32x32">
+      <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="icon" sizes="192x192"/>
+      <link href="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" rel="apple-touch-icon-precomposed"/>
+      <meta content="https://www.lever.co/wp-content/uploads/2019/03/favicon.ico" name="msapplication-TileImage"/>
+     </link>
+    </link>
+   </meta>
+  </meta>
+ </head>
+ <body class="post-template-default single single-post postid-5968 single-format-standard wp-custom-logo no-sidebar post-beyond-rejection-letter-soften-job-rejection-over-the-phone elementor-default">
+  <div class="site page-wrap body-page-wrap" id="page">
+   <a class="skip-link screen-reader-text" href="#content">
+    Skip to content
+   </a>
+   <header class="site-header header" id="masthead">
+    <div class="header__wrapper">
+     <div class="site-branding">
+      <a class="custom-logo-link" href="https://www.lever.co/" rel="home">
+       <img alt="lever recruiting software" class="custom-logo" height="48" src="https://www.lever.co/wp-content/uploads/2019/03/lever_rgb_logo_standard.svg" width="169.001"/>
+      </a>
+      <p class="site-title">
+       <a href="https://www.lever.co/" rel="home">
+        Lever
+       </a>
+      </p>
+      <p class="site-description">
+       Lever Recruiting Software
+      </p>
+     </div>
+     <!-- .site-branding -->
+     <div class="menu-overflow hidden-large">
+     </div>
+     <div class="menu-wrapper">
+      <nav class="main-navigation" id="site-navigation">
+       <div class="menu-main-menu-container">
+        <ul class="menu" id="primary-menu">
+         <li class="hidden-large menu-item menu-item-type-custom menu-item-object-custom menu-item-76" id="menu-item-76">
+          <a href="https://hire.lever.co/">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-32" id="menu-item-32">
+          <a href="/talent-suite">
+           Products
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13835" id="menu-item-13835">
+            <a href="https://www.lever.co/talent-suite/">
+             Lever Talent Suite
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-39" id="menu-item-39">
+            <a href="/hire">
+             Lever Hire
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-49" id="menu-item-49">
+            <a href="/nurture">
+             Lever Nurture
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-50" id="menu-item-50">
+            <a href="/analytics">
+             Lever Analytics
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13834" id="menu-item-13834">
+            <a href="https://www.lever.co/talent-cloud-connect/">
+             Talent Cloud Connect
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-51" id="menu-item-51">
+            <a href="/pricing">
+             Plans and Pricing
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-40" id="menu-item-40">
+            <a href="/ecosystem">
+             Ecosystem
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15555" id="menu-item-15555">
+          <a href="/pricing">
+           Pricing
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-33" id="menu-item-33">
+          <a href="/customers">
+           Customers
+          </a>
+         </li>
+         <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4561" id="menu-item-4561">
+          <a href="https://www.lever.co/recruiting-resources/">
+           Resources
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4562" id="menu-item-4562">
+            <a href="https://www.lever.co/recruiting-resources/">
+             All
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-342" id="menu-item-342">
+            <a href="https://www.lever.co/recruiting-resources/ebook/">
+             eBooks
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-343" id="menu-item-343">
+            <a href="https://www.lever.co/recruiting-resources/video/">
+             Videos
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-346" id="menu-item-346">
+            <a href="https://www.lever.co/recruiting-resources/webinar/">
+             Webinars
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-345" id="menu-item-345">
+            <a href="https://www.lever.co/recruiting-resources/tools/">
+             Tools and Templates
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-taxonomy menu-item-object-resource_type menu-item-344" id="menu-item-344">
+            <a href="https://www.lever.co/recruiting-resources/datasheet/">
+             Product Datasheets
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13391" id="menu-item-13391">
+            <a href="https://www.lever.co/gdpr-recruiting/">
+             GDPR
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16854" id="menu-item-16854">
+            <a href="https://www.lever.co/lever-for-startups/">
+             Lever for Startups
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-35" id="menu-item-35">
+          <a href="/about">
+           Company
+          </a>
+          <ul class="sub-menu">
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44" id="menu-item-44">
+            <a href="/about">
+             About Us
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4566" id="menu-item-4566">
+            <a href="https://www.lever.co/diversity-and-inclusion/">
+             Diversity
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47" id="menu-item-47">
+            <a href="/press">
+             Press
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46" id="menu-item-46">
+            <a href="/careers">
+             Careers
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-48" id="menu-item-48">
+            <a href="/partner-referral-application">
+             Referral Program
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15716" id="menu-item-15716">
+            <a href="https://www.lever.co/events/">
+             Events
+            </a>
+           </li>
+           <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17257" id="menu-item-17257">
+            <a href="https://www.lever.co/contact/">
+             Contact Us
+            </a>
+           </li>
+          </ul>
+         </li>
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36" id="menu-item-36">
+          <a href="/blog">
+           Blog
+          </a>
+         </li>
+        </ul>
+       </div>
+      </nav>
+      <!-- #site-navigation -->
+      <div class="user-navigation">
+       <div class="menu-user-menu-container">
+        <ul class="menu" id="menu-user-menu">
+         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37" id="menu-item-37">
+          <a href="https://hire.lever.co" rel="noopener noreferrer" target="_blank">
+           Sign in
+          </a>
+         </li>
+         <li class="menu-button menu-item menu-item-type-custom menu-item-object-custom menu-item-38" id="menu-item-38">
+          <a href="/1801-demo-signup">
+           Get Started
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <div class="social-links hidden-large">
+       <div class="menu-socail-links-container">
+        <ul class="menu" id="menu-socail-links">
+         <li class="fa fa-twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-73" id="menu-item-73">
+          <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+           Twitter
+          </a>
+         </li>
+         <li class="fa fa-linkedin menu-item menu-item-type-custom menu-item-object-custom menu-item-74" id="menu-item-74">
+          <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+           Linkedin
+          </a>
+         </li>
+         <li class="fa fa-facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-75" id="menu-item-75">
+          <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+           Facebook
+          </a>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+     <!-- .menu-wrapper -->
+     <button aria-controls="primary-menu" aria-expanded="false" class="menu-toggle hidden-large">
+      <span class="fa fa-bars">
+      </span>
+     </button>
+    </div>
+    <!-- .header__wrapper -->
+   </header>
+   <!-- #masthead -->
+   <div class="site-content" id="content">
+    <div class="popup-takeover">
+     <div class="popup-takeover__wrapper">
+      <div class="popup-takeover__image" style="background-image: url(' https://www.lever.co/wp-content/uploads/2019/06/icon-newsletter.png')">
+      </div>
+      <h2 class="popup-takeover__header">
+       Recruit ahead of the curve
+      </h2>
+      <div class="popup-takeover__content">
+       <p>
+        Get innovative, expert insights and recruiting best practices delivered straight to your inbox.
+       </p>
+      </div>
+      <div class="popup-takeover__subscription">
+       <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+        <div class="umfwrap">
+         <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-1" datalink="">
+         </form>
+         <div class="mkto_ty_message" style="display:none">
+          Thanks for subscribing.
+         </div>
+        </div>
+       </div>
+       <script>
+        if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+       </script>
+       <div id="iframe_area">
+       </div>
+      </div>
+      <a class="popup-takeover__close close">
+      </a>
+     </div>
+    </div>
+    <div class="content-area" id="primary">
+     <main class="site-main" id="main">
+      <article class="post-5968 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized" id="post-5968">
+       <div class="entry-header">
+        <div class="blog-subscribe-wrap">
+         <div class="blog-subscribe">
+          <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+           <div class="umfwrap">
+            <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-2" datalink="">
+            </form>
+            <div class="mkto_ty_message" style="display:none">
+             Thanks for subscribing.
+            </div>
+           </div>
+          </div>
+          <script>
+           if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+          </script>
+          <div id="iframe_area">
+          </div>
+         </div>
+        </div>
+        <div class="container header-single-wrap">
+         <a class="all-posts-link" href="https://www.lever.co/blog">
+          ALL POSTS
+         </a>
+         <h1 class="entry-title single-title">
+          Beyond the Rejection Letter: 7 Tips to Soften Job Rejection Over the Phone
+         </h1>
+        </div>
+       </div>
+       <!-- .entry-title -->
+       <div class="top-banner top-banner--full">
+        <div class="wideimage-bg" style="background-image: url('https://www.lever.co/wp-content/uploads/2019/04/rejection_calls.jpg')">
+         <img alt="" src="https://www.lever.co/wp-content/uploads/2019/04/rejection_calls.jpg"/>
+        </div>
+       </div>
+       <div class="content-wrap container container--medium single-content-wrap single-content-wrap--has-banner">
+        <div class="content-sidebar">
+         <div class="author-sidebar">
+          <div class="author-detail">
+           <div class="author-label">
+            written by
+           </div>
+           <div class="avatar-wrap">
+            <img alt="Maya Humes" src="https://www.lever.co/wp-content/uploads/2019/03/linked_image_-48x48.jpg"/>
+           </div>
+           <div class="author-wrap">
+            <div class="author-name">
+             <span class="author vcard">
+              <a class="url fn n" href="https://www.lever.co/author/maya-humes/">
+               Maya Humes
+              </a>
+             </span>
+            </div>
+            <div class="author-description">
+             Content Marketing Manager
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="postdate-sidebar">
+          <div class="postdate-title">
+           published
+          </div>
+          <div class="postdate-date">
+           4/6/17 9:00 AM
+          </div>
+         </div>
+         <div class="category-sidebar">
+          <div class="cat-links">
+           <div class="cat-links__lable">
+            Category
+           </div>
+           <span class="cat-links__content">
+            <a href="https://www.lever.co/category/uncategorized/" rel="category tag">
+             Uncategorized
+            </a>
+           </span>
+          </div>
+         </div>
+         <div class="addthis_sharing">
+          <div class="addthis_sharing_title">
+           share
+          </div>
+          <div class="addthis_sharing__wrap">
+           <div class="addthis_sharing_toolbox">
+           </div>
+           <div class="addthis_counter">
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="entry-content">
+         <p>
+          <span style="font-weight: 400;">
+           If you’re a recruiter, rejecting candidates is likely the most agonizing part of your role. After learning what your candidate cares most deeply about during
+           <a href="/blog/phone-interview-questions">
+            phone interviews
+           </a>
+           , you have to break the news that your team won’t be continuing their process. For candidates, that rejection is equally – arguably more – torturous. Perhaps they imagined sitting at that one desk near the window in your office or squealed to their roommate about finding their dream job; it’s heartbreaking to realize that dream won’t become a reality.
+          </span>
+         </p>
+         <p>
+          <span id="more-5968">
+          </span>
+         </p>
+         <div>
+          <p>
+           <span style="font-weight: 400;">
+            While rejection is an inevitable fixture of your role as a recruiter, you can make it less painful for your candidates. In the past, we shared 4 ways to humanize your
+           </span>
+           <a href="/blog/how-to-write-human-rejection-letters">
+            <span style="font-weight: 400;">
+             rejection letters
+            </span>
+           </a>
+           <span style="font-weight: 400;">
+            . But what’s best practice when you’ve gotten to know a candidate better, and you’d rather jump on the phone with them? What do you say in those rejection
+            <em>
+             calls
+            </em>
+            ?
+           </span>
+           <span style="font-weight: 400;">
+            Recently, Lever G&amp;A Recruiter Brynna Locke and Arrow Electronics Recruiter Joshua Chen openly shared 7 examples of how they break the news over the phone – and why their approach creates a better experience for many candidates.
+           </span>
+          </p>
+          <ul>
+           <li>
+            <h3>
+             <strong>
+              Be sensitive and careful about how you begin the call
+             </strong>
+            </h3>
+           </li>
+          </ul>
+          <h3>
+           <strong>
+            <i>
+             “ Hi ___, how’s it going? Thank you for jumping on the phone with me – I know you’re probably busy. I wanted to let you know that we won’t be moving forward with your application, but we’ve genuinely enjoyed getting to know you and learning about your passion for fostering customer happiness.”  – Josh
+            </i>
+           </strong>
+          </h3>
+          <p>
+           <span style="font-weight: 400;">
+            This is no ordinary check-in with your candidate, so you may want to approach the conversation with a slightly different tone than usual. You don’t want to sound overly somber, but too much cheeriness, or distracting questions like “How has your morning been?” may confuse your candidate. Instead, thank them for their time and then begin the hard conversation. Like Josh does, you can communicate how much you’ve enjoyed learning about them. Perhaps they opened up about their deep interest in user research or their personal blog – take a moment to recognize how awesome those passions are.
+           </span>
+          </p>
+          <p>
+           <span style="font-weight: 400;">
+            Remember: it’s much easier to make these conversations human when you actually know your candidates well. But to build those deeper relationships, you have to make your pipeline smaller. In Josh’s experience, it’s best practice to
+           </span>
+           <a href="/recruiting-resources/candidate-sourcing-strategies">
+            <span style="font-weight: 400;">
+             source
+            </span>
+           </a>
+           <i>
+            <span style="font-weight: 400;">
+             less
+            </span>
+           </i>
+           <span style="font-weight: 400;">
+            candidates and commit to getting to know that select bunch. Not only will you get
+           </span>
+           <a href="/blog/8-quick-tricks-to-level-up-your-cold-recruiting-emails">
+            <span style="font-weight: 400;">
+             more responses
+            </span>
+           </a>
+           <span style="font-weight: 400;">
+            in your initial messages, but you can sincerely convey why you enjoyed getting to know your candidates in those rejection calls.
+           </span>
+          </p>
+          <ol>
+           <li>
+            <h3>
+             <strong>
+              Tell them what they did well
+             </strong>
+            </h3>
+           </li>
+          </ol>
+          <h3>
+           <strong>
+            <i>
+             “We hope you know how much everyone enjoyed talking to you. We found that you were a great communicator, curious, and a quick learner.” – Brynna
+            </i>
+           </strong>
+          </h3>
+          <p>
+           <span style="font-weight: 400;">
+            Just because you’re not hiring them now doesn’t mean they’re not a strong candidate. So if possible, list a few of the dynamic qualities you saw in them; that positive reinforcement will give them more confidence in their next interview process. Often, Brynna will gush about her candidates’ strengths and briefly explain why she thinks they’re valuable.
+           </span>
+          </p>
+          <p>
+           <span style="font-weight: 400;">
+            Be sure to strike a balance here though! Don’t get so lost in your flurry of compliments that you lose direction in your call.
+           </span>
+          </p>
+          <ol>
+           <li>
+            <h3>
+             <strong>
+              Give them high-level constructive feedback
+             </strong>
+            </h3>
+           </li>
+          </ol>
+          <h3>
+           <strong>
+            <i>
+             “While you were a fantastic candidate in x, y and z ways, we are looking for candidates with more hands-on customer implementation experience.” – Brynna
+            </i>
+           </strong>
+          </h3>
+          <p>
+           <span style="font-weight: 400;">
+            If you do choose to provide constructive feedback, make it actionable. Suggest they make changes that are actually within their control. If your candidate only has one year of product marketing experience, for example, but you’re looking for the breadth of knowledge that comes with three to five, it could be productive to let them know. What’s an example of unproductive feedback?  “Don’t just tell a nervous candidate that they seemed too nervous and their communication skills weren’t clear, for example,” says Brynna. That feedback could exacerbate the problem and make them even more nervous in their next interview process.
+           </span>
+           <span style="font-weight: 400;">
+            <br/>
+           </span>
+           <span style="font-weight: 400;">
+            <br/>
+           </span>
+           <span style="font-weight: 400;">
+            Some teams have a policy that prohibits feedback in order to avoid legal stickiness, as is the case at Joshua’s company Arrow Electronics. This rule doesn’t always sit well with candidates, so the key is to first explain that it applies for everyone, and that it’s out of your control. Then, you may want to acknowledge how disappointing that might be for them. Express your empathy around how inconvenient the policy is.
+           </span>
+          </p>
+          <ol>
+           <li>
+            <h3>
+             <strong>
+              Express your desire to maintain contact
+             </strong>
+            </h3>
+           </li>
+          </ol>
+          <h3>
+           <strong>
+            <i>
+             “We’d love to stay in touch, and we’ll definitely reach out to you if there’s a role that opens up that’s a better fit for you here.”
+            </i>
+           </strong>
+           <span style="font-weight: 400;">
+            –
+            <em>
+             Josh
+            </em>
+           </span>
+          </h3>
+          <p>
+           <span style="font-weight: 400;">
+            If you build a strong relationship with your candidate, suggest staying in contact. Perhaps you know of a role on another team they’d be better suited for, or you’d like to keep in touch in case a more fitting role opens up on your team in the future.
+           </span>
+          </p>
+          <p>
+           <span style="font-weight: 400;">
+            Sometimes, the job market may seem enormous, but it’s tinier than you think. “Just remember that every relationship comes back to you in some form,” advises Josh. “That candidate you just let down knows a ton of others.” If you abruptly end their process, they’ll remember that experience and tell their friends and friends’ friends. Think about when you
+           </span>
+           <i>
+            <span style="font-weight: 400;">
+             or
+            </span>
+           </i>
+           <span style="font-weight: 400;">
+            your roommate have a poor customer experience; don’t you then associate the entire brand with that interaction?
+           </span>
+          </p>
+          <ol>
+           <li>
+            <h3>
+             <strong>
+              Check in to see if they have any questions to surface
+             </strong>
+            </h3>
+           </li>
+          </ol>
+          <h3>
+           <strong>
+            <i>
+             “Does all of that make sense? Do you have any questions for me?” – Josh and Brynna
+            </i>
+           </strong>
+          </h3>
+          <p>
+           <span style="font-weight: 400;">
+            You treated the rest of the recruiting process like a two-way street – don’t stop now. Before you jump off the phone, give your candidate a chance to ask questions. Naturally, some candidates will want to quickly escape the conversation, but others will want to talk through their thoughts and even learn additional context. Remember that it’s on you to craft a supportive, caring candidate experience from start to finish.
+           </span>
+          </p>
+          <ol>
+           <li>
+            <h3>
+             <strong>
+              Don’t go back on your word
+             </strong>
+            </h3>
+           </li>
+          </ol>
+          <h3>
+           <strong>
+            <i>
+             “Well, maybe we can move forward with you after all. Let me actually talk to the team again to see if we’d be able to hire you.”
+            </i>
+           </strong>
+          </h3>
+          <p>
+           <span style="font-weight: 400;">
+            You know what a great fit feels like, so stick to your guns. If you do change your mind in that conversation, you are opening yourself up to a candidate experience debacle should the team not agree to reconsider their application.
+           </span>
+          </p>
+          <p>
+           <span style="font-weight: 400;">
+            A great best practice? Write out what you want to say beforehand. That way, you know you’ll give your candidates a logical explanation. But don’t be afraid to look up from your sheet of paper and converse naturally, of course.  “I like to keep my outline structured but unstructured,” says Josh. “I map out my key points, but I also know to be fluid and adaptable depending on the situation.”
+           </span>
+          </p>
+          <ol>
+           <li>
+            <h3>
+             <strong>
+              Don’t tell them that their age, race,
+             </strong>
+             <strong>
+              religion, etc. had anything to do with your decision
+             </strong>
+            </h3>
+           </li>
+          </ol>
+          <h3>
+           <strong style="font-size: 2rem; background-color: transparent;">
+            <i>
+             “We’re looking for someone a bit younger, less nervous, and more technically savvy.”
+            </i>
+           </strong>
+          </h3>
+          <p>
+           <span style="font-weight: 400;">
+            <br/>
+            <span style="font-weight: 400;">
+             If you’re giving explanations like this in your phone calls, there’s an even greater problem. Before you even begin hiring, you should know the prohibited forms of discrimination in employment (and know not to practice them). But in case you need a refresher,
+            </span>
+            <a href="https://www.eeoc.gov/facts/qanda.html">
+             <span style="font-weight: 400;">
+              here
+             </span>
+            </a>
+            <span style="font-weight: 400;">
+             you go!
+            </span>
+            <br/>
+           </span>
+          </p>
+          <p>
+           <span style="font-weight: 400;">
+            —
+           </span>
+          </p>
+          <p>
+           <span style="font-weight: 400;">
+            These tips won’t make rejection calls easy. Even saying ‘rejection’ and easy’ in the same sentence sounds strange. Instead, our hope is that the suggestions above help you maintain all the meaningful relationships you build.
+           </span>
+          </p>
+          <p>
+           <span style="font-weight: 400;">
+            To learn how the team at
+            <a href="https://home.kpmg.com/nz/en/home.html">
+             KPMG NZ
+            </a>
+            is enhancing every candidate experience through thoughtful
+            <a href="/blog/how-to-write-human-rejection-letters">
+             rejection letters
+            </a>
+            , read our customer spotlight
+           </span>
+           <a href="/blog/how-kpmg-new-zealand-is-reinventing-candidate-experience-at-scale">
+            <span style="font-weight: 400;">
+             here
+            </span>
+           </a>
+           <span style="font-weight: 400;">
+            .
+           </span>
+          </p>
+         </div>
+        </div>
+        <!-- .entry-content -->
+       </div>
+       <!-- Popups -->
+       <div class="blog-related-posts">
+        <div class="related-posts-wrapper">
+         <h4>
+          Further reading
+         </h4>
+         <div class="related-posts">
+          <div class="related-posts__item related-post">
+           <div class="related-post__image" style="background-image: url(https://www.lever.co/wp-content/uploads/2019/04/bazaarvoice_photo-11.jpg)">
+           </div>
+           <div class="related-post__content">
+            <h3 class="related-post__title">
+             <a href="https://www.lever.co/blog/working-from-home-benefits-everyone/">
+              Working from Home Benefits Everyone
+             </a>
+            </h3>
+            <div class="related-post__body">
+             Sixty percent of companies offer their employees telecommuting benefits. From 2012 to 2016, the number of employees working remotely rose from 39 percent to 43 percent, and employees working remotely spent more time doing so. By 2020, it’s anticipated that...
+            </div>
+            <a class="link-more" href="https://www.lever.co/blog/working-from-home-benefits-everyone/">
+             Read more
+            </a>
+           </div>
+          </div>
+          <div class="related-posts__item related-post">
+           <div class="related-post__image" style="background-image: url(https://www.lever.co/wp-content/uploads/2019/04/working-remote.jpg)">
+           </div>
+           <div class="related-post__content">
+            <h3 class="related-post__title">
+             <a href="https://www.lever.co/blog/working-remotely-ideal-work-environment-or-threat-to-culture-and-employee-productivity/">
+              Working Remotely: Ideal Work Environment Or Threat To Culture And Employee Productivity?
+             </a>
+            </h3>
+            <div class="related-post__body">
+             The traditional office landscape is changing and has been for quite some time, but the degree to which it should be shifting is subject to debate. Many employees consider their local coffee shop to be the ideal work environment, while...
+            </div>
+            <a class="link-more" href="https://www.lever.co/blog/working-remotely-ideal-work-environment-or-threat-to-culture-and-employee-productivity/">
+             Read more
+            </a>
+           </div>
+          </div>
+          <div class="related-posts__item related-post">
+           <div class="related-post__image" style="background-image: url(https://www.lever.co/wp-content/uploads/2019/04/roman_mars_design_thinking.jpg)">
+           </div>
+           <div class="related-post__content">
+            <h3 class="related-post__title">
+             <a href="https://www.lever.co/blog/what-roman-mars-taught-us-about-design-thinking-in-recruiting/">
+              What Roman Mars Taught Us About Design Thinking in Recruiting
+             </a>
+            </h3>
+            <div class="related-post__body">
+             Roman Mars, the host and creator of radio show 99% Invisible, joined us at last year’s Talent Innovation Summit to discuss design and architecture. He began by saying, “I’m not going to talk about hiring… I’m going to talk about...
+            </div>
+            <a class="link-more" href="https://www.lever.co/blog/what-roman-mars-taught-us-about-design-thinking-in-recruiting/">
+             Read more
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <footer class="entry-footer">
+       </footer>
+       <!-- .entry-footer -->
+      </article>
+      <!-- #post-5445 -->
+     </main>
+     <!-- #main -->
+    </div>
+    <!-- #primary -->
+   </div>
+   <!-- #content -->
+   <script async="" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-559e959a0e65babe" type="text/javascript">
+   </script>
+   <footer class="site-footer footer" id="colophon">
+    <div class="footer__wrapper">
+     <div class="footer__top">
+      <div class="widget_link_list widget-column" id="list-2">
+       <h3 class="widget-title">
+        products
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/talent-suite">
+          Lever Talent Suite
+         </a>
+        </li>
+        <li class="">
+         <a href="/hire">
+          Lever Hire
+         </a>
+        </li>
+        <li class="">
+         <a href="/nurture">
+          Lever Nurture
+         </a>
+        </li>
+        <li class="">
+         <a href="/analytics">
+          Lever Analytics
+         </a>
+        </li>
+        <li class="">
+         <a href="/talent-cloud-connect">
+          Talent Cloud Connect
+         </a>
+        </li>
+        <li class="">
+         <a href="/pricing">
+          Plans and Pricing
+         </a>
+        </li>
+        <li class="">
+         <a href="/ecosystem">
+          Ecosystem
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-3">
+       <h3 class="widget-title">
+        company
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/about">
+          About us
+         </a>
+        </li>
+        <li class="">
+         <a href="/customers">
+          Customers
+         </a>
+        </li>
+        <li class="">
+         <a href="/press">
+          Press
+         </a>
+        </li>
+        <li class="">
+         <a href="/careers">
+          Careers
+         </a>
+        </li>
+        <li class="">
+         <a href="/events/">
+          Events
+         </a>
+        </li>
+        <li class="">
+         <a href="https://www.lever.co/contact/">
+          Contact Us
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-4">
+       <h3 class="widget-title">
+        resources
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="/recruiting-resources">
+          Resource center
+         </a>
+        </li>
+        <li class="">
+         <a href="/blog">
+          Blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://inside.lever.co/" target="_blank">
+          Inside Lever blog
+         </a>
+        </li>
+        <li class="">
+         <a href="https://fulcrum.lever.co/" target="_blank">
+          Lever Engineering blog
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-5">
+       <h3 class="widget-title">
+        support
+       </h3>
+       <ul class="list">
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us" target="_blank">
+          Help center
+         </a>
+        </li>
+        <li class="">
+         <a href="https://status.lever.co/" target="_blank">
+          Product status
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Support
+         </a>
+        </li>
+        <li class="">
+         <a href="https://help.lever.co/hc/en-us/requests/new" target="_blank">
+          Submit a ticket
+         </a>
+        </li>
+       </ul>
+      </div>
+      <div class="widget_link_list widget-column" id="list-6">
+       <h3 class="widget-title">
+        contact sales
+       </h3>
+       <ul class="list">
+        <li class="phone-footer-bg phone-icon-left">
+         (415) 458-2731
+        </li>
+        <li class="">
+         155 5th St 6th floor
+        </li>
+        <li class="">
+         San Francisco, CA 94103
+        </li>
+        <li class="contact-form__wrap">
+         <a href="mailto:info@lever.co">
+          info@lever.co
+         </a>
+        </li>
+        <li class="">
+         Toronto Office
+        </li>
+        <li class="">
+         176 Yonge Street, 6F
+        </li>
+        <li class="">
+         Toronto, ON M5C 2L7
+        </li>
+       </ul>
+      </div>
+     </div>
+     <div class="footer__bottom-wrapper">
+      <div class="footer__bottom">
+       <div class="widget_text" id="text-2">
+        <div class="textwidget">
+         <div class="block-about-footer">
+          <div class="block-about-footer__left">
+           <div class="footer-circle-image">
+            <img alt="Image of Lever team members" class="border-radius-50" src="https://www.lever.co/wp-content/uploads/2019/03/footer-image-leveroo-group.jpg"/>
+           </div>
+          </div>
+          <div class="block-about-footer__right">
+           <p class="social-footer-bg">
+            Follow us on
+            <a href="https://www.linkedin.com/company/3254533">
+             LinkedIn
+            </a>
+            ,
+            <a href="https://www.facebook.com/leverapp/">
+             Facebook
+            </a>
+            , and
+            <a href="https://twitter.com/lever">
+             Twitter
+            </a>
+            .
+           </p>
+           <div class="social-links">
+            <a href="https://twitter.com/lever" rel="noopener noreferrer" target="_blank">
+             <img alt="twitter" src="/wp-content/uploads/2019/04/twitter.png"/>
+            </a>
+            <a href="https://www.linkedin.com/company/3254533" rel="noopener noreferrer" target="_blank">
+             <img alt="linkedin" src="/wp-content/uploads/2019/04/LinkedIn-3.png"/>
+            </a>
+            <a href="https://www.facebook.com/leverapp/" rel="noopener noreferrer" target="_blank">
+             <img alt="facebook" src="/wp-content/uploads/2019/04/facebook.png"/>
+            </a>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="footer__subscribe">
+       <strong>
+        Sign up for our blog
+       </strong>
+       <p>
+        Keep up with the latest in recruiting.
+       </p>
+       <div class="marketo-form marketo-form-type__1_column marketo-form-button-style__default">
+        <div class="umfwrap">
+         <form class="mktoForm marketo-form-1015 default" data-formid="1015" data-forminstance="marketo-form-3" datalink="">
+         </form>
+         <div class="mkto_ty_message" style="display:none">
+          Thanks for subscribing.
+         </div>
+        </div>
+       </div>
+       <script>
+        if(!plugin_path) var plugin_path = 'https://www.lever.co/wp-admin/admin-ajax.php';
+
+		  mktoFormConfig = typeof mktoFormConfig !== 'undefined' ? mktoFormConfig : {};
+		  mktoFormList = typeof mktoFormList !== 'undefined' ? mktoFormList : [];
+		  if (mktoFormList.indexOf(1015) === -1) {
+	      mktoFormList.push(1015);
+	    }
+
+      mktoFormConfig.podId = '//app-sj26.marketo.com';
+      mktoFormConfig.munchkinId = '293-AOQ-024';
+      mktoFormConfig.formIds = mktoFormList;
+       </script>
+       <div id="iframe_area">
+       </div>
+      </div>
+     </div>
+     <div class="footer__copyright">
+      <div class="widget_text" id="text-4">
+       <h4 class="widget-title hidden">
+        copyright
+       </h4>
+       <div class="textwidget">
+        <p>
+         <span class="copyright-content">
+          © 2019 Lever
+          <a href="/privacy">
+           Privacy
+          </a>
+          |
+          <a href="https://www.lever.co/legal/">
+           Legal
+          </a>
+          |
+          <a href="/levers-data-selling-policy">
+           Do Not Sell My Personal Information
+          </a>
+         </span>
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+   <!-- #colophon -->
+  </div>
+  <!-- #page -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NSF9Z3W" style="display:none;visibility:hidden" width="0">
+   </iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <script type="text/javascript">
+   (function(){
+                document.addEventListener('DOMContentLoaded', function(){
+                    let wpp_widgets = document.querySelectorAll('.popular-posts-sr');
+
+                    if ( wpp_widgets ) {
+                        for (let i = 0; i < wpp_widgets.length; i++) {
+                            let wpp_widget = wpp_widgets[i];
+                            WordPressPopularPosts.theme(wpp_widget);
+                        }
+                    }
+                });
+            })();
+  </script>
+  <script>
+   var WPPImageObserver = null;
+
+            function wpp_load_img(img) {
+                if ( ! 'imgSrc' in img.dataset || ! img.dataset.imgSrc )
+                    return;
+
+                img.src = img.dataset.imgSrc;
+
+                if ( 'imgSrcset' in img.dataset ) {
+                    img.srcset = img.dataset.imgSrcset;
+                    img.removeAttribute('data-img-srcset');
+                }
+
+                img.classList.remove('wpp-lazyload');
+                img.removeAttribute('data-img-src');
+                img.classList.add('wpp-lazyloaded');
+            }
+
+            function wpp_observe_imgs(){
+                let wpp_images = document.querySelectorAll('img.wpp-lazyload'),
+                    wpp_widgets = document.querySelectorAll('.popular-posts-sr');
+
+                if ( wpp_images.length || wpp_widgets.length ) {
+                    if ( 'IntersectionObserver' in window ) {
+                        WPPImageObserver = new IntersectionObserver(function(entries, observer) {
+                            entries.forEach(function(entry) {
+                                if (entry.isIntersecting) {
+                                    let img = entry.target;
+                                    wpp_load_img(img);
+                                    WPPImageObserver.unobserve(img);
+                                }
+                            });
+                        });
+
+                        if ( wpp_images.length ) {
+                            wpp_images.forEach(function(image) {
+                                WPPImageObserver.observe(image);
+                            });
+                        }
+
+                        if ( wpp_widgets.length ) {
+                            for (var i = 0; i < wpp_widgets.length; i++) {
+                                let wpp_widget_images = wpp_widgets[i].querySelectorAll('img.wpp-lazyload');
+
+                                if ( ! wpp_widget_images.length && wpp_widgets[i].shadowRoot ) {
+                                    wpp_widget_images = wpp_widgets[i].shadowRoot.querySelectorAll('img.wpp-lazyload');
+                                }
+
+                                if ( wpp_widget_images.length ) {
+                                    wpp_widget_images.forEach(function(image) {
+                                        WPPImageObserver.observe(image);
+                                    });
+                                }
+                            }
+                        }
+                    } /** Fallback for older browsers */
+                    else {
+                        if ( wpp_images.length ) {
+                            for (var i = 0; i < wpp_images.length; i++) {
+                                wpp_load_img(wpp_images[i]);
+                                wpp_images[i].classList.remove('wpp-lazyloaded');
+                            }
+                        }
+
+                        if ( wpp_widgets.length ) {
+                            for (var j = 0; j < wpp_widgets.length; j++) {
+                                let wpp_widget = wpp_widgets[j],
+                                    wpp_widget_images = wpp_widget.querySelectorAll('img.wpp-lazyload');
+
+                                if ( ! wpp_widget_images.length && wpp_widget.shadowRoot ) {
+                                    wpp_widget_images = wpp_widget.shadowRoot.querySelectorAll('img.wpp-lazyload');
+                                }
+
+                                if ( wpp_widget_images.length ) {
+                                    for (var k = 0; k < wpp_widget_images.length; k++) {
+                                        wpp_load_img(wpp_widget_images[k]);
+                                        wpp_widget_images[k].classList.remove('wpp-lazyloaded');
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                wpp_observe_imgs();
+
+                // When an ajaxified WPP widget loads,
+                // Lazy load its images
+                document.addEventListener('wpp-onload', function(){
+                    wpp_observe_imgs();
+                });
+            });
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/metronet-profile-picture/js/mpp-frontend.js?ver=2.3.9" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var ctcc_vars = {"expiry":"","method":"","version":"1"};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/plugins/uk-cookie-consent/assets/js/uk-cookie-consent-js.js?ver=2.3.0" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/navigation-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/skip-link-focus-fix-min.js?ver=20151215" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/libs/jquery.magnific-popup.min.js?ver=1.0.0" type="text/javascript">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.3/js.cookie.min.js?ver=2.1.3" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   /* <![CDATA[ */
+var marketoSettings = {"invalidDomains":"@gmail., @yahoo., @hotmail., @live., @aol., @outlook., @gmil., @gamil., @gmai., @gmail., @icloud., @qq., @googlemail., @email., @mail., @mac., @earthlink., @googlemail., @email., @test., @icloud., @mailinator.com, @me.com, @iffymedia.com, @126.com, @net8mail.com, @memed.com, @protonmail.com, @naver.com, @att.net, @bellsouth.net, @centurylink.net, @cox.net, @yahoo.co.uk, @windowslive.com, @mynet.com, @yourdomain.com","formiduncheckemail":{"formID":["1186","1251","1273"]}};
+var customAjax = {"ajaxurl":"https:\/\/www.lever.co\/wp-admin\/admin-ajax.php"};
+var timeConfigPopupFull = {"time_full_value":"1"};
+var timeConfigPopupSidebar = {"time_sidebar_value":"0.5"};
+var popupIdConfigPopupFull = {"popup_id":"14920"};
+/* ]]> */
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-min.js?ver=1.0.0-228" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-content/themes/lever/js/scripts-header-min.js?ver=1.0.0-228" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/comment-reply.min.js?ver=5.3.2" type="text/javascript">
+  </script>
+  <script src="https://www.lever.co/wp-includes/js/wp-embed.min.js?ver=5.3.2" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   jQuery(document).ready(function($){
+												if(!catapultReadCookie("catAccCookies")){ // If the cookie has not been set then show the bar
+							$("html").addClass("has-cookie-bar");
+							$("html").addClass("cookie-bar-bottom-bar");
+							$("html").addClass("cookie-bar-bar");
+													}
+																	});
+  </script>
+  <div class="" id="catapult-cookie-bar">
+   <div class="ctcc-inner">
+    <span class="ctcc-left-side">
+     This site uses cookies to offer you a better browsing experience.
+     <a class="ctcc-more-info-link" href="https://www.lever.co/cookie-policy" tabindex="0" target="_blank">
+      Learn more.
+     </a>
+    </span>
+    <span class="ctcc-right-side">
+     <button id="catapultCookie" onclick="catapultAcceptCookies();" tabindex="0">
+      Thank you
+     </button>
+    </span>
+   </div>
+   <!-- custom wrapper class -->
+  </div>
+  <!-- #catapult-cookie-bar -->
+  <script type="text/javascript">
+   window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fb4e40776b","applicationID":"308893147","transactionName":"ZF0EbBcHWxZWVEUIWV0XJ1sRD1oLGERYD1FfXQ==","queueTime":0,"applicationTime":299,"atts":"SBoHGl8dSBg=","errorBeacon":"bam.nr-data.net","agent":""}
+  </script>
+ </body>
+</html>
